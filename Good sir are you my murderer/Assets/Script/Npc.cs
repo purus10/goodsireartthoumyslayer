@@ -25,6 +25,7 @@ public class Npc : MonoBehaviour {
 		if (item != null && item.Lethal == true) 
 		{
 			Health -= item.Amount;
+			item.Lethal = false;
 		}
 	}
 

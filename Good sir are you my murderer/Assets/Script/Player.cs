@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
 		{
 		Health -= item.Amount;
 			print ("IM HIT!!!");
+			item.Lethal = false;
 		}
 	}
 
