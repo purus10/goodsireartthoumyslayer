@@ -6,7 +6,7 @@ public class NetworkManager : MonoBehaviour {
 
 	string registeredGameName = "Good_Sir_@rt_Thou_Sl@yer";
 	float refreshRequestLength = 3.0f;
-	bool spawn;
+	static bool spawn = false;
 	public GameObject Player;
 	HostData[] hostData;
 
@@ -25,10 +25,9 @@ public class NetworkManager : MonoBehaviour {
 	{
 		Debug.Log("Server initialized");
 		SpawnPlayer();
-		spawn = true;
 	}
 
-	void OnPlayerDisconnnect(NetworkPlayer player)
+	void OnPlayerDisconnected(NetworkPlayer player)
 	{
 		Debug.Log("Player disconnected from: "+ player.ipAddress + ":" + player.port);
 		Network.RemoveRPCs(player);
@@ -44,12 +43,12 @@ public class NetworkManager : MonoBehaviour {
 	{
 		if(Network.isServer)
 		{
-			Network.Disconnect(1);
+			Network.Disconnect(0);
 			MasterServer.UnregisterHost();
 		}
 		
 		if (Network.isClient) 
-			Network.Disconnect(1);
+			Network.Disconnect(0);
 	}
 
 	public IEnumerator RefreshHotList()
@@ -80,7 +79,11 @@ public class NetworkManager : MonoBehaviour {
 		if (Network.isClient && spawn == false)
 		{
 			if (GUI.Button(new Rect(Screen.width/2,25f,150f,30f), "Spawn"))
+			{
 				SpawnPlayer();
+				spawn = true;
+			}
+
 		}
 		
 		if (!Network.isClient && !Network.isServer)
@@ -90,7 +93,7 @@ public class NetworkManager : MonoBehaviour {
 				StartServer();
 			}
 			
-			if (GUI.Button(new Rect(Screen.width/2,85f,150f,30f), "Refresh Server List"))
+			if (GUI.Button(new Rect(Screen.width/2,50f,150f,30f), "Refresh Server List"))
 			{
 				StartCoroutine("RefreshHotList");
 			}
