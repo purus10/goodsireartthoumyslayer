@@ -42,12 +42,12 @@ public class NetworkManager : MonoBehaviour {
 	{
 		if(Network.isServer)
 		{
-			Network.Disconnect(200);
+			Network.Disconnect(1);
 			MasterServer.UnregisterHost();
 		}
 		
 		if (Network.isClient) 
-			Network.Disconnect(200);
+			Network.Disconnect(1);
 	}
 
 	public IEnumerator RefreshHotList()
