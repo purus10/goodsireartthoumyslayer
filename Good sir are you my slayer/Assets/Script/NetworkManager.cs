@@ -12,7 +12,7 @@ public class NetworkManager : MonoBehaviour {
 
 	private void StartServer()
 	{
-		Network.InitializeServer(4,25000,false);
+		Network.InitializeServer(3,25000,false);
 		MasterServer.RegisterHost(registeredGameName, "Let's Party");
 	}
 
