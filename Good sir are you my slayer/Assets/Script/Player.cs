@@ -7,8 +7,10 @@ public class Player : MonoBehaviour {
 	public enum states {Idle, Armed,Attacking, Searching, Hurt, Drawing}
 	public enum player {one,two,three,four}
 	public states State;
-	public int Points, Health,WeaponHeld, Hits;
-	public float Speed;
+	public int Points, Health, WeaponHeld, Hits;
+	public float Speed, EatTimer, BathTimer, DrunkTimer, SmokeTimer;
+	public Rect[] GUIHUD;
+	float[] NeedTimers = new float[4];
 	float drawing, attacking, consuming, smoking, peeing;
 	public bool IsBleeding, WeaponDrawn;
 	public string Name;
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		CheckNeeds();
 		NetworkView nView = GetComponent<NetworkView>();
 		if(!nView.isMine) return;
 		if (State == states.Idle || State == states.Armed)
@@ -89,6 +92,11 @@ public class Player : MonoBehaviour {
 
 	}
 
+	void OnGUI()
+	{
+		GUI.Box (GUIHUD [0], "");
+		GUI.Label (GUIHUD [1], "Hunger : " + Needs [0].Meter.ToString ());
+	}
 	void Attack(int selected)
 	{
 		Item attackweapon = Weapon.GetComponent<Item>();
@@ -119,7 +127,33 @@ public class Player : MonoBehaviour {
 		for (int i = 0; i< Needs.Length; i++) 
 		{
 			Needs[i] = new Need();
-			Needs [i].Name = Get.NeedName [i];
+			Needs [i].Name = Get.NeedName [i]; 
+		}
+	
+
+	}
+	void SetNeedTimers()
+	{
+		//0 = eat, 1 = smoke, 2 = bathroom, 3 = drunkness
+		if (NeedTimers [0] <= 0)
+			NeedTimers [0] = EatTimer;
+		if (NeedTimers [1] <= 0)
+			NeedTimers [1] = SmokeTimer;
+		if (NeedTimers [2] <= 0)
+			NeedTimers [2] = BathTimer;
+		if(NeedTimers [3] <= 0)
+			NeedTimers [3] = DrunkTimer;
+	}
+	void CheckNeeds()
+	{
+		for (int i = 0; i < NeedTimers.Length; i++)
+		{
+			NeedTimers[i]--;
+			if ( NeedTimers[i] <= 0)
+			{
+				Needs [i].Meter--;
+				SetNeedTimers();
+			}
 		}
 	}
 	void Undraw(int selected)
