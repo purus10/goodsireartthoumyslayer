@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 863ffcd44c9d3644bbdb05c937e46173
+timeCreated: 1442192999
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Column_A
+    100002: Column_A_L
+    100004: Curtain_1
+    100006: DoorA
+    100008: Floor_Angled_Unit
+    100010: Floor_Unit_Base
+    100012: Floor_Unit_L
+    100014: //RootNode
+    100016: Steps
+    100018: Wall_Angled_Unit1
+    100020: Wall_Angled_Unit_Topper
+    100022: Wall_Angled_Unt_Tall
+    100024: Wall_Corner
+    100026: Wall_Corner_Tall
+    100028: Wall_Corner_Topper
+    100030: Wall_Panel_L
+    100032: Wall_Panel_Short
+    100034: Wall_Top_Bar1
+    100036: Wall_Unit_End_P1
+    100038: Wall_Unit_Tall
+    100040: Wall_Unit_Topper
+    100042: Wall_W_Door_Tall
+    100044: Wall_W_Large_Door
+    100046: Wall_W_Window1
+    100048: Wall_W_Window_Tall
+    100050: Window_L
+    100052: WindowA
+    400000: Column_A
+    400002: Column_A_L
+    400004: Curtain_1
+    400006: DoorA
+    400008: Floor_Angled_Unit
+    400010: Floor_Unit_Base
+    400012: Floor_Unit_L
+    400014: //RootNode
+    400016: Steps
+    400018: Wall_Angled_Unit1
+    400020: Wall_Angled_Unit_Topper
+    400022: Wall_Angled_Unt_Tall
+    400024: Wall_Corner
+    400026: Wall_Corner_Tall
+    400028: Wall_Corner_Topper
+    400030: Wall_Panel_L
+    400032: Wall_Panel_Short
+    400034: Wall_Top_Bar1
+    400036: Wall_Unit_End_P1
+    400038: Wall_Unit_Tall
+    400040: Wall_Unit_Topper
+    400042: Wall_W_Door_Tall
+    400044: Wall_W_Large_Door
+    400046: Wall_W_Window1
+    400048: Wall_W_Window_Tall
+    400050: Window_L
+    400052: WindowA
+    2300000: Column_A
+    2300002: Column_A_L
+    2300004: Curtain_1
+    2300006: DoorA
+    2300008: Floor_Angled_Unit
+    2300010: Floor_Unit_Base
+    2300012: Floor_Unit_L
+    2300014: Steps
+    2300016: Wall_Angled_Unit1
+    2300018: Wall_Angled_Unit_Topper
+    2300020: Wall_Angled_Unt_Tall
+    2300022: Wall_Corner
+    2300024: Wall_Corner_Tall
+    2300026: Wall_Corner_Topper
+    2300028: Wall_Panel_L
+    2300030: Wall_Panel_Short
+    2300032: Wall_Top_Bar1
+    2300034: Wall_Unit_End_P1
+    2300036: Wall_Unit_Tall
+    2300038: Wall_Unit_Topper
+    2300040: Wall_W_Door_Tall
+    2300042: Wall_W_Large_Door
+    2300044: Wall_W_Window1
+    2300046: Wall_W_Window_Tall
+    2300048: Window_L
+    2300050: WindowA
+    3300000: Column_A
+    3300002: Column_A_L
+    3300004: Curtain_1
+    3300006: DoorA
+    3300008: Floor_Angled_Unit
+    3300010: Floor_Unit_Base
+    3300012: Floor_Unit_L
+    3300014: Steps
+    3300016: Wall_Angled_Unit1
+    3300018: Wall_Angled_Unit_Topper
+    3300020: Wall_Angled_Unt_Tall
+    3300022: Wall_Corner
+    3300024: Wall_Corner_Tall
+    3300026: Wall_Corner_Topper
+    3300028: Wall_Panel_L
+    3300030: Wall_Panel_Short
+    3300032: Wall_Top_Bar1
+    3300034: Wall_Unit_End_P1
+    3300036: Wall_Unit_Tall
+    3300038: Wall_Unit_Topper
+    3300040: Wall_W_Door_Tall
+    3300042: Wall_W_Large_Door
+    3300044: Wall_W_Window1
+    3300046: Wall_W_Window_Tall
+    3300048: Window_L
+    3300050: WindowA
+    4300000: Wall_W_Window1
+    4300002: WindowA
+    4300004: DoorA
+    4300006: Wall_Unit_End_P1
+    4300008: Wall_W_Large_Door
+    4300010: Floor_Unit_Base
+    4300012: Floor_Angled_Unit
+    4300014: Wall_Top_Bar1
+    4300016: Floor_Unit_L
+    4300018: Wall_Angled_Unit1
+    4300020: Wall_Unit_Topper
+    4300022: Steps
+    4300024: Wall_Angled_Unit_Topper
+    4300026: Wall_Corner
+    4300028: Wall_Corner_Topper
+    4300030: Wall_Panel_Short
+    4300032: Wall_Panel_L
+    4300034: Column_A
+    4300036: Wall_W_Window_Tall
+    4300038: Wall_Unit_Tall
+    4300040: Wall_W_Door_Tall
+    4300042: Wall_Angled_Unt_Tall
+    4300044: Window_L
+    4300046: Column_A_L
+    4300048: Wall_Corner_Tall
+    4300050: Curtain_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
