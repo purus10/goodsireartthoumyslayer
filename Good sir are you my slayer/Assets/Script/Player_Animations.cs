@@ -29,9 +29,9 @@ public class Player_Animations : MonoBehaviour {
 			Walk(Walk_Up_Left);
 		else if(Input.GetKey(KeyCode.W)&& Input.GetKey(KeyCode.D))
 			Walk(Walk_Up_Right);
-		else if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-			Walk(Walk_Down_Right);
 		else if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+			Walk(Walk_Down_Right);
+		else if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
 			Walk(Walk_Down_Left);
 		else if(Input.GetKey(KeyCode.W))
 			Walk(Walk_Up);
@@ -43,21 +43,21 @@ public class Player_Animations : MonoBehaviour {
 			Walk(Walk_Down);
 		//Idle
 		if(Input.GetKeyUp(KeyCode.W) && Input.GetKeyUp(KeyCode.A))
-			player.sprite = Walk_Up_Left[0];
+			player.sprite = Walk_Up_Left[3];
 		else if(Input.GetKeyUp(KeyCode.W)&& Input.GetKeyUp(KeyCode.D))
-			player.sprite = Walk_Up_Right[0];
+			player.sprite = Walk_Up_Right[3];
 		else if(Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.A))
-			player.sprite = Walk_Down_Left[0];
+			player.sprite = Walk_Down_Left[3];
 		else if(Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.D))
-			player.sprite = Walk_Down_Right[0];
+			player.sprite = Walk_Down_Right[3];
 		else if(Input.GetKeyUp(KeyCode.W))
-			player.sprite = Walk_Up[0];
+			player.sprite = Walk_Up[3];
 		else if(Input.GetKeyUp(KeyCode.A))
-			player.sprite = Walk_Left[0];
+			player.sprite = Walk_Left[3];
 		else if(Input.GetKeyUp(KeyCode.D))
-			player.sprite = Walk_Right[0];
+			player.sprite = Walk_Right[3];
 		else if(Input.GetKeyUp(KeyCode.S))
-			player.sprite = Walk_Down[0];
+			player.sprite = Walk_Down[3];
 
 
 

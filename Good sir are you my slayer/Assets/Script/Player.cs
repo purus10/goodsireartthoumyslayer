@@ -125,7 +125,7 @@ public class Player : MonoBehaviour {
 		print("ARMING");
 		State = states.Drawing;
 		ClearDraws();
-		Weapon = Instantiate(Slots[selected],transform.position,transform.rotation) as GameObject;
+		Weapon = Instantiate(Slots[selected],transform.position + Slots[selected].transform.position,Slots[selected].transform.rotation) as GameObject;
 		Weapon.transform.parent = this.transform;
 		Item drawnweapon = Weapon.GetComponent<Item>();
 		drawing = drawnweapon.DrawSpeed;
