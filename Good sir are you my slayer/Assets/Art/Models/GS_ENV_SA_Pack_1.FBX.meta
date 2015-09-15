@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: a428531b4f70a474bbee9ec0c95de64e
+timeCreated: 1442192999
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SA_BooKShelf_1
+    100004: SA_Cabinet_002
+    100006: SA_Cabinet_1
+    100008: SA_Candle
+    100010: SA_Candle_Holder
+    100012: SA_Chair2
+    100014: SA_Chair_A
+    100016: SA_Chair_W_Arms
+    100018: SA_Desk_A
+    100020: SA_Dresser_1
+    100022: SA_Fireplace_1
+    100024: SA_L_Bookshelf
+    100026: SA_Pool_Ball
+    100028: SA_Shelf_A
+    100030: SA_Snooker_Table
+    100032: SA_Table_l
+    100034: SA_Table_S
+    100036: SA_Vase_L
+    100038: SA_Vase_Stand
+    400000: //RootNode
+    400002: SA_BooKShelf_1
+    400004: SA_Cabinet_002
+    400006: SA_Cabinet_1
+    400008: SA_Candle
+    400010: SA_Candle_Holder
+    400012: SA_Chair2
+    400014: SA_Chair_A
+    400016: SA_Chair_W_Arms
+    400018: SA_Desk_A
+    400020: SA_Dresser_1
+    400022: SA_Fireplace_1
+    400024: SA_L_Bookshelf
+    400026: SA_Pool_Ball
+    400028: SA_Shelf_A
+    400030: SA_Snooker_Table
+    400032: SA_Table_l
+    400034: SA_Table_S
+    400036: SA_Vase_L
+    400038: SA_Vase_Stand
+    2300000: SA_BooKShelf_1
+    2300002: SA_Cabinet_002
+    2300004: SA_Cabinet_1
+    2300006: SA_Candle
+    2300008: SA_Candle_Holder
+    2300010: SA_Chair2
+    2300012: SA_Chair_A
+    2300014: SA_Chair_W_Arms
+    2300016: SA_Desk_A
+    2300018: SA_Dresser_1
+    2300020: SA_Fireplace_1
+    2300022: SA_L_Bookshelf
+    2300024: SA_Pool_Ball
+    2300026: SA_Shelf_A
+    2300028: SA_Snooker_Table
+    2300030: SA_Table_l
+    2300032: SA_Table_S
+    2300034: SA_Vase_L
+    2300036: SA_Vase_Stand
+    3300000: SA_BooKShelf_1
+    3300002: SA_Cabinet_002
+    3300004: SA_Cabinet_1
+    3300006: SA_Candle
+    3300008: SA_Candle_Holder
+    3300010: SA_Chair2
+    3300012: SA_Chair_A
+    3300014: SA_Chair_W_Arms
+    3300016: SA_Desk_A
+    3300018: SA_Dresser_1
+    3300020: SA_Fireplace_1
+    3300022: SA_L_Bookshelf
+    3300024: SA_Pool_Ball
+    3300026: SA_Shelf_A
+    3300028: SA_Snooker_Table
+    3300030: SA_Table_l
+    3300032: SA_Table_S
+    3300034: SA_Vase_L
+    3300036: SA_Vase_Stand
+    4300000: SA_Table_l
+    4300002: SA_Chair2
+    4300004: SA_Chair_W_Arms
+    4300006: SA_Chair_A
+    4300008: SA_Vase_L
+    4300010: SA_Vase_Stand
+    4300012: SA_Dresser_1
+    4300014: SA_Desk_A
+    4300016: SA_Fireplace_1
+    4300018: SA_Candle_Holder
+    4300020: SA_Candle
+    4300022: SA_BooKShelf_1
+    4300024: SA_Shelf_A
+    4300026: SA_Table_S
+    4300028: SA_L_Bookshelf
+    4300030: SA_Cabinet_1
+    4300032: SA_Snooker_Table
+    4300034: SA_Cabinet_002
+    4300036: SA_Pool_Ball
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

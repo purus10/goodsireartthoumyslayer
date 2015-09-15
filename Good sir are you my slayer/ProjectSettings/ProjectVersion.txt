@@ -1,0 +1,6 @@
+<<<<<<< HEAD:Good sir are you my murderer/ProjectSettings/ProjectVersion.txt
+m_EditorVersion: 5.0.1f1
+=======
+m_EditorVersion: 5.1.0f3
+>>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/ProjectSettings/ProjectVersion.txt
+m_StandardAssetsVersion: 0
