@@ -6,7 +6,6 @@ public class Player : MonoBehaviour {
 
 	public enum states {Idle, Armed,Attacking, Searching, Hurt, Drawing}
 	public enum player {one,two,three,four}
-	public player P;
 	public states State;
 	public int Points, Health,WeaponHeld, Hits;
 	public float Speed;
@@ -20,6 +19,9 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
+		HUD_Bar.player = this;
+		NetworkView nView = GetComponent<NetworkView>();
+		if(!nView.isMine) enabled = false;
 		Name = Get.Name;
 		CreateNeeds();
 	}
@@ -39,8 +41,8 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (P == player.one)
-		{
+		NetworkView nView = GetComponent<NetworkView>();
+		if(!nView.isMine) return;
 		if (State == states.Idle || State == states.Armed)
 		{
 		if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.up * Speed * Time.deltaTime);
@@ -85,7 +87,6 @@ public class Player : MonoBehaviour {
 				State = states.Armed;
 			}
 		}
-		}
 
 	}
 
@@ -119,7 +120,7 @@ public class Player : MonoBehaviour {
 		for (int i = 0; i< Needs.Length; i++) 
 		{
 			Needs[i] = new Need();
-			Needs [i].Name = Get.NeedName [i];
+			Needs[i].Name = Get.NeedName [i];
 		}
 	}
 	void Undraw(int selected)

@@ -1,0 +1,351 @@
+Initialize engine version: 5.0.1f1 (5a2e8fe35a68)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GT 440  (ID=0xde0)
+    Vendor:   NVIDIA
+    VRAM:     993 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.143 seconds
+desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Test_Data\Managed\System.Core.dll (this message is harmless)
+Running as server. Player ID is 0.
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:14)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/Users/Kosta/Documents/goodsireartthoumyslayer/Good sir are you my murderer/Assets/Script/NetworkManager.cs Line: 14)
+
+Server initialized
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:OnServerInitialized() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:25)
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:14)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+ 
+(Filename: C:/Users/Kosta/Documents/goodsireartthoumyslayer/Good sir are you my murderer/Assets/Script/NetworkManager.cs Line: 25)
+
+Spawning Player...
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:SpawnPlayer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:71)
+NetworkManager:OnServerInitialized() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:26)
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:14)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+ 
+(Filename: C:/Users/Kosta/Documents/goodsireartthoumyslayer/Good sir are you my murderer/Assets/Script/NetworkManager.cs Line: 71)
+
+Allocating view ID AllocatedID: 1.
+
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:629)
+NetworkManager:SpawnPlayer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:72)
+NetworkManager:OnServerInitialized() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:26)
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:14)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 629)
+
+Sent RPC call '__RPCNetworkInstantiate' to all connected clients
+
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:629)
+NetworkManager:SpawnPlayer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:72)
+NetworkManager:OnServerInitialized() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:26)
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:14)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 629)
+
+Added RPC '__RPCNetworkInstantiate' to buffer.
+UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
+UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:629)
+NetworkManager:SpawnPlayer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:72)
+NetworkManager:OnServerInitialized() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:26)
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:14)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 629)
+
+Attempting to connect to master server at 67.225.180.24:23466
+UnityEngine.MasterServer:RegisterHost(String, String, String)
+UnityEngine.MasterServer:RegisterHost(String, String) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:1077)
+NetworkManager:StartServer() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:15)
+NetworkManager:OnGUI() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:88)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 1077)
+
+Connected to master server at 67.225.180.24:23466
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Received identifier 0 from master server
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Registration Successful
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:OnMasterServerEvent(MasterServerEvent) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:38)
+ 
+(Filename: C:/Users/Kosta/Documents/goodsireartthoumyslayer/Good sir are you my murderer/Assets/Script/NetworkManager.cs Line: 38)
+
+New connection established (25.43.131.141:54792)
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+New scope index 0 is now in scope for AllocatedID: 0
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+New scope index 0 is now in scope for AllocatedID: 0
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+New scope index 0 is now in scope for SceneID: 3 Level Prefix: 0
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+New scope index 0 is now in scope for SceneID: 4 Level Prefix: 0
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+New scope index 0 is now in scope for AllocatedID: 1
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Sent initalization to player 1
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC '__RPCNetworkInstantiate' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Sent host update to master server with identifier 0
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Received identifier 0 from master server
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Registration Successful
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:OnMasterServerEvent(MasterServerEvent) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\NetworkManager.cs:38)
+ 
+(Filename: C:/Users/Kosta/Documents/goodsireartthoumyslayer/Good sir are you my murderer/Assets/Script/NetworkManager.cs Line: 38)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+Added RPC 'GetHurt' to buffer.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2493)
+
+ARMING
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviour.gen.cs:108)
+Player:ReadyDraw(Int32) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Player.cs:101)
+Player:Update() (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Player.cs:54)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviour.gen.cs Line: 108)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sent RPC call 'GetHurt' to all connected clients
+
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Added RPC 'GetHurt' to buffer.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Npc:OnCollisionEnter(Collision) (at C:\Users\Kosta\Documents\goodsireartthoumyslayer\Good sir are you my murderer\Assets\Script\Npc.cs:27)
+
+[C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp line 2493] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
