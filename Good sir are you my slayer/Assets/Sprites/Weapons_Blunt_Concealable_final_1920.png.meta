@@ -1,0 +1,1243 @@
+fileFormatVersion: 2
+guid: c7a4783ab7efd8b4490285e4043064e9
+timeCreated: 1442341650
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Weapons_Blunt_Concealable_final_1920_0
+    21300002: Weapons_Blunt_Concealable_final_1920_1
+    21300004: Weapons_Blunt_Concealable_final_1920_2
+    21300006: Weapons_Blunt_Concealable_final_1920_3
+    21300008: Weapons_Blunt_Concealable_final_1920_4
+    21300010: Weapons_Blunt_Concealable_final_1920_5
+    21300012: Weapons_Blunt_Concealable_final_1920_6
+    21300014: Weapons_Blunt_Concealable_final_1920_7
+    21300016: Weapons_Blunt_Concealable_final_1920_8
+    21300018: Weapons_Blunt_Concealable_final_1920_9
+    21300020: Weapons_Blunt_Concealable_final_1920_10
+    21300022: Weapons_Blunt_Concealable_final_1920_11
+    21300024: Weapons_Blunt_Concealable_final_1920_12
+    21300026: Weapons_Blunt_Concealable_final_1920_13
+    21300028: Weapons_Blunt_Concealable_final_1920_14
+    21300030: Weapons_Blunt_Concealable_final_1920_15
+    21300032: Weapons_Blunt_Concealable_final_1920_16
+    21300034: Weapons_Blunt_Concealable_final_1920_17
+    21300036: Weapons_Blunt_Concealable_final_1920_18
+    21300038: Weapons_Blunt_Concealable_final_1920_19
+    21300040: Weapons_Blunt_Concealable_final_1920_20
+    21300042: Weapons_Blunt_Concealable_final_1920_21
+    21300044: Weapons_Blunt_Concealable_final_1920_22
+    21300046: Weapons_Blunt_Concealable_final_1920_23
+    21300048: Weapons_Blunt_Concealable_final_1920_24
+    21300050: Weapons_Blunt_Concealable_final_1920_25
+    21300052: Weapons_Blunt_Concealable_final_1920_26
+    21300054: Weapons_Blunt_Concealable_final_1920_27
+    21300056: Weapons_Blunt_Concealable_final_1920_28
+    21300058: Weapons_Blunt_Concealable_final_1920_29
+    21300060: Weapons_Blunt_Concealable_final_1920_30
+    21300062: Weapons_Blunt_Concealable_final_1920_31
+    21300064: Weapons_Blunt_Concealable_final_1920_32
+    21300066: Weapons_Blunt_Concealable_final_1920_33
+    21300068: Weapons_Blunt_Concealable_final_1920_34
+    21300070: Weapons_Blunt_Concealable_final_1920_35
+    21300072: Weapons_Blunt_Concealable_final_1920_36
+    21300074: Weapons_Blunt_Concealable_final_1920_37
+    21300076: Weapons_Blunt_Concealable_final_1920_38
+    21300078: Weapons_Blunt_Concealable_final_1920_39
+    21300080: Weapons_Blunt_Concealable_final_1920_40
+    21300082: Weapons_Blunt_Concealable_final_1920_41
+    21300084: Weapons_Blunt_Concealable_final_1920_42
+    21300086: Weapons_Blunt_Concealable_final_1920_43
+    21300088: Weapons_Blunt_Concealable_final_1920_44
+    21300090: Weapons_Blunt_Concealable_final_1920_45
+    21300092: Weapons_Blunt_Concealable_final_1920_46
+    21300094: Weapons_Blunt_Concealable_final_1920_47
+    21300096: Weapons_Blunt_Concealable_final_1920_48
+    21300098: Weapons_Blunt_Concealable_final_1920_49
+    21300100: Weapons_Blunt_Concealable_final_1920_50
+    21300102: Weapons_Blunt_Concealable_final_1920_51
+    21300104: Weapons_Blunt_Concealable_final_1920_52
+    21300106: Weapons_Blunt_Concealable_final_1920_53
+    21300108: Weapons_Blunt_Concealable_final_1920_54
+    21300110: Weapons_Blunt_Concealable_final_1920_55
+    21300112: Weapons_Blunt_Concealable_final_1920_56
+    21300114: Weapons_Blunt_Concealable_final_1920_57
+    21300116: Weapons_Blunt_Concealable_final_1920_58
+    21300118: Weapons_Blunt_Concealable_final_1920_59
+    21300120: Weapons_Blunt_Concealable_final_1920_60
+    21300122: Weapons_Blunt_Concealable_final_1920_61
+    21300124: Weapons_Blunt_Concealable_final_1920_62
+    21300126: Weapons_Blunt_Concealable_final_1920_63
+    21300128: Weapons_Blunt_Concealable_final_1920_64
+    21300130: Weapons_Blunt_Concealable_final_1920_65
+    21300132: Weapons_Blunt_Concealable_final_1920_66
+    21300134: Weapons_Blunt_Concealable_final_1920_67
+    21300136: Weapons_Blunt_Concealable_final_1920_68
+    21300138: Weapons_Blunt_Concealable_final_1920_69
+    21300140: Weapons_Blunt_Concealable_final_1920_70
+    21300142: Weapons_Blunt_Concealable_final_1920_71
+    21300144: Weapons_Blunt_Concealable_final_1920_72
+    21300146: Weapons_Blunt_Concealable_final_1920_73
+    21300148: Weapons_Blunt_Concealable_final_1920_74
+    21300150: Weapons_Blunt_Concealable_final_1920_75
+    21300152: Weapons_Blunt_Concealable_final_1920_76
+    21300154: Weapons_Blunt_Concealable_final_1920_77
+    21300156: Weapons_Blunt_Concealable_final_1920_78
+    21300158: Weapons_Blunt_Concealable_final_1920_79
+    21300160: Weapons_Blunt_Concealable_final_1920_80
+    21300162: Weapons_Blunt_Concealable_final_1920_81
+    21300164: Weapons_Blunt_Concealable_final_1920_82
+    21300166: Weapons_Blunt_Concealable_final_1920_83
+    21300168: Weapons_Blunt_Concealable_final_1920_84
+    21300170: Weapons_Blunt_Concealable_final_1920_85
+    21300172: Weapons_Blunt_Concealable_final_1920_86
+    21300174: Weapons_Blunt_Concealable_final_1920_87
+    21300176: Weapons_Blunt_Concealable_final_1920_88
+    21300178: Weapons_Blunt_Concealable_final_1920_89
+    21300180: Weapons_Blunt_Concealable_final_1920_90
+    21300182: Weapons_Blunt_Concealable_final_1920_91
+    21300184: Weapons_Blunt_Concealable_final_1920_92
+    21300186: Weapons_Blunt_Concealable_final_1920_93
+    21300188: Weapons_Blunt_Concealable_final_1920_94
+    21300190: Weapons_Blunt_Concealable_final_1920_95
+    21300192: Weapons_Blunt_Concealable_final_1920_96
+    21300194: Weapons_Blunt_Concealable_final_1920_97
+    21300196: Weapons_Blunt_Concealable_final_1920_98
+    21300198: Weapons_Blunt_Concealable_final_1920_99
+    21300200: Weapons_Blunt_Concealable_final_1920_100
+    21300202: Weapons_Blunt_Concealable_final_1920_101
+    21300204: Weapons_Blunt_Concealable_final_1920_102
+    21300206: Weapons_Blunt_Concealable_final_1920_103
+    21300208: Weapons_Blunt_Concealable_final_1920_104
+    21300210: Weapons_Blunt_Concealable_final_1920_105
+    21300212: Weapons_Blunt_Concealable_final_1920_106
+    21300214: Weapons_Blunt_Concealable_final_1920_107
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Weapons_Blunt_Concealable_final_1920_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 140
+        width: 57
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 152
+        width: 29
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_2
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 152
+        width: 25
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_3
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 152
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_4
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 152
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_5
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 152
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_6
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 140
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_7
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 152
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_8
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 152
+        width: 14
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_9
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 152
+        width: 32
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_10
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 152
+        width: 32
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_11
+      rect:
+        serializedVersion: 2
+        x: 1956
+        y: 152
+        width: 44
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_12
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 152
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_13
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 152
+        width: 60
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_14
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 88
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_15
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_16
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 88
+        width: 5
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 88
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 111
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_19
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_20
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 88
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_21
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_22
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 88
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_23
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 111
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_24
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 88
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_25
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 88
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_26
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_27
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 111
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_28
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_29
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 88
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_30
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_31
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 88
+        width: 65
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_32
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 88
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_33
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 88
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_34
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_35
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_36
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 111
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_37
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 88
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_38
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 88
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_39
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 111
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_40
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_41
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_42
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 88
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_43
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 88
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_44
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_45
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_46
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_47
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 80
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_48
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_49
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 88
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_50
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_51
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 88
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_52
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 80
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_53
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 88
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_54
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 88
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_55
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 88
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_56
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_57
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 88
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_58
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 88
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_59
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 88
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_60
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_61
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_62
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_63
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_64
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_65
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 88
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_66
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_67
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_68
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 88
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_69
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_70
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_71
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_72
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_73
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 88
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_74
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 88
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_75
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_76
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 88
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_77
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_78
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_79
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 88
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_80
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_81
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 88
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_82
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 88
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_83
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 88
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_84
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 88
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_85
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 88
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_86
+      rect:
+        serializedVersion: 2
+        x: 2180
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_87
+      rect:
+        serializedVersion: 2
+        x: 2323
+        y: 80
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_88
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 88
+        width: 4
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_89
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 88
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_90
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 80
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_91
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_92
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 71
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_93
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 43
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_94
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 47
+        width: 37
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_95
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 47
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_96
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 47
+        width: 5
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_97
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 43
+        width: 18
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_98
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 47
+        width: 5
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_99
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 40
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_100
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 47
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_101
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 43
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_102
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 43
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_103
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 47
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_104
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 47
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_105
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 47
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_106
+      rect:
+        serializedVersion: 2
+        x: 2323
+        y: 43
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Weapons_Blunt_Concealable_final_1920_107
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 43
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -17,14 +17,13 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD:Good sir are you my murderer/Good sir are you my murderer.sln
-																																				GlobalSection(MonoDevelopProperties) = preSolution
+																																																GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																					GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> 50b56199126689dd9129337909eca52a58f8cf27
 =======
-										GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Good sir are you my slayer-csharp.sln
+									GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Good sir are you my slayer.sln
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

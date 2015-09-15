@@ -16,15 +16,13 @@ public class Player : MonoBehaviour {
 	public string Name;
 	public Need[] Needs = new Need[4];
 	public GameObject[] Slots = new GameObject[3];
+	public GameObject Selected;
 	public GameObject Weapon;
 
 	// Use this for initialization
-	void Awake () 
+	void Awake ()
 	{
-<<<<<<< HEAD:Good sir are you my murderer/Assets/Script/Player.cs
-		HUD_Bar.player = this;
-=======
->>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Assets/Script/Player.cs
+		Database.Get.player = this;
 		NetworkView nView = GetComponent<NetworkView>();
 		if(!nView.isMine) enabled = false;
 		Name = Get.Name;
@@ -43,21 +41,29 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	// Update is called once per frame
+	void Start()
+	{
+		if(Slots[0] != null && Selected == null) 
+			Selected = Slots[0];
+	}
 	void Update () 
 	{
-<<<<<<< HEAD:Good sir are you my murderer/Assets/Script/Player.cs
-=======
 		CheckNeeds();
->>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Assets/Script/Player.cs
 		NetworkView nView = GetComponent<NetworkView>();
 		if(!nView.isMine) return;
+		if (Input.GetKeyDown(KeyCode.G))
+			ToggleInventory();
+
 		if (State == states.Idle || State == states.Armed)
 		{
-		if (Input.GetKey(KeyCode.W)) transform.Translate(Vector3.up * Speed * Time.deltaTime);
-		if (Input.GetKey(KeyCode.D)) transform.Translate(Vector3.right * Speed * Time.deltaTime);
-		if (Input.GetKey(KeyCode.A)) transform.Translate(Vector3.left * Speed * Time.deltaTime);
-		if (Input.GetKey(KeyCode.S)) transform.Translate(Vector3.down * Speed * Time.deltaTime);
+		if (Input.GetKey(KeyCode.W)) 
+				transform.Translate(Vector3.up * Speed * Time.deltaTime);
+		if (Input.GetKey(KeyCode.D)) 
+				transform.Translate(Vector3.right * Speed * Time.deltaTime);
+		if (Input.GetKey(KeyCode.A)) 
+				transform.Translate(Vector3.left * Speed * Time.deltaTime);
+		if (Input.GetKey(KeyCode.S)) 
+				transform.Translate(Vector3.down * Speed * Time.deltaTime);
 		}
 
 		if (State == states.Idle)
@@ -99,10 +105,12 @@ public class Player : MonoBehaviour {
 
 	}
 
-	void OnGUI()
+	void ToggleInventory()
 	{
-		GUI.Box (GUIHUD [0], "");
-		GUI.Label (GUIHUD [1], "Hunger : " + Needs [0].Meter.ToString ());
+		if (Slots[1] != null && Selected == Slots[0]) 
+			Selected = Slots[1];
+		else if (Selected == Slots[1] && Slots[0] != null)
+			Selected = Slots[0];
 	}
 	void Attack(int selected)
 	{
@@ -134,9 +142,7 @@ public class Player : MonoBehaviour {
 		for (int i = 0; i< Needs.Length; i++) 
 		{
 			Needs[i] = new Need();
-<<<<<<< HEAD:Good sir are you my murderer/Assets/Script/Player.cs
 			Needs[i].Name = Get.NeedName [i];
-=======
 			Needs [i].Name = Get.NeedName [i]; 
 		}
 	
@@ -161,10 +167,10 @@ public class Player : MonoBehaviour {
 			NeedTimers[i]--;
 			if ( NeedTimers[i] <= 0)
 			{
+				if (Needs[i].Meter > 0)
 				Needs [i].Meter--;
 				SetNeedTimers();
 			}
->>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Assets/Script/Player.cs
 		}
 	}
 	void Undraw(int selected)

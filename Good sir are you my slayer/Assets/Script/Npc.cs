@@ -24,12 +24,9 @@ public class Npc : MonoBehaviour {
 		
 		if (item != null && item.Lethal == true) 
 		{
-<<<<<<< HEAD:Good sir are you my murderer/Assets/Script/Npc.cs
 			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.AllBuffered,item.Amount);
 			Health -= item.Amount;
-=======
 			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.All,item.Amount);
->>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Assets/Script/Npc.cs
 			item.Lethal = false;
 		}
 	}
