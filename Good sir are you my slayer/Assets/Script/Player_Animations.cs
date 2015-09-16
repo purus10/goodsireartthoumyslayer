@@ -23,7 +23,8 @@ public class Player_Animations : MonoBehaviour {
 	}
 	void Update () 
 	{
-	
+		NetworkView nView = GetComponent<NetworkView>();
+		if(!nView.isMine) return;
 		//walk
 		if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
 			Walk(Walk_Up_Left);

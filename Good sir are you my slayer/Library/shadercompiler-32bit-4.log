@@ -1,14 +1,7 @@
-<<<<<<< HEAD:Good sir are you my murderer/Library/shadercompiler-32bit-1.log
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-32bit-1-3432
-=======
-Base path: C:/Program Files/Unity5/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-32bit-4-9324
->>>>>>> 56942522baa9e73969ec7c9d5af1ff1ae889678a:Good sir are you my slayer/Library/shadercompiler-32bit-4.log
+Pipe name: \\.\pipe\UnityShaderCompiler-32bit-4-9724
 Cmd: getPlatforms
 Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
 
 
 Quitting shader compiler process
-
-Crashed!

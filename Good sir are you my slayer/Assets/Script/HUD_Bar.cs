@@ -12,6 +12,12 @@ public class HUD_Bar : MonoBehaviour {
 	Sprite ShowBar;
 	Sprite ShowNumber;
 
+	void Start()
+	{
+		NetworkView nView = GetComponent<NetworkView>();
+		if(!nView.isMine) enabled = false;
+	}
+
 	void Update () 
 	{
 		if (Get.player != null)
