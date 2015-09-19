@@ -11,6 +11,11 @@ public class HUD_Bar : MonoBehaviour {
 	public GameObject NumSprite;
 	Sprite ShowBar;
 	Sprite ShowNumber;
+	NetworkView NView;
+
+	void Start()
+	{
+	}
 
 	void Update () 
 	{
@@ -31,7 +36,6 @@ public class HUD_Bar : MonoBehaviour {
 			
 		}
 	}
-	
 	void ShowHealth()
 	{
 		if (Get.player.Health == 10)
@@ -50,4 +54,6 @@ public class HUD_Bar : MonoBehaviour {
 		ShowBar = Bar[Get.player.Needs[i].Meter/10];
 		ShowNumber = Number[Get.player.Needs[i].Meter/10];
 	}
+
+
 }

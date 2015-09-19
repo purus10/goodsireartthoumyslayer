@@ -25,8 +25,6 @@ public class Npc : MonoBehaviour {
 		if (item != null && item.Lethal == true) 
 		{
 			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.AllBuffered,item.Amount);
-			Health -= item.Amount;
-			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.All,item.Amount);
 			item.Lethal = false;
 		}
 	}

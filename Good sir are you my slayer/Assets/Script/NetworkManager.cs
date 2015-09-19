@@ -8,6 +8,7 @@ public class NetworkManager : MonoBehaviour {
 	float refreshRequestLength = 3.0f;
 	static bool spawn = false;
 	public GameObject Player;
+	public GameObject HUD;
 	HostData[] hostData;
 
 	private void StartServer()

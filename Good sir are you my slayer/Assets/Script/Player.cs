@@ -45,6 +45,7 @@ public class Player : MonoBehaviour {
 	{
 		if(Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
+		GetComponentInChildren<Camera>().enabled = true;
 	}
 	void Update () 
 	{
