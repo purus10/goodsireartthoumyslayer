@@ -8,6 +8,7 @@ public class HUD_Inventory : MonoBehaviour {
 	public GameObject[] Icons;
 	public GameObject[] Inventory;
 	public float Anim_speed;
+	public Player player;
 	//static public bool ;
 	float time;
 	int frame;
@@ -18,20 +19,20 @@ public class HUD_Inventory : MonoBehaviour {
 	}
 	void Update () 
 	{
-		if (Get.player != null)
+		if (player != null)
 		{
 			for (int i = 0;i < Inventory.Length;i++)
 			{
-				if(Get.player.Slots[i] != null)
+				if(player.Slots[i] != null)
 				{
-					Sprite icon = Get.player.Slots[i].GetComponent<SpriteRenderer>().sprite;
+					Sprite icon = player.Slots[i].GetComponent<SpriteRenderer>().sprite;
 					Icons[i].GetComponent<SpriteRenderer>().sprite = icon;
 				}
 			}
 			
 			for (int i = 0; i < Inventory.Length;i++)
 			{
-				if(Get.player.Selected == Get.player.Slots[i])
+				if(player.Selected == player.Slots[i])
 				{
 				transform.position = Inventory[i].transform.position;
 				}

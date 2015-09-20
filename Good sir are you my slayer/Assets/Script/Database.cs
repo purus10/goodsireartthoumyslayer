@@ -7,9 +7,8 @@ namespace Database{
 	public class Get
 	{
 		public enum Type {Head, Body, Accessory}; 
-		static public Player player;
 		static public string[] FirstName = new string[] {"Lol","JK","Hi","moo"};
-		static public string[] LastName = new string[] {"L.","K.","J,","H."};
+		static public string[] LastName = new string[] {"L.","K.","J.,","H."};
 		static public string[] NeedName = new string[] {"Eat","Smoke","Bathroom","Drunkness"};
 		static public string[] Consumable = new string[] {"Poison","Snack","Drink","Bandage","Firecracker","PainKiller"};
 		static public string Name{get{return FirstName [Random.Range (0, FirstName.Length)]+" "+LastName [Random.Range (0, LastName.Length)];}}

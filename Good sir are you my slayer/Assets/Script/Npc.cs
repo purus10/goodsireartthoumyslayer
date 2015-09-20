@@ -28,7 +28,6 @@ public class Npc : MonoBehaviour {
 			item.Lethal = false;
 		}
 	}
-
 	[RPC]
 	private void GetHurt(int amount)
 	{
@@ -41,11 +40,14 @@ public class Npc : MonoBehaviour {
 		
 		if (item != null)
 		{
-			if (item.Lethal == true) Supsicion += 2;
-			if (item.Drawn == true) Supsicion ++;
+			if (item.Lethal == true) 
+			{
+				Supsicion += 2;
+
+			} else if (item.Drawn == true) Supsicion ++;
 		}
 
-		if ( Supsicion >= 5000) 
+		if (Supsicion >= 5000) 
 		{
 			State = states.Afraid;
 			Transform player = col.gameObject.GetComponentInParent<Transform>();
@@ -71,7 +73,8 @@ public class Npc : MonoBehaviour {
 		{
 			if (Afraidof != null)
 			{
-				//Be AFraid :P
+				float distance = Vector3.Distance(Afraidof.position,transform.position);
+
 			}
 		}
 	}

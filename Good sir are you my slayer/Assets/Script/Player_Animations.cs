@@ -21,17 +21,12 @@ public class Player_Animations : MonoBehaviour {
 
 	void Start()
 	{
-	player = Get.player.GetComponent<SpriteRenderer>();
+	player = GetComponent<SpriteRenderer>();
 	NView  = GetComponent<NetworkView>();
 	}
 	void Update () 
 	{
-<<<<<<< HEAD
 		if(!NView.isMine) return;
-=======
-		NetworkView nView = GetComponent<NetworkView>();
-		if(!nView.isMine) return;
->>>>>>> d0123c8a7008a0f5a043edcf3a8ffff3133299f1
 		//walk
 		if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
 		{

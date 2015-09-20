@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
-
-
+	
 	string registeredGameName = "Good_Sir_@rt_Thou_Sl@yer";
 	float refreshRequestLength = 3.0f;
 	static bool spawn = false;

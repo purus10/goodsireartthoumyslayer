@@ -4,7 +4,7 @@ using Database;
 
 public class Player : MonoBehaviour {
 
-	public enum states {Idle, Armed,Attacking, Searching, Hurt, Drawing}
+	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing}
 	public enum player {one,two,three,four}
 	public states State;
 	public int Points, Health, WeaponHeld, Hits;
@@ -12,18 +12,19 @@ public class Player : MonoBehaviour {
 	public Rect[] GUIHUD;
 	float[] NeedTimers = new float[4];
 	float drawing, attacking, consuming, smoking, peeing;
-	public bool IsBleeding, WeaponDrawn;
+	public bool IsBleeding, WeaponDrawn, IsSeen;
 	public string Name;
 	public Need[] Needs = new Need[4];
 	public GameObject[] Slots = new GameObject[3];
+	public GameObject HUD;
 	public GameObject Selected;
 	public GameObject Weapon;
+	NetworkView nView;
 
 	// Use this for initialization
 	void Awake ()
 	{
-		Database.Get.player = this;
-		NetworkView nView = GetComponent<NetworkView>();
+		nView = GetComponent<NetworkView>();
 		if(!nView.isMine) enabled = false;
 		Name = Get.Name;
 		CreateNeeds();
@@ -40,18 +41,17 @@ public class Player : MonoBehaviour {
 			item.Lethal = false;
 		}
 	}
-
 	void Start()
 	{
 		if(Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
 		GetComponentInChildren<Camera>().enabled = true;
+		HUD.SetActive(true);
+		StartCoroutine("PlayTimer");
 	}
 	void Update () 
 	{
 		CheckNeeds();
-		NetworkView nView = GetComponent<NetworkView>();
-		if(!nView.isMine) return;
 		if (Input.GetKeyDown(KeyCode.G))
 			ToggleInventory();
 
@@ -106,6 +106,21 @@ public class Player : MonoBehaviour {
 
 	}
 
+	private IEnumerator PlayTimer()
+	{
+		while (true)
+		{
+			yield return new WaitForSeconds(1);
+		 	if (Network.isServer) 
+				nView.RPC("TrackPlayTime",RPCMode.All);
+		}
+	}
+	[RPC]
+	private void TrackPlayTime()
+	{
+		Digit.playTime++;
+	}
+	
 	void ToggleInventory()
 	{
 		if (Slots[1] != null && Selected == Slots[0]) 
