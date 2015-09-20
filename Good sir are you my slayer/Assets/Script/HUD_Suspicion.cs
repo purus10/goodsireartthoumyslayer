@@ -7,14 +7,8 @@ public class HUD_Suspicion : MonoBehaviour {
 	public SpriteRenderer Witnessed;
 	public SpriteRenderer Wanted;
 
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+		Witnessed.enabled = player.IsSeen;
 	}
 }

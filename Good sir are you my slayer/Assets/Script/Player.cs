@@ -86,7 +86,6 @@ public class Player : MonoBehaviour {
 		{
 				if (drawing != 0) drawing--;
 				else {
-					
 					State = states.Armed;
 					Item drawnweapon = Weapon.GetComponent<Item>();
 					drawnweapon.Drawn = true;
@@ -105,7 +104,6 @@ public class Player : MonoBehaviour {
 		}
 
 	}
-
 	private IEnumerator PlayTimer()
 	{
 		while (true)
