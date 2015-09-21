@@ -6,7 +6,7 @@ public class Npc : MonoBehaviour {
 
 	public enum states {Idle, Afraid, StartTalk, Talking, Curious, SearchingForGuard};
 	public states State;
-	public int Health, Supsicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat;
+	public int Health, Supsicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, ConvoLength;
 	float[] NeedTimers = new float[4];
 	public Transform Afraidof;
 	public float Watch, Wait, Act, Speed;
@@ -40,6 +40,7 @@ public class Npc : MonoBehaviour {
 	{
 		Item item = col.gameObject.GetComponent<Item>();
 		Npc guest = col.gameObject.GetComponent<Npc>();
+		Player player = col.gameObject.GetComponent<Player>();
 		
 		if (item != null)
 		{
@@ -57,6 +58,22 @@ public class Npc : MonoBehaviour {
 			{
 
 			}
+		}
+
+		if (State == states.Idle)
+		{
+			if (player != null)
+				if(player.State != Player.states.Armed)
+					if (Input.GetKeyDown(KeyCode.Z))
+				{
+					State = states.Talking;
+					offender = player;
+					for (int i = 0; i < offender.Needs.Length;i++)
+					{
+						ConvoLength -= offender.Needs[i].Meter;
+					}
+					ConvoLength -= (offender.Health * 10);
+				}
 		}
 
 		if (Supsicion >= Afraidat && State != states.Afraid) 
@@ -81,7 +98,24 @@ public class Npc : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (offender != null && State == states.Idle)
+		if (State == states.Afraid)
+		{
+			if (Afraidof != null)
+			{
+				float distance = Vector3.Distance(Afraidof.position,transform.position);
+				if (distance < 20f)
+				{
+					transform.Translate(-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * Speed * Time.deltaTime);
+				} else {
+					State = states.Idle;
+					Supsicion = 0;
+					offender = Afraidof.gameObject.GetComponent<Player>();
+					offender.IsSeen = false;
+					offender = null;
+					Afraidof = null;
+				}
+			}
+		} else if (State == states.Idle && offender != null)
 		{
 			Watch++;
 			if (Watch >= (Act*2))
@@ -99,28 +133,20 @@ public class Npc : MonoBehaviour {
 			}
 		}
 
-		if (State == states.Afraid);
+
+
+		if (State == states.Talking)
 		{
-			if (Afraidof != null)
+			Wait++;
+			if (Wait >= ConvoLength)
 			{
-				float distance = Vector3.Distance(Afraidof.position,transform.position);
-				if (distance < 20f)
-				{
-					transform.Translate(-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * Speed * Time.deltaTime);
-				} else {
-					State = states.Idle;
-					Supsicion = 0;
-					offender = Afraidof.gameObject.GetComponent<Player>();
-						offender.IsSeen = false;
-					offender = null;
-					Afraidof = null;
-				}
+
 			}
 		}
 
 		if (State == states.SearchingForGuard)
 		{
-			Guard[] Search = GameObject.FindObjectOfType(typeof(Guard)) as Guard[];
+			Guard[] Search = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
 
 			//continue here
 
