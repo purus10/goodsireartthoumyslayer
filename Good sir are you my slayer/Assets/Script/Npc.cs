@@ -4,14 +4,15 @@ using Database;
 
 public class Npc : MonoBehaviour {
 
-	public enum states {Idle, Afraid, StartTalk, Talking, Curious, SearchingForGuard};
+	public enum states {Idle, Afraid, Talking, Eat, Smoke, Drink, Bathroom, Walk, SearchingForGuard};
 	public states State;
-	public int Health, Supsicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, ConvoLength;
+	public int Health, Supsicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, Crave, ConvoLength;
 	float[] NeedTimers = new float[4];
 	public Transform Afraidof;
 	public float Watch, Wait, Act, Speed;
 	public string Name;
 	public Vector3[] Move;
+	Vector3 direction;
 	public Player offender;
 	public Need[] Needs = new Need[4];
 	
@@ -128,11 +129,30 @@ public class Npc : MonoBehaviour {
 			Wait++;
 			if (Wait >= Act)
 			{
-				transform.Translate(Move[Random.Range(0,Move.Length)] * Speed * Time.deltaTime);
+				for (int i = 0; i < Needs.Length;i++)
+				{
+					if (Needs[i].Meter <= Crave)
+						GetNeedState(i);
+				}
+				if (State == states.Idle)
+				{
+				State = states.Walk;
+				direction = Move[Random.Range(0,Move.Length-1)];
+				}
 				Wait = 0;
 			}
 		}
 
+		if (State == states.Walk) 
+		{
+			Walk(direction);
+			Wait++;
+			if (Wait >= Act)
+			{
+				State = states.Idle;
+				Wait = 0;
+			}
+		}
 
 
 		if (State == states.Talking)
@@ -153,6 +173,11 @@ public class Npc : MonoBehaviour {
 		}
 	}
 
+	void Walk(Vector3 dir)
+	{
+		transform.Translate(dir * Speed * Time.deltaTime);
+	}
+
 	void CreateNeeds()
 	{
 		for (int i = 0; i< Needs.Length; i++) 
@@ -163,6 +188,17 @@ public class Npc : MonoBehaviour {
 		}
 		
 		
+	}
+	void GetNeedState(int i)
+	{
+		if (i == 0)
+			State = states.Eat;
+		else if (i == 1)
+			State = states.Smoke;
+		else if (i == 2)
+			State = states.Bathroom;
+		else if (i == 3)
+			State = states.Drink;
 	}
 	void SetNeedTimers()
 	{

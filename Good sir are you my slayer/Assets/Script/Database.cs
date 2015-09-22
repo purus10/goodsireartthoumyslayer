@@ -7,6 +7,9 @@ namespace Database{
 	public class Get
 	{
 		public enum Type {Head, Body, Accessory}; 
+		static public string TargetName;
+		static public Sprite TargetHead;
+		static public Sprite TargetBody;
 		static public string[] FirstName = new string[] {"Lol","JK","Hi","moo"};
 		static public string[] LastName = new string[] {"L.","K.","J.,","H."};
 		static public string[] NeedName = new string[] {"Eat","Smoke","Bathroom","Drunkness"};
