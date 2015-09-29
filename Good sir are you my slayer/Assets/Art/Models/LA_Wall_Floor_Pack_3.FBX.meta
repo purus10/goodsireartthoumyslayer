@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 817002f5537dc2a48a0ac09fec0aba99
+timeCreated: 1443382141
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: LA_Balcony_Rail_1
+    100002: LA_Balcony_Rail_End
+    100004: LA_Floor_Angled
+    100006: LA_Floor_Filler
+    100008: LA_Wall_Corner_Short
+    100010: LA_Wall_Corner_Tall
+    100012: LA_Wall_Corner_Topper
+    100014: LA_Wall_Door_Short
+    100016: LA_Wall_Door_Tall
+    100018: //RootNode
+    100020: LA_Wall_Top_Bar1
+    100022: LA_Wall_Unit_Topper
+    100024: LA_Wall_Window_Short
+    100026: LA_Wall_Window_Tall
+    100028: LA_Window_Short
+    100030: LA_Window_Tall
+    400000: LA_Balcony_Rail_1
+    400002: LA_Balcony_Rail_End
+    400004: LA_Floor_Angled
+    400006: LA_Floor_Filler
+    400008: LA_Wall_Corner_Short
+    400010: LA_Wall_Corner_Tall
+    400012: LA_Wall_Corner_Topper
+    400014: LA_Wall_Door_Short
+    400016: LA_Wall_Door_Tall
+    400018: //RootNode
+    400020: LA_Wall_Top_Bar1
+    400022: LA_Wall_Unit_Topper
+    400024: LA_Wall_Window_Short
+    400026: LA_Wall_Window_Tall
+    400028: LA_Window_Short
+    400030: LA_Window_Tall
+    2300000: LA_Balcony_Rail_1
+    2300002: LA_Balcony_Rail_End
+    2300004: LA_Floor_Angled
+    2300006: LA_Floor_Filler
+    2300008: LA_Wall_Corner_Short
+    2300010: LA_Wall_Corner_Tall
+    2300012: LA_Wall_Corner_Topper
+    2300014: LA_Wall_Door_Short
+    2300016: LA_Wall_Door_Tall
+    2300018: LA_Wall_Top_Bar1
+    2300020: LA_Wall_Unit_Topper
+    2300022: LA_Wall_Window_Short
+    2300024: LA_Wall_Window_Tall
+    2300026: LA_Window_Short
+    2300028: LA_Window_Tall
+    3300000: LA_Balcony_Rail_1
+    3300002: LA_Balcony_Rail_End
+    3300004: LA_Floor_Angled
+    3300006: LA_Floor_Filler
+    3300008: LA_Wall_Corner_Short
+    3300010: LA_Wall_Corner_Tall
+    3300012: LA_Wall_Corner_Topper
+    3300014: LA_Wall_Door_Short
+    3300016: LA_Wall_Door_Tall
+    3300018: LA_Wall_Top_Bar1
+    3300020: LA_Wall_Unit_Topper
+    3300022: LA_Wall_Window_Short
+    3300024: LA_Wall_Window_Tall
+    3300026: LA_Window_Short
+    3300028: LA_Window_Tall
+    4300000: LA_Wall_Window_Short
+    4300002: LA_Window_Short
+    4300004: LA_Wall_Door_Short
+    4300006: LA_Floor_Angled
+    4300008: LA_Wall_Top_Bar1
+    4300010: LA_Wall_Unit_Topper
+    4300012: LA_Wall_Corner_Short
+    4300014: LA_Wall_Corner_Topper
+    4300016: LA_Wall_Window_Tall
+    4300018: LA_Wall_Door_Tall
+    4300020: LA_Wall_Corner_Tall
+    4300022: LA_Balcony_Rail_1
+    4300024: LA_Balcony_Rail_End
+    4300026: LA_Window_Tall
+    4300028: LA_Floor_Filler
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
