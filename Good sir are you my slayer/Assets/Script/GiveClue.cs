@@ -9,7 +9,7 @@ public class GiveClue : MonoBehaviour
 	int i = 0;
 
 
-	void OnTriggerStay(Collision col)
+	void OnTriggerStay(Collider col)
 	{
 		Player player = col.gameObject.GetComponentInParent<Player> ();
 
