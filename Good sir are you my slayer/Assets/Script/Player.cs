@@ -53,35 +53,27 @@ public class Player : MonoBehaviour {
 	void Update () 
 	{
 		CheckNeeds();
-		if (Input.GetKeyDown(KeyCode.G))
+		if (Input.GetButtonDown("A"))
 			ToggleInventory();
 
 		if (State == states.Idle || State == states.Armed)
 		{
-		if (Input.GetKey(KeyCode.W)) 
-				transform.Translate(Vector3.up * Speed * Time.deltaTime);
-		if (Input.GetKey(KeyCode.D)) 
-				transform.Translate(Vector3.right * Speed * Time.deltaTime);
-		if (Input.GetKey(KeyCode.A)) 
-				transform.Translate(Vector3.left * Speed * Time.deltaTime);
-		if (Input.GetKey(KeyCode.S)) 
-				transform.Translate(Vector3.down * Speed * Time.deltaTime);
+			transform.Translate (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
+			transform.Translate (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
 		}
 
 		if (State == states.Idle)
 		{
-			if (Input.GetKeyDown(KeyCode.X) && Slots[0] != null) ReadyDraw(0);
-			if (Input.GetKeyDown(KeyCode.C) && Slots[1] != null) ReadyDraw(1);
-			if (Input.GetKeyDown(KeyCode.V) && Slots[2] != null) ReadyDraw(2);
+			if (Input.GetButtonDown("Y"))
+			 if (Selected == Slots[0]) ReadyDraw(0);
+			else if (Selected == Slots[1]) ReadyDraw(1);
+			/*if (Input.GetKeyDown(KeyCode.X) && Slots[0] != null) Undraw(0);
+			if (Input.GetKeyDown(KeyCode.C) && Slots[1] != null) Undraw(1);
+			if (Input.GetKeyDown(KeyCode.V) && Slots[2] != null) Undraw(2);*/
 		}
 
 		if (State == states.Armed)
-		{
-			if (Input.GetKeyDown(KeyCode.Z)) Attack(WeaponHeld);
-			if (Input.GetKeyDown(KeyCode.X) && Slots[0] != null) Undraw(0);
-			if (Input.GetKeyDown(KeyCode.C) && Slots[1] != null) Undraw(1);
-			if (Input.GetKeyDown(KeyCode.V) && Slots[2] != null) Undraw(2);
-		} 
+			if (Input.GetAxis("RBumper") >= 0.1f) Attack(WeaponHeld);
 
 		if (State == states.Drawing)
 		{
@@ -129,6 +121,7 @@ public class Player : MonoBehaviour {
 	}
 	void Attack(int selected)
 	{
+		print ("ATTACKING");
 		Item attackweapon = Weapon.GetComponent<Item>();
 		attackweapon.Lethal = true;
 		attackweapon.Range.enabled = true;
