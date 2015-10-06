@@ -1,0 +1,583 @@
+fileFormatVersion: 2
+guid: b47b496780c76a34da7aaf215a8e510a
+timeCreated: 1444162581
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: F_Body_2_Blue_0
+    21300002: F_Body_2_Blue_1
+    21300004: F_Body_2_Blue_2
+    21300006: F_Body_2_Blue_3
+    21300008: F_Body_2_Blue_4
+    21300010: F_Body_2_Blue_5
+    21300012: F_Body_2_Blue_6
+    21300014: F_Body_2_Blue_7
+    21300016: F_Body_2_Blue_8
+    21300018: F_Body_2_Blue_9
+    21300020: F_Body_2_Blue_10
+    21300022: F_Body_2_Blue_11
+    21300024: F_Body_2_Blue_12
+    21300026: F_Body_2_Blue_13
+    21300028: F_Body_2_Blue_14
+    21300030: F_Body_2_Blue_15
+    21300032: F_Body_2_Blue_16
+    21300034: F_Body_2_Blue_17
+    21300036: F_Body_2_Blue_18
+    21300038: F_Body_2_Blue_19
+    21300040: F_Body_2_Blue_20
+    21300042: F_Body_2_Blue_21
+    21300044: F_Body_2_Blue_22
+    21300046: F_Body_2_Blue_23
+    21300048: F_Body_2_Blue_24
+    21300050: F_Body_2_Blue_25
+    21300052: F_Body_2_Blue_26
+    21300054: F_Body_2_Blue_27
+    21300056: F_Body_2_Blue_28
+    21300058: F_Body_2_Blue_29
+    21300060: F_Body_2_Blue_30
+    21300062: F_Body_2_Blue_31
+    21300064: F_Body_2_Blue_32
+    21300066: F_Body_2_Blue_33
+    21300068: F_Body_2_Blue_34
+    21300070: F_Body_2_Blue_35
+    21300072: F_Body_2_Blue_36
+    21300074: F_Body_2_Blue_37
+    21300076: F_Body_2_Blue_38
+    21300078: F_Body_2_Blue_39
+    21300080: F_Body_2_Blue_40
+    21300082: F_Body_2_Blue_41
+    21300084: F_Body_2_Blue_42
+    21300086: F_Body_2_Blue_43
+    21300088: F_Body_2_Blue_44
+    21300090: F_Body_2_Blue_45
+    21300092: F_Body_2_Blue_46
+    21300094: F_Body_2_Blue_47
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: F_Body_2_Blue_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 640
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 640
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_3
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 640
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 640
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_5
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 640
+        width: 48
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_6
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 640
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_7
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 640
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_8
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 516
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 516
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 516
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_11
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 516
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_12
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 516
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_13
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 516
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_14
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 516
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_15
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 516
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_16
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 400
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 400
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 400
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_19
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 400
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_20
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 400
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_21
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 400
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_22
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 400
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_23
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 400
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_24
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 288
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 292
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_27
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 288
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_28
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 288
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_29
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 288
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_30
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 292
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_31
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 288
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_32
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 168
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_33
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 168
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 172
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_35
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 168
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_36
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 168
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_37
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 168
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_38
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 172
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_39
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 168
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_40
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 48
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_43
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 48
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_44
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 48
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_45
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 48
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_46
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 48
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: F_Body_2_Blue_47
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 48
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

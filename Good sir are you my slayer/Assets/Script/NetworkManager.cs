@@ -7,7 +7,7 @@ public class NetworkManager : MonoBehaviour {
 	float refreshRequestLength = 3.0f;
 	static bool spawn = false;
 	public GameObject Player;
-	public GameObject HUD;
+	public Closet GetCloset;
 	HostData[] hostData;
 
 	private void StartServer()
@@ -69,8 +69,8 @@ public class NetworkManager : MonoBehaviour {
 
 	private void SpawnPlayer()
 	{
-		Debug.Log("Spawning Player...");
-		Network.Instantiate(Player, new Vector3(0f,0f,0f),Quaternion.identity,0);
+			Debug.Log ("Spawning Player...");
+			Network.Instantiate (Player, new Vector3 (0f, 0f, 0f), Quaternion.identity, 0);
 	}
 
 	public void OnGUI()

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
 	public bool IsBleeding, WeaponDrawn, IsSeen;
 	public string Name, TargetName;
 	public Sprite TargetBody, TargetHead;
+	public SpriteRenderer Body, Head;
 	public Need[] Needs = new Need[4];
 	public GameObject[] Slots = new GameObject[3];
 	public GameObject HUD;
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour {
 		if(!nView.isMine) enabled = false;
 		Name = Get.Name;
 		CreateNeeds();
+		SetDress ();
 	}
 
 	void OnCollisionEnter(Collision col)
@@ -73,7 +75,8 @@ public class Player : MonoBehaviour {
 		}
 
 		if (State == states.Armed)
-			if (Input.GetAxis("RBumper") >= 0.1f) Attack(WeaponHeld);
+			if (Input.GetAxis("RBumper") >= 0.1f) 
+				Attack(WeaponHeld);
 
 		if (State == states.Drawing)
 		{
@@ -96,6 +99,12 @@ public class Player : MonoBehaviour {
 			}
 		}
 
+	}
+	void SetDress()
+	{
+		GameObject clst = GameObject.Find ("Closet");
+		Closet closet = clst.gameObject.GetComponent<Closet> ();
+		closet.DressUp (this);
 	}
 	private IEnumerator PlayTimer()
 	{
