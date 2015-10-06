@@ -26,7 +26,7 @@ public class Closet : MonoBehaviour {
 		Sprite PreBody = player.Body.sprite;
 		Sprite PreHead = player.Head.sprite;
 		PlaceSprites (player);
-		StartCoroutine ("DressSet (player)");
+		//StartCoroutine ("DressSet (player)");
 
 	}
 	void PlaceSprites(Player player)
