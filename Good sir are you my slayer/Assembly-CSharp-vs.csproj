@@ -61,6 +61,7 @@
      <Compile Include="Assets\Script\Npc.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Player_Animations.cs" />
+     <Compile Include="Assets\Script\TESTINPUT.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

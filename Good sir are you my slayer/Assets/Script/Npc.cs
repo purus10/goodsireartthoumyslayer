@@ -65,9 +65,11 @@ public class Npc : MonoBehaviour {
 		{
 			if (player != null)
 				if(player.State != Player.states.Armed)
-					if (Input.GetKeyDown(KeyCode.Z))
+			{
+					if (Input.GetButtonDown("X"))
 				{
 					State = states.Talking;
+					print("YOU ARE TALKING");
 					offender = player;
 					for (int i = 0; i < offender.Needs.Length;i++)
 					{
@@ -75,6 +77,7 @@ public class Npc : MonoBehaviour {
 					}
 					ConvoLength -= (offender.Health * 10);
 				}
+			}
 		}
 
 		if (Supsicion >= Afraidat && State != states.Afraid) 
@@ -94,6 +97,8 @@ public class Npc : MonoBehaviour {
 				offender.IsSeen = false;
 			offender = null;
 		}
+		if (State == states.Talking)
+			State = states.Idle;
 	}
 
 	// Update is called once per frame

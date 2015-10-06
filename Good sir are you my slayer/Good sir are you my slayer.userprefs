@@ -1,20 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Digit.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Player.cs">
     <Files>
       <File FileName="Good sir are you my slayer.sln" Line="1" Column="1" />
-      <File FileName="Assets\Script\Player.cs" Line="26" Column="15" />
+      <File FileName="Assets\Script\Player.cs" Line="76" Column="40" />
       <File FileName="Assets\Script\Player_Animations.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\HUD_Bar.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\NetworkManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Database.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\HUD_Inventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Npc.cs" Line="25" Column="3" />
-      <File FileName="Assets\Script\Digit.cs" Line="10" Column="30" />
+      <File FileName="Assets\Script\HUD_Inventory.cs" Line="13" Column="2" />
+      <File FileName="Assets\Script\Npc.cs" Line="91" Column="34" />
+      <File FileName="Assets\Script\Digit.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Name.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\HUD_Suspicion.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Item.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\GiveClue.cs" Line="12" Column="35" />
+      <File FileName="Assets\Script\GiveClue.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\TESTINPUT.cs" Line="21" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
