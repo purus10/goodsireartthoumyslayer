@@ -70,8 +70,6 @@ public class NetworkManager : MonoBehaviour {
 	{
 			Debug.Log ("Spawning Player...");
 			Network.Instantiate (Player, new Vector3 (0f, 0f, 0f), Quaternion.identity, 0);
-		Debug.Log("Spawning Player...");
-		Network.Instantiate(Player, new Vector3(0f,0f,-0.01f),Quaternion.identity,0);
 	}
 
 	public void OnGUI()
