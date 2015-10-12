@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
 	public SpriteRenderer Body, Head;
 	public Need[] Needs = new Need[4];
 	public GameObject[] Slots = new GameObject[3];
+	public CharacterController Character;
 	public GameObject HUD;
 	public GameObject Selected;
 	public GameObject Weapon;
@@ -60,8 +61,9 @@ public class Player : MonoBehaviour {
 
 		if (State == states.Idle || State == states.Armed)
 		{
-			transform.Translate (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
-			transform.Translate (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
+			print ("yes");
+			Character.Move (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
+			Character.Move (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
 		}
 
 		if (State == states.Idle)

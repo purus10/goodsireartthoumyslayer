@@ -4,14 +4,17 @@ using Database;
 
 public class Npc : MonoBehaviour {
 
-	public enum states {Idle, Afraid, Talking, Eat, Smoke, Drink, Bathroom, Walk, SearchingForGuard};
+	public enum states {Idle, Afraid, Talking, Eat, Smoke, Drink, Bathroom, Walk, SearchingForGuard, Reporting};
 	public states State;
-	public int Health, Supsicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, Crave, ConvoLength;
+	public int Health, Suspicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, Crave, ConvoLength;
 	float[] NeedTimers = new float[4];
+	Guard[] Search;
 	public Transform Afraidof;
-	public float Watch, Wait, Act, Speed;
+	public TextMesh  Namerender;
+	public float Watch, Wait, Act, Speed, AfraidSpeed;
 	public string Name;
 	public Vector3[] Move;
+	public CharacterController Character;
 	Vector3 direction;
 	public Player offender;
 	public Need[] Needs = new Need[4];
@@ -48,20 +51,20 @@ public class Npc : MonoBehaviour {
 			offender = col.gameObject.GetComponentInParent<Player>();
 			if (item.Lethal == true) 
 			{
-				Supsicion += 2;
+				Suspicion += 2;
 				offender.IsSeen = true;
-			} else if (item.Drawn == true) Supsicion ++;
+			} else if (item.Drawn == true) Suspicion ++;
 		} else if (guest != null)
 		{
 			if (guest.State == states.Afraid)
 				State = states.Afraid;
 			else if (guest.State == states.Idle)
 			{
-
+				//Start talking to each other.
 			}
 		}
 
-		if (State == states.Idle)
+		if (State == states.Idle || State == states.Walk)
 		{
 			if (player != null)
 				if(player.State != Player.states.Armed)
@@ -69,6 +72,7 @@ public class Npc : MonoBehaviour {
 					if (Input.GetButtonDown("X"))
 				{
 					State = states.Talking;
+					Wait = 0;
 					print("YOU ARE TALKING");
 					offender = player;
 					for (int i = 0; i < offender.Needs.Length;i++)
@@ -80,7 +84,7 @@ public class Npc : MonoBehaviour {
 			}
 		}
 
-		if (Supsicion >= Afraidat && State != states.Afraid) 
+		if (Suspicion >= Afraidat && State != states.Afraid) 
 		{
 			offender.IsSeen = true;
 			State = states.Afraid;
@@ -90,7 +94,6 @@ public class Npc : MonoBehaviour {
 
 	void OnTriggerExit(Collider col)
 	{
-		Watch = 0;
 		if (State != states.Afraid)
 		{
 			if (offender != null)
@@ -104,6 +107,7 @@ public class Npc : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		#region Afraid
 		if (State == states.Afraid)
 		{
 			if (Afraidof != null)
@@ -111,25 +115,30 @@ public class Npc : MonoBehaviour {
 				float distance = Vector3.Distance(Afraidof.position,transform.position);
 				if (distance < 20f)
 				{
-					transform.Translate(-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * Speed * Time.deltaTime);
+					Character.Move (-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * AfraidSpeed * Time.deltaTime);
 				} else {
 					State = states.Idle;
-					Supsicion = 0;
-					offender = Afraidof.gameObject.GetComponent<Player>();
+					Suspicion = 0;
+					//offender = Afraidof.gameObject.GetComponent<Player>();
 					offender.IsSeen = false;
 					offender = null;
 					Afraidof = null;
 				}
 			}
-		} else if (State == states.Idle && offender != null)
+		}
+		#endregion
+		#region Offended
+		else if (State == states.Idle && offender != null)
 		{
 			Watch++;
 			if (Watch >= (Act*2))
 			{
 				State = states.SearchingForGuard;
-				Watch = 0;
 			}
-		} else if (State == states.Idle);
+		} 
+		#endregion
+		#region Idle
+		else if (State == states.Idle);
 		{
 			Wait++;
 			if (Wait >= Act)
@@ -143,44 +152,60 @@ public class Npc : MonoBehaviour {
 				{
 				State = states.Walk;
 				direction = Move[Random.Range(0,Move.Length-1)];
-				}
 				Wait = 0;
+				}
+
 			}
 		}
-
+		#endregion
+		#region Walking
 		if (State == states.Walk) 
 		{
-			Walk(direction);
-			Wait++;
-			if (Wait >= Act)
+			if (Wait < Act)
 			{
-				State = states.Idle;
+				Walk(direction);
+				Wait++;
+			} else {
 				Wait = 0;
+				Suspicion -= 5;
+				State = states.Idle;
 			}
 		}
-
-
+		#endregion
+		#region Talking
 		if (State == states.Talking)
 		{
-			Wait++;
-			if (Wait >= ConvoLength)
-			{
-
-			}
+			if (Wait < ConvoLength)
+				Wait++;
+			else Namerender.text = Name;
 		}
-
+		#endregion
+		#region SearchingForGuard
 		if (State == states.SearchingForGuard)
 		{
-			Guard[] Search = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
-
-			//continue here
-
+			if (Search == null)
+				Search  = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
+			else {
+				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
+				if (distance > 1f)
+					Character.Move (Vector3.MoveTowards(transform.position,Search[0].transform.position, 5f) * Speed * Time.deltaTime);
+				else 
+					State = states.Reporting;
+			}
 		}
+		#endregion
+		#region ReportingToGuard
+		if (State == states.Reporting)
+		{
+			//triggering the guard goes here.
+			State = states.Idle;
+		}
+		#endregion
 	}
 
 	void Walk(Vector3 dir)
 	{
-		transform.Translate(dir * Speed * Time.deltaTime);
+		Character.Move (dir * Speed * Time.deltaTime);
 	}
 
 	void CreateNeeds()
