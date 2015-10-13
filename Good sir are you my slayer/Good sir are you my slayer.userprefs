@@ -4,12 +4,12 @@
     <Files>
       <File FileName="Assets\Script\NetworkManager.cs" Line="1" Column="1" />
       <File FileName="Good sir are you my slayer.sln" Line="1" Column="1" />
-      <File FileName="Assets\Script\Player.cs" Line="47" Column="3" />
+      <File FileName="Assets\Script\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Player_Animations.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\HUD_Bar.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Database.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\HUD_Inventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Npc.cs" Line="197" Column="3" />
+      <File FileName="Assets\Script\Npc.cs" Line="247" Column="12" />
       <File FileName="Assets\Script\Digit.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Name.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\HUD_Suspicion.cs" Line="1" Column="1" />
@@ -18,6 +18,8 @@
       <File FileName="Assets\Script\TESTINPUT.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Closet.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Change.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Guard.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MOVETEST.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

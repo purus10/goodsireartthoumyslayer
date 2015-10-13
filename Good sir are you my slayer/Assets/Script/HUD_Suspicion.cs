@@ -10,5 +10,7 @@ public class HUD_Suspicion : MonoBehaviour {
 	void Update () 
 	{
 		Witnessed.enabled = player.IsSeen;
+		Wanted.enabled = player.IsWanted;
+
 	}
 }

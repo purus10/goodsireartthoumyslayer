@@ -4,27 +4,19 @@ using Database;
 
 public class Guard : MonoBehaviour {
 
-	static public bool isSearching;
+	public Player Target;
+	public CharacterController Character;
 	public int Health, Supsicion;
-	public string Name;
-	public Need[] Needs = new Need[4];
-	
-	void Awake () 
+	public float Speed;
+
+	void Update () 
 	{
-		CreateNeeds();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	
-	void CreateNeeds()
-	{
-		for (int i = 0; i< Needs.Length; i++) 
+		if (Target != null) 
 		{
-			Needs[i] = new Need();
-			Needs [i].Name = Get.NeedName [i];
+			Target.IsWanted = true;
+			float distance = Vector3.Distance(Target.transform.position,transform.position);
+			if (distance > 1f)
+				Character.Move (Vector3.MoveTowards(transform.position,Target.transform.position, 5f) * Speed * Time.deltaTime);
 		}
 	}
 }

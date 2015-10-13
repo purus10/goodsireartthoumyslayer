@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	public Rect[] GUIHUD;
 	float[] NeedTimers = new float[4];
 	float drawing, attacking, consuming, smoking, peeing;
-	public bool IsBleeding, WeaponDrawn, IsSeen;
+	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted;
 	public string Name, TargetName;
 	public Sprite TargetBody, TargetHead;
 	public SpriteRenderer Body, Head;

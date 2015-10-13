@@ -9,6 +9,8 @@ public class Npc : MonoBehaviour {
 	public int Health, Suspicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, Crave, ConvoLength;
 	float[] NeedTimers = new float[4];
 	Guard[] Search;
+	Item[] Items, selections;
+	public GameObject SearchingforArea;
 	public Transform Afraidof;
 	public TextMesh  Namerender;
 	public float Watch, Wait, Act, Speed, AfraidSpeed;
@@ -107,6 +109,7 @@ public class Npc : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		CheckNeeds ();
 		#region Afraid
 		if (State == states.Afraid)
 		{
@@ -167,8 +170,9 @@ public class Npc : MonoBehaviour {
 				Wait++;
 			} else {
 				Wait = 0;
-				Suspicion -= 5;
 				State = states.Idle;
+				if (Suspicion > 0) 
+					Suspicion -= 5;
 			}
 		}
 		#endregion
@@ -197,8 +201,63 @@ public class Npc : MonoBehaviour {
 		#region ReportingToGuard
 		if (State == states.Reporting)
 		{
-			//triggering the guard goes here.
+			Search[0].Target = offender;
+
 			State = states.Idle;
+		}
+		#endregion
+		#region Drink
+		if (State == states.Drink)
+		{
+			if (Items == null)
+				Items  = GameObject.FindObjectsOfType(typeof(Item)) as Item[];
+			else if (Needs[3].Meter <= 0)
+			{
+				Item drink = null;
+				for (int i = 0; i < Items.Length;i++)
+				{
+					if (Items[i].Type == Item.type.Spawn && Items[i].Loot != null && Items[i].Loot.name == "Drink")
+					{
+						drink = Items[i];
+						break;
+					} else if (Items[i].IsConsumable == Item.consumable.Drink)
+					{
+						drink = Items[i];
+						break;
+					}
+				}
+				float distance = Vector2.Distance(drink.transform.position,transform.position);
+				if (distance > 0.5f)
+					Character.Move (Vector2.MoveTowards(transform.position,drink.gameObject.transform.position, 5f) * Speed * Time.deltaTime);
+				else
+					Needs[3].Meter += 100;
+			} else
+				State = states.Idle;
+		}
+		#endregion
+		#region Bathroom
+		if (State == states.Bathroom)
+		{
+				SearchingforArea  = GameObject.Find("Bathroom");
+				print(SearchingforArea.transform.position);
+				float distance = Vector2.Distance(SearchingforArea.transform.position,transform.position);
+				if (distance > 5f)
+					Character.Move (SearchingforArea.gameObject.transform.position * Speed * Time.deltaTime);
+			else
+				Needs[2].Meter += 100;
+		}
+		#endregion
+		#region Eat
+		#endregion
+		#region Smoke
+		if (State == states.Smoke)
+		{
+			if (SearchingforArea != null && SearchingforArea.name == "Cigarette")
+			{
+				float distance = Vector2.Distance(SearchingforArea.transform.position,transform.position);
+				if (distance > 5f)
+					Character.Move (Vector2.MoveTowards(transform.position,SearchingforArea.gameObject.transform.position, 5f) * Speed * Time.deltaTime);
+			} else SearchingforArea  = GameObject.Find("Cigarette");
 		}
 		#endregion
 	}
@@ -229,6 +288,7 @@ public class Npc : MonoBehaviour {
 			State = states.Bathroom;
 		else if (i == 3)
 			State = states.Drink;
+		Wait = 0;
 	}
 	void SetNeedTimers()
 	{
