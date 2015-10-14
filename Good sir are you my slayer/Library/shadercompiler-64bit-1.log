@@ -1,9 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
-<<<<<<< HEAD
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1548
-Cmd: getPlatforms
-=======
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-6912
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-7448
 Cmd: getPlatforms
 Cmd: preprocess
   insize=8687 outsize=2135 ok=1
@@ -36,7 +32,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=805 outsize=390 ok=1
 Cmd: preprocess
-  insize=2605 outsize=2163 ok=1
+  insize=2605 outsize=2162 ok=1
 Cmd: preprocess
   insize=1991 outsize=491 ok=1
 Cmd: preprocess
@@ -44,7 +40,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1284 outsize=407 ok=1
 Cmd: preprocess
-  insize=2300 outsize=2114 ok=1
+  insize=2300 outsize=2112 ok=1
 Cmd: preprocess
   insize=979 outsize=976 ok=1
 Cmd: preprocess
@@ -116,7 +112,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1085 outsize=561 ok=1
 Cmd: preprocess
-  insize=1776 outsize=1592 ok=1
+  insize=1776 outsize=1593 ok=1
 Cmd: preprocess
   insize=674 outsize=320 ok=1
 Cmd: preprocess
@@ -164,7 +160,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1423 outsize=670 ok=1
 Cmd: preprocess
-  insize=2142 outsize=1815 ok=1
+  insize=2142 outsize=1816 ok=1
 Cmd: preprocess
   insize=2194 outsize=1609 ok=1
 Cmd: preprocess
@@ -214,7 +210,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=674 outsize=350 ok=1
 Cmd: preprocess
-  insize=1825 outsize=1385 ok=1
+  insize=1825 outsize=1386 ok=1
 Cmd: preprocess
   insize=6924 outsize=251 ok=1
 Cmd: preprocess
@@ -234,7 +230,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=692 outsize=317 ok=1
 Cmd: preprocess
-  insize=2366 outsize=1923 ok=1
+  insize=2366 outsize=1924 ok=1
 Cmd: preprocess
   insize=956 outsize=953 ok=1
 Cmd: preprocess
@@ -260,31 +256,22 @@ Cmd: preprocess
 Cmd: preprocess
   insize=5240 outsize=920 ok=1
 Cmd: preprocess
-  insize=2647 outsize=2322 ok=1
+  insize=2647 outsize=2323 ok=1
 Cmd: preprocess
   insize=2474 outsize=823 ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=1271 outsize=1477 kw= pd= ok=1
+  api=4 type=0 insize=35278 outsize=2737 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=1271 outsize=1087 kw= pd= ok=1
+  api=4 type=1 insize=35278 outsize=2184 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=36042 outsize=2753 kw=DIRECTIONAL pd= ok=1
+  api=4 type=0 insize=57406 outsize=3793 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=36042 outsize=2200 kw=DIRECTIONAL pd= ok=1
+  api=4 type=1 insize=57406 outsize=2647 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=6924 outsize=3663 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=0 insize=57382 outsize=3793 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=6924 outsize=1314 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=1 insize=57382 outsize=2647 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=3695 outsize=2753 kw=DIRECTIONAL pd= ok=1
+  api=4 type=0 insize=123090 outsize=4175 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF TCP2_SPEC_TOON ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=3695 outsize=1168 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6845 outsize=3663 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6845 outsize=1314 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=3617 outsize=2753 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=3617 outsize=1168 kw=DIRECTIONAL pd= ok=1
->>>>>>> c4ae85c9bb084b34453e9fd8f784f1047f714380
+  api=4 type=1 insize=123090 outsize=4483 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF TCP2_SPEC_TOON ok=1
