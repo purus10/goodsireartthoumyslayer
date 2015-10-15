@@ -44,6 +44,10 @@ public class Closet : MonoBehaviour {
 		yield return null;
 	}
 
+	void Update()
+	{
+		transform.Translate( Vector3.up * 1f * Time.deltaTime);
+	}
 	void OnCollisionEnter () 
 	{
 		print ("Change your face! :D");

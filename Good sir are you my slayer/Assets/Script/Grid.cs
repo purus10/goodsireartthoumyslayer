@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Grid : MonoBehaviour {
 
-	public Transform Player;
+	public bool displayGridGizmos;
 	public LayerMask UnwalkableMask;
 	public Vector2 GridWorldSize;
 	public float NodeRadius;
@@ -12,12 +13,20 @@ public class Grid : MonoBehaviour {
 	float nodeDiameter;
 	int gridSizeX, gridSizeY;
 
-	void Start()
+	void Awake()
 	{
 		nodeDiameter = NodeRadius*2;
 		gridSizeX = Mathf.RoundToInt(GridWorldSize.x/nodeDiameter);
 		gridSizeY = Mathf.RoundToInt(GridWorldSize.y/nodeDiameter);
 		CreateGrid();
+	}
+
+	public int MaxSize
+	{
+		get 
+		{
+			return gridSizeX*gridSizeY;
+		}
 	}
 
 	void CreateGrid()
@@ -31,9 +40,34 @@ public class Grid : MonoBehaviour {
 			{
 				Vector3 worldpoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + NodeRadius) + Vector3.up * (y * nodeDiameter + NodeRadius);
 				bool walkable = !(Physics.CheckSphere(worldpoint,NodeRadius, UnwalkableMask));
-				grid[x,y] = new Node(walkable,worldpoint);
+				grid[x,y] = new Node(walkable,worldpoint,x,y);
 			}
 		}
+	}
+
+	public List<Node> GetNeighbours(Node node)
+	{
+		List<Node> neighbours = new List<Node> ();
+
+		for (int x = -1; x <= 1; x++) 
+		{
+			for (int y = -1; y <= 1; y++)
+			{
+				if (x == 0 && y == 0)
+					continue;
+
+				int checkX = node.gridX + x;
+				int checkY = node.gridY + y;
+
+				if (checkX >= 0 && checkX < gridSizeX && checkY >= 0 && checkY < gridSizeY)
+				{
+					neighbours.Add(grid[checkX,checkY]);
+				}
+			}
+		}
+
+		return neighbours;
+
 	}
 
 	public Node NodeFromWorlPoint(Vector3 worldPosition)
@@ -47,20 +81,16 @@ public class Grid : MonoBehaviour {
 		int y = Mathf.RoundToInt((gridSizeY -1) * percentY);
 		return grid[x,y];
 	}
-
+	
 	void OnDrawGizmos()
 	{
 		Gizmos.DrawWireCube(transform.position, new Vector3(GridWorldSize.x,GridWorldSize.y,1));
-
-		if (grid != null)
+		if (grid != null && displayGridGizmos) 
 		{
-			Node playernode = NodeFromWorlPoint(Player.position);
-			foreach (Node n in grid)
+			foreach (Node n in grid) 
 			{
-				Gizmos.color = (n.Walkable)?Color.white:Color.red;
-				if (playernode == n)
-					Gizmos.color = Color.cyan;
-				Gizmos.DrawCube(n.WorldPosition,Vector3.one * (nodeDiameter-0.1f));
+				Gizmos.color = Color.black;
+				Gizmos.DrawCube (n.WorldPosition, Vector3.one * (nodeDiameter - 0.1f));
 			}
 		}
 	}
