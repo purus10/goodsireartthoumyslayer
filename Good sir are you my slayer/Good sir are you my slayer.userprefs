@@ -1,29 +1,26 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Npc.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Unit.cs">
     <Files>
       <File FileName="Assets\Script\NetworkManager.cs" Line="1" Column="1" />
       <File FileName="Good sir are you my slayer.sln" Line="1" Column="1" />
-      <File FileName="Assets\Script\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Player_Animations.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\HUD_Bar.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Database.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\HUD_Inventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Npc.cs" Line="247" Column="12" />
-      <File FileName="Assets\Script\Digit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Name.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\HUD_Suspicion.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Item.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\GiveClue.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\TESTINPUT.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Closet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Player.cs" Line="55" Column="3" />
+      <File FileName="Assets\Script\Closet.cs" Line="44" Column="21" />
       <File FileName="Assets\Script\Change.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\Guard.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MOVETEST.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Node.cs" Line="8" Column="26" />
+      <File FileName="Assets\Script\Grid.cs" Line="22" Column="3" />
+      <File FileName="Assets\Script\Heap.cs" Line="43" Column="30" />
+      <File FileName="Assets\Script\PathRequestManager.cs" Line="12" Column="26" />
+      <File FileName="Assets\Script\Pathfinding.cs" Line="14" Column="56" />
+      <File FileName="Assets\Script\Unit.cs" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Unit.cs" line="22" />
+      <Breakpoint file="C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Unit.cs" line="16" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
