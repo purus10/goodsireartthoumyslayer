@@ -1,9 +1,5 @@
-Base path: C:/Program Files/Unity/Editor/Data
-<<<<<<< HEAD
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1548
-Cmd: getPlatforms
-=======
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-6912
+Base path: C:/Program Files/Unity5/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-21408
 Cmd: getPlatforms
 Cmd: preprocess
   insize=8687 outsize=2135 ok=1
@@ -36,7 +32,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=805 outsize=390 ok=1
 Cmd: preprocess
-  insize=2605 outsize=2163 ok=1
+  insize=2605 outsize=2162 ok=1
 Cmd: preprocess
   insize=1991 outsize=491 ok=1
 Cmd: preprocess
@@ -44,7 +40,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1284 outsize=407 ok=1
 Cmd: preprocess
-  insize=2300 outsize=2114 ok=1
+  insize=2300 outsize=2112 ok=1
 Cmd: preprocess
   insize=979 outsize=976 ok=1
 Cmd: preprocess
@@ -54,7 +50,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=3422 outsize=806 ok=1
 Cmd: preprocess
-  insize=2539 outsize=2352 ok=1
+  insize=2539 outsize=2353 ok=1
 Cmd: preprocess
   insize=1349 outsize=482 ok=1
 Cmd: preprocess
@@ -86,7 +82,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=999 outsize=498 ok=1
 Cmd: preprocess
-  insize=2955 outsize=2371 ok=1
+  insize=2955 outsize=2372 ok=1
 Cmd: preprocess
   insize=2527 outsize=790 ok=1
 Cmd: preprocess
@@ -164,7 +160,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1423 outsize=670 ok=1
 Cmd: preprocess
-  insize=2142 outsize=1815 ok=1
+  insize=2142 outsize=1817 ok=1
 Cmd: preprocess
   insize=2194 outsize=1609 ok=1
 Cmd: preprocess
@@ -234,7 +230,7 @@ Cmd: preprocess
 Cmd: preprocess
   insize=692 outsize=317 ok=1
 Cmd: preprocess
-  insize=2366 outsize=1923 ok=1
+  insize=2366 outsize=1924 ok=1
 Cmd: preprocess
   insize=956 outsize=953 ok=1
 Cmd: preprocess
@@ -263,28 +259,3 @@ Cmd: preprocess
   insize=2647 outsize=2322 ok=1
 Cmd: preprocess
   insize=2474 outsize=823 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1271 outsize=1477 kw= pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1271 outsize=1087 kw= pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=36042 outsize=2753 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=36042 outsize=2200 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6924 outsize=3663 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6924 outsize=1314 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=3695 outsize=2753 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=3695 outsize=1168 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=6845 outsize=3663 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=6845 outsize=1314 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=3617 outsize=2753 kw=DIRECTIONAL pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=3617 outsize=1168 kw=DIRECTIONAL pd= ok=1
->>>>>>> c4ae85c9bb084b34453e9fd8f784f1047f714380
