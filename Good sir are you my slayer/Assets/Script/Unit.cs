@@ -3,18 +3,14 @@ using System.Collections;
 using System;
 
 public class Unit : MonoBehaviour {
-
-	public Transform target;
+	
 	public float speed = 0.5f;
 	public Vector3[] path;
 
-
-	void Update()
+	public void MoveTo(Transform target)
 	{
-		if (Input.GetButtonDown ("Jump")) 
-		{
+		print ("yes");
 			PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
-		}
 	}
 
 	public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -43,7 +39,7 @@ public class Unit : MonoBehaviour {
 				currentWaypoint = path[targetIndex];
 			}
 
-			transform.position = Vector3.MoveTowards(transform.position,currentWaypoint,speed);
+			transform.position = Vector3.MoveTowards(transform.position,currentWaypoint,speed * Time.deltaTime);
 			yield return null;
 		}
 	}

@@ -6,6 +6,7 @@ public class Npc : MonoBehaviour {
 
 	public enum states {Idle, Afraid, Talking, Eat, Smoke, Drink, Bathroom, Walk, SearchingForGuard, Reporting};
 	public states State;
+	public Unit Unit;
 	public int Health, Suspicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, Crave, ConvoLength;
 	float[] NeedTimers = new float[4];
 	Guard[] Search;
@@ -187,12 +188,14 @@ public class Npc : MonoBehaviour {
 		#region SearchingForGuard
 		if (State == states.SearchingForGuard)
 		{
+			print ("yes");
 			if (Search == null)
 				Search  = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
 			else {
+				print ("yes");
 				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
 				if (distance > 1f)
-					Character.Move (Vector3.MoveTowards(transform.position,Search[0].transform.position, 5f) * Speed * Time.deltaTime);
+					Unit.MoveTo(Search[0].transform);
 				else 
 					State = states.Reporting;
 			}
@@ -226,11 +229,9 @@ public class Npc : MonoBehaviour {
 						break;
 					}
 				}
+				SearchingforArea = drink.gameObject;
 				float distance = Vector2.Distance(drink.transform.position,transform.position);
-				if (distance > 0.5f)
-					Character.Move (Vector2.MoveTowards(transform.position,drink.gameObject.transform.position, 5f) * Speed * Time.deltaTime);
-				else
-					Needs[3].Meter += 100;
+					Unit.MoveTo(SearchingforArea.transform);
 			} else
 				State = states.Idle;
 		}
@@ -238,25 +239,27 @@ public class Npc : MonoBehaviour {
 		#region Bathroom
 		if (State == states.Bathroom)
 		{
-				SearchingforArea  = GameObject.Find("Bathroom");
-				print(SearchingforArea.transform.position);
-				float distance = Vector2.Distance(SearchingforArea.transform.position,transform.position);
-				if (distance > 5f)
-					Character.Move (SearchingforArea.gameObject.transform.position * Speed * Time.deltaTime);
-			else
-				Needs[2].Meter += 100;
+			if (SearchingforArea != null && SearchingforArea.name == "Toilet")
+			{
+				Unit.MoveTo(SearchingforArea.transform);
+			} else SearchingforArea  = GameObject.Find("Toilet");
 		}
 		#endregion
 		#region Eat
+		if (State == states.Eat)
+		{
+			if (SearchingforArea != null && SearchingforArea.name == "Food")
+			{
+				Unit.MoveTo(SearchingforArea.transform);
+			} else SearchingforArea  = GameObject.Find("Food");
+		}
 		#endregion
 		#region Smoke
 		if (State == states.Smoke)
 		{
 			if (SearchingforArea != null && SearchingforArea.name == "Cigarette")
 			{
-				float distance = Vector2.Distance(SearchingforArea.transform.position,transform.position);
-				if (distance > 5f)
-					Character.Move (Vector2.MoveTowards(transform.position,SearchingforArea.gameObject.transform.position, 5f) * Speed * Time.deltaTime);
+				Unit.MoveTo(SearchingforArea.transform);
 			} else SearchingforArea  = GameObject.Find("Cigarette");
 		}
 		#endregion

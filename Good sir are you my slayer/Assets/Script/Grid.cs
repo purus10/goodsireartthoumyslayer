@@ -89,7 +89,7 @@ public class Grid : MonoBehaviour {
 		{
 			foreach (Node n in grid) 
 			{
-				Gizmos.color = Color.black;
+				Gizmos.color = (n.Walkable)? Color.white: Color.red;
 				Gizmos.DrawCube (n.WorldPosition, Vector3.one * (nodeDiameter - 0.1f));
 			}
 		}

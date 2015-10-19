@@ -52,6 +52,7 @@ public class Player : MonoBehaviour {
 		GetComponentInChildren<Camera>().enabled = true;
 		HUD.SetActive(true);
 		StartCoroutine("PlayTimer");
+		TargetName = Get.TargetName;
 	}
 	void Update () 
 	{
