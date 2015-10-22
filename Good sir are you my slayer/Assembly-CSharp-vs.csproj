@@ -100,6 +100,7 @@
      <Compile Include="Assets\Script\Heap.cs" />
      <Compile Include="Assets\Script\Item.cs" />
      <Compile Include="Assets\Script\MOVETEST.cs" />
+     <Compile Include="Assets\Script\MoveToward.cs" />
      <Compile Include="Assets\Script\Name.cs" />
      <Compile Include="Assets\Script\NetworkManager.cs" />
      <Compile Include="Assets\Script\Node.cs" />

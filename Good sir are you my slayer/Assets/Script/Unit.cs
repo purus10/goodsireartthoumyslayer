@@ -7,10 +7,9 @@ public class Unit : MonoBehaviour {
 	public float speed = 0.5f;
 	public Vector3[] path;
 
-	public void MoveTo(Transform target)
+	public void MoveTo(Vector3 target)
 	{
-		print ("yes");
-			PathRequestManager.RequestPath (transform.position, target.position, OnPathFound);
+			PathRequestManager.RequestPath (transform.position, target, OnPathFound);
 	}
 
 	public void OnPathFound(Vector3[] newPath, bool pathSuccessful)
@@ -25,6 +24,8 @@ public class Unit : MonoBehaviour {
 
 	IEnumerator FollowPath()
 	{
+		if (path.Length == 0)
+			yield break;
 		Vector3 currentWaypoint = path [0];
 		int targetIndex = 0;
 		while (true) 

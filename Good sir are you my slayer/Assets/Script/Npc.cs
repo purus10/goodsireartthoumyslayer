@@ -167,7 +167,7 @@ public class Npc : MonoBehaviour {
 		{
 			if (Wait < Act)
 			{
-				Walk(direction);
+				Walk(direction*Random.Range(1f,10f));
 				Wait++;
 			} else {
 				Wait = 0;
@@ -195,7 +195,7 @@ public class Npc : MonoBehaviour {
 				print ("yes");
 				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
 				if (distance > 1f)
-					Unit.MoveTo(Search[0].transform);
+					Unit.MoveTo(Search[0].transform.position);
 				else 
 					State = states.Reporting;
 			}
@@ -231,7 +231,7 @@ public class Npc : MonoBehaviour {
 				}
 				SearchingforArea = drink.gameObject;
 				float distance = Vector2.Distance(drink.transform.position,transform.position);
-					Unit.MoveTo(SearchingforArea.transform);
+				Unit.MoveTo(SearchingforArea.transform.position);
 			} else
 				State = states.Idle;
 		}
@@ -241,7 +241,7 @@ public class Npc : MonoBehaviour {
 		{
 			if (SearchingforArea != null && SearchingforArea.name == "Toilet")
 			{
-				Unit.MoveTo(SearchingforArea.transform);
+				Unit.MoveTo(SearchingforArea.transform.position);
 			} else SearchingforArea  = GameObject.Find("Toilet");
 		}
 		#endregion
@@ -250,7 +250,7 @@ public class Npc : MonoBehaviour {
 		{
 			if (SearchingforArea != null && SearchingforArea.name == "Food")
 			{
-				Unit.MoveTo(SearchingforArea.transform);
+				Unit.MoveTo(SearchingforArea.transform.position);
 			} else SearchingforArea  = GameObject.Find("Food");
 		}
 		#endregion
@@ -259,7 +259,7 @@ public class Npc : MonoBehaviour {
 		{
 			if (SearchingforArea != null && SearchingforArea.name == "Cigarette")
 			{
-				Unit.MoveTo(SearchingforArea.transform);
+				Unit.MoveTo(SearchingforArea.transform.position);
 			} else SearchingforArea  = GameObject.Find("Cigarette");
 		}
 		#endregion
@@ -267,7 +267,7 @@ public class Npc : MonoBehaviour {
 
 	void Walk(Vector3 dir)
 	{
-		Character.Move (dir * Speed * Time.deltaTime);
+		Unit.MoveTo (transform.position + dir);
 	}
 
 	void CreateNeeds()
@@ -278,8 +278,6 @@ public class Npc : MonoBehaviour {
 			Needs[i].Name = Get.NeedName [i];
 			Needs [i].Name = Get.NeedName [i]; 
 		}
-		
-		
 	}
 	void GetNeedState(int i)
 	{
