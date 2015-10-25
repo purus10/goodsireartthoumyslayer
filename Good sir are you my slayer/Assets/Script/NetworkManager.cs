@@ -9,6 +9,12 @@ public class NetworkManager : MonoBehaviour {
 	public GameObject Player;
 	HostData[] hostData;
 
+	void Awake()
+	{
+		if (Digit.currentRound > 1)
+			SpawnPlayer();
+	}
+
 	private void StartServer()
 	{
 		Network.InitializeServer(3,25000,false);

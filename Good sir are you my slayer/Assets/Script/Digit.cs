@@ -3,8 +3,8 @@ using System.Collections;
 using Database;
 
 public class Digit : MonoBehaviour {
-
-	public static int playTime;
+	
+	int playTime;
 	public Sprite[] Digits;
 	public SpriteRenderer Minute;
 	public SpriteRenderer Colon;
@@ -16,15 +16,13 @@ public class Digit : MonoBehaviour {
 	public int lastSeconds = 0;
 	public int firstSeconds = 0;
 	public int minutes;
-	public int currentRound;
+	static public int currentRound = 1;
 	public int finalRound;
 	SpriteRenderer digit;
 
 	void Start()
 	{
 		StartCoroutine("ChangeDigits");
-		digit = CurrentRound;
-		CreateDigit(currentRound, false);
 		digit = FinalRound;
 		CreateDigit(finalRound, false);
 	}
@@ -33,6 +31,8 @@ public class Digit : MonoBehaviour {
 	// Use this for initialization
 	void Update () 
 	{
+		digit = CurrentRound;
+		CreateDigit(currentRound, false);
 		digit = Minute;
 		CreateDigit(minutes, false);
 		digit = FirstSecond;
@@ -48,6 +48,7 @@ public class Digit : MonoBehaviour {
 		while (true)
 		{
 			yield return new WaitForSeconds(1);
+			playTime++;
 			lastSeconds = (playTime) % 10;
 			firstSeconds = (playTime/10) % 6;
 			minutes = (playTime/60) % 60;

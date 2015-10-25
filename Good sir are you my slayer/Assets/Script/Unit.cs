@@ -3,8 +3,10 @@ using System.Collections;
 using System;
 
 public class Unit : MonoBehaviour {
-	
-	public float speed = 0.5f;
+
+	public float MinSpeed;
+	public float MaxSpeed;
+	public float speed;
 	public Vector3[] path;
 
 	public void MoveTo(Vector3 target)
@@ -16,6 +18,7 @@ public class Unit : MonoBehaviour {
 	{
 		if (pathSuccessful) 
 		{
+			speed = UnityEngine.Random.Range(0.5f,1.5f);
 			path = newPath;
 			StopCoroutine("FollowPath");
 			StartCoroutine("FollowPath");
@@ -25,7 +28,9 @@ public class Unit : MonoBehaviour {
 	IEnumerator FollowPath()
 	{
 		if (path.Length == 0)
+		{
 			yield break;
+		}
 		Vector3 currentWaypoint = path [0];
 		int targetIndex = 0;
 		while (true) 
@@ -39,7 +44,6 @@ public class Unit : MonoBehaviour {
 				}
 				currentWaypoint = path[targetIndex];
 			}
-
 			transform.position = Vector3.MoveTowards(transform.position,currentWaypoint,speed * Time.deltaTime);
 			yield return null;
 		}

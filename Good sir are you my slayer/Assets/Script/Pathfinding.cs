@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System;
 
 public class Pathfinding : MonoBehaviour {
@@ -22,8 +21,6 @@ public class Pathfinding : MonoBehaviour {
 	
 	IEnumerator FindPath(Vector3 startPos, Vector3 targetPos)
 	{
-		Stopwatch sw = new Stopwatch ();
-		sw.Start ();
 		Vector3[] waypoints = new Vector3[0];
 		bool pathSuccess = false;
 
@@ -40,8 +37,6 @@ public class Pathfinding : MonoBehaviour {
 				closedSet.Add (currentNode);
 
 				if (currentNode == targetNode) {
-					sw.Stop ();
-					print ("Path found: " + sw.ElapsedMilliseconds + " ms"); 
 					pathSuccess = true;
 					break;
 				}
@@ -57,16 +52,21 @@ public class Pathfinding : MonoBehaviour {
 
 						if (!openSet.Contains (neighbour)) {
 							openSet.Add (neighbour);
+						} else 
 							openSet.UpdateItem (neighbour);
-						}
 					}
 				}
 			}
 			yield return null;
 			if (pathSuccess)
+			{
 				waypoints = RetracePath (startNode, targetNode);
+			}
 			requestManager.FinishedProcessingPath (waypoints, pathSuccess);
-		}
+		} else
+			print("Not Pathable");
+		requestManager.FinishedProcessingPath (waypoints, pathSuccess);
+		yield break;
 
 	}
 

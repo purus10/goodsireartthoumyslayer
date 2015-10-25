@@ -62,7 +62,6 @@ public class Player : MonoBehaviour {
 
 		if (State == states.Idle || State == states.Armed)
 		{
-			print ("yes");
 			Character.Move (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
 			Character.Move (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
 		}
@@ -78,7 +77,7 @@ public class Player : MonoBehaviour {
 		}
 
 		if (State == states.Armed)
-			if (Input.GetAxis("RBumper") >= 0.1f) 
+			if (Input.GetAxis("RBumper") >= 0.01f)
 				Attack(WeaponHeld);
 
 		if (State == states.Drawing)
@@ -93,11 +92,12 @@ public class Player : MonoBehaviour {
 		}
 		if (State == states.Attacking)
 		{
-			if (attacking != 0) attacking--;
+			if (attacking != 0) 
+				attacking--;
 			else {
 					Item attackweapon = Weapon.GetComponent<Item>();
 				attackweapon.Lethal = false;
-					attackweapon.Range.enabled = false;
+				attackweapon.Range.enabled = false;
 				State = states.Armed;
 			}
 		}
@@ -114,14 +114,14 @@ public class Player : MonoBehaviour {
 		while (true)
 		{
 			yield return new WaitForSeconds(1);
-		 	if (Network.isServer) 
-				nView.RPC("TrackPlayTime",RPCMode.All);
+		 	/*if (Network.isServer) 
+				nView.RPC("TrackPlayTime",RPCMode.All);*/
 		}
 	}
 	[RPC]
 	private void TrackPlayTime()
 	{
-		Digit.playTime++;
+		//Digit.playTime++;
 	}
 	
 	void ToggleInventory()

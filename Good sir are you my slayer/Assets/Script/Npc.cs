@@ -1,36 +1,81 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
 using Database;
 
 public class Npc : MonoBehaviour {
 
-	public enum states {Idle, Afraid, Talking, Eat, Smoke, Drink, Bathroom, Walk, SearchingForGuard, Reporting};
+	public enum states {Idle, Afraid, Talking, Hungry, Smoke, Drink, Bathroom, Walk, SearchingForGuard, Reporting};
 	public states State;
 	public Unit Unit;
-	public int Health, Suspicion, EatTimer, BathTimer, DrunkTimer, SmokeTimer, Afraidat, Crave, ConvoLength;
+	public float HungerTimer, BathTimer, DrunkTimer, SmokeTimer;
+	public int Health, Suspicion, Afraidat, Crave;
+	float[] needs = new float[4] {100,100,100,100};
+	public float conversation = 100, convoLength = 50f;
 	float[] NeedTimers = new float[4];
 	Guard[] Search;
 	Item[] Items, selections;
+	public LayerMask layermask;
 	public GameObject SearchingforArea;
 	public Transform Afraidof;
 	public TextMesh  Namerender;
-	public float Watch, Wait, Act, Speed, AfraidSpeed;
+	public float SetCounter;
+	public float counter;
+	public float Watch, AfraidSpeed;
 	public string Name;
 	public Vector3[] Move;
 	public CharacterController Character;
-	Vector3 direction;
+	public Vector3 direction;
 	public Player offender;
 	public Need[] Needs = new Need[4];
 	
 	void Awake () 
 	{
-		CreateNeeds();
+
+		InvokeRepeating("CountDown",1.0f,1.0f);
+		InvokeRepeating("Hunger",HungerTimer,1.0f);
+		InvokeRepeating("Smoke",SmokeTimer,1.0f);
+		InvokeRepeating("Bathroom",BathTimer,1.0f);
+		InvokeRepeating("Drunk",DrunkTimer,1.0f);
 	}
 
-	void OnCollisionEnter(Collision col)
+	void CountDown()
+	{
+		counter--;
+	}
+
+	void Hunger()
+	{
+		needs[0]--;
+	}
+
+	void Smoke()
+	{
+		needs[1]--;
+	}
+
+	void Bathroom()
+	{
+		needs[2]--;
+	}
+
+	void Drunk()
+	{
+		needs[3]--;
+	}
+
+	void Talk()
+	{
+		conversation--;
+	}
+
+	void OnCollisionEnter (Collision col)
 	{
 		Item item = col.gameObject.GetComponent<Item>();
-		
+		print ("yes");
+		print (item);
+
 		if (item != null && item.Lethal == true) 
 		{
 			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.AllBuffered,item.Amount);
@@ -66,23 +111,21 @@ public class Npc : MonoBehaviour {
 				//Start talking to each other.
 			}
 		}
-
-		if (State == states.Idle || State == states.Walk)
+		//TALKING TO PLAYER
+		if (State == states.Idle)
 		{
 			if (player != null)
 				if(player.State != Player.states.Armed)
 			{
-					if (Input.GetButtonDown("X"))
+					if (Input.GetButtonDown("X") && State != states.Talking)
 				{
-					State = states.Talking;
-					Wait = 0;
-					print("YOU ARE TALKING");
 					offender = player;
 					for (int i = 0; i < offender.Needs.Length;i++)
-					{
-						ConvoLength -= offender.Needs[i].Meter;
-					}
-					ConvoLength -= (offender.Health * 10);
+						convoLength -= (offender.Needs[i].Meter/10);
+					convoLength -= offender.Health;
+					State = states.Talking;
+					print (convoLength);
+					Namerender.text = "...Talking";
 				}
 			}
 		}
@@ -104,13 +147,31 @@ public class Npc : MonoBehaviour {
 			offender = null;
 		}
 		if (State == states.Talking)
+		{
 			State = states.Idle;
+			if (Namerender.text == "...Talking")
+			{
+				conversation = 100f;
+				convoLength = 500f;
+				Namerender.text = "";
+			}
+
+		}
 	}
 
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
-		CheckNeeds ();
+		if (Health <= 0)
+		{
+			if (Name == Get.TargetName)
+			{
+				Application.LoadLevel(0);
+				Digit.currentRound++;
+			}
+			GameObject.Destroy(gameObject);
+		}
+
 		#region Afraid
 		if (State == states.Afraid)
 		{
@@ -119,7 +180,7 @@ public class Npc : MonoBehaviour {
 				float distance = Vector3.Distance(Afraidof.position,transform.position);
 				if (distance < 20f)
 				{
-					Character.Move (-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * AfraidSpeed * Time.deltaTime);
+					//Character.Move (-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * AfraidSpeed * Time.deltaTime);
 				} else {
 					State = states.Idle;
 					Suspicion = 0;
@@ -134,29 +195,33 @@ public class Npc : MonoBehaviour {
 		#region Offended
 		else if (State == states.Idle && offender != null)
 		{
-			Watch++;
+			/*Watch++;
 			if (Watch >= (Act*2))
 			{
 				State = states.SearchingForGuard;
-			}
+			}*/
 		} 
 		#endregion
 		#region Idle
 		else if (State == states.Idle);
 		{
-			Wait++;
-			if (Wait >= Act)
+			if (counter == 0)
 			{
-				for (int i = 0; i < Needs.Length;i++)
+				for (int i = 0; i < needs.Length;i++)
 				{
-					if (Needs[i].Meter <= Crave)
+					if (needs[i] <= Crave)
 						GetNeedState(i);
 				}
 				if (State == states.Idle)
 				{
-				State = states.Walk;
-				direction = Move[Random.Range(0,Move.Length-1)];
-				Wait = 0;
+					direction = Move[Random.Range(0,Move.Length-1)];
+					Vector3 move = direction+ new Vector3(1*Random.Range(1f,20f),1*Random.Range(1f,12f),-0.1f);
+					bool walkable = (Physics.CheckSphere(move,0.5f,layermask));
+					if (walkable)
+					{
+						Unit.MoveTo(move);
+						State = states.Walk;
+					}
 				}
 
 			}
@@ -165,30 +230,34 @@ public class Npc : MonoBehaviour {
 		#region Walking
 		if (State == states.Walk) 
 		{
-			if (Wait < Act)
+			if (Unit.path.Length > 0)
 			{
-				Walk(direction*Random.Range(1f,10f));
-				Wait++;
-			} else {
-				Wait = 0;
+			if (transform.position == Unit.path[Unit.path.Length-1])
+				{
+				counter = SetCounter;
 				State = states.Idle;
 				if (Suspicion > 0) 
 					Suspicion -= 5;
+				}
+			} else {
+				counter = SetCounter;
+				State = states.Idle;
 			}
 		}
 		#endregion
 		#region Talking
 		if (State == states.Talking)
 		{
-			if (Wait < ConvoLength)
-				Wait++;
-			else Namerender.text = Name;
+			InvokeRepeating("Talk",convoLength,1.0f);
+			if (conversation == 0)
+			{
+				Namerender.text = Name;
+			}
 		}
 		#endregion
 		#region SearchingForGuard
 		if (State == states.SearchingForGuard)
 		{
-			print ("yes");
 			if (Search == null)
 				Search  = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
 			else {
@@ -196,7 +265,7 @@ public class Npc : MonoBehaviour {
 				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
 				if (distance > 1f)
 					Unit.MoveTo(Search[0].transform.position);
-				else 
+				else
 					State = states.Reporting;
 			}
 		}
@@ -232,35 +301,65 @@ public class Npc : MonoBehaviour {
 				SearchingforArea = drink.gameObject;
 				float distance = Vector2.Distance(drink.transform.position,transform.position);
 				Unit.MoveTo(SearchingforArea.transform.position);
-			} else
+			} 
+
+			if (transform.position == Unit.path[Unit.path.Length-1])
+			{
+				needs[3] = 100;
+				SearchingforArea = null;
 				State = states.Idle;
+			}
 		}
 		#endregion
 		#region Bathroom
 		if (State == states.Bathroom)
 		{
-			if (SearchingforArea != null && SearchingforArea.name == "Toilet")
+			if (SearchingforArea == null)
 			{
+				SearchingforArea  = GameObject.Find("Toilet");
 				Unit.MoveTo(SearchingforArea.transform.position);
-			} else SearchingforArea  = GameObject.Find("Toilet");
+			}
+
+			if (transform.position == Unit.path[Unit.path.Length-1])
+			{
+				needs[2] = 100;
+				SearchingforArea = null;
+				State = states.Idle;
+			}
 		}
 		#endregion
-		#region Eat
-		if (State == states.Eat)
+		#region Hungry
+		if (State == states.Hungry)
 		{
-			if (SearchingforArea != null && SearchingforArea.name == "Food")
+			if (SearchingforArea == null)
 			{
+				SearchingforArea  = GameObject.Find("Food");
 				Unit.MoveTo(SearchingforArea.transform.position);
-			} else SearchingforArea  = GameObject.Find("Food");
+			}
+
+			if (transform.position == Unit.path[Unit.path.Length-1])
+			{
+				needs[0] = 100;
+				SearchingforArea = null;
+				State = states.Idle;
+			}
 		}
 		#endregion
 		#region Smoke
 		if (State == states.Smoke)
 		{
-			if (SearchingforArea != null && SearchingforArea.name == "Cigarette")
+			if (SearchingforArea == null)
 			{
+				SearchingforArea  = GameObject.Find("cigarette");
 				Unit.MoveTo(SearchingforArea.transform.position);
-			} else SearchingforArea  = GameObject.Find("Cigarette");
+			}
+
+			if (transform.position == Unit.path[Unit.path.Length-1])
+			{
+				needs[1] = 100;
+				SearchingforArea = null;
+				State = states.Idle;
+			}
 		}
 		#endregion
 	}
@@ -269,51 +368,15 @@ public class Npc : MonoBehaviour {
 	{
 		Unit.MoveTo (transform.position + dir);
 	}
-
-	void CreateNeeds()
-	{
-		for (int i = 0; i< Needs.Length; i++) 
-		{
-			Needs[i] = new Need();
-			Needs[i].Name = Get.NeedName [i];
-			Needs [i].Name = Get.NeedName [i]; 
-		}
-	}
 	void GetNeedState(int i)
 	{
 		if (i == 0)
-			State = states.Eat;
+			State = states.Hungry;
 		else if (i == 1)
 			State = states.Smoke;
 		else if (i == 2)
 			State = states.Bathroom;
 		else if (i == 3)
 			State = states.Drink;
-		Wait = 0;
-	}
-	void SetNeedTimers()
-	{
-		//0 = eat, 1 = smoke, 2 = bathroom, 3 = drunkness
-		if (NeedTimers [0] <= 0)
-			NeedTimers [0] = EatTimer;
-		if (NeedTimers [1] <= 0)
-			NeedTimers [1] = SmokeTimer;
-		if (NeedTimers [2] <= 0)
-			NeedTimers [2] = BathTimer;
-		if(NeedTimers [3] <= 0)
-			NeedTimers [3] = DrunkTimer;
-	}
-	void CheckNeeds()
-	{
-		for (int i = 0; i < NeedTimers.Length; i++)
-		{
-			NeedTimers[i]--;
-			if ( NeedTimers[i] <= 0)
-			{
-				if (Needs[i].Meter > 0)
-					Needs [i].Meter--;
-				SetNeedTimers();
-			}
-		}
 	}
 }

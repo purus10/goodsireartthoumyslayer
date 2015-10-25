@@ -40,7 +40,8 @@ public class Item : MonoBehaviour {
 				}*/
 			} else if (player != null) 
 			{
-				if (Input.GetKeyDown (KeyCode.V)) GiveLoot (player);
+				if (Input.GetKeyDown (KeyCode.V)) 
+					GiveLoot (player);
 			}
 		}
 	}

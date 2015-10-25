@@ -12,7 +12,6 @@ public class MoveToward : MonoBehaviour {
 		{
 			if (Input.GetButtonDown("X"))
 			{
-				print ("yes");
 				player.transform.position = MoveTo;
 			}
 		}
