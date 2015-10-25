@@ -29,6 +29,16 @@ public class Npc : MonoBehaviour {
 	public Vector3 direction;
 	public Player offender;
 	public Need[] Needs = new Need[4];
+
+	Vector3 RunAway()
+	{
+		Vector3 path = Vector3.zero;
+		Vector3 moveaway = -Vector3.MoveTowards(transform.position,Afraidof.position,10f);
+		bool walkable = (Physics.CheckSphere(moveaway,0.5f,layermask));
+		if (walkable)
+			path = moveaway;
+		return path;
+	}
 	
 	void Awake () 
 	{
@@ -177,14 +187,14 @@ public class Npc : MonoBehaviour {
 		{
 			if (Afraidof != null)
 			{
-				float distance = Vector3.Distance(Afraidof.position,transform.position);
-				if (distance < 20f)
+				float distance = Vector3.Distance(transform.position,Afraidof.position);
+				if (distance < 10f)
 				{
-					//Character.Move (-Vector3.MoveTowards(transform.position,Afraidof.position, 5f) * AfraidSpeed * Time.deltaTime);
+						Unit.MoveTo(RunAway());
 				} else {
 					State = states.Idle;
 					Suspicion = 0;
-					//offender = Afraidof.gameObject.GetComponent<Player>();
+					offender = Afraidof.gameObject.GetComponent<Player>();
 					offender.IsSeen = false;
 					offender = null;
 					Afraidof = null;
@@ -215,7 +225,7 @@ public class Npc : MonoBehaviour {
 				if (State == states.Idle)
 				{
 					direction = Move[Random.Range(0,Move.Length-1)];
-					Vector3 move = direction+ new Vector3(1*Random.Range(1f,20f),1*Random.Range(1f,12f),-0.1f);
+					Vector3 move = direction + new Vector3(1*Random.Range(1f,20f),1*Random.Range(1f,12f),-0.1f);
 					bool walkable = (Physics.CheckSphere(move,0.5f,layermask));
 					if (walkable)
 					{

@@ -109,6 +109,7 @@
      <Compile Include="Assets\Script\Pathfinding.cs" />
      <Compile Include="Assets\Script\Player.cs" />
      <Compile Include="Assets\Script\Player_Animations.cs" />
+     <Compile Include="Assets\Script\Result.cs" />
      <Compile Include="Assets\Script\SetName.cs" />
      <Compile Include="Assets\Script\TESTINPUT.cs" />
      <Compile Include="Assets\Script\TName.cs" />
