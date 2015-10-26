@@ -176,8 +176,7 @@ public class Npc : MonoBehaviour {
 		{
 			if (Name == Get.TargetName)
 			{
-				Application.LoadLevel(0);
-				Digit.currentRound++;
+				Result.End = true;
 			}
 			GameObject.Destroy(gameObject);
 		}

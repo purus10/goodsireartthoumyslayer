@@ -23,13 +23,14 @@ public class Player : MonoBehaviour {
 	public GameObject Selected;
 	public GameObject Weapon;
 	NetworkView nView;
+	int ResultSlot;
 
 	// Use this for initialization
 	void Awake ()
 	{
 		nView = GetComponent<NetworkView>();
 		if(!nView.isMine) enabled = false;
-		Name = Get.Name;
+		SetName ();
 		CreateNeeds();
 		SetDress ();
 	}
@@ -54,8 +55,9 @@ public class Player : MonoBehaviour {
 		StartCoroutine("PlayTimer");
 		TargetName = Get.TargetName;
 	}
-	void Update () 
+	void FixedUpdate () 
 	{
+		Result.PlayerScore [ResultSlot] = Points;
 		CheckNeeds();
 		if (Input.GetButtonDown("A"))
 			ToggleInventory();
@@ -102,6 +104,20 @@ public class Player : MonoBehaviour {
 			}
 		}
 
+	}
+
+	void SetName()
+	{
+		Name = Get.Name;
+		for (int i = 0; i < Result.PlayerName.Length; i++) 
+		{
+			if (Result.PlayerName[i] == null)
+			{
+				Result.PlayerName[i] = Name;
+				ResultSlot = i;
+				break;
+			}
+		}
 	}
 	void SetDress()
 	{
