@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	public Rect[] GUIHUD;
 	float[] NeedTimers = new float[4];
 	float drawing, attacking, consuming, smoking, peeing;
-	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted;
+	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted, AxisPress;
 	public string Name, TargetName;
 	public Sprite TargetBody, TargetHead;
 	public SpriteRenderer Body, Head;
@@ -71,23 +71,43 @@ public class Player : MonoBehaviour {
 		if (State == states.Idle)
 		{
 			if (Input.GetButtonDown("Y"))
-			 if (Selected == Slots[0]) ReadyDraw(0);
-			else if (Selected == Slots[1]) ReadyDraw(1);
+			{
+					if (Selected == Slots[0]) ReadyDraw(0);
+				else if (Selected == Slots[1]) ReadyDraw(1);
+			}
+
 			/*if (Input.GetKeyDown(KeyCode.X) && Slots[0] != null) Undraw(0);
 			if (Input.GetKeyDown(KeyCode.C) && Slots[1] != null) Undraw(1);
 			if (Input.GetKeyDown(KeyCode.V) && Slots[2] != null) Undraw(2);*/
 		}
 
-		if (State == states.Armed)
-			if (Input.GetAxis("RBumper") >= 0.01f)
-				Attack(WeaponHeld);
+		if (State == states.Armed) 
+		{
+			/*if (Input.GetAxis ("RBumper") == 0)
+				AxisPress = false;*/
+			if (Input.GetAxis ("RBumper") != 0)
+			{
+				if (AxisPress == false)
+				{
+				Attack (WeaponHeld);
+				AxisPress = true;
+				}
+			}
+
+			if (Input.GetButtonDown("Y"))
+			{
+				if (Selected == Slots[0]) Undraw(0);
+				else if (Selected == Slots[1]) Undraw(1);
+			}
+		}
 
 		if (State == states.Drawing)
 		{
 				if (drawing != 0) drawing--;
 				else {
+				print("ARMING");
 					State = states.Armed;
-					Item drawnweapon = Weapon.GetComponent<Item>();
+					Item drawnweapon = Weapon.GetComponentInChildren<Item>();
 					drawnweapon.Drawn = true;
 					drawnweapon.Notice.enabled = true;
 				}
@@ -97,9 +117,7 @@ public class Player : MonoBehaviour {
 			if (attacking != 0) 
 				attacking--;
 			else {
-					Item attackweapon = Weapon.GetComponent<Item>();
-				attackweapon.Lethal = false;
-				attackweapon.Range.enabled = false;
+				AxisPress = false;
 				State = states.Armed;
 			}
 		}
@@ -149,21 +167,19 @@ public class Player : MonoBehaviour {
 	}
 	void Attack(int selected)
 	{
-		print ("ATTACKING");
-		Item attackweapon = Weapon.GetComponent<Item>();
-		attackweapon.Lethal = true;
-		attackweapon.Range.enabled = true;
-		attacking = attackweapon.AttackSpeed;
-		State = states.Attacking;
+		Item attackweapon = Weapon.GetComponentInChildren<Item>();
+			attackweapon.Lethal = true;
+			attackweapon.Range.enabled = true;
+			attacking = attackweapon.AttackSpeed;
+			State = states.Attacking;
 	}
 	void ReadyDraw(int selected)
 	{
-		print("ARMING");
 		State = states.Drawing;
 		ClearDraws();
 		Weapon = Instantiate(Slots[selected],transform.position + Slots[selected].transform.position,Slots[selected].transform.rotation) as GameObject;
 		Weapon.transform.parent = this.transform;
-		Item drawnweapon = Weapon.GetComponent<Item>();
+		Item drawnweapon = Weapon.GetComponentInChildren<Item>();
 		drawing = drawnweapon.DrawSpeed;
 		WeaponHeld = selected;
 	}
@@ -211,11 +227,10 @@ public class Player : MonoBehaviour {
 	}
 	void Undraw(int selected)
 	{
-		Item heldweapon = Weapon.GetComponent<Item>();
+		Item heldweapon = Weapon.GetComponentInChildren<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{
-			heldweapon.Drawn = false;
-			heldweapon.Notice.enabled = false;
+			ClearDraws();
 			State = states.Idle;
 		}
 	}

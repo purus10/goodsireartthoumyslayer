@@ -7,9 +7,10 @@ public class MoveToward : MonoBehaviour {
 
 	void OnTriggerStay(Collider col)
 	{
-		Player player = col.GetComponentInChildren<Player> ();
+		Player player = col.GetComponent<Player> ();
 		if (player != null) 
 		{
+			print ("yes");
 			if (Input.GetButtonDown("X"))
 			{
 				player.transform.position = MoveTo;

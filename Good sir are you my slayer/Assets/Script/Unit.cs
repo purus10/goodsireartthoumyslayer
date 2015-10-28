@@ -20,8 +20,11 @@ public class Unit : MonoBehaviour {
 		{
 			speed = UnityEngine.Random.Range(0.5f,1.5f);
 			path = newPath;
+			if (this != null)
+			{
 			StopCoroutine("FollowPath");
 			StartCoroutine("FollowPath");
+			}
 		}
 	}
 

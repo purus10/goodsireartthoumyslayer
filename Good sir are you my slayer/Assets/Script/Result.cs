@@ -25,7 +25,11 @@ public class Result : MonoBehaviour {
 			{
 				Application.LoadLevel(0);
 				Digit.currentRound++;
-				print ("yes");
+				End = false;
+				for (int i = 0; i < Result.PlayerName.Length;i++)
+				{
+					Result.PlayerName[i] = null;
+				}
 			}
 
 		}

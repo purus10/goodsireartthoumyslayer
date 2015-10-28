@@ -8,8 +8,9 @@ public class Npc : MonoBehaviour {
 
 	public enum states {Idle, Afraid, Talking, Hungry, Smoke, Drink, Bathroom, Walk, SearchingForGuard, Reporting};
 	public states State;
+	public bool hurtstart;
 	public Unit Unit;
-	public float HungerTimer, BathTimer, DrunkTimer, SmokeTimer;
+	public float HungerTimer, BathTimer, DrunkTimer, SmokeTimer, HurtTimer;
 	public int Health, Suspicion, Afraidat, Crave;
 	float[] needs = new float[4] {100,100,100,100};
 	public float conversation = 100, convoLength = 50f;
@@ -20,8 +21,9 @@ public class Npc : MonoBehaviour {
 	public GameObject SearchingforArea;
 	public Transform Afraidof;
 	public TextMesh  Namerender;
+	public SpriteRenderer[] Sprite = new SpriteRenderer[2];
 	public float SetCounter;
-	public float counter;
+	public float counter = 50f, hurt = 0.5f;
 	public float Watch, AfraidSpeed;
 	public string Name;
 	public Vector3[] Move;
@@ -42,7 +44,6 @@ public class Npc : MonoBehaviour {
 	
 	void Awake () 
 	{
-
 		InvokeRepeating("CountDown",1.0f,1.0f);
 		InvokeRepeating("Hunger",HungerTimer,1.0f);
 		InvokeRepeating("Smoke",SmokeTimer,1.0f);
@@ -83,19 +84,41 @@ public class Npc : MonoBehaviour {
 	void OnCollisionEnter (Collision col)
 	{
 		Item item = col.gameObject.GetComponent<Item>();
-		print ("yes");
-		print (item);
+		Player player = col.gameObject.GetComponentInParent<Player>();
 
 		if (item != null && item.Lethal == true) 
 		{
 			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.AllBuffered,item.Amount);
+			hurtstart = true;
+			item.Range.enabled = false;
 			item.Lethal = false;
+			if (Health <= 0 && Name == Get.TargetName)
+			{
+			player.Points += item.Amount;
+			}
+
 		}
 	}
 	[RPC]
 	private void GetHurt(int amount)
 	{
 		Health -= amount;
+	}
+	[RPC]
+	private void HurtLerp(float spd)
+	{
+		for (int i = 0; i < Sprite.Length;i++)
+		{
+		Sprite[i].color = Color.Lerp (Sprite[i].color, Color.red, spd * Time.time);
+		}
+	}
+	[RPC]
+	private void RevertColor()
+	{
+		for (int i = 0; i < Sprite.Length;i++)
+		{
+			Sprite[i].color = Color.white;
+		}
 	}
 
 	void OnTriggerStay(Collider col)
@@ -134,7 +157,6 @@ public class Npc : MonoBehaviour {
 						convoLength -= (offender.Needs[i].Meter/10);
 					convoLength -= offender.Health;
 					State = states.Talking;
-					print (convoLength);
 					Namerender.text = "...Talking";
 				}
 			}
@@ -162,7 +184,7 @@ public class Npc : MonoBehaviour {
 			if (Namerender.text == "...Talking")
 			{
 				conversation = 100f;
-				convoLength = 500f;
+				convoLength = 50f;
 				Namerender.text = "";
 			}
 
@@ -170,15 +192,18 @@ public class Npc : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () 
+	void Update () 
 	{
 		if (Health <= 0)
 		{
-			if (Name == Get.TargetName)
+			if (hurtstart == false)
 			{
-				Result.End = true;
+				if (Name == Get.TargetName)
+				{
+					Result.End = true;
+				}
+				GameObject.Destroy(gameObject);
 			}
-			GameObject.Destroy(gameObject);
 		}
 
 		#region Afraid
@@ -201,14 +226,28 @@ public class Npc : MonoBehaviour {
 			}
 		}
 		#endregion
+		#region Hurt
+		if (hurtstart == true)
+		{
+			hurt -= 0.1f;
+			if (hurt <= 0)
+			{
+				GetComponent<NetworkView>().RPC("RevertColor",RPCMode.AllBuffered);
+				hurt = 1f;
+				hurtstart = false;
+			} else 
+				GetComponent<NetworkView>().RPC("HurtLerp",RPCMode.AllBuffered,0.1f);
+
+		}
+		#endregion
 		#region Offended
 		else if (State == states.Idle && offender != null)
 		{
-			/*Watch++;
-			if (Watch >= (Act*2))
+			Watch++;
+			if (Watch >= 5f)
 			{
 				State = states.SearchingForGuard;
-			}*/
+			}
 		} 
 		#endregion
 		#region Idle
@@ -258,7 +297,7 @@ public class Npc : MonoBehaviour {
 		if (State == states.Talking)
 		{
 			InvokeRepeating("Talk",convoLength,1.0f);
-			if (conversation == 0)
+			if (conversation <= 0)
 			{
 				Namerender.text = Name;
 			}
@@ -267,23 +306,25 @@ public class Npc : MonoBehaviour {
 		#region SearchingForGuard
 		if (State == states.SearchingForGuard)
 		{
-			if (Search == null)
+			/*if (Search == null)
 				Search  = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
 			else {
-				print ("yes");
-				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
-				if (distance > 1f)
+				bool walkable = (Physics.CheckSphere(Search[0].transform.position,0.5f,layermask));
+				if (walkable)
 					Unit.MoveTo(Search[0].transform.position);
-				else
-					State = states.Reporting;
-			}
+				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
+				if (distance < 1f)
+				{
+						Unit.MoveTo(transform.position);
+						State = states.Reporting;
+				}
+			}*/
 		}
 		#endregion
 		#region ReportingToGuard
 		if (State == states.Reporting)
 		{
 			Search[0].Target = offender;
-
 			State = states.Idle;
 		}
 		#endregion
