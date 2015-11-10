@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted, AxisPress;
 	public string Name, TargetName;
 	public Sprite TargetBody, TargetHead;
-	public SpriteRenderer Body, Head;
+    public Player_Animations Anim;
 	public Need[] Needs = new Need[4];
 	public GameObject[] Slots = new GameObject[3];
 	public CharacterController Character;
@@ -145,9 +145,8 @@ public class Player : MonoBehaviour {
 	}
 	void SetDress()
 	{
-		GameObject clst = GameObject.Find ("Closet");
-		Closet closet = clst.gameObject.GetComponent<Closet> ();
-		closet.DressUp (this);
+        Anim._head = Random.Range(0, Anim.Head_Walk_Down1.Length);
+        Anim._body = Random.Range(0, Anim.Body_Walk_Down1.Length);
 	}
 	private IEnumerator PlayTimer()
 	{

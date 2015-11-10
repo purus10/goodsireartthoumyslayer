@@ -23,26 +23,26 @@ public class Closet : MonoBehaviour {
 
 	public void DressUp(Player player)
 	{
-		Sprite PreBody = player.Body.sprite;
+	/*	Sprite PreBody = player.Body.sprite;
 		Sprite PreHead = player.Head.sprite;
 		PlaceSprites (player);
-		//StartCoroutine ("DressSet (player)");
+		//StartCoroutine ("DressSet (player)");*/
 
 	}
 	void PlaceSprites(Player player)
 	{
-		player.Body.sprite = GetBody;
-		player.Head.sprite = GetHead;
+		/*player.Body.sprite = GetBody;
+		player.Head.sprite = GetHead;*/
 	}
 
-	IEnumerator DressSet(Player player)
+	/*IEnumerator DressSet(Player player)
 	{
-		PlaceSprites (player);
+	/*	PlaceSprites (player);
 		Sprite Body = player.Body.sprite;
 		Sprite Head = player.Head.sprite;
 		if (NotLikeTarget (Body,Head) == false)
 		yield return null;
-	}
+	}*/
 
 	void Update()
 	{

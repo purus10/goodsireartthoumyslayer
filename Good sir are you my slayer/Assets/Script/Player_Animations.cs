@@ -3,102 +3,147 @@ using System.Collections;
 using Database;
 
 public class Player_Animations : MonoBehaviour {
-	
-	SpriteRenderer player;
-	public float Anim_speed;
-	float time;
-	int frame = 0;
-	public Sprite[] Walk_Up;
-	public Sprite[] Walk_Up_Left;
-	public Sprite[] Walk_Up_Right;
-	public Sprite[] Walk_Down;
-	public Sprite[] Walk_Down_Left;
-	public Sprite[] Walk_Down_Right;
-	public Sprite[] Walk_Left;
-	public Sprite[] Walk_Right;
-	Sprite[] check;
-	NetworkView NView;
 
-	void Start()
-	{
-	player = GetComponent<SpriteRenderer>();
-	NView  = GetComponent<NetworkView>();
-	}
-	void Update () 
-	{
-		if(!NView.isMine) return;
-		//walk
-		if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,1);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,2);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,3);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,4);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.W))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,5);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.A))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,6);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.D))
-		{
-			NView.RPC("AssignCheck",RPCMode.All,7);
-			NView.RPC("Walk",RPCMode.All);
-		} else if(Input.GetKey(KeyCode.S))
-			NView.RPC("AssignCheck",RPCMode.All,8);
-			NView.RPC("Walk",RPCMode.All);
+    SpriteRenderer player;
+    public float Anim_speed;
+    public SpriteRenderer Sprite_body;
+    public int _body, _head;
+    float time;
+   public  int frame = 0;
+   public  Vector3 position;
+    Sprite[,] Head;
+    Sprite[,] Body;
+    #region Implement Arrays
+    public Sprite[] Head_Walk_Up1;
+    public Sprite[] Head_Walk_Up2;
+    public Sprite[] Head_Walk_Up3;
+    public Sprite[] Head_Walk_Up4;
+    public Sprite[] Head_Walk_Up5;
+    public Sprite[] Head_Walk_Up6;
+    public Sprite[] Head_Walk_Down1;
+    public Sprite[] Head_Walk_Down2;
+    public Sprite[] Head_Walk_Down3;
+    public Sprite[] Head_Walk_Down4;
+    public Sprite[] Head_Walk_Down5;
+    public Sprite[] Head_Walk_Down6;
+    public Sprite[] Head_Walk_Left1;
+    public Sprite[] Head_Walk_Left2;
+    public Sprite[] Head_Walk_Left3;
+    public Sprite[] Head_Walk_Left4;
+    public Sprite[] Head_Walk_Left5;
+    public Sprite[] Head_Walk_Left6;
+    public Sprite[] Head_Walk_Right1;
+    public Sprite[] Head_Walk_Right2;
+    public Sprite[] Head_Walk_Right3;
+    public Sprite[] Head_Walk_Right4;
+    public Sprite[] Head_Walk_Right5;
+    public Sprite[] Head_Walk_Right6;
+    public Sprite[] Body_Walk_Up1;
+    public Sprite[] Body_Walk_Up2;
+    public Sprite[] Body_Walk_Up3;
+    public Sprite[] Body_Walk_Up4;
+    public Sprite[] Body_Walk_Up5;
+    public Sprite[] Body_Walk_Up6;
+    public Sprite[] Body_Walk_Down1;
+    public Sprite[] Body_Walk_Down2;
+    public Sprite[] Body_Walk_Down3;
+    public Sprite[] Body_Walk_Down4;
+    public Sprite[] Body_Walk_Down5;
+    public Sprite[] Body_Walk_Down6;
+    public Sprite[] Body_Walk_Left1;
+    public Sprite[] Body_Walk_Left2;
+    public Sprite[] Body_Walk_Left3;
+    public Sprite[] Body_Walk_Left4;
+    public Sprite[] Body_Walk_Left5;
+    public Sprite[] Body_Walk_Left6;
+    public Sprite[] Body_Walk_Right1;
+    public Sprite[] Body_Walk_Right2;
+    public Sprite[] Body_Walk_Right3;
+    public Sprite[] Body_Walk_Right4;
+    public Sprite[] Body_Walk_Right5;
+    public Sprite[] Body_Walk_Right6;
+    #endregion
+    Sprite[] check;
+    NetworkView NView;
 
-		//Idle
-		if(Input.GetKeyUp(KeyCode.W) && Input.GetKeyUp(KeyCode.A))
-			NView.RPC("AssignIdle",RPCMode.All,1);
-		else if(Input.GetKeyUp(KeyCode.W)&& Input.GetKeyUp(KeyCode.D))
-			NView.RPC("AssignIdle",RPCMode.All,2);
-		else if(Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.D))
-			NView.RPC("AssignIdle",RPCMode.All,3);
-		else if(Input.GetKeyUp(KeyCode.S) && Input.GetKeyUp(KeyCode.A))
-			NView.RPC("AssignIdle",RPCMode.All,4);
-		else if(Input.GetKeyUp(KeyCode.W))
-			NView.RPC("AssignIdle",RPCMode.All,5);
+    void Awake()
+    {
+        SetHead();
+       SetBody();
+        
+    }
+    void Start()
+    {
+        player = GetComponent<SpriteRenderer>();
+        NView = GetComponent<NetworkView>();
+        position = transform.position;
+        player.sprite = Head[_head, 0];
+       Sprite_body.sprite = Body[_body, 0];
+    }
+    void Update()
+    {
+        if (!NView.isMine) return;
+        //walk
+        if (position.y < transform.position.y)
+        {
+            Walk(6, 11);
+            position = transform.position;
+            // NView.RPC("Walk",RPCMode.All,6,11);
+        }
+        else if (position.x > transform.position.x)
+        {
+            Walk(18, 23);
+            position = transform.position;
+            //NView.RPC("Walk",RPCMode.All,18,23);
+        }
+        else if (position.x < transform.position.x)
+        {
+            Walk(12, 17);
+            position = transform.position;
+            //NView.RPC("Walk",RPCMode.All,12,17);
+        }
+        else if (position.y > transform.position.y)
+        {
+            Walk(0, 5);
+            position = transform.position;
+            //NView.RPC("Walk",RPCMode.All,0,5);
+        }
+
+        //Idle
+        if (Input.GetKeyUp(KeyCode.W))
+            player.sprite = Head[_head, 6];
 		else if(Input.GetKeyUp(KeyCode.A))
-			NView.RPC("AssignIdle",RPCMode.All,6);
-		else if(Input.GetKeyUp(KeyCode.D))
-			NView.RPC("AssignIdle",RPCMode.All,7);
-		else if(Input.GetKeyUp(KeyCode.S))
-			NView.RPC("AssignIdle",RPCMode.All,8);
-	}
-	[RPC]
-	private void AssignIdle(int i)
-	{
-		if (i == 1) 
-			player.sprite = Walk_Up_Left[3];
-		else if (i == 2)
-			player.sprite = Walk_Up_Right[3];
-		else if (i == 3)
-			player.sprite = Walk_Down_Right[3];
-		else if (i == 4)
-			player.sprite = Walk_Down_Left[3];
-		else if (i == 5)
-			player.sprite = Walk_Up[3];
-		else if (i == 6)
-			player.sprite = Walk_Left[3];
-		else if (i == 7)
-			player.sprite = Walk_Right[3];
-		else if (i == 8)
-			player.sprite = Walk_Down[3];
-	}
-	[RPC]
+            player.sprite = Head[_head, 18];
+        else if(Input.GetKeyUp(KeyCode.D))
+            player.sprite = Head[_head, 12];
+        else if(Input.GetKeyUp(KeyCode.S))
+            player.sprite = Head[_head, 0];
+    }
+    [RPC]
+    private void AssignIdle(int i)
+    {
+        if (i == 1)
+        {
+            player.sprite = Head[_head, 0];
+            Sprite_body.sprite = Body[_body, 0];
+        }
+        else if (i == 2)
+        {
+            player.sprite = Head[_head, 6];
+            Sprite_body.sprite = Body[_body, 6];
+        }
+        else if (i == 3)
+        {
+            player.sprite = Head[_head, 12];
+            Sprite_body.sprite = Body[_body, 12];
+        }
+        else if (i == 4)
+        {
+            player.sprite = Head[_head, 18];
+            Sprite_body.sprite = Body[_body, 18];
+        }
+    }
+    /*[RPC]
 	private void AssignCheck(int i)
 	{
 		if (i == 1) 
@@ -116,20 +161,200 @@ public class Player_Animations : MonoBehaviour {
 		else if (i == 7)
 			check = Walk_Right;
 		else if (i == 8)
-			check = Walk_Down;
-	}
+			check = Walk_Down;*/
+
+    void SetHead()
+    {
+        Head = new Sprite[Head_Walk_Down1.Length, 24];
+        for (int i = 0; i < Head_Walk_Down1.Length;i++)
+        {
+            for (int j = 0;j < 24;j++)
+            {
+                switch(j)
+                {
+                    case 0:
+                        Head[i, j] = Head_Walk_Down1[i];
+                        break;
+                    case 1:
+                        Head[i, j] = Head_Walk_Down2[i];
+                        break;
+                    case 2:
+                        Head[i, j] = Head_Walk_Down3[i];
+                        break;
+                    case 3:
+                        Head[i, j] = Head_Walk_Down4[i];
+                        break;
+                    case 4:
+                        Head[i, j] = Head_Walk_Down5[i];
+                        break;
+                    case 5:
+                        Head[i, j] = Head_Walk_Down6[i];
+                        break;
+                    case 6:
+                        Head[i, j] = Head_Walk_Up1[i];
+                        break;
+                    case 7:
+                        Head[i, j] = Head_Walk_Up2[i];
+                        break;
+                    case 8:
+                        Head[i, j] = Head_Walk_Up3[i];
+                        break;
+                    case 9:
+                        Head[i, j] = Head_Walk_Up4[i];
+                        break;
+                    case 10:
+                        Head[i, j] = Head_Walk_Up5[i];
+                        break;
+                    case 11:
+                        Head[i, j] = Head_Walk_Up6[i];
+                        break;
+                    case 12:
+                        Head[i, j] = Head_Walk_Right1[i];
+                        break;
+                    case 13:
+                        Head[i, j] = Head_Walk_Right2[i];
+                        break;
+                    case 14:
+                        Head[i, j] = Head_Walk_Right3[i];
+                        break;
+                    case 15:
+                        Head[i, j] = Head_Walk_Right4[i];
+                        break;
+                    case 16:
+                        Head[i, j] = Head_Walk_Right5[i];
+                        break;
+                    case 17:
+                        Head[i, j] = Head_Walk_Right6[i];
+                        break;
+                    case 18:
+                        Head[i, j] = Head_Walk_Left1[i];
+                        break;
+                    case 19:
+                        Head[i, j] = Head_Walk_Left2[i];
+                        break;
+                    case 20:
+                        Head[i, j] = Head_Walk_Left3[i];
+                        break;
+                    case 21:
+                        Head[i, j] = Head_Walk_Left4[i];
+                        break;
+                    case 22:
+                        Head[i, j] = Head_Walk_Left5[i];
+                        break;
+                    case 23:
+                        Head[i, j] = Head_Walk_Left6[i];
+                        break;
+                    default:
+                        print("ERROR " + j + " NOT ASSIGNED");
+                        break;
+                }
+            }
+
+        }
+    }
+    void SetBody()
+    {
+        Body = new Sprite[Body_Walk_Down1.Length, 24];
+        for (int i = 0; i < Body.GetLength(0); i++)
+        {
+            for (int j = 0; j < Body.GetLength(1); j++)
+            {
+                switch (j)
+                {
+                    case 0:
+                        Body[i, j] = Body_Walk_Down1[i];
+                        break;
+                    case 1:
+                        Body[i, j] = Body_Walk_Down2[i];
+                        break;
+                    case 2:
+                        Body[i, j] = Body_Walk_Down3[i];
+                        break;
+                    case 3:
+                        Body[i, j] = Body_Walk_Down4[i];
+                        break;
+                    case 4:
+                        Body[i, j] = Body_Walk_Down5[i];
+                        break;
+                    case 5:
+                        Body[i, j] = Body_Walk_Down6[i];
+                        break;
+                    case 6:
+                        Body[i, j] = Body_Walk_Up1[i];
+                        break;
+                    case 7:
+                        Body[i, j] = Body_Walk_Up2[i];
+                        break;
+                    case 8:
+                        Body[i, j] = Body_Walk_Up3[i];
+                        break;
+                    case 9:
+                        Body[i, j] = Body_Walk_Up4[i];
+                        break;
+                    case 10:
+                        Body[i, j] = Body_Walk_Up5[i];
+                        break;
+                    case 11:
+                        Body[i, j] = Body_Walk_Up6[i];
+                        break;
+                    case 12:
+                        Body[i, j] = Body_Walk_Down1[i];
+                        break;
+                    case 13:
+                        Body[i, j] = Body_Walk_Down2[i];
+                        break;
+                    case 14:
+                        Body[i, j] = Body_Walk_Down3[i];
+                        break;
+                    case 15:
+                        Body[i, j] = Body_Walk_Down4[i];
+                        break;
+                    case 16:
+                        Body[i, j] = Body_Walk_Down5[i];
+                        break;
+                    case 17:
+                        Body[i, j] = Body_Walk_Down6[i];
+                        break;
+                    case 18:
+                        Body[i, j] = Body_Walk_Up1[i];
+                        break;
+                    case 19:
+                        Body[i, j] = Body_Walk_Up2[i];
+                        break;
+                    case 20:
+                        Body[i, j] = Body_Walk_Up3[i];
+                        break;
+                    case 21:
+                        Body[i, j] = Body_Walk_Up4[i];
+                        break;
+                    case 22:
+                        Body[i, j] = Body_Walk_Up5[i];
+                        break;
+                    case 23:
+                        Body[i, j] = Body_Walk_Up6[i];
+                        break;
+                    default:
+                        print("ERROR " + j + " NOT ASSIGNED");
+                        break;
+                }
+            }
+
+        }
+    }
 	[RPC]
-	private void Walk()
+	private void Walk(int min, int max)
 	{
-		if (frame <= Walk_Up_Left.Length-1)
-		{
-			time++;
-			if (time >= Anim_speed && check != null)
-			{
-				player.sprite = check[frame++];
-				time = 0;
-				check = null;
-			}
-		} else frame = 0;
-	}
+        if (frame < max)
+        {
+            time++;
+            if (time >= Anim_speed)
+            {
+                frame++;
+                player.sprite = Head[_head, frame];
+                Sprite_body.sprite = Body[_body, frame];
+                time = 0;
+            }
+        }
+        else frame = min;
+    }
 }
