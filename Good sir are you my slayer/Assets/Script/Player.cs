@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
 	public GameObject HUD;
 	public GameObject Selected;
 	public GameObject Weapon;
+    public Container SelectedContain;
 	NetworkView nView;
 	int ResultSlot;
 
@@ -39,12 +40,12 @@ public class Player : MonoBehaviour {
 	{
 		Item item = col.gameObject.GetComponent<Item>();
 
-		if (item != null && item.Lethal == true) 
-		{
-		Health -= item.Amount;
-			print ("IM HIT!!!");
-			item.Lethal = false;
-		}
+            if (item != null && item.Lethal == true)
+            {
+            Health--;
+                item.Range.enabled = false;
+                item.Lethal = false;
+            }
 	}
 	void Start()
 	{
@@ -61,6 +62,11 @@ public class Player : MonoBehaviour {
 		CheckNeeds();
 		if (Input.GetButtonDown("A"))
 			ToggleInventory();
+
+        if (SelectedContain != null)
+        {
+
+        }
 
 		if (State == states.Idle || State == states.Armed)
 		{

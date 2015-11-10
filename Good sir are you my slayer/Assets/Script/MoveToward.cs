@@ -10,7 +10,6 @@ public class MoveToward : MonoBehaviour {
 		Player player = col.GetComponent<Player> ();
 		if (player != null) 
 		{
-			print ("yes");
 			if (Input.GetButtonDown("X"))
 			{
 				player.transform.position = MoveTo;
