@@ -15,15 +15,15 @@ public class GiveClue : MonoBehaviour
 
 		if (player != null) 
 		{
-			if (Input.GetKey(KeyCode.L))
+		/*	if (Input.GetKey(KeyCode.L))
 			{
 				i++;
-				if (i >= SearchLength)
+				/*if (i >= SearchLength)
 					if (Clue == Get.TargetHead)
-						player.TargetHead = Clue;
+						//player.TargetHead = Clue;
 				else if (Clue == Get.TargetBody)
-					player.TargetBody = Clue;
-			}
+					//player.TargetBody = Clue;
+			}*/
 
 		}
 	}

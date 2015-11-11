@@ -25,42 +25,42 @@ public class Item : MonoBehaviour {
 	}
 
 	//Check if Player is picking up or poisoning the loot
-	void OnColliderEnter(Collider col)
+	void OnTriggerStay(Collider col)
 	{
 		if (Type == type.Spawn) 
 		{
 			Player player = col.GetComponent<Player> ();
-			if (Input.GetKeyDown (KeyCode.C))
-			{
-				/*if (player.Slots[3] != null)
-					if (player.Slots[3].IsConsumable == consumable.Poison && IsConsumable == consumable.Drink && IsPoisoned == false) 
-				{
-					IsPoisoned = true;
-					player.Slots[3] = null;
-				}*/
-			} else if (player != null) 
-			{
-				if (Input.GetKeyDown (KeyCode.V)) 
-					GiveLoot (player);
-			}
+
+            if (player != null)
+            {
+                print("yes");
+                if (Input.GetKeyDown(KeyCode.V))
+                    GiveLoot(player);
+            }
 		}
 	}
 	// Update is called once per frame
 	void Update () 
 	{
 	}
-	void GiveLoot(Player player)
-	{
-		Item loot = Loot.GetComponent<Item>();
-		if (loot.Type == type.Consumable) 
-		{
-			if (player.Slots [3] == null)
-			{
-				if (IsPoisoned == true && loot.Name == "Drink") GivePoison();
-				player.Slots[3] = Loot;
-			}
-		} else if (loot.Type == type.Weapon) GiveWeapon(player);
-	}
+    void GiveLoot(Player player)
+    {
+        
+        Item loot = Loot.GetComponent<Item>();
+        if (loot != null)
+        {
+            print("FOUND ITEM");
+            if (loot.Type == type.Consumable)
+            {
+                if (player.Slots[2] == null)
+                {
+                    if (IsPoisoned == true && loot.Name == "Drink") GivePoison();
+                    player.Slots[2] = Loot;
+                }
+            }
+            else if (loot.Type == type.Weapon) GiveWeapon(player);
+        }
+    }
 	void CastItem(Player player)
 	{
 		if (Type == type.Consumable) Cast.Consumable(this, player);
@@ -75,7 +75,8 @@ public class Item : MonoBehaviour {
 
 	void GiveWeapon(Player player)
 	{
-		if (player.Slots [1] == null) player.Slots [1] = Loot;
-		else if (player.Slots [2] == null) player.Slots [2] = Loot;
+        print("yes");
+		if (player.Slots [0] == null) player.Slots[0] = Loot;
+		else if (player.Slots [1] == null) player.Slots [1] = Loot;
 	}
 }

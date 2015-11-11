@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
 	float drawing, attacking, consuming, smoking, peeing;
 	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted, AxisPress;
 	public string Name, TargetName;
-	public Sprite TargetBody, TargetHead;
+	public SpriteRenderer TargetBody, TargetHead;
     public Player_Animations Anim;
 	public Need[] Needs = new Need[4];
 	public GameObject[] Slots = new GameObject[3];

@@ -1,0 +1,1101 @@
+fileFormatVersion: 2
+guid: 0bbfd08414c88944b970e919d0f3322e
+timeCreated: 1447204166
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Items_Consumable_1920px_0
+    21300002: Items_Consumable_1920px_1
+    21300004: Items_Consumable_1920px_2
+    21300006: Items_Consumable_1920px_3
+    21300008: Items_Consumable_1920px_4
+    21300010: Items_Consumable_1920px_5
+    21300012: Items_Consumable_1920px_6
+    21300014: Items_Consumable_1920px_7
+    21300016: Items_Consumable_1920px_8
+    21300018: Items_Consumable_1920px_9
+    21300020: Items_Consumable_1920px_10
+    21300022: Items_Consumable_1920px_11
+    21300024: Items_Consumable_1920px_12
+    21300026: Items_Consumable_1920px_13
+    21300028: Items_Consumable_1920px_14
+    21300030: Items_Consumable_1920px_15
+    21300032: Items_Consumable_1920px_16
+    21300034: Items_Consumable_1920px_17
+    21300036: Items_Consumable_1920px_18
+    21300038: Items_Consumable_1920px_19
+    21300040: Items_Consumable_1920px_20
+    21300042: Items_Consumable_1920px_21
+    21300044: Items_Consumable_1920px_22
+    21300046: Items_Consumable_1920px_23
+    21300048: Items_Consumable_1920px_24
+    21300050: Items_Consumable_1920px_25
+    21300052: Items_Consumable_1920px_26
+    21300054: Items_Consumable_1920px_27
+    21300056: Items_Consumable_1920px_28
+    21300058: Items_Consumable_1920px_29
+    21300060: Items_Consumable_1920px_30
+    21300062: Items_Consumable_1920px_31
+    21300064: Items_Consumable_1920px_32
+    21300066: Items_Consumable_1920px_33
+    21300068: Items_Consumable_1920px_34
+    21300070: Items_Consumable_1920px_35
+    21300072: Items_Consumable_1920px_36
+    21300074: Items_Consumable_1920px_37
+    21300076: Items_Consumable_1920px_38
+    21300078: Items_Consumable_1920px_39
+    21300080: Items_Consumable_1920px_40
+    21300082: Items_Consumable_1920px_41
+    21300084: Items_Consumable_1920px_42
+    21300086: Items_Consumable_1920px_43
+    21300088: Items_Consumable_1920px_44
+    21300090: Items_Consumable_1920px_45
+    21300092: Items_Consumable_1920px_46
+    21300094: Items_Consumable_1920px_47
+    21300096: Items_Consumable_1920px_48
+    21300098: Items_Consumable_1920px_49
+    21300100: Items_Consumable_1920px_50
+    21300102: Items_Consumable_1920px_51
+    21300104: Items_Consumable_1920px_52
+    21300106: Items_Consumable_1920px_53
+    21300108: Items_Consumable_1920px_54
+    21300110: Items_Consumable_1920px_55
+    21300112: Items_Consumable_1920px_56
+    21300114: Items_Consumable_1920px_57
+    21300116: Items_Consumable_1920px_58
+    21300118: Items_Consumable_1920px_59
+    21300120: Items_Consumable_1920px_60
+    21300122: Items_Consumable_1920px_61
+    21300124: Items_Consumable_1920px_62
+    21300126: Items_Consumable_1920px_63
+    21300128: Items_Consumable_1920px_64
+    21300130: Items_Consumable_1920px_65
+    21300132: Items_Consumable_1920px_66
+    21300134: Items_Consumable_1920px_67
+    21300136: Items_Consumable_1920px_68
+    21300138: Items_Consumable_1920px_69
+    21300140: Items_Consumable_1920px_70
+    21300142: Items_Consumable_1920px_71
+    21300144: Items_Consumable_1920px_72
+    21300146: Items_Consumable_1920px_73
+    21300148: Items_Consumable_1920px_74
+    21300150: Items_Consumable_1920px_75
+    21300152: Items_Consumable_1920px_76
+    21300154: Items_Consumable_1920px_77
+    21300156: Items_Consumable_1920px_78
+    21300158: Items_Consumable_1920px_79
+    21300160: Items_Consumable_1920px_80
+    21300162: Items_Consumable_1920px_81
+    21300164: Items_Consumable_1920px_82
+    21300166: Items_Consumable_1920px_83
+    21300168: Items_Consumable_1920px_84
+    21300170: Items_Consumable_1920px_85
+    21300172: Items_Consumable_1920px_86
+    21300174: Items_Consumable_1920px_87
+    21300176: Items_Consumable_1920px_88
+    21300178: Items_Consumable_1920px_89
+    21300180: Items_Consumable_1920px_90
+    21300182: Items_Consumable_1920px_91
+    21300184: Items_Consumable_1920px_92
+    21300186: Items_Consumable_1920px_93
+    21300188: Items_Consumable_1920px_94
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Items_Consumable_1920px_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 188
+        width: 56
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 216
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_2
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 216
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_3
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 216
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_4
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 216
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_5
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 216
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_6
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 216
+        width: 60
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_7
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 220
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_8
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 220
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_9
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 160
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_10
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 184
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_11
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 160
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_12
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 156
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_13
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 156
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_14
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 156
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_15
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 180
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_16
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 156
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_17
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 156
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_18
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 180
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 152
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_20
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 176
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_21
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 152
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_22
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 176
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 152
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_24
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 152
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 152
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 152
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_27
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 152
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_28
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 152
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_29
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 152
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_30
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 160
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_31
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 160
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_32
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 160
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_33
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 160
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_34
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 160
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_35
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 160
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_36
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 160
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_37
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 156
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_38
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 152
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_39
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_40
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 152
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_42
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 152
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_44
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 152
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_45
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_46
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_47
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_48
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 144
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_49
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_50
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_51
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_52
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_53
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_54
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_55
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_56
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_57
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_58
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_59
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 148
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_60
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_61
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 156
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_62
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 156
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_63
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 156
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_64
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 152
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_65
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 144
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_66
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 152
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_67
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 100
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_68
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 132
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_69
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 100
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_70
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 104
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_71
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 112
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_72
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 112
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_73
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 104
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_74
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 112
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_75
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 108
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_76
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 108
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_77
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 108
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_78
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 108
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_79
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 108
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_80
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 108
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_81
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 108
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_82
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 112
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_83
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 112
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_84
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 112
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_85
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 112
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_86
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 112
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_87
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 68
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_88
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 68
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_89
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 68
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_90
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 68
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_91
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 64
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_92
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 64
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_93
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 64
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Items_Consumable_1920px_94
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 64
+        width: 4
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

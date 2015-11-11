@@ -116,6 +116,7 @@
     <Compile Include="Assets\JMO Assets\Toony Colors Pro\Scripts\TCP2_RuntimeUtils.cs" />
     <Compile Include="Assets\Script\Change.cs" />
     <Compile Include="Assets\Script\Closet.cs" />
+    <Compile Include="Assets\Script\Clue.cs" />
     <Compile Include="Assets\Script\Container.cs" />
     <Compile Include="Assets\Script\Database.cs" />
     <Compile Include="Assets\Script\Digit.cs" />
