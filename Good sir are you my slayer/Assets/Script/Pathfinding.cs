@@ -27,46 +27,53 @@ public class Pathfinding : MonoBehaviour {
 		Node startNode = grid.NodeFromWorlPoint (startPos);
 		Node targetNode = grid.NodeFromWorlPoint (targetPos);
 
-		if (startNode.Walkable && targetNode.Walkable) {
-			Heap<Node> openSet = new Heap<Node> (grid.MaxSize);
-			HashSet<Node> closedSet = new HashSet<Node> ();
-			openSet.Add (startNode);
+        if (startNode.Walkable && targetNode.Walkable)
+        {
+            Heap<Node> openSet = new Heap<Node>(grid.MaxSize);
+            HashSet<Node> closedSet = new HashSet<Node>();
+            openSet.Add(startNode);
 
-			while (openSet.Count > 0) {
-				Node currentNode = openSet.RemoveFirst ();
-				closedSet.Add (currentNode);
+            while (openSet.Count > 0)
+            {
+                Node currentNode = openSet.RemoveFirst();
+                closedSet.Add(currentNode);
 
-				if (currentNode == targetNode) {
-					pathSuccess = true;
-					break;
-				}
+                if (currentNode == targetNode)
+                {
+                    pathSuccess = true;
+                    break;
+                }
 
-				foreach (Node neighbour in grid.GetNeighbours(currentNode)) {
-					if (!neighbour.Walkable || closedSet.Contains (neighbour))
-						continue;
-					int newMovementCostToNeighbour = currentNode.gCost + GetDistance (currentNode, neighbour);
-					if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains (neighbour)) {
-						neighbour.gCost = newMovementCostToNeighbour;
-						neighbour.hCost = GetDistance (neighbour, targetNode);
-						neighbour.Parent = currentNode;
+                foreach (Node neighbour in grid.GetNeighbours(currentNode))
+                {
+                    if (!neighbour.Walkable || closedSet.Contains(neighbour))
+                        continue;
+                    int newMovementCostToNeighbour = currentNode.gCost + GetDistance(currentNode, neighbour);
+                    if (newMovementCostToNeighbour < neighbour.gCost || !openSet.Contains(neighbour))
+                    {
+                        neighbour.gCost = newMovementCostToNeighbour;
+                        neighbour.hCost = GetDistance(neighbour, targetNode);
+                        neighbour.Parent = currentNode;
 
-						if (!openSet.Contains (neighbour)) {
-							openSet.Add (neighbour);
-						} else 
-							openSet.UpdateItem (neighbour);
-					}
-				}
-			}
-			yield return null;
-			if (pathSuccess)
-			{
-				waypoints = RetracePath (startNode, targetNode);
-			}
-			requestManager.FinishedProcessingPath (waypoints, pathSuccess);
-		} else
-			print("Not Pathable");
-		requestManager.FinishedProcessingPath (waypoints, pathSuccess);
-		yield break;
+                        if (!openSet.Contains(neighbour))
+                        {
+                            openSet.Add(neighbour);
+                        }
+                        else
+                            openSet.UpdateItem(neighbour);
+                    }
+                }
+            }
+            yield return null;
+            if (pathSuccess)
+            {
+                waypoints = RetracePath(startNode, targetNode);
+            }
+            requestManager.FinishedProcessingPath(waypoints, pathSuccess);
+        } else {
+            requestManager.FinishedProcessingPath(waypoints, pathSuccess);
+            yield break;
+        }
 
 	}
 

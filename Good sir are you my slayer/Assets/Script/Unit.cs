@@ -11,7 +11,7 @@ public class Unit : MonoBehaviour {
 
 	public void MoveTo(Vector3 target)
 	{
-			PathRequestManager.RequestPath (transform.position, target, OnPathFound);
+		PathRequestManager.RequestPath (transform.position, target, OnPathFound);
 	}
 
 	public void OnPathFound(Vector3[] newPath, bool pathSuccessful)

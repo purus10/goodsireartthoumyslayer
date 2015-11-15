@@ -5,8 +5,9 @@ public class NetworkManager : MonoBehaviour {
 	
 	string registeredGameName = "Good_Sir_@rt_Thou_Sl@yer";
 	float refreshRequestLength = 3.0f;
-	static bool spawn = false;
-	public GameObject Player;
+    static int spawned;
+    public bool spawn = false;
+    public GameObject Player;
 	HostData[] hostData;
 
 	void Awake()
@@ -37,6 +38,7 @@ public class NetworkManager : MonoBehaviour {
 		Debug.Log("Player disconnected from: "+ player.ipAddress + ":" + player.port);
 		Network.RemoveRPCs(player);
 		Network.DestroyPlayerObjects(player);
+        spawned--;
 	}
 	void OnMasterServerEvent(MasterServerEvent masterServerEvent)
 	{
@@ -72,26 +74,36 @@ public class NetworkManager : MonoBehaviour {
 		else Debug.Log(hostData.Length + " have been found");
 	}
 
-	private void SpawnPlayer()
-	{
-			Debug.Log ("Spawning Player...");
-			Network.Instantiate (Player, new Vector3 (0f, 0f, -0.1f), Quaternion.identity, 0);
-	}
+    private void SpawnPlayer()
+    {
+        Debug.Log("Spawning Player...");
+        Network.Instantiate(Player, new Vector3(0f, 0f, -0.1f), Quaternion.identity, 0);
+        spawned++;
+        spawn = true;
+    }
 
 	public void OnGUI()
 	{
 
-		if (Network.isClient && spawn == false)
+		if (Network.isClient && !spawn)
 		{
 			if (GUI.Button(new Rect(Screen.width/2,25f,150f,30f), "Spawn"))
 			{
-				SpawnPlayer();
-				spawn = true;
+                SpawnPlayer();
 			}
 
 		}
-		
-		if (!Network.isClient && !Network.isServer)
+
+        if (Network.isServer && spawn)
+        {
+            if (GUI.Button(new Rect(Screen.width / 2, 25f, 150f, 30f), "Start Match"))
+            {
+                if (Network.connections.Length == spawned)
+                    Application.LoadLevel(1);
+            }
+        }
+
+        if (!Network.isClient && !Network.isServer)
 		{
 			if (GUI.Button(new Rect(Screen.width/2,25f,150f,30f), "Start New Server"))
 			{

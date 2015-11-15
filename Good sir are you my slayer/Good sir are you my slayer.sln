@@ -1,11 +1,11 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Good sir are you my slayer.CSharp.Plugins", "Good sir are you my slayer.CSharp.Plugins.csproj", "{2435BCEB-BF7C-CD6B-C028-5C6BDA78A145}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{323535B7-D515-2AF0-F8F3-7DBEC1E90220}") = "Good sir are you my slayer", "Assembly-CSharp-firstpass.csproj", "{727CE962-941E-153D-0CA6-11AC4BB978A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Good sir are you my slayer.CSharp", "Good sir are you my slayer.CSharp.csproj", "{9F5F6798-101D-8012-4580-996A31A70A03}"
+Project("{323535B7-D515-2AF0-F8F3-7DBEC1E90220}") = "Good sir are you my slayer", "Assembly-CSharp.csproj", "{367759D1-04B0-685D-F3E2-944124430662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Good sir are you my slayer.CSharp.Editor", "Good sir are you my slayer.CSharp.Editor.csproj", "{826E8774-362B-27CD-3F1E-4DFDE4D09BD2}"
+Project("{323535B7-D515-2AF0-F8F3-7DBEC1E90220}") = "Good sir are you my slayer", "Assembly-CSharp-Editor.csproj", "{BB9F1D8A-2619-A1B0-2F04-93AFCD48AF14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,20 +13,40 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2435BCEB-BF7C-CD6B-C028-5C6BDA78A145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2435BCEB-BF7C-CD6B-C028-5C6BDA78A145}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2435BCEB-BF7C-CD6B-C028-5C6BDA78A145}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2435BCEB-BF7C-CD6B-C028-5C6BDA78A145}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F5F6798-101D-8012-4580-996A31A70A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F5F6798-101D-8012-4580-996A31A70A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F5F6798-101D-8012-4580-996A31A70A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F5F6798-101D-8012-4580-996A31A70A03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{826E8774-362B-27CD-3F1E-4DFDE4D09BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{826E8774-362B-27CD-3F1E-4DFDE4D09BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{826E8774-362B-27CD-3F1E-4DFDE4D09BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{826E8774-362B-27CD-3F1E-4DFDE4D09BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{727CE962-941E-153D-0CA6-11AC4BB978A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{727CE962-941E-153D-0CA6-11AC4BB978A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{727CE962-941E-153D-0CA6-11AC4BB978A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{727CE962-941E-153D-0CA6-11AC4BB978A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{367759D1-04B0-685D-F3E2-944124430662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{367759D1-04B0-685D-F3E2-944124430662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{367759D1-04B0-685D-F3E2-944124430662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{367759D1-04B0-685D-F3E2-944124430662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9F1D8A-2619-A1B0-2F04-93AFCD48AF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9F1D8A-2619-A1B0-2F04-93AFCD48AF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9F1D8A-2619-A1B0-2F04-93AFCD48AF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9F1D8A-2619-A1B0-2F04-93AFCD48AF14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+										GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.IndentWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
+	EndGlobalSection
+
 EndGlobal

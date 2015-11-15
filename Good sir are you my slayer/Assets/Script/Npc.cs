@@ -30,6 +30,8 @@ public class Npc : MonoBehaviour {
 	public CharacterController Character;
 	public Vector3 direction;
 	public Player offender;
+    public Npc mingler;
+    public SpriteBubble Bubble;
 	public Need[] Needs = new Need[4];
 
 	Vector3 RunAway()
@@ -121,10 +123,26 @@ public class Npc : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerStay(Collider col)
+    void OnTriggerEnter(Collider col)
+    {
+        Npc guest = col.gameObject.GetComponent<Npc>();
+        if (guest != null && mingler == null)
+        {
+            if (guest.State == states.Afraid)
+                State = states.Afraid;
+            else if (guest.State == states.Idle)
+            {
+                mingler = guest;
+                guest.mingler = this;
+                guest.State = states.Talking;
+                State = states.Talking;
+            }
+        }
+    }
+
+        void OnTriggerStay(Collider col)
 	{
 		Item item = col.gameObject.GetComponent<Item>();
-		Npc guest = col.gameObject.GetComponent<Npc>();
 		Player player = col.gameObject.GetComponent<Player>();
 		
 		if (item != null)
@@ -135,14 +153,6 @@ public class Npc : MonoBehaviour {
 				Suspicion += 2;
 				offender.IsSeen = true;
 			} else if (item.Drawn == true) Suspicion ++;
-		} else if (guest != null)
-		{
-			if (guest.State == states.Afraid)
-				State = states.Afraid;
-			else if (guest.State == states.Idle)
-			{
-				//Start talking to each other.
-			}
 		}
 		//TALKING TO PLAYER
 		if (State == states.Idle)
@@ -253,26 +263,45 @@ public class Npc : MonoBehaviour {
 		#region Idle
 		else if (State == states.Idle);
 		{
-			if (counter == 0)
+			if (counter <= 0)
 			{
-				for (int i = 0; i < needs.Length;i++)
-				{
-					if (needs[i] <= Crave)
-						GetNeedState(i);
-				}
-				if (State == states.Idle)
-				{
-					direction = Move[Random.Range(0,Move.Length-1)];
-					Vector3 move = direction + new Vector3(1*Random.Range(1f,20f),1*Random.Range(1f,12f),-0.1f);
-					bool walkable = (Physics.CheckSphere(move,0.5f,layermask));
-					if (walkable)
-					{
-						Unit.MoveTo(move);
-						State = states.Walk;
-					}
-				}
+                if (mingler != null)
+                {
+                    print("MOVING TO TALK");
+                    float distance = Vector3.Distance(mingler.transform.position, transform.position);
+                    if (distance > 1f)
+                    {
+                        Unit.MoveTo(mingler.transform.position);
+                    } else
+                    {
+                        counter = SetCounter;
+                        State = states.Talking;
+                    }
+                }
 
-			}
+                /*    for (int i = 0; i < needs.Length; i++)
+                    {
+                        if (needs[i] <= Crave)
+                            GetNeedState(i);
+                    }*/
+                    if (State == states.Idle)
+                    {
+                        direction = Move[Random.Range(0, Move.Length)];
+                        Vector3 move = direction + new Vector3(direction.x * Random.Range(1f, 20f), direction.y * Random.Range(1f, 12f), -0.1f);
+                        bool walkable = (Physics.CheckSphere(move, 0.5f, layermask));
+                        if (walkable)
+                        {
+                            State = states.Walk;
+                            Unit.MoveTo(move);
+                        }
+                        else
+                        {
+                            print("Not Moving");
+                            counter = SetCounter;
+                        }
+                    }
+
+                }
 		}
 		#endregion
 		#region Walking
@@ -296,11 +325,23 @@ public class Npc : MonoBehaviour {
 		#region Talking
 		if (State == states.Talking)
 		{
-			InvokeRepeating("Talk",convoLength,1.0f);
-			if (conversation <= 0)
-			{
-				Namerender.text = Name;
-			}
+            if (mingler != null)
+            {
+
+                if (counter <= 0)
+                {
+                    State = states.Idle;
+                    mingler = null;
+                }
+            }
+            if (offender != null)
+            {
+                InvokeRepeating("Talk", convoLength, 1.0f);
+                if (conversation <= 0)
+                {
+                    Namerender.text = Name;
+                }
+            }
 		}
 		#endregion
 		#region SearchingForGuard
