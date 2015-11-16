@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake ()
 	{
-		nView = GetComponent<NetworkView>();
+        nView = GetComponent<NetworkView>();
 		if(!nView.isMine) enabled = false;
 		SetName ();
 		CreateNeeds();
@@ -49,12 +49,15 @@ public class Player : MonoBehaviour {
 	}
 	void Start()
 	{
-		if(Slots[0] != null && Selected == null) 
+        if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
 		GetComponentInChildren<Camera>().enabled = true;
-		HUD.SetActive(true);
-		StartCoroutine("PlayTimer");
-		TargetName = Get.TargetName;
+		if (Application.loadedLevel == 1)
+        {
+            HUD.SetActive(true);
+            StartCoroutine("PlayTimer");
+            TargetName = Get.TargetName;
+        }
 	}
 	void FixedUpdate () 
 	{
@@ -81,16 +84,10 @@ public class Player : MonoBehaviour {
 					if (Selected == Slots[0]) ReadyDraw(0);
 				else if (Selected == Slots[1]) ReadyDraw(1);
 			}
-
-			/*if (Input.GetKeyDown(KeyCode.X) && Slots[0] != null) Undraw(0);
-			if (Input.GetKeyDown(KeyCode.C) && Slots[1] != null) Undraw(1);
-			if (Input.GetKeyDown(KeyCode.V) && Slots[2] != null) Undraw(2);*/
 		}
 
 		if (State == states.Armed) 
 		{
-			/*if (Input.GetAxis ("RBumper") == 0)
-				AxisPress = false;*/
 			if (Input.GetAxis ("RBumper") != 0)
 			{
 				if (AxisPress == false)
@@ -202,8 +199,6 @@ public class Player : MonoBehaviour {
 			Needs[i].Name = Get.NeedName [i];
 			Needs [i].Name = Get.NeedName [i]; 
 		}
-	
-
 	}
 	void SetNeedTimers()
 	{

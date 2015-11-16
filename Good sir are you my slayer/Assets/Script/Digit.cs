@@ -31,6 +31,9 @@ public class Digit : MonoBehaviour {
 	// Use this for initialization
 	void Update () 
 	{
+       if (minutes == 3)
+            Result.End = true;
+
 		digit = CurrentRound;
 		CreateDigit(currentRound, false);
 		digit = Minute;

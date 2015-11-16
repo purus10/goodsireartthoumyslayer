@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class NetworkManager : MonoBehaviour {
 	
 	string registeredGameName = "Good_Sir_@rt_Thou_Sl@yer";
 	float refreshRequestLength = 3.0f;
-    static int spawned;
+    public LayerMask layermask;
+    public int spawned;
     public bool spawn = false;
+    public List<Vector3> Spawn_Point;
     public GameObject Player;
 	HostData[] hostData;
 
 	void Awake()
 	{
-		if (Digit.currentRound > 1)
-			SpawnPlayer();
+        SpawnPlayer();
 	}
 
 	private void StartServer()
@@ -31,7 +33,8 @@ public class NetworkManager : MonoBehaviour {
 	{
 		Debug.Log("Server initialized");
 		SpawnPlayer();
-	}
+        spawn = true;
+    }
 
 	void OnPlayerDisconnected(NetworkPlayer player)
 	{
@@ -77,9 +80,10 @@ public class NetworkManager : MonoBehaviour {
     private void SpawnPlayer()
     {
         Debug.Log("Spawning Player...");
-        Network.Instantiate(Player, new Vector3(0f, 0f, -0.1f), Quaternion.identity, 0);
-        spawned++;
-        spawn = true;
+        int spawnpoint = Random.Range(0, Spawn_Point.Count);
+        Network.Instantiate(Player, Spawn_Point[spawnpoint], Quaternion.identity, 0);
+        Spawn_Point.RemoveAt(spawnpoint);
+
     }
 
 	public void OnGUI()
@@ -90,7 +94,9 @@ public class NetworkManager : MonoBehaviour {
 			if (GUI.Button(new Rect(Screen.width/2,25f,150f,30f), "Spawn"))
 			{
                 SpawnPlayer();
-			}
+                spawn = true;
+                spawned++;
+            }
 
 		}
 
@@ -99,7 +105,9 @@ public class NetworkManager : MonoBehaviour {
             if (GUI.Button(new Rect(Screen.width / 2, 25f, 150f, 30f), "Start Match"))
             {
                 if (Network.connections.Length == spawned)
+                {
                     Application.LoadLevel(1);
+                }
             }
         }
 
