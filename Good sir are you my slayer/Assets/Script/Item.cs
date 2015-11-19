@@ -8,14 +8,17 @@ public class Item : MonoBehaviour {
 	public enum consumable{Any, Poison, Snack, Drink, Bandage, Firecracker, PainKiller};
 	public bool IsPoisoned, Drawn, Lethal;
 	public string Name;
-	public Collider Range, Notice;
+    public Vector3[] Range_Position;
+    public int facing;
+	public Collider Notice, Range;
 	public type Type; 
 	public consumable IsConsumable;
 	public GameObject Loot;
 	public int Ammo, Amount, Bleed, Force, Suspicion, ThrowAmount;
 	public float DrawSpeed, AttackSpeed;
+    public Vector3 position;
 
-	void Awake()
+    void Awake()
 	{
 		if (Type == type.Consumable)
 		{
@@ -27,29 +30,89 @@ public class Item : MonoBehaviour {
 	//Check if Player is picking up or poisoning the loot
 	void OnTriggerStay(Collider col)
 	{
-		if (Type == type.Spawn) 
-		{
-			Player player = col.GetComponent<Player> ();
+        Player player = col.GetComponent<Player>();
 
+        if (Type == type.Spawn)
+        { 
             if (player != null)
             {
-                print("yes");
-                if (Input.GetKeyDown(KeyCode.V))
+                if (Input.GetKeyDown(KeyCode.J))
                     GiveLoot(player);
             }
-		}
+		} else if (Type == type.Weapon && !Drawn)
+        {
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                GiveSelf(player);
+            }
+        }
 	}
 	// Update is called once per frame
 	void Update () 
 	{
-	}
+        if (position.x > transform.position.x)
+        {
+            //left
+            facing = 6;
+        }
+        else if (position.x < transform.position.x)
+        {
+            //right
+            facing = 2;
+        }
+        else if (position.y < transform.position.y)
+        {
+            //up
+            facing = 0;
+        }
+        else if (position.y < transform.position.y && position.x < transform.position.x)
+        {
+            //upright
+            facing = 1;
+        }
+        else if (position.y < transform.position.y && position.x > transform.position.x)
+        {
+            //upleft
+            facing = 7;
+        }
+        else if (position.y > transform.position.y)
+        {
+            //down
+            facing = 4;
+        }
+        else if (position.y > transform.position.y && position.x < transform.position.x)
+        {
+            //downright
+            facing = 3;
+        }
+        else if (position.y > transform.position.y && position.x > transform.position.x)
+        {
+            //downleft
+            facing = 5;
+        }
+        //Range.transform.position = Range_Position[facing];
+        position = transform.position;
+    }
+    void GiveSelf(Player player)
+    {
+        //print("yes");
+        if (player.Slots[0] == player.Selected && player.Slots[0] == null)
+        {
+            player.Slots[0] = Loot;
+            //GameObject.Destroy(gameObject);
+        }
+        /*else if (player.Slots[1] == player.Selected && player.Slots[1] == null)
+        {
+            player.Slots[1] = Loot;
+        }*/
+
+    }
     void GiveLoot(Player player)
     {
         
         Item loot = Loot.GetComponent<Item>();
         if (loot != null)
         {
-            print("FOUND ITEM");
             if (loot.Type == type.Consumable)
             {
                 if (player.Slots[2] == null)
@@ -75,7 +138,6 @@ public class Item : MonoBehaviour {
 
 	void GiveWeapon(Player player)
 	{
-        print("yes");
 		if (player.Slots [0] == null) player.Slots[0] = Loot;
 		else if (player.Slots [1] == null) player.Slots [1] = Loot;
 	}

@@ -9,7 +9,7 @@ public class Player_Animations : MonoBehaviour {
     public SpriteRenderer Sprite_body;
     public int _body, _head;
     float time;
-   public  int frame = 0;
+   public  int frame;
    public  Vector3 position;
     Sprite[,] Head;
     Sprite[,] Body;
@@ -82,15 +82,10 @@ public class Player_Animations : MonoBehaviour {
     }
     void Update()
     {
+        
         if (!NView.isMine) return;
         //walk
-        if (position.y < transform.position.y)
-        {
-            Walk(6, 11);
-            position = transform.position;
-            // NView.RPC("Walk",RPCMode.All,6,11);
-        }
-        else if (position.x > transform.position.x)
+        if (position.x > transform.position.x)
         {
             Walk(18, 23);
             position = transform.position;
@@ -102,22 +97,29 @@ public class Player_Animations : MonoBehaviour {
             position = transform.position;
             //NView.RPC("Walk",RPCMode.All,12,17);
         }
-        else if (position.y > transform.position.y)
+        else if (position.y < transform.position.y)
+        {
+            Walk(6, 11);
+            position = transform.position;
+            // NView.RPC("Walk",RPCMode.All,6,11);
+        }else if (position.y > transform.position.y)
         {
             Walk(0, 5);
             position = transform.position;
             //NView.RPC("Walk",RPCMode.All,0,5);
         }
+        position = transform.position;
+
 
         //Idle
-        if (Input.GetKeyUp(KeyCode.W))
-            player.sprite = Head[_head, 6];
-		else if(Input.GetKeyUp(KeyCode.A))
-            player.sprite = Head[_head, 18];
-        else if(Input.GetKeyUp(KeyCode.D))
-            player.sprite = Head[_head, 12];
-        else if(Input.GetKeyUp(KeyCode.S))
-            player.sprite = Head[_head, 0];
+        /*  if (Input.GetKeyUp(KeyCode.W))
+              player.sprite = Head[_head, 6];
+          else if(Input.GetKeyUp(KeyCode.A))
+              player.sprite = Head[_head, 18];
+          else if(Input.GetKeyUp(KeyCode.D))
+              player.sprite = Head[_head, 12];
+          else if(Input.GetKeyUp(KeyCode.S))
+              player.sprite = Head[_head, 0];*/
     }
     [RPC]
     private void AssignIdle(int i)
@@ -344,7 +346,8 @@ public class Player_Animations : MonoBehaviour {
 	[RPC]
 	private void Walk(int min, int max)
 	{
-        if (frame < max)
+        
+        if (frame < max && frame >= min)
         {
             time++;
             if (time >= Anim_speed)

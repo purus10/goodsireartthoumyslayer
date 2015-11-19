@@ -66,12 +66,13 @@ public class Player : MonoBehaviour {
 		if (Input.GetButtonDown("A"))
 			ToggleInventory();
 
-        if (SelectedContain != null)
+        if (Input.GetAxis("LBumper") != 0)
         {
-
+            if (Selected == Slots[0]) Drop(0);
+            else if (Selected == Slots[1]) Drop(1);
         }
 
-		if (State == states.Idle || State == states.Armed)
+        if (State == states.Idle || State == states.Armed)
 		{
 			Character.Move (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
 			Character.Move (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
@@ -162,9 +163,9 @@ public class Player : MonoBehaviour {
 	
 	void ToggleInventory()
 	{
-		if (Slots[1] != null && Selected == Slots[0]) 
+		if (Selected == Slots[0]) 
 			Selected = Slots[1];
-		else if (Selected == Slots[1] && Slots[0] != null)
+		else if (Selected == Slots[1])
 			Selected = Slots[0];
 	}
 	void Attack(int selected)
@@ -190,6 +191,17 @@ public class Player : MonoBehaviour {
 		GameObject.Destroy(Weapon);
 		Weapon = null;
 	}
+
+    void Drop(int selected)
+    {
+        if (Slots[selected] != null)
+        {
+            Network.Instantiate(Slots[selected], transform.position, Slots[selected].transform.rotation, 0);
+            Slots[selected] = null;
+            Selected = null;
+        }
+
+    }
 
 	void CreateNeeds()
 	{

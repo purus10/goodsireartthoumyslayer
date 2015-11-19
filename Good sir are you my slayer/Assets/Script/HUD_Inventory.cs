@@ -23,12 +23,14 @@ public class HUD_Inventory : MonoBehaviour {
 		{
 			for (int i = 0;i < Inventory.Length;i++)
 			{
-				if(player.Slots[i] != null)
-				{
-					Sprite icon = player.Slots[i].GetComponent<SpriteRenderer>().sprite;
-					Icons[i].GetComponent<SpriteRenderer>().sprite = icon;
-				}
-			}
+                if (player.Slots[i] != null)
+                {
+                    Sprite icon = player.Slots[i].GetComponent<SpriteRenderer>().sprite;
+                    Icons[i].GetComponent<SpriteRenderer>().sprite = icon;
+                }
+                else
+                    Icons[i].GetComponent<SpriteRenderer>().sprite = null;
+            }
 			
 			for (int i = 0; i < Inventory.Length;i++)
 			{

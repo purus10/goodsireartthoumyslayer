@@ -141,6 +141,7 @@
     <Compile Include="Assets\Script\Player_Animations.cs" />
     <Compile Include="Assets\Script\Result.cs" />
     <Compile Include="Assets\Script\SetName.cs" />
+    <Compile Include="Assets\Script\SpriteBubble.cs" />
     <Compile Include="Assets\Script\TESTINPUT.cs" />
     <Compile Include="Assets\Script\TName.cs" />
     <Compile Include="Assets\Script\Unit.cs" />
