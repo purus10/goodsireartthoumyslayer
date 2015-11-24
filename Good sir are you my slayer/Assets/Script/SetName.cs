@@ -8,11 +8,11 @@ public class SetName : MonoBehaviour {
 	
 	void Start () {
 	
-		text.text = Get.TargetName;
+		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void FixedUpdate () {
+        text.text = Get.TargetName;
+    }
 }

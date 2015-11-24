@@ -85,28 +85,24 @@ public class Npc : MonoBehaviour {
 
 	void OnCollisionEnter (Collision col)
 	{
-		Item item = col.gameObject.GetComponent<Item>();
-		Player player = col.gameObject.GetComponentInParent<Player>();
+        Player player = col.gameObject.GetComponentInParent<Player>();
+        if (player != null)
+        {
+            Item item = player.gameObject.GetComponentInChildren<Item>();
+            if (item != null && item.Lethal)
+            {
+                Health -= item.Amount;
+                hurtstart = true;
+                 player.WeaponRange[item.facing].enabled = false;
+                 item.Lethal = false;
+                if (Health <= 0 && Name == Get.TargetName)
+                {
+                    player.Points += item.Amount;
+                }
 
-		if (item != null && item.Lethal == true) 
-		{
-			GetComponent<NetworkView>().RPC("GetHurt",RPCMode.AllBuffered,item.Amount);
-			hurtstart = true;
-			item.Range.enabled = false;
-			item.Lethal = false;
-			if (Health <= 0 && Name == Get.TargetName)
-			{
-			player.Points += item.Amount;
-			}
-
-		}
-	}
-	[RPC]
-	private void GetHurt(int amount)
-	{
-		Health -= amount;
-	}
-	[RPC]
+            }
+        }
+    }
 	private void HurtLerp(float spd)
 	{
 		for (int i = 0; i < Sprite.Length;i++)
@@ -114,7 +110,6 @@ public class Npc : MonoBehaviour {
 		Sprite[i].color = Color.Lerp (Sprite[i].color, Color.red, spd * Time.time);
 		}
 	}
-	[RPC]
 	private void RevertColor()
 	{
 		for (int i = 0; i < Sprite.Length;i++)
@@ -242,12 +237,11 @@ public class Npc : MonoBehaviour {
 			hurt -= 0.1f;
 			if (hurt <= 0)
 			{
-				GetComponent<NetworkView>().RPC("RevertColor",RPCMode.AllBuffered);
+                RevertColor();
 				hurt = 1f;
 				hurtstart = false;
 			} else 
-				GetComponent<NetworkView>().RPC("HurtLerp",RPCMode.AllBuffered,0.1f);
-
+				HurtLerp(0.1f);
 		}
 		#endregion
 		#region Offended
@@ -347,7 +341,7 @@ public class Npc : MonoBehaviour {
 		#region SearchingForGuard
 		if (State == states.SearchingForGuard)
 		{
-			/*if (Search == null)
+			if (Search == null)
 				Search  = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
 			else {
 				bool walkable = (Physics.CheckSphere(Search[0].transform.position,0.5f,layermask));
@@ -358,8 +352,8 @@ public class Npc : MonoBehaviour {
 				{
 						Unit.MoveTo(transform.position);
 						State = states.Reporting;
-				}
-			}*/
+                }
+			}
 		}
 		#endregion
 		#region ReportingToGuard

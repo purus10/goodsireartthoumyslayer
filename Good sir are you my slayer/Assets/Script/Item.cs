@@ -4,18 +4,17 @@ using Database;
 
 public class Item : MonoBehaviour {
 
-	public enum type {Consumable,Spawn,Weapon};
+	public enum type {Consumable,Spawn,Weapon, Clue};
 	public enum consumable{Any, Poison, Snack, Drink, Bandage, Firecracker, PainKiller};
 	public bool IsPoisoned, Drawn, Lethal;
 	public string Name;
-    public Vector3[] Range_Position;
     public int facing;
 	public Collider Notice, Range;
 	public type Type; 
 	public consumable IsConsumable;
 	public GameObject Loot;
 	public int Ammo, Amount, Bleed, Force, Suspicion, ThrowAmount;
-	public float DrawSpeed, AttackSpeed;
+	public float DrawSpeed, AttackSpeed, WeaponRange_X, WeaponRange_Y;
     public Vector3 position;
 
     void Awake()
@@ -32,18 +31,20 @@ public class Item : MonoBehaviour {
 	{
         Player player = col.GetComponent<Player>();
 
-        if (Type == type.Spawn)
-        { 
-            if (player != null)
-            {
-                if (Input.GetKeyDown(KeyCode.J))
-                    GiveLoot(player);
-            }
-		} else if (Type == type.Weapon && !Drawn)
+        if (player != null)
         {
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Type == type.Spawn)
             {
-                GiveSelf(player);
+                    if (Input.GetButtonDown("Y"))
+                        GiveLoot(player);
+            }
+            else if (Type == type.Weapon && player.Selected == null)
+            {
+
+                if (Input.GetButtonDown("Y"))
+                {
+                    GiveSelf(player);
+                }
             }
         }
 	}
@@ -53,12 +54,12 @@ public class Item : MonoBehaviour {
         if (position.x > transform.position.x)
         {
             //left
-            facing = 6;
+            facing = 2;
         }
         else if (position.x < transform.position.x)
         {
             //right
-            facing = 2;
+            facing = 6;
         }
         else if (position.y < transform.position.y)
         {
@@ -95,17 +96,17 @@ public class Item : MonoBehaviour {
     }
     void GiveSelf(Player player)
     {
-        //print("yes");
-        if (player.Slots[0] == player.Selected && player.Slots[0] == null)
+        if (player.Slots[0] == null)
         {
-            player.Slots[0] = Loot;
-            //GameObject.Destroy(gameObject);
+            player.Slots[0] = Instantiate(Loot, new Vector3(0.3f,-0.1f,-0.1f), transform.rotation) as GameObject;
+            GameObject.Destroy(this.gameObject);
+            player.Selected = player.Slots[0];
+        } else if (player.Slots[1] == null)
+        {
+            player.Slots[1] = Instantiate(Loot, new Vector3(0.3f, -0.1f, -0.1f), transform.rotation) as GameObject;
+            GameObject.Destroy(this.gameObject);
+            player.Selected = player.Slots[1];
         }
-        /*else if (player.Slots[1] == player.Selected && player.Slots[1] == null)
-        {
-            player.Slots[1] = Loot;
-        }*/
-
     }
     void GiveLoot(Player player)
     {

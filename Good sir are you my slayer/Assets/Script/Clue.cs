@@ -11,12 +11,15 @@ public class Clue : MonoBehaviour {
 
         if (player != null)
         {
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                print("GOT IT");
-                if (player.TargetHead == null)
+            if (Input.GetButtonDown("X"))
+                {
+                print("I HAVE AQUIRED A CLUE");
+                if (player.TargetHead.sprite == null)
                     player.TargetHead.sprite = Get.TargetHead;
-                else player.TargetBody.sprite = Get.TargetBody;
+                else if (player.TargetBody.sprite == null)
+                    player.TargetBody.sprite = Get.TargetBody;
+                else
+                    player.TargetName = Get.TargetName;
             }
         }
     }

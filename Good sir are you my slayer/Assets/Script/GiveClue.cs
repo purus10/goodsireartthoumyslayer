@@ -4,9 +4,10 @@ using Database;
 
 public class GiveClue : MonoBehaviour 
 {
-	public Sprite Clue;
-	public int SearchLength;
-	int i = 0;
+    public SpriteRenderer HUD_TargetHead;
+    public SpriteRenderer HUD_TargetBody;
+    public SpriteRenderer HUD_TargetString;
+
 
 
 	void OnTriggerStay(Collider col)
@@ -15,15 +16,10 @@ public class GiveClue : MonoBehaviour
 
 		if (player != null) 
 		{
-		/*	if (Input.GetKey(KeyCode.L))
-			{
-				i++;
-				/*if (i >= SearchLength)
-					if (Clue == Get.TargetHead)
-						//player.TargetHead = Clue;
-				else if (Clue == Get.TargetBody)
-					//player.TargetBody = Clue;
-			}*/
+            if (Input.GetButtonDown("Y"))
+            {
+                HUD_TargetHead.sprite = Get.TargetHead;
+            }
 
 		}
 	}

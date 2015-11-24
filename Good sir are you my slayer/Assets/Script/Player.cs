@@ -10,7 +10,9 @@ public class Player : MonoBehaviour {
 	public int Points, Health, WeaponHeld, Hits;
 	public float Speed, EatTimer, BathTimer, DrunkTimer, SmokeTimer;
 	public Rect[] GUIHUD;
-	float[] NeedTimers = new float[4];
+    public GameObject WeaponCollider;
+    public BoxCollider[] WeaponRange;
+    float[] NeedTimers = new float[4];
 	float drawing, attacking, consuming, smoking, peeing;
 	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted, AxisPress;
 	public string Name, TargetName;
@@ -23,14 +25,11 @@ public class Player : MonoBehaviour {
 	public GameObject Selected;
 	public GameObject Weapon;
     public Container SelectedContain;
-	NetworkView nView;
 	int ResultSlot;
 
 	// Use this for initialization
 	void Awake ()
 	{
-        nView = GetComponent<NetworkView>();
-		if(!nView.isMine) enabled = false;
 		SetName ();
 		CreateNeeds();
 		SetDress ();
@@ -49,28 +48,28 @@ public class Player : MonoBehaviour {
 	}
 	void Start()
 	{
+        DontDestroyOnLoad(gameObject);
         if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
-		GetComponentInChildren<Camera>().enabled = true;
-		if (Application.loadedLevel == 1)
-        {
-            HUD.SetActive(true);
-            StartCoroutine("PlayTimer");
-            TargetName = Get.TargetName;
-        }
+        GetComponentInChildren<Camera>().enabled = true;
 	}
 	void FixedUpdate () 
 	{
-		Result.PlayerScore [ResultSlot] = Points;
+        if (Health == 0)
+            GameObject.Destroy(this.gameObject);
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Application.LoadLevel("Main Scene");
+            Player_Animations p = GetComponent<Player_Animations>();
+            p.AssignParts();
+            HUD.SetActive(true);
+            StartCoroutine("PlayTimer");
+        }
+        Result.PlayerScore [ResultSlot] = Points;
 		CheckNeeds();
 		if (Input.GetButtonDown("A"))
 			ToggleInventory();
-
-        if (Input.GetAxis("LBumper") != 0)
-        {
-            if (Selected == Slots[0]) Drop(0);
-            else if (Selected == Slots[1]) Drop(1);
-        }
 
         if (State == states.Idle || State == states.Armed)
 		{
@@ -82,10 +81,16 @@ public class Player : MonoBehaviour {
 		{
 			if (Input.GetButtonDown("Y"))
 			{
-					if (Selected == Slots[0]) ReadyDraw(0);
-				else if (Selected == Slots[1]) ReadyDraw(1);
+					if (Selected == Slots[0] && Slots[0] != null) ReadyDraw(0);
+				else if (Selected == Slots[1] && Slots[1] != null) ReadyDraw(1);
 			}
-		}
+
+            if (Input.GetAxis("LBumper") != 0)
+            {
+                if (Selected == Slots[0] && Slots[0] != null) Drop(0);
+                else if (Selected == Slots[1] && Slots[1] != null) Drop(1);
+            }
+        }
 
 		if (State == states.Armed) 
 		{
@@ -100,6 +105,7 @@ public class Player : MonoBehaviour {
 
 			if (Input.GetButtonDown("Y"))
 			{
+                print("yes");
 				if (Selected == Slots[0]) Undraw(0);
 				else if (Selected == Slots[1]) Undraw(1);
 			}
@@ -122,11 +128,26 @@ public class Player : MonoBehaviour {
 				attacking--;
 			else {
 				AxisPress = false;
-				State = states.Armed;
+                Item attackweapon = Weapon.GetComponentInChildren<Item>();
+                if (attackweapon.Lethal)
+                {
+                    attackweapon.Lethal = false;
+                    WeaponRange[attackweapon.facing].enabled = false;
+                    attacking = attackweapon.AttackSpeed;
+                }
+                State = states.Armed;
 			}
 		}
 
 	}
+
+    void SetWeaponRange(float Y, float X)
+    {
+        foreach (BoxCollider col in WeaponRange)
+        {
+            col.size = new Vector3(X, Y, 1f);
+        }
+    }
 
 	void SetName()
 	{
@@ -172,7 +193,7 @@ public class Player : MonoBehaviour {
 	{
 		Item attackweapon = Weapon.GetComponentInChildren<Item>();
 			attackweapon.Lethal = true;
-			attackweapon.Range.enabled = true;
+			WeaponRange[attackweapon.facing].enabled = true;
 			attacking = attackweapon.AttackSpeed;
 			State = states.Attacking;
 	}
@@ -181,10 +202,11 @@ public class Player : MonoBehaviour {
 		State = states.Drawing;
 		ClearDraws();
 		Weapon = Instantiate(Slots[selected],transform.position + Slots[selected].transform.position,Slots[selected].transform.rotation) as GameObject;
-		Weapon.transform.parent = this.transform;
+        Weapon.transform.parent = this.transform;
 		Item drawnweapon = Weapon.GetComponentInChildren<Item>();
 		drawing = drawnweapon.DrawSpeed;
 		WeaponHeld = selected;
+        SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
 	}
 	void ClearDraws()
 	{
@@ -196,7 +218,8 @@ public class Player : MonoBehaviour {
     {
         if (Slots[selected] != null)
         {
-            Network.Instantiate(Slots[selected], transform.position, Slots[selected].transform.rotation, 0);
+            Item item = Slots[selected].GetComponent<Item>();
+            Instantiate(Slots[selected], transform.position, Slots[selected].transform.rotation);
             Slots[selected] = null;
             Selected = null;
         }
@@ -237,7 +260,7 @@ public class Player : MonoBehaviour {
 			}
 		}
 	}
-	void Undraw(int selected)
+	public void Undraw(int selected)
 	{
 		Item heldweapon = Weapon.GetComponentInChildren<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)

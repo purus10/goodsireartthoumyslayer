@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 using Database;
 
 public class Player_Animations : MonoBehaviour {
@@ -64,7 +65,6 @@ public class Player_Animations : MonoBehaviour {
     public Sprite[] Body_Walk_Right6;
     #endregion
     Sprite[] check;
-    NetworkView NView;
 
     void Awake()
     {
@@ -72,41 +72,38 @@ public class Player_Animations : MonoBehaviour {
        SetBody();
         
     }
+    public void AssignParts()
+    {
+        player.sprite = Head[_head, 0];
+        Sprite_body.sprite = Body[_body, 0];
+    }
     void Start()
     {
         player = GetComponent<SpriteRenderer>();
-        NView = GetComponent<NetworkView>();
         position = transform.position;
-        player.sprite = Head[_head, 0];
-       Sprite_body.sprite = Body[_body, 0];
+        AssignParts();     
     }
     void Update()
     {
-        
-        if (!NView.isMine) return;
         //walk
         if (position.x > transform.position.x)
         {
             Walk(18, 23);
             position = transform.position;
-            //NView.RPC("Walk",RPCMode.All,18,23);
         }
         else if (position.x < transform.position.x)
         {
             Walk(12, 17);
             position = transform.position;
-            //NView.RPC("Walk",RPCMode.All,12,17);
         }
         else if (position.y < transform.position.y)
         {
             Walk(6, 11);
             position = transform.position;
-            // NView.RPC("Walk",RPCMode.All,6,11);
         }else if (position.y > transform.position.y)
         {
             Walk(0, 5);
             position = transform.position;
-            //NView.RPC("Walk",RPCMode.All,0,5);
         }
         position = transform.position;
 
@@ -121,7 +118,6 @@ public class Player_Animations : MonoBehaviour {
           else if(Input.GetKeyUp(KeyCode.S))
               player.sprite = Head[_head, 0];*/
     }
-    [RPC]
     private void AssignIdle(int i)
     {
         if (i == 1)
@@ -145,25 +141,6 @@ public class Player_Animations : MonoBehaviour {
             Sprite_body.sprite = Body[_body, 18];
         }
     }
-    /*[RPC]
-	private void AssignCheck(int i)
-	{
-		if (i == 1) 
-			check = Walk_Up_Left;
-		else if (i == 2)
-			check = Walk_Up_Right;
-		else if (i == 3)
-			check = Walk_Down_Right;
-		else if (i == 4)
-			check = Walk_Down_Left;
-		else if (i == 5)
-			check = Walk_Up;
-		else if (i == 6)
-			check = Walk_Left;
-		else if (i == 7)
-			check = Walk_Right;
-		else if (i == 8)
-			check = Walk_Down;*/
 
     void SetHead()
     {
@@ -343,10 +320,9 @@ public class Player_Animations : MonoBehaviour {
 
         }
     }
-	[RPC]
-	private void Walk(int min, int max)
+
+	public void Walk(int min, int max)
 	{
-        
         if (frame < max && frame >= min)
         {
             time++;

@@ -5,18 +5,24 @@ using Database;
 public class Guard : MonoBehaviour {
 
 	public Player Target;
-	public CharacterController Character;
-	public int Health, Supsicion;
-	public float Speed;
+    public Unit Unit;
+    public LayerMask layermask;
 
 	void Update () 
 	{
 		if (Target != null) 
 		{
 			Target.IsWanted = true;
-			float distance = Vector3.Distance(Target.transform.position,transform.position);
-			if (distance > 1f)
-				Character.Move (Vector3.MoveTowards(transform.position,Target.transform.position, 5f) * Speed * Time.deltaTime);
-		}
+            print("I AM GUARDING AGAINST YOU");
+            bool walkable = (Physics.CheckSphere(Target.transform.position, 0.5f, layermask));
+            if (walkable)
+                Unit.MoveTo(Target.transform.position);
+            float distance = Vector3.Distance(Target.transform.position, transform.position);
+            if (distance < 1f)
+            {
+                Unit.MoveTo(Target.transform.position);
+                Target.Health = 0;
+            }
+        }
 	}
 }
