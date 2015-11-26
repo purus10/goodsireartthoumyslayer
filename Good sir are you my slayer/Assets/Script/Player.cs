@@ -42,7 +42,6 @@ public class Player : MonoBehaviour {
             if (item != null && item.Lethal == true)
             {
             Health--;
-                item.Range.enabled = false;
                 item.Lethal = false;
             }
 	}

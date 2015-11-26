@@ -1,0 +1,947 @@
+fileFormatVersion: 2
+guid: 8fe68ed3c5bdc16439f0e906489a25e7
+timeCreated: 1448557936
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Animations_Misc1_1920px_0
+    21300002: Animations_Misc1_1920px_1
+    21300004: Animations_Misc1_1920px_2
+    21300006: Animations_Misc1_1920px_3
+    21300008: Animations_Misc1_1920px_4
+    21300010: Animations_Misc1_1920px_5
+    21300012: Animations_Misc1_1920px_6
+    21300014: Animations_Misc1_1920px_7
+    21300016: Animations_Misc1_1920px_8
+    21300018: Animations_Misc1_1920px_9
+    21300020: Animations_Misc1_1920px_10
+    21300022: Animations_Misc1_1920px_11
+    21300024: Animations_Misc1_1920px_12
+    21300026: Animations_Misc1_1920px_13
+    21300028: Animations_Misc1_1920px_14
+    21300030: Animations_Misc1_1920px_15
+    21300032: Animations_Misc1_1920px_16
+    21300034: Animations_Misc1_1920px_17
+    21300036: Animations_Misc1_1920px_18
+    21300038: Animations_Misc1_1920px_19
+    21300040: Animations_Misc1_1920px_20
+    21300042: Animations_Misc1_1920px_21
+    21300044: Animations_Misc1_1920px_22
+    21300046: Animations_Misc1_1920px_23
+    21300048: Animations_Misc1_1920px_24
+    21300050: Animations_Misc1_1920px_25
+    21300052: Animations_Misc1_1920px_26
+    21300054: Animations_Misc1_1920px_27
+    21300056: Animations_Misc1_1920px_28
+    21300058: Animations_Misc1_1920px_29
+    21300060: Animations_Misc1_1920px_30
+    21300062: Animations_Misc1_1920px_31
+    21300064: Animations_Misc1_1920px_32
+    21300066: Animations_Misc1_1920px_33
+    21300068: Animations_Misc1_1920px_34
+    21300070: Animations_Misc1_1920px_35
+    21300072: Animations_Misc1_1920px_36
+    21300074: Animations_Misc1_1920px_37
+    21300076: Animations_Misc1_1920px_38
+    21300078: Animations_Misc1_1920px_39
+    21300080: Animations_Misc1_1920px_40
+    21300082: Animations_Misc1_1920px_41
+    21300084: Animations_Misc1_1920px_42
+    21300086: Animations_Misc1_1920px_43
+    21300088: Animations_Misc1_1920px_44
+    21300090: Animations_Misc1_1920px_45
+    21300092: Animations_Misc1_1920px_46
+    21300094: Animations_Misc1_1920px_47
+    21300096: Animations_Misc1_1920px_48
+    21300098: Animations_Misc1_1920px_49
+    21300100: Animations_Misc1_1920px_50
+    21300102: Animations_Misc1_1920px_51
+    21300104: Animations_Misc1_1920px_52
+    21300106: Animations_Misc1_1920px_53
+    21300108: Animations_Misc1_1920px_54
+    21300110: Animations_Misc1_1920px_55
+    21300112: Animations_Misc1_1920px_56
+    21300114: Animations_Misc1_1920px_57
+    21300116: Animations_Misc1_1920px_58
+    21300118: Animations_Misc1_1920px_59
+    21300120: Animations_Misc1_1920px_60
+    21300122: Animations_Misc1_1920px_61
+    21300124: Animations_Misc1_1920px_62
+    21300126: Animations_Misc1_1920px_63
+    21300128: Animations_Misc1_1920px_64
+    21300130: Animations_Misc1_1920px_65
+    21300132: Animations_Misc1_1920px_66
+    21300134: Animations_Misc1_1920px_67
+    21300136: Animations_Misc1_1920px_68
+    21300138: Animations_Misc1_1920px_69
+    21300140: Animations_Misc1_1920px_70
+    21300142: Animations_Misc1_1920px_71
+    21300144: Animations_Misc1_1920px_72
+    21300146: Animations_Misc1_1920px_73
+    21300148: Animations_Misc1_1920px_74
+    21300150: Animations_Misc1_1920px_75
+    21300152: Animations_Misc1_1920px_76
+    21300154: Animations_Misc1_1920px_77
+    21300156: Animations_Misc1_1920px_78
+    21300158: Animations_Misc1_1920px_79
+    21300160: Animations_Misc1_1920px_80
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Animations_Misc1_1920px_0
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 144
+        width: 22
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_1
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 188
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_2
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 184
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_3
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 156
+        width: 66
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_4
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 156
+        width: 90
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_5
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 144
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_6
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 172
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_7
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 144
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_8
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 144
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_9
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 156
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_10
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 148
+        width: 70
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_11
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 148
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_12
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 172
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_13
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 168
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_14
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 124
+        width: 54
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_15
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 132
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_16
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 136
+        width: 78
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_17
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 140
+        width: 46
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_18
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 144
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_19
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 156
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_20
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 156
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_21
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 144
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_22
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 160
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_23
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 156
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_24
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 156
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_25
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 147
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_26
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 147
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_27
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 148
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_28
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 140
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_29
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 144
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_30
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 152
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_31
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 148
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_32
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 120
+        width: 50
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_33
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 120
+        width: 74
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_34
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 140
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_35
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 108
+        width: 59
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_36
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 109
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 105
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_38
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 100
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_39
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 100
+        width: 70
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_40
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 96
+        width: 58
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_41
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 92
+        width: 54
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_42
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 92
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_43
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 89
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_44
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 85
+        width: 53
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_45
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 95
+        width: 54
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_46
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 95
+        width: 49
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_47
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 95
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_48
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 92
+        width: 59
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_49
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 86
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_50
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 86
+        width: 71
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_51
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 91
+        width: 70
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_52
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 91
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_53
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 88
+        width: 49
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_54
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 91
+        width: 44
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_55
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 91
+        width: 41
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_56
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 88
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_57
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 91
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_58
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 91
+        width: 41
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_59
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 91
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_60
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 78
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_61
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 75
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_62
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 75
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_63
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 72
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_64
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 80
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_65
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 83
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_66
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 78
+        width: 41
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_67
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 80
+        width: 75
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_68
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 71
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_69
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 71
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_70
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 71
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_71
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 68
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_72
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 64
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_73
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 59
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_74
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 66
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_75
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 62
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_76
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 59
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_77
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 49
+        width: 75
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_78
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 49
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_79
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 32
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Animations_Misc1_1920px_80
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 32
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
