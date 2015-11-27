@@ -5,6 +5,7 @@ using Database;
 public class SetName : MonoBehaviour {
 
 	public TextMesh text;
+    public Player player;
 	
 	void Start () {
 	
@@ -13,6 +14,6 @@ public class SetName : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        text.text = Get.TargetName;
+        text.text = player.TargetName;
     }
 }

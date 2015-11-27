@@ -96,7 +96,6 @@
      <Compile Include="Assets\Script\Grid.cs" />
      <Compile Include="Assets\Script\Guard.cs" />
      <Compile Include="Assets\Script\HUD_Bar.cs" />
-     <Compile Include="Assets\Script\HUD_Display.cs" />
      <Compile Include="Assets\Script\HUD_Inventory.cs" />
      <Compile Include="Assets\Script\HUD_Suspicion.cs" />
      <Compile Include="Assets\Script\Heap.cs" />
@@ -105,7 +104,6 @@
      <Compile Include="Assets\Script\MOVETEST.cs" />
      <Compile Include="Assets\Script\MoveToward.cs" />
      <Compile Include="Assets\Script\Name.cs" />
-     <Compile Include="Assets\Script\NetworkManager.cs" />
      <Compile Include="Assets\Script\Node.cs" />
      <Compile Include="Assets\Script\Npc.cs" />
      <Compile Include="Assets\Script\PathRequestManager.cs" />
@@ -118,9 +116,9 @@
      <Compile Include="Assets\Script\SetName.cs" />
      <Compile Include="Assets\Script\Special_Animation.cs" />
      <Compile Include="Assets\Script\SpriteBubble.cs" />
-     <Compile Include="Assets\Script\TESTINPUT.cs" />
      <Compile Include="Assets\Script\TName.cs" />
      <Compile Include="Assets\Script\Unit.cs" />
+     <Compile Include="Assets\Script\f.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Colorful\Shaders\CC_Convolution3x3.shader" />

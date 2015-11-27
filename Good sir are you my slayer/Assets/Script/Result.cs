@@ -20,10 +20,12 @@ public class Result : MonoBehaviour {
 
         if (Network.connections.Length+1 == press_count)
         {
-            Application.LoadLevel(1);
+            Application.LoadLevel(0);
             Digit.currentRound++;
+            Digit.playTime = 0;
             Time.timeScale = 1;
             press_count = 0;
+
             for (int i = 0; i < Result.PlayerName.Length; i++)
             {
                 Result.PlayerName[i] = null;

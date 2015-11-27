@@ -9,7 +9,7 @@ public class TName : MonoBehaviour {
     public SpriteRenderer body;
 
 	// Use this for initialization
-	void Awake () 
+	void Start () 
 	{
 		Get.TargetName = Get.Name;
 		npc.Name = Get.TargetName;

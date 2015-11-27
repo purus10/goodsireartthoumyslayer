@@ -12,14 +12,14 @@ public class Clue : MonoBehaviour {
         if (player != null)
         {
             if (Input.GetButtonDown("X"))
-                {
-                print("I HAVE AQUIRED A CLUE");
+            {
                 if (player.TargetHead.sprite == null)
                     player.TargetHead.sprite = Get.TargetHead;
                 else if (player.TargetBody.sprite == null)
                     player.TargetBody.sprite = Get.TargetBody;
                 else
                     player.TargetName = Get.TargetName;
+                GameObject.Destroy(gameObject);
             }
         }
     }

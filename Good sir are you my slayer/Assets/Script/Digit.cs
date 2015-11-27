@@ -4,7 +4,7 @@ using Database;
 
 public class Digit : MonoBehaviour {
 	
-	int playTime;
+	static public int playTime;
 	public Sprite[] Digits;
 	public SpriteRenderer Minute;
 	public SpriteRenderer Colon;

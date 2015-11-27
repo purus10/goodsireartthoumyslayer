@@ -131,7 +131,7 @@ public class Item : MonoBehaviour {
             Weapon.sortingOrder = 2;
             Attack.sortingOrder = -1;
             Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
-            Attack.gameObject.transform.localPosition = AttackPlacement[2];
+            Attack.gameObject.transform.localPosition = AttackPlacement[0];
             Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
         }
         else if (position.y > transform.position.y && position.x > transform.position.x)
@@ -140,10 +140,9 @@ public class Item : MonoBehaviour {
             facing = 5;
             Weapon.sortingOrder = 2;
             Attack.sortingOrder = 2;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
-            Attack.gameObject.transform.localPosition = AttackPlacement[2];
+            Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+            Attack.gameObject.transform.localPosition = AttackPlacement[0];
         }
-        //Range.transform.position = Range_Position[facing];
         position = transform.position;
     }
     void GiveSelf(Player player)

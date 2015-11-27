@@ -9,7 +9,7 @@ public class NetworkManager : MonoBehaviour {
     public LayerMask layermask;
     public int spawned;
     public bool spawn = false;
-    public List<Vector3> Spawn_Point;
+    static public List<Vector3> Spawn_Point;
     public GameObject Player;
 	HostData[] hostData;
 

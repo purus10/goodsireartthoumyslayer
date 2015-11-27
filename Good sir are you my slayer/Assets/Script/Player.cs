@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Database;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
 	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing}
 	public enum player {one,two,three,four}
-	public states State;
+    static public List<Vector3> SpawnPoints = new List<Vector3>();
+    public List<Vector3> Spawn_Point;
+    public states State;
 	public int Points, Health, WeaponHeld, Hits;
 	public float Speed, EatTimer, BathTimer, DrunkTimer, SmokeTimer;
 	public Rect[] GUIHUD;
@@ -30,7 +32,8 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake ()
 	{
-		SetName ();
+        CreatePositionList();
+		SetName();
 		CreateNeeds();
 		SetDress ();
 	}
@@ -51,20 +54,26 @@ public class Player : MonoBehaviour {
         if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
         GetComponentInChildren<Camera>().enabled = true;
-	}
-	void FixedUpdate () 
+        HUD.SetActive(true);
+    }
+
+    void OnLevelWasLoaded()
+    {
+        PlacePlayer();
+    }
+    void FixedUpdate () 
 	{
         if (Health == 0)
             GameObject.Destroy(this.gameObject);
 
-        if (Input.GetKeyDown(KeyCode.A))
+       /* if (Input.GetKeyDown(KeyCode.A))
         {
             Application.LoadLevel("Main Scene");
             Player_Animations p = GetComponent<Player_Animations>();
             p.AssignParts();
-            HUD.SetActive(true);
+            
             StartCoroutine("PlayTimer");
-        }
+        }*/
         Result.PlayerScore [ResultSlot] = Points;
 		CheckNeeds();
 		if (Input.GetButtonDown("A"))
@@ -140,6 +149,21 @@ public class Player : MonoBehaviour {
 
 	}
 
+    void CreatePositionList()
+    {
+        foreach (Vector3 p in Spawn_Point)
+            SpawnPoints.Add(p);
+    }
+
+    public void PlacePlayer()
+    {
+        int spawnpoint = Random.Range(0, SpawnPoints.Count);
+        transform.position = SpawnPoints[spawnpoint];
+        SpawnPoints.RemoveAt(spawnpoint);
+
+    }
+
+
     void SetWeaponRange(float Y, float X)
     {
         foreach (BoxCollider col in WeaponRange)
@@ -165,20 +189,6 @@ public class Player : MonoBehaviour {
 	{
         Anim._head = Random.Range(0, Anim.Head_Walk_Down1.Length);
         Anim._body = Random.Range(0, Anim.Body_Walk_Down1.Length);
-	}
-	private IEnumerator PlayTimer()
-	{
-		while (true)
-		{
-			yield return new WaitForSeconds(1);
-		 	/*if (Network.isServer) 
-				nView.RPC("TrackPlayTime",RPCMode.All);*/
-		}
-	}
-	[RPC]
-	private void TrackPlayTime()
-	{
-		//Digit.playTime++;
 	}
 	
 	void ToggleInventory()
