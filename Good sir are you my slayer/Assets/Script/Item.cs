@@ -6,7 +6,7 @@ public class Item : MonoBehaviour {
 
 	public enum type {Consumable,Spawn,Weapon, Clue};
 	public enum consumable{Any, Poison, Snack, Drink, Bandage, Firecracker, PainKiller};
-	public bool IsPoisoned, Drawn, Lethal;
+	public bool IsPoisoned, Drawn, Lethal, Attack_Anim;
 	public string Name;
     public int facing;
     public Vector3[] WeaponPlacment;
@@ -55,7 +55,7 @@ public class Item : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        if (Lethal == true)
+        if (Attack_Anim == true)
         {
             Weapon.enabled = false;
             Attack.enabled = true;

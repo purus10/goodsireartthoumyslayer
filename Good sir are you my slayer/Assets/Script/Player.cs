@@ -137,6 +137,7 @@ public class Player : MonoBehaviour {
 			else {
 				AxisPress = false;
                 Item attackweapon = Weapon.GetComponentInChildren<Item>();
+                attackweapon.Attack_Anim = false;
                 if (attackweapon.Lethal)
                 {
                     attackweapon.Lethal = false;
@@ -202,7 +203,8 @@ public class Player : MonoBehaviour {
 	{
 		Item attackweapon = Weapon.GetComponentInChildren<Item>();
 			attackweapon.Lethal = true;
-			WeaponRange[attackweapon.facing].enabled = true;
+        attackweapon.Attack_Anim = true;
+        WeaponRange[attackweapon.facing].enabled = true;
 			attacking = attackweapon.AttackSpeed;
 			State = states.Attacking;
 	}
