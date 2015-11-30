@@ -10,8 +10,9 @@ public class Player : MonoBehaviour {
     public List<Vector3> Spawn_Point;
     public states State;
 	public int Points, Health, WeaponHeld, Hits;
-	public float Speed, EatTimer, BathTimer, DrunkTimer, SmokeTimer;
-	public Rect[] GUIHUD;
+    public float Speed;
+    float EatTimer, BathTimer, DrunkTimer, SmokeTimer;
+    public Rect[] GUIHUD;
     public GameObject WeaponCollider;
     public BoxCollider[] WeaponRange;
     float[] NeedTimers = new float[4];
@@ -78,6 +79,15 @@ public class Player : MonoBehaviour {
 		CheckNeeds();
 		if (Input.GetButtonDown("A"))
 			ToggleInventory();
+
+        if (Input.GetButtonDown("B"))
+        {
+            if (Slots[2] != null)
+            {
+                Item item = Slots[2].GetComponent<Item>();
+                item.CastItem(this);
+            }
+        }
 
         if (State == states.Idle || State == states.Armed)
 		{
@@ -245,7 +255,11 @@ public class Player : MonoBehaviour {
 			Needs[i].Name = Get.NeedName [i];
 			Needs [i].Name = Get.NeedName [i]; 
 		}
-	}
+        EatTimer = Random.Range(20, 40);
+        BathTimer = Random.Range(20, 40);
+        DrunkTimer = Random.Range(20, 40);
+        SmokeTimer = Random.Range(20, 40);
+    }
 	void SetNeedTimers()
 	{
 		//0 = eat, 1 = smoke, 2 = bathroom, 3 = drunkness

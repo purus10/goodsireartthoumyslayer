@@ -114,9 +114,11 @@
      <Compile Include="Assets\Script\Player_SyncPosition.cs" />
      <Compile Include="Assets\Script\Result.cs" />
      <Compile Include="Assets\Script\SetName.cs" />
+     <Compile Include="Assets\Script\Smoking_Area.cs" />
      <Compile Include="Assets\Script\Special_Animation.cs" />
      <Compile Include="Assets\Script\SpriteBubble.cs" />
      <Compile Include="Assets\Script\TName.cs" />
+     <Compile Include="Assets\Script\Toilet_Area.cs" />
      <Compile Include="Assets\Script\Unit.cs" />
      <Compile Include="Assets\Script\f.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />

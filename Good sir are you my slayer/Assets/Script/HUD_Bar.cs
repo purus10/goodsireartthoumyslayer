@@ -47,9 +47,11 @@ public class HUD_Bar : MonoBehaviour {
 	
 	void ShowNeed(int i)
 	{
-		//0 = eat, 1 = smoke, 2 = bathroom, 3 = drunkness
-		ShowBar = Bar[player.Needs[i].Meter/10];
-		ShowNumber = Number[player.Needs[i].Meter/10];
+        //0 = eat, 1 = smoke, 2 = bathroom, 3 = drunkness
+        float meter = player.Needs[i].Meter;
+        float meter_Roundup = Mathf.Round(meter / 10);
+		ShowBar = Bar[(int)meter_Roundup];
+		ShowNumber = Number[(int)meter_Roundup];
 	}
 
 

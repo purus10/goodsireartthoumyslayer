@@ -39,13 +39,13 @@ public class Item : MonoBehaviour {
         {
             if (Type == type.Spawn)
             {
-                    if (Input.GetButtonDown("Y"))
+                    if (Input.GetButtonDown("A"))
                         GiveLoot(player);
             }
             else if (Type == type.Weapon && player.Selected == null && player.State == Player.states.Idle)
             {
 
-                if (Input.GetButtonDown("Y"))
+                if (Input.GetButtonDown("A"))
                 {
                     GiveSelf(player);
                 }
@@ -176,7 +176,7 @@ public class Item : MonoBehaviour {
             else if (loot.Type == type.Weapon) GiveWeapon(player);
         }
     }
-	void CastItem(Player player)
+	public void CastItem(Player player)
 	{
 		if (Type == type.Consumable) Cast.Consumable(this, player);
 	}

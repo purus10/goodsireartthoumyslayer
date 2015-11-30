@@ -8,12 +8,13 @@ public class SetName : MonoBehaviour {
     public Player player;
 	
 	void Start () {
-	
-		
-	}
+        GetComponent<MeshRenderer>().sortingOrder = 3;
+
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
         text.text = player.TargetName;
+
     }
 }

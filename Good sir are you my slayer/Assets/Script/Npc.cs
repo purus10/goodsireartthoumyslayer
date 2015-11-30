@@ -10,10 +10,11 @@ public class Npc : MonoBehaviour {
 	public states State;
 	public bool hurtstart;
 	public Unit Unit;
-	public float HungerTimer, BathTimer, DrunkTimer, SmokeTimer, HurtTimer;
+    public float HurtTimer;
+    float HungerTimer, BathTimer, DrunkTimer, SmokeTimer;
 	public int Health, Suspicion, Afraidat, Crave;
 	float[] needs = new float[4] {100,100,100,100};
-	public float conversation = 100, convoLength = 50f;
+	float conversation = 500f, convoLength = 50f;
 	float[] NeedTimers = new float[4];
 	Guard[] Search;
 	Item[] Items, selections;
@@ -51,7 +52,13 @@ public class Npc : MonoBehaviour {
 		InvokeRepeating("Smoke",SmokeTimer,1.0f);
 		InvokeRepeating("Bathroom",BathTimer,1.0f);
 		InvokeRepeating("Drunk",DrunkTimer,1.0f);
-	}
+        conversation = Random.Range(300, 700);
+        convoLength = Random.Range(30, 70);
+        HungerTimer = Random.Range(20, 40);
+        BathTimer = Random.Range(20, 40);
+        DrunkTimer = Random.Range(20, 40);
+        SmokeTimer = Random.Range(20, 40);
+    }
 
 	void CountDown()
 	{
@@ -121,7 +128,7 @@ public class Npc : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         Npc guest = col.gameObject.GetComponent<Npc>();
-        if (guest != null && mingler == null)
+        if (guest != null && mingler == null && SearchingforArea == null)
         {
             if (guest.State == states.Afraid)
                 State = states.Afraid;
@@ -273,11 +280,11 @@ public class Npc : MonoBehaviour {
                     }
                 }
 
-                /*    for (int i = 0; i < needs.Length; i++)
+                    for (int i = 0; i < needs.Length; i++)
                     {
                         if (needs[i] <= Crave)
                             GetNeedState(i);
-                    }*/
+                    }
                     if (State == states.Idle)
                     {
                         direction = Move[Random.Range(0, Move.Length)];
@@ -366,7 +373,19 @@ public class Npc : MonoBehaviour {
 		#region Drink
 		if (State == states.Drink)
 		{
-			if (Items == null)
+            if (SearchingforArea == null)
+            {
+                SearchingforArea = GameObject.Find("Drink_Area");
+                Unit.MoveTo(SearchingforArea.transform.position);
+            }
+
+            if (transform.position == Unit.path[Unit.path.Length - 1])
+            {
+                needs[2] = 100;
+                SearchingforArea = null;
+                State = states.Idle;
+            }
+            /*if (Items == null)
 				Items  = GameObject.FindObjectsOfType(typeof(Item)) as Item[];
 			else if (Needs[3].Meter <= 0)
 			{
@@ -393,15 +412,15 @@ public class Npc : MonoBehaviour {
 				needs[3] = 100;
 				SearchingforArea = null;
 				State = states.Idle;
-			}
-		}
+			}*/
+        }
 		#endregion
 		#region Bathroom
 		if (State == states.Bathroom)
 		{
 			if (SearchingforArea == null)
 			{
-				SearchingforArea  = GameObject.Find("Toilet");
+				SearchingforArea  = GameObject.Find("Toilet_Area");
 				Unit.MoveTo(SearchingforArea.transform.position);
 			}
 
@@ -416,7 +435,19 @@ public class Npc : MonoBehaviour {
 		#region Hungry
 		if (State == states.Hungry)
 		{
-			if (SearchingforArea == null)
+            if (SearchingforArea == null)
+            {
+                SearchingforArea = GameObject.Find("Food_Area");
+                Unit.MoveTo(SearchingforArea.transform.position);
+            }
+
+            if (transform.position == Unit.path[Unit.path.Length - 1])
+            {
+                needs[2] = 100;
+                SearchingforArea = null;
+                State = states.Idle;
+            }
+            /*if (SearchingforArea == null)
 			{
 				SearchingforArea  = GameObject.Find("Food");
 				Unit.MoveTo(SearchingforArea.transform.position);
@@ -427,19 +458,19 @@ public class Npc : MonoBehaviour {
 				needs[0] = 100;
 				SearchingforArea = null;
 				State = states.Idle;
-			}
-		}
+			}*/
+        }
 		#endregion
 		#region Smoke
 		if (State == states.Smoke)
 		{
 			if (SearchingforArea == null)
 			{
-				SearchingforArea  = GameObject.Find("cigarette");
+				SearchingforArea  = GameObject.Find("Smoking_Area");
 				Unit.MoveTo(SearchingforArea.transform.position);
 			}
 
-			if (transform.position == Unit.path[Unit.path.Length-1])
+			if (SearchingforArea != null && transform.position == Unit.path[Unit.path.Length-1])
 			{
 				needs[1] = 100;
 				SearchingforArea = null;
