@@ -6,6 +6,8 @@ public class Result : MonoBehaviour {
 	static public bool End;
 	static public string[] PlayerName = new string[4];
 	static public int[] PlayerScore = new int[4];
+    public Sprite Score_Board;
+    public TextMesh[] Names = new TextMesh[4];
     int press_count;
 	public Rect ResultBox;
 	public Rect[] PlayerDisplay = new Rect[4];
@@ -20,15 +22,21 @@ public class Result : MonoBehaviour {
 
         if (Network.connections.Length+1 == press_count)
         {
-            Application.LoadLevel(0);
-            Digit.currentRound++;
-            Digit.playTime = 0;
-            Time.timeScale = 1;
-            press_count = 0;
-
-            for (int i = 0; i < Result.PlayerName.Length; i++)
+            if (Digit.currentRound < 3)
             {
-                Result.PlayerName[i] = null;
+                Application.LoadLevel(0);
+                Digit.currentRound++;
+                Digit.playTime = 0;
+                Time.timeScale = 1;
+                press_count = 0;
+
+                for (int i = 0; i < Result.PlayerName.Length; i++)
+                {
+                    Result.PlayerName[i] = null;
+                }
+            } else
+            {
+                Network.Disconnect();
             }
         }
     }
@@ -42,10 +50,21 @@ public class Result : MonoBehaviour {
             {
                 GUI.Label(PlayerDisplay[i], PlayerName[i] + "  " + PlayerScore[i]);
             }
-            if (GUI.Button(NextRound, "Next Round"))
+
+            if (Digit.currentRound != 3)
             {
-                press_count++;
-                End = false;
+                if (GUI.Button(NextRound, "Next Round"))
+                {
+                    press_count++;
+                    End = false;
+                }
+            } else
+            {
+                if (GUI.Button(NextRound, "End Game"))
+                {
+                    press_count++;
+                    End = false;
+                }
             }
 
         }

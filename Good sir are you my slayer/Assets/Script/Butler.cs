@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class Butler : MonoBehaviour {
+public class Butler : NetworkBehaviour {
 
     public Vector3[] EndPoint;
     public Unit Unit;

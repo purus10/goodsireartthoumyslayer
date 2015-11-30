@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Database;
+using UnityEngine.Networking;
 
-public class Guard : MonoBehaviour {
+public class Guard : NetworkBehaviour {
 
 	public Player Target;
     public Vector3 StartPoint;

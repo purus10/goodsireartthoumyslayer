@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using Database;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 
-public class Player : MonoBehaviour {
+public class Player : NetworkBehaviour {
 
 	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing}
 	public enum player {one,two,three,four}
@@ -49,7 +50,7 @@ public class Player : MonoBehaviour {
                 item.Lethal = false;
             }
 	}
-	void Start()
+        void Start()
 	{
         DontDestroyOnLoad(gameObject);
         if (Slots[0] != null && Selected == null) 
@@ -58,7 +59,7 @@ public class Player : MonoBehaviour {
         HUD.SetActive(true);
     }
 
-    void OnLevelWasLoaded()
+    public override void OnStartServer()
     {
         PlacePlayer();
     }
@@ -168,6 +169,7 @@ public class Player : MonoBehaviour {
 
     public void PlacePlayer()
     {
+        print("PLACING");
         int spawnpoint = Random.Range(0, SpawnPoints.Count);
         transform.position = SpawnPoints[spawnpoint];
         SpawnPoints.RemoveAt(spawnpoint);

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Database;
+using UnityEngine.Networking;
 
-public class Item : MonoBehaviour {
+public class Item : NetworkBehaviour {
 
 	public enum type {Consumable,Spawn,Weapon, Clue};
 	public enum consumable{Any, Poison, Snack, Drink, Bandage, Firecracker, PainKiller};

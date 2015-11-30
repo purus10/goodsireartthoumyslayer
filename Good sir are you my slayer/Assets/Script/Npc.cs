@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using UnityEngine.Networking;
 using Database;
 
-public class Npc : MonoBehaviour {
+
+public class Npc : NetworkBehaviour {
 
 	public enum states {Idle, Afraid, Talking, Hungry, Smoke, Drink, Bathroom, Walk, SearchingForGuard, Reporting};
 	public states State;
@@ -204,8 +206,12 @@ public class Npc : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
+        if (!isServer)
+        {
+            return;
+        }
 		if (Health <= 0)
 		{
 			if (hurtstart == false)
