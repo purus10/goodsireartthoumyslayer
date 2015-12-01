@@ -18,9 +18,10 @@ public class Unit_Spawner : NetworkBehaviour {
     public int NumberOfGuards;
     public int NumberOfButlers;
 
-    public override void OnStartServer()
+    public void SpawnUnits()
     {
-        for (int i = 0;i<NumberOfNPC; i++)
+        print("SPAWNING");
+        for (int i = 0; i < NumberOfNPC; i++)
         {
             if (i < SpawnPoints.Count)
             {
@@ -59,6 +60,11 @@ public class Unit_Spawner : NetworkBehaviour {
                 ItemSpawnPoints.RemoveAt(position);
             }
         }
+    }
+
+    public override void OnStartServer()
+    {
+        SpawnUnits();
     }
 
     void SpawnNPC(Vector3 position)

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class Result : MonoBehaviour {
+public class Result : NetworkBehaviour {
 
 	static public bool End;
 	static public string[] PlayerName = new string[4];
@@ -24,11 +25,13 @@ public class Result : MonoBehaviour {
         {
             if (Digit.currentRound < 3)
             {
-                Application.LoadLevel(0);
+                Application.LoadLevel(1);
+                //GetComponent<Unit_Spawner>().SpawnUnits();
                 Digit.currentRound++;
                 Digit.playTime = 0;
                 Time.timeScale = 1;
                 press_count = 0;
+
 
                 for (int i = 0; i < Result.PlayerName.Length; i++)
                 {
