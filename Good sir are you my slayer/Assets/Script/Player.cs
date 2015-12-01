@@ -147,7 +147,7 @@ public class Player : NetworkBehaviour {
 				attacking--;
 			else {
 				AxisPress = false;
-                Item attackweapon = Weapon.GetComponentInChildren<Item>();
+                Item attackweapon = Weapon.GetComponent<Item>();
                 attackweapon.Attack_Anim = false;
                 if (attackweapon.Lethal)
                 {

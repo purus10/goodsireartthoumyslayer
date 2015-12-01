@@ -8,10 +8,12 @@ public class Unit_Spawner : NetworkBehaviour {
     [SerializeField] GameObject NPC_prefab;
     [SerializeField] GameObject GUARD_prefab;
     [SerializeField] GameObject BUTLER_prefab;
+    [SerializeField] GameObject CLUE_prefab;
     [SerializeField] GameObject[] Item_prefab;
     [SerializeField] List<Vector3> SpawnPoints = new List<Vector3>();
     [SerializeField] List<Vector3> ItemSpawnPoints = new List<Vector3>();
     private int counter;
+    public int NumberOfClues;
     public int NumberOfNPC;
     public int NumberOfGuards;
     public int NumberOfButlers;
@@ -47,6 +49,16 @@ public class Unit_Spawner : NetworkBehaviour {
                 SpawnPoints.RemoveAt(position);
             }
         }
+
+        for (int i = 0; i < NumberOfClues; i++)
+        {
+            if (i < ItemSpawnPoints.Count)
+            {
+                int position = Random.Range(0, ItemSpawnPoints.Count - 1);
+                SpawnClue(ItemSpawnPoints[position]);
+                ItemSpawnPoints.RemoveAt(position);
+            }
+        }
     }
 
     void SpawnNPC(Vector3 position)
@@ -72,8 +84,13 @@ public class Unit_Spawner : NetworkBehaviour {
 
     }
 
-	// Use this for initialization
-	void Start () {
+    void SpawnClue(Vector3 position)
+    {
+        Instantiate(CLUE_prefab, position, Quaternion.identity);
+    }
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	

@@ -159,13 +159,12 @@ public class Npc : NetworkBehaviour {
 			} else if (item.Drawn == true) Suspicion ++;
 		}
 		//TALKING TO PLAYER
-		if (State == states.Idle)
-		{
 			if (player != null)
 				if(player.State != Player.states.Armed)
 			{
-					if (Input.GetButtonDown("X") && State != states.Talking)
+					if (Input.GetButtonDown("X"))
 				{
+                    print("I AM TALKNG");
 					offender = player;
 					for (int i = 0; i < offender.Needs.Length;i++)
 						convoLength -= (offender.Needs[i].Meter/10);
@@ -174,7 +173,6 @@ public class Npc : NetworkBehaviour {
 					Namerender.text = "...Talking";
 				}
 			}
-		}
 
 		if (Suspicion >= Afraidat && State != states.Afraid) 
 		{
