@@ -1,18 +1,18 @@
 fileFormatVersion: 2
 guid: bb5d5fea0b03e154aba570408fed84e4
-timeCreated: 1448932215
+timeCreated: 1448932896
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Gal_Heads_Bodies1_1920px_0
-    21300002: Gal_Heads_Bodies1_1920px_1
-    21300004: Gal_Heads_Bodies1_1920px_2
-    21300006: Gal_Heads_Bodies1_1920px_3
-    21300008: Gal_Heads_Bodies1_1920px_4
-    21300010: Gal_Heads_Bodies1_1920px_5
-    21300012: Gal_Heads_Bodies1_1920px_6
-    21300014: Gal_Heads_Bodies1_1920px_7
-    21300016: Gal_Heads_Bodies1_1920px_8
+    21300000: F_DownHead1
+    21300002: F_RightHead1
+    21300004: F_UpHead1
+    21300006: F_LeftHead1
+    21300008: F_DownHead2
+    21300010: F_RightHead2
+    21300012: F_UpHead2
+    21300014: F_LeftHead2
+    21300016: F_DownHead3
     21300018: Gal_Heads_Bodies1_1920px_9
     21300020: Gal_Heads_Bodies1_1920px_10
     21300022: Gal_Heads_Bodies1_1920px_11
@@ -190,7 +190,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Gal_Heads_Bodies1_1920px_0
+    - name: F_DownHead1
       rect:
         serializedVersion: 2
         x: 64
@@ -200,7 +200,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_1
+    - name: F_RightHead1
       rect:
         serializedVersion: 2
         x: 156
@@ -210,7 +210,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_2
+    - name: F_UpHead1
       rect:
         serializedVersion: 2
         x: 248
@@ -220,7 +220,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_3
+    - name: F_LeftHead1
       rect:
         serializedVersion: 2
         x: 340
@@ -230,7 +230,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_4
+    - name: F_DownHead2
       rect:
         serializedVersion: 2
         x: 436
@@ -240,7 +240,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_5
+    - name: F_RightHead2
       rect:
         serializedVersion: 2
         x: 548
@@ -250,7 +250,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_6
+    - name: F_UpHead2
       rect:
         serializedVersion: 2
         x: 664
@@ -260,7 +260,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_7
+    - name: F_LeftHead2
       rect:
         serializedVersion: 2
         x: 784
@@ -270,7 +270,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Gal_Heads_Bodies1_1920px_8
+    - name: F_DownHead3
       rect:
         serializedVersion: 2
         x: 904
