@@ -20,7 +20,6 @@ public class Unit_Spawner : NetworkBehaviour {
 
     public void SpawnUnits()
     {
-        print("SPAWNING");
         for (int i = 0; i < NumberOfNPC; i++)
         {
             if (i < SpawnPoints.Count)
@@ -64,7 +63,7 @@ public class Unit_Spawner : NetworkBehaviour {
 
     public override void OnStartServer()
     {
-        SpawnUnits();
+       //SpawnUnits();
     }
 
     void SpawnNPC(Vector3 position)
@@ -96,12 +95,17 @@ public class Unit_Spawner : NetworkBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-	
-	}
+   /* void OnEnable () {
+        SpawnUnits();
+    }*/
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SpawnUnits();
+        }
 	
 	}
 }

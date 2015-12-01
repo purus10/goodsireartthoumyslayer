@@ -26,7 +26,7 @@ public class Result : NetworkBehaviour {
             if (Digit.currentRound < 3)
             {
                 Application.LoadLevel(1);
-                //GetComponent<Unit_Spawner>().SpawnUnits();
+                GetComponent<Unit_Spawner>().SpawnUnits();
                 Digit.currentRound++;
                 Digit.playTime = 0;
                 Time.timeScale = 1;
