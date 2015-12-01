@@ -1,39 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class SpriteBubble : MonoBehaviour
+public class SpriteBubble : NetworkBehaviour
 {
     public SpriteRenderer Bubble;
     public enum states {None, Talking};
-    public states Type;
     public Sprite[] Bubbles;
     public float Anim_speed;
+    public Npc Npc;
     int frame;
     float time;
 	
 	void Update ()
     {
-        switch (Type)
+        switch (Npc.State)
         {
-            case states.Talking:
+            case Npc.states.Talking:
                 {
-
+                    Anim_Bubble(0, 5);
+                    break;
+                }
+            case Npc.states.Idle:
+                {
+                    Bubble.sprite = Bubbles[20];
                     break;
                 }
         }
 	
 	}
 
-    [RPC]
-    private void Anim_Bubble(int min, int max)
+    public void Anim_Bubble(int min, int max)
     {
-        if (frame < max)
+        if (frame < max && frame >= min)
         {
             time++;
             if (time >= Anim_speed)
             {
                 frame++;
-                Bubble.sprite = Bubbles[frame];
+                Bubble.sprite =Bubbles[frame];
                 time = 0;
             }
         }

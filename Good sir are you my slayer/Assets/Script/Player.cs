@@ -52,7 +52,6 @@ public class Player : NetworkBehaviour {
 	}
         void Start()
 	{
-        DontDestroyOnLoad(gameObject);
         if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
         GetComponentInChildren<Camera>().enabled = true;
@@ -170,9 +169,9 @@ public class Player : NetworkBehaviour {
     public void PlacePlayer()
     {
         print("PLACING");
-        int spawnpoint = Random.Range(0, SpawnPoints.Count);
-        transform.position = SpawnPoints[spawnpoint];
-        SpawnPoints.RemoveAt(spawnpoint);
+        int spawnpoint = Random.Range(0, Spawn_Point.Count);
+        transform.position = Spawn_Point[spawnpoint];
+        Spawn_Point.RemoveAt(spawnpoint);
 
     }
 
@@ -289,7 +288,7 @@ public class Player : NetworkBehaviour {
 	}
 	public void Undraw(int selected)
 	{
-		Item heldweapon = Weapon.GetComponentInChildren<Item>();
+		Item heldweapon = Weapon.GetComponent<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{
 			ClearDraws();

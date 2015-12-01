@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class Result : MonoBehaviour {
+public class Result : NetworkBehaviour {
 
 	static public bool End;
 	static public string[] PlayerName = new string[4];
 	static public int[] PlayerScore = new int[4];
     public Sprite Score_Board;
     public TextMesh[] Names = new TextMesh[4];
-    int press_count;
+    static public int press_count;
 	public Rect ResultBox;
 	public Rect[] PlayerDisplay = new Rect[4];
 	public Rect NextRound;
+    public Unit_Spawner USpawner;
 
     void Update()
     {
@@ -24,10 +26,11 @@ public class Result : MonoBehaviour {
         {
             if (Digit.currentRound < 3)
             {
-                Application.LoadLevel(0);
+                Unit_Destroy();
                 Digit.currentRound++;
                 Digit.playTime = 0;
                 Time.timeScale = 1;
+                Unit_Spawner.StartMatch = true;
                 press_count = 0;
 
                 for (int i = 0; i < Result.PlayerName.Length; i++)
@@ -36,9 +39,75 @@ public class Result : MonoBehaviour {
                 }
             } else
             {
-                Network.Disconnect();
+                Unit_Destroy();
+                Digit.currentRound = 0;
+                print("GAME DONE");
+                Time.timeScale = 1;
+                Digit.playTime = 0;
+                USpawner.startscreen.SetActive(true);
+                USpawner.startscreen.GetComponent<Camera>().enabled = true;
+                GUI_Start.Start = true;
             }
         }
+    }
+
+    void Unit_Destroy()
+    {
+        
+        Guard[] SearchG = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
+        Butler[] SearchB = GameObject.FindObjectsOfType(typeof(Butler)) as Butler[];
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+        Item[] SearchI = GameObject.FindObjectsOfType(typeof(Item)) as Item[];
+        Clue[] SearchC = GameObject.FindObjectsOfType(typeof(Clue)) as Clue[];
+        Player[] SearchP = GameObject.FindObjectsOfType(typeof(Player)) as Player[];
+
+        foreach (Guard g in SearchG)
+        {
+            GameObject.Destroy(g.gameObject);
+        }
+        foreach (Butler g in SearchB)
+        {
+            GameObject.Destroy(g.gameObject);
+        }
+        foreach (Npc g in SearchN)
+        {
+            GameObject.Destroy(g.gameObject);
+        }
+        foreach (Item g in SearchI)
+        {
+            GameObject.Destroy(g.gameObject);
+        }
+        foreach (Clue g in SearchC)
+        {
+            GameObject.Destroy(g.gameObject);
+        }
+
+        foreach(Vector3 p in USpawner.SaveSpawnPoints)
+        {
+            USpawner.SpawnPoints.Add(p);
+        }
+        foreach (Vector3 p in USpawner.SaveItemSpawnPoints)
+        {
+            USpawner.ItemSpawnPoints.Add(p);
+        }
+
+        if (Digit.currentRound < 3)
+        {
+            foreach (Player p in SearchP)
+            {
+                p.PlacePlayer();
+            }
+        } else
+        {
+            foreach (Player p in SearchP)
+            {
+                foreach (Vector3 pos in Player.SpawnPoints)
+                {
+                    p.Spawn_Point.Add(pos);
+                }
+            }
+        }
+
     }
 	void OnGUI () 
 	{

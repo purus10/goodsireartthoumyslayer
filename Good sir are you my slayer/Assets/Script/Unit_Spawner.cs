@@ -8,17 +8,24 @@ public class Unit_Spawner : NetworkBehaviour {
     [SerializeField] GameObject NPC_prefab;
     [SerializeField] GameObject GUARD_prefab;
     [SerializeField] GameObject BUTLER_prefab;
+    [SerializeField] GameObject CLUE_prefab;
     [SerializeField] GameObject[] Item_prefab;
-    [SerializeField] List<Vector3> SpawnPoints = new List<Vector3>();
-    [SerializeField] List<Vector3> ItemSpawnPoints = new List<Vector3>();
+    public List<Vector3> SpawnPoints = new List<Vector3>();
+    public List<Vector3> ItemSpawnPoints = new List<Vector3>();
+    public GameObject startscreen;
+    public List<Vector3> SaveSpawnPoints = new List<Vector3>();
+    public List<Vector3> SaveItemSpawnPoints = new List<Vector3>();
     private int counter;
     public int NumberOfNPC;
     public int NumberOfGuards;
     public int NumberOfButlers;
+    public int NumberOfItems;
+    public int NumberOfClues;
+    static public bool StartMatch;
 
-    public override void OnStartServer()
+    public void SpawnUnits()
     {
-        for (int i = 0;i<NumberOfNPC; i++)
+        for (int i = 0; i < NumberOfNPC; i++)
         {
             if (i < SpawnPoints.Count)
             {
@@ -47,6 +54,21 @@ public class Unit_Spawner : NetworkBehaviour {
                 SpawnPoints.RemoveAt(position);
             }
         }
+
+        for (int i = 0; i < NumberOfClues; i++)
+        {
+            if (i < ItemSpawnPoints.Count)
+            {
+                int position = Random.Range(0, ItemSpawnPoints.Count - 1);
+                SpawnClues(ItemSpawnPoints[position]);
+                ItemSpawnPoints.RemoveAt(position);
+            }
+        }
+    }
+
+    public override void OnStartServer()
+    {
+        
     }
 
     void SpawnNPC(Vector3 position)
@@ -72,13 +94,32 @@ public class Unit_Spawner : NetworkBehaviour {
 
     }
 
-	// Use this for initialization
-	void Start () {
-	
+    void SpawnClues(Vector3 position)
+    {
+        Instantiate(CLUE_prefab, position, Quaternion.identity);
+    }
+
+    // Use this for initialization
+    void Awake ()
+    {
+       /* foreach(Vector3 p in SpawnPoints)
+        {
+            SaveSpawnPoints.Add(p);
+        }
+
+        foreach(Vector3 p in ItemSpawnPoints)
+        {
+            SaveItemSpawnPoints.Add(p);
+        }*/
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void FixedUpdate ()
+    {
+	    if (StartMatch == true)
+        {
+            SpawnUnits();
+            StartMatch = false;
+        }
 	}
 }

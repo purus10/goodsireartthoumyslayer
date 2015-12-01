@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.Networking;
 using Database;
 
-public class Player_Animations : MonoBehaviour {
+public class Player_Animations : NetworkBehaviour {
 
     SpriteRenderer player;
     public float Anim_speed;

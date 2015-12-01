@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8a5f0e90e1fca10499b08dbb6ec1f680
-timeCreated: 1447527874
+timeCreated: 1449004922
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -24,6 +24,7 @@ TextureImporter:
     21300034: Status_icons_1920_19
     21300036: Status_icons_1920_20
     21300038: Status_icons_1920_21
+    21300040: Status_icons_1920_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -78,7 +79,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_2
       rect:
@@ -88,7 +89,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_3
       rect:
@@ -98,7 +99,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_4
       rect:
@@ -108,7 +109,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_5
       rect:
@@ -118,7 +119,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_6
       rect:
@@ -128,7 +129,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_7
       rect:
@@ -138,7 +139,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_8
       rect:
@@ -148,7 +149,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_10
       rect:
@@ -158,7 +159,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_11
       rect:
@@ -168,7 +169,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_12
       rect:
@@ -178,7 +179,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_13
       rect:
@@ -188,7 +189,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_14
       rect:
@@ -198,7 +199,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_15
       rect:
@@ -208,7 +209,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_16
       rect:
@@ -218,7 +219,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_17
       rect:
@@ -228,7 +229,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_18
       rect:
@@ -238,7 +239,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_19
       rect:
@@ -248,7 +249,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_20
       rect:
@@ -258,7 +259,7 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Status_icons_1920_21
       rect:
@@ -268,7 +269,17 @@ TextureImporter:
         width: 80
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Status_icons_1920_0
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 179
+        width: 79
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
