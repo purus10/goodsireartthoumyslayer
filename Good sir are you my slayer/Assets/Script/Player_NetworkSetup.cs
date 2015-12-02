@@ -16,7 +16,6 @@ public class Player_NetworkSetup : NetworkBehaviour {
             }
             else
             {
-                print("REGISTERED");
                 GetComponent<Player>().enabled = false;
                 GetComponent<Player>().GetComponentInChildren<AudioListener>().enabled = false;
             }
