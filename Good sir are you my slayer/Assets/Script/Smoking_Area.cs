@@ -11,7 +11,6 @@ public class Smoking_Area : MonoBehaviour
         {
             if (player != null)
             {
-                print(player.Needs[1].Meter);
                 player.Needs[1].Meter = Mathf.Min(player.Needs[1].Meter+1,100);
             }
         }

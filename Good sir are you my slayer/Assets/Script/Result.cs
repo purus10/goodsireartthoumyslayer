@@ -97,6 +97,19 @@ public class Result : NetworkBehaviour {
             {
                 p.PlacePlayer();
             }
+
+            USpawner.SpawnPoints.Clear();
+            foreach (Vector3 pos in USpawner.SaveSpawnPoints)
+            {
+                USpawner.SpawnPoints.Add(pos);
+            }
+
+            USpawner.ItemSpawnPoints.Clear();
+            foreach (Vector3 pos in USpawner.SaveItemSpawnPoints)
+            {
+                USpawner.ItemSpawnPoints.Add(pos);
+            }
+
         } else
         {
             foreach (Player p in SearchP)

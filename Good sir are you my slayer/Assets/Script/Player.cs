@@ -123,7 +123,6 @@ public class Player : NetworkBehaviour {
 
 			if (Input.GetButtonDown("Y"))
 			{
-                print("yes");
 				if (Selected == Slots[0]) Undraw(0);
 				else if (Selected == Slots[1]) Undraw(1);
 			}
@@ -133,7 +132,6 @@ public class Player : NetworkBehaviour {
 		{
 				if (drawing != 0) drawing--;
 				else {
-				print("ARMING");
 					State = states.Armed;
 					Item drawnweapon = Weapon.GetComponentInChildren<Item>();
 					drawnweapon.Drawn = true;
@@ -168,7 +166,6 @@ public class Player : NetworkBehaviour {
 
     public void PlacePlayer()
     {
-        print("PLACING");
         int spawnpoint = Random.Range(0, Spawn_Point.Count);
         transform.position = Spawn_Point[spawnpoint];
         Spawn_Point.RemoveAt(spawnpoint);

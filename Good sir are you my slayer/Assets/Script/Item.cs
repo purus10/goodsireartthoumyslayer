@@ -40,13 +40,13 @@ public class Item : NetworkBehaviour {
         {
             if (Type == type.Spawn)
             {
-                    if (Input.GetButtonDown("A"))
+                    if (Input.GetButtonDown("X"))
                         GiveLoot(player);
             }
             else if (Type == type.Weapon && player.Selected == null && player.State == Player.states.Idle)
             {
 
-                if (Input.GetButtonDown("A"))
+                if (Input.GetButtonDown("X"))
                 {
                     GiveSelf(player);
                 }
@@ -56,95 +56,99 @@ public class Item : NetworkBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        if (Attack_Anim == true)
+        if (Type == type.Weapon)
         {
-            Weapon.enabled = false;
-            Attack.enabled = true;
-        } else
-        {
-            Weapon.enabled = true;
-            Attack.enabled = false;
+            if (Attack_Anim == true)
+            {
+                Weapon.enabled = false;
+                Attack.enabled = true;
+            }
+            else
+            {
+                Weapon.enabled = true;
+                Attack.enabled = false;
+            }
+            if (position.x > transform.position.x)
+            {
+                //left
+                facing = 2;
+                Weapon.sortingOrder = 2;
+                Attack.sortingOrder = 2;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
+                Attack.gameObject.transform.localPosition = AttackPlacement[2];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
+            }
+            else if (position.x < transform.position.x)
+            {
+                //right
+                facing = 6;
+                Weapon.sortingOrder = 0;
+                Attack.sortingOrder = -1;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                Attack.gameObject.transform.localPosition = AttackPlacement[2];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            }
+            else if (position.y < transform.position.y)
+            {
+                //up
+                facing = 0;
+                Weapon.sortingOrder = 0;
+                Attack.sortingOrder = -1;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[1];
+                Attack.gameObject.transform.localPosition = AttackPlacement[3];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            }
+            else if (position.y < transform.position.y && position.x < transform.position.x)
+            {
+                //upright
+                facing = 1;
+                Weapon.sortingOrder = 0;
+                Attack.sortingOrder = -1;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[1];
+                Attack.gameObject.transform.localPosition = AttackPlacement[2];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            }
+            else if (position.y < transform.position.y && position.x > transform.position.x)
+            {
+                //upleft
+                facing = 7;
+                Weapon.sortingOrder = 0;
+                Attack.sortingOrder = 2;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
+                Attack.gameObject.transform.localPosition = AttackPlacement[2];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
+            }
+            else if (position.y > transform.position.y)
+            {
+                //down
+                facing = 4;
+                Weapon.sortingOrder = 2;
+                Attack.sortingOrder = 2;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                Attack.gameObject.transform.localPosition = AttackPlacement[0];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
+            }
+            else if (position.y > transform.position.y && position.x < transform.position.x)
+            {
+                //downright
+                facing = 3;
+                Weapon.sortingOrder = 2;
+                Attack.sortingOrder = -1;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                Attack.gameObject.transform.localPosition = AttackPlacement[0];
+                Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            }
+            else if (position.y > transform.position.y && position.x > transform.position.x)
+            {
+                //downleft
+                facing = 5;
+                Weapon.sortingOrder = 2;
+                Attack.sortingOrder = 2;
+                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                Attack.gameObject.transform.localPosition = AttackPlacement[0];
+            }
+            position = transform.position;
         }
-        if (position.x > transform.position.x)
-        {
-            //left
-            facing = 2;
-            Weapon.sortingOrder = 2;
-            Attack.sortingOrder = 2;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
-            Attack.gameObject.transform.localPosition = AttackPlacement[2];
-            Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
-        }
-        else if (position.x < transform.position.x)
-        {
-            //right
-            facing = 6;
-            Weapon.sortingOrder = 0;
-            Attack.sortingOrder = -1;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
-            Attack.gameObject.transform.localPosition = AttackPlacement[2];
-            Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (position.y < transform.position.y)
-        {
-            //up
-            facing = 0;
-            Weapon.sortingOrder = 0;
-            Attack.sortingOrder = -1;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[1];
-            Attack.gameObject.transform.localPosition = AttackPlacement[3];
-               Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (position.y < transform.position.y && position.x < transform.position.x)
-        {
-            //upright
-            facing = 1;
-            Weapon.sortingOrder = 0;
-            Attack.sortingOrder = -1;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[1];
-            Attack.gameObject.transform.localPosition = AttackPlacement[2];
-            Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (position.y < transform.position.y && position.x > transform.position.x)
-        {
-            //upleft
-            facing = 7;
-            Weapon.sortingOrder = 0;
-            Attack.sortingOrder = 2;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
-            Attack.gameObject.transform.localPosition = AttackPlacement[2];
-            Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
-        }
-        else if (position.y > transform.position.y)
-        {
-            //down
-            facing = 4;
-            Weapon.sortingOrder = 2;
-            Attack.sortingOrder = 2;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
-            Attack.gameObject.transform.localPosition = AttackPlacement[0];
-            Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
-        }
-        else if (position.y > transform.position.y && position.x < transform.position.x)
-        {
-            //downright
-            facing = 3;
-            Weapon.sortingOrder = 2;
-            Attack.sortingOrder = -1;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
-            Attack.gameObject.transform.localPosition = AttackPlacement[0];
-            Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
-        }
-        else if (position.y > transform.position.y && position.x > transform.position.x)
-        {
-            //downleft
-            facing = 5;
-            Weapon.sortingOrder = 2;
-            Attack.sortingOrder = 2;
-            Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
-            Attack.gameObject.transform.localPosition = AttackPlacement[0];
-        }
-        position = transform.position;
     }
     void GiveSelf(Player player)
     {

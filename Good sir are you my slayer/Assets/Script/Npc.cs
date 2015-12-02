@@ -274,7 +274,6 @@ public class Npc : NetworkBehaviour {
 			{
                 if (mingler != null)
                 {
-                    print("MOVING TO TALK");
                     float distance = Vector3.Distance(mingler.transform.position, transform.position);
                     if (distance > 1f)
                     {
@@ -303,7 +302,6 @@ public class Npc : NetworkBehaviour {
                         }
                         else
                         {
-                            print("Not Moving");
                             counter = SetCounter;
                         }
                     }
