@@ -1,0 +1,1596 @@
+fileFormatVersion: 2
+guid: ebbf52e1f2fc69a488d0356296759fc4
+timeCreated: 1449014728
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Guy_Heads_Bodies1_1920px_0
+    21300002: Guy_Heads_Bodies1_1920px_1
+    21300004: Guy_Heads_Bodies1_1920px_2
+    21300006: Guy_Heads_Bodies1_1920px_3
+    21300008: Guy_Heads_Bodies1_1920px_4
+    21300010: Guy_Heads_Bodies1_1920px_5
+    21300012: Guy_Heads_Bodies1_1920px_6
+    21300014: Guy_Heads_Bodies1_1920px_7
+    21300016: Guy_Heads_Bodies1_1920px_8
+    21300018: Guy_Heads_Bodies1_1920px_9
+    21300020: Guy_Heads_Bodies1_1920px_10
+    21300022: Guy_Heads_Bodies1_1920px_11
+    21300024: Guy_Heads_Bodies1_1920px_12
+    21300026: Guy_Heads_Bodies1_1920px_13
+    21300028: Guy_Heads_Bodies1_1920px_14
+    21300030: Guy_Heads_Bodies1_1920px_15
+    21300032: Guy_Heads_Bodies1_1920px_16
+    21300034: Guy_Heads_Bodies1_1920px_17
+    21300036: Guy_Heads_Bodies1_1920px_18
+    21300038: Guy_Heads_Bodies1_1920px_19
+    21300040: Guy_Heads_Bodies1_1920px_20
+    21300042: Guy_Heads_Bodies1_1920px_21
+    21300044: Guy_Heads_Bodies1_1920px_22
+    21300046: Guy_Heads_Bodies1_1920px_23
+    21300048: Guy_Heads_Bodies1_1920px_24
+    21300050: Guy_Heads_Bodies1_1920px_25
+    21300052: Guy_Heads_Bodies1_1920px_26
+    21300054: Guy_Heads_Bodies1_1920px_27
+    21300056: Guy_Heads_Bodies1_1920px_28
+    21300058: Guy_Heads_Bodies1_1920px_29
+    21300060: Guy_Heads_Bodies1_1920px_30
+    21300062: Guy_Heads_Bodies1_1920px_31
+    21300064: Guy_Heads_Bodies1_1920px_32
+    21300066: Guy_Heads_Bodies1_1920px_33
+    21300068: Guy_Heads_Bodies1_1920px_34
+    21300070: Guy_Heads_Bodies1_1920px_35
+    21300072: Guy_Heads_Bodies1_1920px_36
+    21300074: Guy_Heads_Bodies1_1920px_37
+    21300076: Guy_Heads_Bodies1_1920px_38
+    21300078: Guy_Heads_Bodies1_1920px_39
+    21300080: Guy_Heads_Bodies1_1920px_40
+    21300082: Guy_Heads_Bodies1_1920px_41
+    21300084: Guy_Heads_Bodies1_1920px_42
+    21300086: Guy_Heads_Bodies1_1920px_43
+    21300088: Guy_Heads_Bodies1_1920px_44
+    21300090: Guy_Heads_Bodies1_1920px_45
+    21300092: Guy_Heads_Bodies1_1920px_46
+    21300094: Guy_Heads_Bodies1_1920px_47
+    21300096: Guy_Heads_Bodies1_1920px_48
+    21300098: Guy_Heads_Bodies1_1920px_49
+    21300100: Guy_Heads_Bodies1_1920px_50
+    21300102: Guy_Heads_Bodies1_1920px_51
+    21300104: Guy_Heads_Bodies1_1920px_52
+    21300106: Guy_Heads_Bodies1_1920px_53
+    21300108: Guy_Heads_Bodies1_1920px_54
+    21300110: Guy_Heads_Bodies1_1920px_55
+    21300112: Guy_Heads_Bodies1_1920px_56
+    21300114: Guy_Heads_Bodies1_1920px_57
+    21300116: Guy_Heads_Bodies1_1920px_58
+    21300118: Guy_Heads_Bodies1_1920px_59
+    21300120: Guy_Heads_Bodies1_1920px_60
+    21300122: Guy_Heads_Bodies1_1920px_61
+    21300124: Guy_Heads_Bodies1_1920px_62
+    21300126: Guy_Heads_Bodies1_1920px_63
+    21300128: Guy_Heads_Bodies1_1920px_64
+    21300130: Guy_Heads_Bodies1_1920px_65
+    21300132: Guy_Heads_Bodies1_1920px_66
+    21300134: Guy_Heads_Bodies1_1920px_67
+    21300136: Guy_Heads_Bodies1_1920px_68
+    21300138: Guy_Heads_Bodies1_1920px_69
+    21300140: Guy_Heads_Bodies1_1920px_70
+    21300142: Guy_Heads_Bodies1_1920px_71
+    21300144: Guy_Heads_Bodies1_1920px_72
+    21300146: Guy_Heads_Bodies1_1920px_73
+    21300148: Guy_Heads_Bodies1_1920px_74
+    21300150: Guy_Heads_Bodies1_1920px_75
+    21300152: Guy_Heads_Bodies1_1920px_76
+    21300154: Guy_Heads_Bodies1_1920px_77
+    21300156: Guy_Heads_Bodies1_1920px_78
+    21300158: Guy_Heads_Bodies1_1920px_79
+    21300160: Guy_Heads_Bodies1_1920px_80
+    21300162: Guy_Heads_Bodies1_1920px_81
+    21300164: Guy_Heads_Bodies1_1920px_82
+    21300166: Guy_Heads_Bodies1_1920px_83
+    21300168: Guy_Heads_Bodies1_1920px_84
+    21300170: Guy_Heads_Bodies1_1920px_85
+    21300172: Guy_Heads_Bodies1_1920px_86
+    21300174: Guy_Heads_Bodies1_1920px_87
+    21300176: Guy_Heads_Bodies1_1920px_88
+    21300178: Guy_Heads_Bodies1_1920px_89
+    21300180: Guy_Heads_Bodies1_1920px_90
+    21300182: Guy_Heads_Bodies1_1920px_91
+    21300184: Guy_Heads_Bodies1_1920px_92
+    21300186: Guy_Heads_Bodies1_1920px_93
+    21300188: Guy_Heads_Bodies1_1920px_94
+    21300190: Guy_Heads_Bodies1_1920px_95
+    21300192: Guy_Heads_Bodies1_1920px_96
+    21300194: Guy_Heads_Bodies1_1920px_97
+    21300196: Guy_Heads_Bodies1_1920px_98
+    21300198: Guy_Heads_Bodies1_1920px_99
+    21300200: Guy_Heads_Bodies1_1920px_100
+    21300202: Guy_Heads_Bodies1_1920px_101
+    21300204: Guy_Heads_Bodies1_1920px_102
+    21300206: Guy_Heads_Bodies1_1920px_103
+    21300208: Guy_Heads_Bodies1_1920px_104
+    21300210: Guy_Heads_Bodies1_1920px_105
+    21300212: Guy_Heads_Bodies1_1920px_106
+    21300214: Guy_Heads_Bodies1_1920px_107
+    21300216: Guy_Heads_Bodies1_1920px_108
+    21300218: Guy_Heads_Bodies1_1920px_109
+    21300220: Guy_Heads_Bodies1_1920px_110
+    21300222: Guy_Heads_Bodies1_1920px_111
+    21300224: Guy_Heads_Bodies1_1920px_112
+    21300226: Guy_Heads_Bodies1_1920px_113
+    21300228: Guy_Heads_Bodies1_1920px_114
+    21300230: Guy_Heads_Bodies1_1920px_115
+    21300232: Guy_Heads_Bodies1_1920px_116
+    21300234: Guy_Heads_Bodies1_1920px_117
+    21300236: Guy_Heads_Bodies1_1920px_118
+    21300238: Guy_Heads_Bodies1_1920px_119
+    21300240: Guy_Heads_Bodies1_1920px_120
+    21300242: Guy_Heads_Bodies1_1920px_121
+    21300244: Guy_Heads_Bodies1_1920px_122
+    21300246: Guy_Heads_Bodies1_1920px_123
+    21300248: Guy_Heads_Bodies1_1920px_124
+    21300250: Guy_Heads_Bodies1_1920px_125
+    21300252: Guy_Heads_Bodies1_1920px_126
+    21300254: Guy_Heads_Bodies1_1920px_127
+    21300256: Guy_Heads_Bodies1_1920px_128
+    21300258: Guy_Heads_Bodies1_1920px_129
+    21300260: Guy_Heads_Bodies1_1920px_130
+    21300262: Guy_Heads_Bodies1_1920px_131
+    21300264: Guy_Heads_Bodies1_1920px_132
+    21300266: Guy_Heads_Bodies1_1920px_133
+    21300268: Guy_Heads_Bodies1_1920px_134
+    21300270: Guy_Heads_Bodies1_1920px_135
+    21300272: Guy_Heads_Bodies1_1920px_136
+    21300274: Guy_Heads_Bodies1_1920px_137
+    21300276: Guy_Heads_Bodies1_1920px_138
+    21300278: Guy_Heads_Bodies1_1920px_139
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Guy_Heads_Bodies1_1920px_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 848
+        width: 56
+        height: 60
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 848
+        width: 48
+        height: 60
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 856
+        width: 56
+        height: 52
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 848
+        width: 48
+        height: 60
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_4
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 848
+        width: 64
+        height: 84
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_5
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 848
+        width: 64
+        height: 84
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 856
+        width: 64
+        height: 76
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_7
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 848
+        width: 64
+        height: 84
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_8
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 848
+        width: 56
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_9
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 848
+        width: 52
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_10
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 856
+        width: 56
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_11
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 848
+        width: 52
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_12
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 848
+        width: 72
+        height: 72
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_13
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 848
+        width: 72
+        height: 72
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_14
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 856
+        width: 72
+        height: 64
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_15
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 848
+        width: 72
+        height: 72
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_16
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 844
+        width: 72
+        height: 80
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_17
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 844
+        width: 76
+        height: 80
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_18
+      rect:
+        serializedVersion: 2
+        x: 2168
+        y: 856
+        width: 72
+        height: 68
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_19
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 844
+        width: 76
+        height: 80
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 732
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 732
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_23
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_24
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 732
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_25
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_26
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 732
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_27
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_28
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 732
+        width: 56
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_29
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 732
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_30
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 732
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_31
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 732
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_32
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 732
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_33
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_34
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 732
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_35
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_36
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 732
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_37
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_38
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 732
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_39
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 732
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_40
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 604
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_41
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_42
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 604
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_43
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_44
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 608
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_45
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_46
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 608
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_47
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_48
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 608
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_49
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 616
+        width: 40
+        height: 48
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_50
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 612
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_51
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 616
+        width: 40
+        height: 48
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_52
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 608
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_53
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_54
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 608
+        width: 56
+        height: 68
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_55
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_56
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 604
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_57
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_58
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 608
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_59
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 612
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_60
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 496
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_61
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_62
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 496
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_63
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_64
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 496
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_65
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_66
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 496
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_67
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_68
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 496
+        width: 56
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_69
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 500
+        width: 40
+        height: 48
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_70
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 492
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_71
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 500
+        width: 40
+        height: 48
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_72
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 496
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_73
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_74
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 496
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_75
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_76
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 496
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_77
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_78
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 496
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_79
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 496
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_80
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_81
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_82
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_83
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_84
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 384
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_85
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_86
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 384
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_87
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_88
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 384
+        width: 56
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_89
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 384
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_90
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 384
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_91
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 384
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_92
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 388
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_93
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_94
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 388
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_95
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_96
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 384
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_97
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_98
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 384
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_99
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 384
+        width: 40
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_100
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 248
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_101
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 264
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_102
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 248
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_103
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 264
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_104
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 260
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_105
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 264
+        width: 44
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_106
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 260
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_107
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 264
+        width: 44
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_108
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 260
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_109
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 264
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_110
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 264
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_111
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 264
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_112
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 260
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_113
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 264
+        width: 44
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_114
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 260
+        width: 56
+        height: 68
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_115
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 264
+        width: 44
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_116
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 260
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_117
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 264
+        width: 44
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_118
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 260
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_119
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 264
+        width: 44
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_120
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 140
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_121
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 52
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_122
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 140
+        width: 56
+        height: 60
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_123
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 144
+        width: 52
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_124
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 144
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_125
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 144
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_126
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 144
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_127
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 144
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_128
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 144
+        width: 56
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_129
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 144
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_130
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 140
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_131
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 144
+        width: 40
+        height: 52
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_132
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 148
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_133
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 144
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_134
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 148
+        width: 56
+        height: 64
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_135
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 144
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_136
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 144
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_137
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 144
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_138
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 144
+        width: 56
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Guy_Heads_Bodies1_1920px_139
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 144
+        width: 48
+        height: 56
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
