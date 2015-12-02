@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 04193c72b9b33f849bb2ee09923ce0f1
-timeCreated: 1449014541
+timeCreated: 1449020398
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -197,8 +197,8 @@ TextureImporter:
         y: 876
         width: 52
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_1
       rect:
@@ -207,8 +207,8 @@ TextureImporter:
         y: 876
         width: 48
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_2
       rect:
@@ -217,8 +217,8 @@ TextureImporter:
         y: 880
         width: 52
         height: 52
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_3
       rect:
@@ -227,8 +227,8 @@ TextureImporter:
         y: 876
         width: 48
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_4
       rect:
@@ -237,8 +237,8 @@ TextureImporter:
         y: 876
         width: 84
         height: 68
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_5
       rect:
@@ -247,8 +247,8 @@ TextureImporter:
         y: 876
         width: 84
         height: 68
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_6
       rect:
@@ -257,8 +257,8 @@ TextureImporter:
         y: 884
         width: 84
         height: 60
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_7
       rect:
@@ -267,8 +267,8 @@ TextureImporter:
         y: 876
         width: 84
         height: 68
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_8
       rect:
@@ -277,8 +277,8 @@ TextureImporter:
         y: 876
         width: 64
         height: 68
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_9
       rect:
@@ -287,8 +287,8 @@ TextureImporter:
         y: 876
         width: 56
         height: 68
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_10
       rect:
@@ -297,8 +297,8 @@ TextureImporter:
         y: 880
         width: 64
         height: 64
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_11
       rect:
@@ -307,8 +307,8 @@ TextureImporter:
         y: 876
         width: 56
         height: 68
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_12
       rect:
@@ -317,8 +317,8 @@ TextureImporter:
         y: 868
         width: 60
         height: 84
-      alignment: 9
-      pivot: {x: .5, y: .100000001}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_13
       rect:
@@ -327,8 +327,8 @@ TextureImporter:
         y: 868
         width: 72
         height: 76
-      alignment: 9
-      pivot: {x: .550000012, y: .100000001}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_14
       rect:
@@ -337,8 +337,8 @@ TextureImporter:
         y: 860
         width: 60
         height: 76
-      alignment: 9
-      pivot: {x: .5, y: .200000003}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_15
       rect:
@@ -347,8 +347,8 @@ TextureImporter:
         y: 868
         width: 72
         height: 76
-      alignment: 9
-      pivot: {x: .449999988, y: .100000001}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_16
       rect:
@@ -357,8 +357,8 @@ TextureImporter:
         y: 876
         width: 52
         height: 60
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_17
       rect:
@@ -367,8 +367,8 @@ TextureImporter:
         y: 876
         width: 60
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_18
       rect:
@@ -377,8 +377,8 @@ TextureImporter:
         y: 872
         width: 52
         height: 64
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_19
       rect:
@@ -387,8 +387,8 @@ TextureImporter:
         y: 876
         width: 60
         height: 56
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_20
       rect:
@@ -397,8 +397,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_21
       rect:
@@ -407,8 +407,8 @@ TextureImporter:
         y: 748
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_22
       rect:
@@ -417,8 +417,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_23
       rect:
@@ -427,8 +427,8 @@ TextureImporter:
         y: 748
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_24
       rect:
@@ -437,8 +437,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_25
       rect:
@@ -447,8 +447,8 @@ TextureImporter:
         y: 748
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_26
       rect:
@@ -457,8 +457,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_27
       rect:
@@ -467,8 +467,8 @@ TextureImporter:
         y: 748
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_28
       rect:
@@ -477,8 +477,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_29
       rect:
@@ -487,8 +487,8 @@ TextureImporter:
         y: 748
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_30
       rect:
@@ -497,8 +497,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_31
       rect:
@@ -507,8 +507,8 @@ TextureImporter:
         y: 748
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_32
       rect:
@@ -517,8 +517,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_33
       rect:
@@ -527,8 +527,8 @@ TextureImporter:
         y: 748
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_34
       rect:
@@ -537,8 +537,8 @@ TextureImporter:
         y: 748
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_35
       rect:
@@ -547,8 +547,8 @@ TextureImporter:
         y: 748
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_36
       rect:
@@ -557,8 +557,8 @@ TextureImporter:
         y: 748
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_37
       rect:
@@ -567,8 +567,8 @@ TextureImporter:
         y: 748
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_38
       rect:
@@ -577,8 +577,8 @@ TextureImporter:
         y: 748
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_39
       rect:
@@ -587,8 +587,8 @@ TextureImporter:
         y: 748
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_40
       rect:
@@ -597,8 +597,8 @@ TextureImporter:
         y: 624
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_41
       rect:
@@ -607,8 +607,8 @@ TextureImporter:
         y: 624
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_42
       rect:
@@ -617,8 +617,8 @@ TextureImporter:
         y: 624
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_43
       rect:
@@ -627,8 +627,8 @@ TextureImporter:
         y: 624
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_44
       rect:
@@ -637,8 +637,8 @@ TextureImporter:
         y: 620
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_45
       rect:
@@ -647,8 +647,8 @@ TextureImporter:
         y: 624
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_46
       rect:
@@ -657,8 +657,8 @@ TextureImporter:
         y: 620
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_47
       rect:
@@ -667,8 +667,8 @@ TextureImporter:
         y: 624
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_48
       rect:
@@ -677,8 +677,8 @@ TextureImporter:
         y: 624
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_49
       rect:
@@ -687,8 +687,8 @@ TextureImporter:
         y: 624
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_50
       rect:
@@ -697,8 +697,8 @@ TextureImporter:
         y: 624
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_51
       rect:
@@ -707,8 +707,8 @@ TextureImporter:
         y: 624
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_52
       rect:
@@ -717,8 +717,8 @@ TextureImporter:
         y: 624
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_53
       rect:
@@ -727,8 +727,8 @@ TextureImporter:
         y: 624
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_54
       rect:
@@ -737,8 +737,8 @@ TextureImporter:
         y: 624
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_55
       rect:
@@ -747,8 +747,8 @@ TextureImporter:
         y: 624
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_56
       rect:
@@ -757,8 +757,8 @@ TextureImporter:
         y: 620
         width: 52
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_57
       rect:
@@ -767,8 +767,8 @@ TextureImporter:
         y: 624
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_58
       rect:
@@ -777,8 +777,8 @@ TextureImporter:
         y: 624
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_59
       rect:
@@ -787,8 +787,8 @@ TextureImporter:
         y: 624
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_60
       rect:
@@ -797,8 +797,8 @@ TextureImporter:
         y: 508
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_61
       rect:
@@ -807,8 +807,8 @@ TextureImporter:
         y: 508
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_62
       rect:
@@ -817,8 +817,8 @@ TextureImporter:
         y: 508
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_63
       rect:
@@ -827,8 +827,8 @@ TextureImporter:
         y: 508
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_64
       rect:
@@ -837,8 +837,8 @@ TextureImporter:
         y: 504
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_65
       rect:
@@ -847,8 +847,8 @@ TextureImporter:
         y: 508
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_66
       rect:
@@ -857,8 +857,8 @@ TextureImporter:
         y: 504
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_67
       rect:
@@ -867,8 +867,8 @@ TextureImporter:
         y: 508
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_68
       rect:
@@ -877,8 +877,8 @@ TextureImporter:
         y: 508
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_69
       rect:
@@ -887,8 +887,8 @@ TextureImporter:
         y: 508
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_70
       rect:
@@ -897,8 +897,8 @@ TextureImporter:
         y: 508
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_71
       rect:
@@ -907,8 +907,8 @@ TextureImporter:
         y: 508
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_72
       rect:
@@ -917,8 +917,8 @@ TextureImporter:
         y: 508
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_73
       rect:
@@ -927,8 +927,8 @@ TextureImporter:
         y: 508
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_74
       rect:
@@ -937,8 +937,8 @@ TextureImporter:
         y: 508
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_75
       rect:
@@ -947,8 +947,8 @@ TextureImporter:
         y: 508
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_76
       rect:
@@ -957,8 +957,8 @@ TextureImporter:
         y: 500
         width: 52
         height: 56
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_77
       rect:
@@ -967,8 +967,8 @@ TextureImporter:
         y: 508
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_78
       rect:
@@ -977,8 +977,8 @@ TextureImporter:
         y: 504
         width: 52
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_79
       rect:
@@ -987,8 +987,8 @@ TextureImporter:
         y: 508
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_80
       rect:
@@ -997,8 +997,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_81
       rect:
@@ -1007,8 +1007,8 @@ TextureImporter:
         y: 400
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_82
       rect:
@@ -1017,8 +1017,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_83
       rect:
@@ -1027,8 +1027,8 @@ TextureImporter:
         y: 400
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_84
       rect:
@@ -1037,8 +1037,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_85
       rect:
@@ -1047,8 +1047,8 @@ TextureImporter:
         y: 400
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_86
       rect:
@@ -1057,8 +1057,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_87
       rect:
@@ -1067,8 +1067,8 @@ TextureImporter:
         y: 400
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_88
       rect:
@@ -1077,8 +1077,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_89
       rect:
@@ -1087,8 +1087,8 @@ TextureImporter:
         y: 400
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_90
       rect:
@@ -1097,8 +1097,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_91
       rect:
@@ -1107,8 +1107,8 @@ TextureImporter:
         y: 400
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_92
       rect:
@@ -1117,8 +1117,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_93
       rect:
@@ -1127,8 +1127,8 @@ TextureImporter:
         y: 400
         width: 52
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_94
       rect:
@@ -1137,8 +1137,8 @@ TextureImporter:
         y: 396
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_95
       rect:
@@ -1147,8 +1147,8 @@ TextureImporter:
         y: 400
         width: 52
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_96
       rect:
@@ -1157,8 +1157,8 @@ TextureImporter:
         y: 396
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_97
       rect:
@@ -1167,8 +1167,8 @@ TextureImporter:
         y: 396
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_98
       rect:
@@ -1177,8 +1177,8 @@ TextureImporter:
         y: 396
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_99
       rect:
@@ -1187,8 +1187,8 @@ TextureImporter:
         y: 396
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_100
       rect:
@@ -1197,8 +1197,8 @@ TextureImporter:
         y: 276
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_101
       rect:
@@ -1207,8 +1207,8 @@ TextureImporter:
         y: 280
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_102
       rect:
@@ -1217,8 +1217,8 @@ TextureImporter:
         y: 276
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_103
       rect:
@@ -1227,8 +1227,8 @@ TextureImporter:
         y: 280
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_104
       rect:
@@ -1237,8 +1237,8 @@ TextureImporter:
         y: 272
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_105
       rect:
@@ -1247,8 +1247,8 @@ TextureImporter:
         y: 280
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_106
       rect:
@@ -1257,8 +1257,8 @@ TextureImporter:
         y: 272
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_107
       rect:
@@ -1267,8 +1267,8 @@ TextureImporter:
         y: 280
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_108
       rect:
@@ -1277,8 +1277,8 @@ TextureImporter:
         y: 276
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_109
       rect:
@@ -1287,8 +1287,8 @@ TextureImporter:
         y: 280
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_110
       rect:
@@ -1297,8 +1297,8 @@ TextureImporter:
         y: 276
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_111
       rect:
@@ -1307,8 +1307,8 @@ TextureImporter:
         y: 280
         width: 40
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_112
       rect:
@@ -1317,8 +1317,8 @@ TextureImporter:
         y: 276
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_113
       rect:
@@ -1327,8 +1327,8 @@ TextureImporter:
         y: 280
         width: 52
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_114
       rect:
@@ -1337,8 +1337,8 @@ TextureImporter:
         y: 276
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_115
       rect:
@@ -1347,8 +1347,8 @@ TextureImporter:
         y: 280
         width: 52
         height: 44
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_116
       rect:
@@ -1357,8 +1357,8 @@ TextureImporter:
         y: 272
         width: 52
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_117
       rect:
@@ -1367,8 +1367,8 @@ TextureImporter:
         y: 276
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_118
       rect:
@@ -1377,8 +1377,8 @@ TextureImporter:
         y: 276
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_119
       rect:
@@ -1387,8 +1387,8 @@ TextureImporter:
         y: 276
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_120
       rect:
@@ -1397,8 +1397,8 @@ TextureImporter:
         y: 160
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_121
       rect:
@@ -1407,8 +1407,8 @@ TextureImporter:
         y: 156
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_122
       rect:
@@ -1417,8 +1417,8 @@ TextureImporter:
         y: 160
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_123
       rect:
@@ -1427,8 +1427,8 @@ TextureImporter:
         y: 156
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_124
       rect:
@@ -1437,8 +1437,8 @@ TextureImporter:
         y: 156
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_125
       rect:
@@ -1447,8 +1447,8 @@ TextureImporter:
         y: 160
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_126
       rect:
@@ -1457,8 +1457,8 @@ TextureImporter:
         y: 156
         width: 44
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_127
       rect:
@@ -1467,8 +1467,8 @@ TextureImporter:
         y: 160
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_128
       rect:
@@ -1477,8 +1477,8 @@ TextureImporter:
         y: 156
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_129
       rect:
@@ -1487,8 +1487,8 @@ TextureImporter:
         y: 156
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_130
       rect:
@@ -1497,8 +1497,8 @@ TextureImporter:
         y: 156
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_131
       rect:
@@ -1507,8 +1507,8 @@ TextureImporter:
         y: 156
         width: 40
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_132
       rect:
@@ -1517,8 +1517,8 @@ TextureImporter:
         y: 160
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_133
       rect:
@@ -1527,8 +1527,8 @@ TextureImporter:
         y: 160
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_134
       rect:
@@ -1537,8 +1537,8 @@ TextureImporter:
         y: 160
         width: 44
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_135
       rect:
@@ -1547,8 +1547,8 @@ TextureImporter:
         y: 160
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_136
       rect:
@@ -1557,8 +1557,8 @@ TextureImporter:
         y: 152
         width: 52
         height: 56
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_137
       rect:
@@ -1567,8 +1567,8 @@ TextureImporter:
         y: 160
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_138
       rect:
@@ -1577,8 +1577,8 @@ TextureImporter:
         y: 156
         width: 52
         height: 52
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Gal_Heads_Bodies1_1920px_139
       rect:
@@ -1587,8 +1587,8 @@ TextureImporter:
         y: 160
         width: 52
         height: 48
-      alignment: 2
-      pivot: {x: .5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
