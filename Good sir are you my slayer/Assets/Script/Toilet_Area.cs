@@ -10,7 +10,7 @@ public class Toilet_Area : MonoBehaviour {
         {
             if (player != null)
             {
-                player.Needs[3].Meter = 100;
+                player.Needs[2].Meter = 100;
             }
         }
     }

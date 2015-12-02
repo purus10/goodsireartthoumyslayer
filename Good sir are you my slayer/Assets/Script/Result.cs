@@ -8,6 +8,7 @@ public class Result : NetworkBehaviour {
 	static public string[] PlayerName = new string[4];
 	static public int[] PlayerScore = new int[4];
     public Sprite Score_Board;
+    public Sprite Clear;
     public TextMesh[] Names = new TextMesh[4];
     static public int press_count;
 	public Rect ResultBox;
@@ -96,6 +97,9 @@ public class Result : NetworkBehaviour {
             foreach (Player p in SearchP)
             {
                 p.PlacePlayer();
+                p.TargetBody.sprite = Clear;
+                p.TargetHead.sprite = Clear;
+                p.TargetName = "";
             }
 
             USpawner.SpawnPoints.Clear();
