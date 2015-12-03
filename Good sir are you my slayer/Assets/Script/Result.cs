@@ -100,6 +100,9 @@ public class Result : NetworkBehaviour {
                 p.TargetBody.sprite = Clear;
                 p.TargetHead.sprite = Clear;
                 p.TargetName = "";
+                p.Weapon = null;
+                p.State = Player.states.Idle;
+                p.AxisPress = false;
             }
 
             USpawner.SpawnPoints.Clear();

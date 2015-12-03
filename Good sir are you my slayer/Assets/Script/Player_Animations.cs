@@ -70,18 +70,16 @@ public class Player_Animations : NetworkBehaviour {
     {
         SetHead();
        SetBody();
-        
+        player = GetComponent<SpriteRenderer>();
+        position = transform.position;
+        _head = Random.Range(0, Head_Walk_Down1.Length - 1);
+        _body = Random.Range(0, 9);
+        AssignParts();
     }
     public void AssignParts()
     {
         player.sprite = Head[_head, 0];
         Sprite_body.sprite = Body[_body, 0];
-    }
-    void Start()
-    {
-        player = GetComponent<SpriteRenderer>();
-        position = transform.position;
-        AssignParts();     
     }
     void Update()
     {

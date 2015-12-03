@@ -62,6 +62,8 @@ public class Npc : NetworkBehaviour {
         SmokeTimer = Random.Range(20, 40);
     }
 
+
+
 	void CountDown()
 	{
 		counter--;

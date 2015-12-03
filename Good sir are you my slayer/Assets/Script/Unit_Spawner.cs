@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Database;
 using System.Collections.Generic;
 using UnityEngine.Networking;
 
@@ -84,6 +85,19 @@ public class Unit_Spawner : NetworkBehaviour {
                 int position = Random.Range(0, ItemSpawnPoints.Count - 1);
                 SpawnCpnsumables(ItemSpawnPoints[position]);
                 ItemSpawnPoints.RemoveAt(position);
+            }
+        }
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+        int chosen = Random.Range(0, SearchN.Length - 1);
+        Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
+        Get.TargetBody = SearchN[chosen].GetComponentInChildren<SpriteRenderer>().sprite;
+        Get.TargetName = Get.Name;
+        SearchN[chosen].Name = Get.TargetName;
+        for (int i = 0; i < SearchN.Length; i++)
+        {
+            if (SearchN[i] != SearchN[chosen] && SearchN[i].Name == SearchN[chosen].name)
+            {
+
             }
         }
     }

@@ -144,15 +144,18 @@ public class Player : NetworkBehaviour {
 				attacking--;
 			else {
 				AxisPress = false;
-                Item attackweapon = Weapon.GetComponentInChildren<Item>();
-                attackweapon.Attack_Anim = false;
-                if (attackweapon.Lethal)
+                if (Weapon != null)
                 {
-                    attackweapon.Lethal = false;
-                    WeaponRange[attackweapon.facing].enabled = false;
-                    attacking = attackweapon.AttackSpeed;
+                    Item attackweapon = Weapon.GetComponentInChildren<Item>();
+                    attackweapon.Attack_Anim = false;
+                    if (attackweapon.Lethal)
+                    {
+                        attackweapon.Lethal = false;
+                        WeaponRange[attackweapon.facing].enabled = false;
+                        attacking = attackweapon.AttackSpeed;
+                    }
+                    State = states.Armed;
                 }
-                State = states.Armed;
 			}
 		}
 

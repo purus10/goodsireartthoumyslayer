@@ -127,6 +127,7 @@
     <Compile Include="Assets\Script\Clue.cs" />
     <Compile Include="Assets\Script\Container.cs" />
     <Compile Include="Assets\Script\Database.cs" />
+    <Compile Include="Assets\Script\Designate_Target.cs" />
     <Compile Include="Assets\Script\Digit.cs" />
     <Compile Include="Assets\Script\GUI_Start.cs" />
     <Compile Include="Assets\Script\GiveClue.cs" />
