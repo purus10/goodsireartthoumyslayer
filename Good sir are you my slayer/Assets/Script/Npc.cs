@@ -16,7 +16,7 @@ public class Npc : NetworkBehaviour {
     float HungerTimer, BathTimer, DrunkTimer, SmokeTimer;
 	public int Health, Suspicion, Afraidat, Crave;
 	float[] needs = new float[4] {100,100,100,100};
-	float conversation = 500f, convoLength = 50f;
+	public float conversation = 500f, convoLength = 50f;
 	float[] NeedTimers = new float[4];
 	Guard[] Search;
 	Item[] Items, selections;
@@ -55,11 +55,12 @@ public class Npc : NetworkBehaviour {
 		InvokeRepeating("Bathroom",BathTimer,1.0f);
 		InvokeRepeating("Drunk",DrunkTimer,1.0f);
         conversation = Random.Range(300, 700);
-        convoLength = Random.Range(30, 70);
+        convoLength = Random.Range(20, 40);
         HungerTimer = Random.Range(20, 40);
         BathTimer = Random.Range(20, 40);
         DrunkTimer = Random.Range(20, 40);
         SmokeTimer = Random.Range(20, 40);
+        Name = Get.Name;
     }
 
 
@@ -106,6 +107,7 @@ public class Npc : NetworkBehaviour {
                 hurtstart = true;
                  player.WeaponRange[item.facing].enabled = false;
                  item.Lethal = false;
+
                 if (Health <= 0 && Name == Get.TargetName)
                 {
                     player.Points += item.Amount;
@@ -163,47 +165,49 @@ public class Npc : NetworkBehaviour {
 		//TALKING TO PLAYER
 		if (State == states.Idle)
 		{
-			if (player != null)
-				if(player.State != Player.states.Armed)
-			{
-					if (Input.GetButtonDown("X") && State != states.Talking)
-				{
-					offender = player;
-					for (int i = 0; i < offender.Needs.Length;i++)
-						convoLength -= (offender.Needs[i].Meter/10);
-					convoLength -= offender.Health;
-					State = states.Talking;
-					Namerender.text = "...Talking";
-				}
-			}
+            if (player != null)
+            {
+                if (player.State != Player.states.Armed || player.State != Player.states.Attacking)
+                {
+                    if (Input.GetButtonDown("X") && State != states.Talking)
+                    {
+                        offender = player;
+                        for (int i = 0; i < offender.Needs.Length; i++)
+                            convoLength -= (offender.Needs[i].Meter / 10);
+                        convoLength -= offender.Health;
+                        State = states.Talking;
+                        player.State = Player.states.Talking;
+                    }
+                }
+            }
 		}
 
 		if (Suspicion >= Afraidat && State != states.Afraid) 
 		{
-			offender.IsSeen = true;
-			State = states.Afraid;
-			Afraidof = offender.transform;
+            if (offender != null)
+            {
+                offender.IsSeen = true;
+                Afraidof = offender.transform;
+            }
+			State = states.Afraid;		
 		}
 	}
 
 	void OnTriggerExit(Collider col)
 	{
-		if (State != states.Afraid)
-		{
-			if (offender != null)
-				offender.IsSeen = false;
-			offender = null;
-		}
+        if (offender != null)
+        {
+            if (State != states.Afraid && offender.State != Player.states.Armed && offender.State != Player.states.Attacking)
+            {
+
+                offender.State = Player.states.Idle;
+                offender.IsSeen = false;
+                offender = null;
+            }
+        }
 		if (State == states.Talking)
 		{
 			State = states.Idle;
-			if (Namerender.text == "...Talking")
-			{
-				conversation = 100f;
-				convoLength = 50f;
-				Namerender.text = "";
-			}
-
 		}
 	}
 
@@ -217,13 +221,13 @@ public class Npc : NetworkBehaviour {
 		if (Health <= 0)
 		{
 			if (hurtstart == false)
-			{
-				if (Name == Get.TargetName)
-				{
-					Result.End = true;
-				}
-				GameObject.Destroy(gameObject);
-			}
+            {
+                if (Name == Get.TargetName)
+                {
+                    Result.End = true;
+                }
+                GameObject.Destroy(gameObject);
+            }
 		}
 
 		#region Afraid
@@ -260,14 +264,14 @@ public class Npc : NetworkBehaviour {
 		}
 		#endregion
 		#region Offended
-		else if (State == states.Idle && offender != null)
+		/*else if (State == states.Idle && offender != null)
 		{
 			Watch++;
 			if (Watch >= 5f)
 			{
 				State = states.SearchingForGuard;
 			}
-		} 
+		} */
 		#endregion
 		#region Idle
 		else if (State == states.Idle);
@@ -352,30 +356,33 @@ public class Npc : NetworkBehaviour {
 		}
 		#endregion
 		#region SearchingForGuard
-		if (State == states.SearchingForGuard)
+	/*	if (State == states.SearchingForGuard)
 		{
 			if (Search == null)
 				Search  = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
 			else {
-				bool walkable = (Physics.CheckSphere(Search[0].transform.position,0.5f,layermask));
-				if (walkable)
-					Unit.MoveTo(Search[0].transform.position);
-				float distance = Vector3.Distance(Search[0].transform.position,transform.position);
-				if (distance < 1f)
-				{
-						Unit.MoveTo(transform.position);
-						State = states.Reporting;
+                if (Search.Length > 0)
+                {
+                    bool walkable = (Physics.CheckSphere(Search[0].transform.position, 0.5f, layermask));
+                    if (walkable)
+                        Unit.MoveTo(Search[0].transform.position);
+                    float distance = Vector3.Distance(Search[0].transform.position, transform.position);
+                    if (distance < 1f)
+                    {
+                        Unit.MoveTo(transform.position);
+                        State = states.Reporting;
+                    }
                 }
 			}
-		}
+		}*/
 		#endregion
-		#region ReportingToGuard
+	/*	#region ReportingToGuard
 		if (State == states.Reporting)
 		{
 			Search[0].Target = offender;
 			State = states.Idle;
 		}
-		#endregion
+		#endregion*/
 		#region Drink
 		if (State == states.Drink)
 		{

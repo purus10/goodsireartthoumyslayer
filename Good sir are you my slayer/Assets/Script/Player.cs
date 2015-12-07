@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour {
 
-	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing}
+	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing, Talking}
 	public enum player {one,two,three,four}
     static public List<Vector3> SpawnPoints = new List<Vector3>();
     public List<Vector3> Spawn_Point;
@@ -17,13 +17,14 @@ public class Player : NetworkBehaviour {
     public GameObject WeaponCollider;
     public BoxCollider[] WeaponRange;
     float[] NeedTimers = new float[4];
-	float drawing, attacking, consuming, smoking, peeing;
+	public float drawing, attacking, consuming, smoking, peeing;
 	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted, AxisPress;
 	public string Name, TargetName;
 	public SpriteRenderer TargetBody, TargetHead;
     public Player_Animations Anim;
 	public Need[] Needs = new Need[4];
-	public GameObject[] Slots = new GameObject[3];
+	public GameObject[] Slots = new GameObject[2];
+    public GameObject Consumable;
 	public CharacterController Character;
 	public GameObject HUD;
 	public GameObject Selected;
@@ -62,10 +63,16 @@ public class Player : NetworkBehaviour {
     {
         PlacePlayer();
     }
-    void FixedUpdate () 
+    void Update () 
 	{
+        if (!isLocalPlayer)
+            return;
+
         if (Health == 0)
-            GameObject.Destroy(this.gameObject);
+        {
+            GetComponent<Player>().enabled = false;
+            GetComponent<CharacterController>().enabled = false;
+        }
 
        /* if (Input.GetKeyDown(KeyCode.A))
         {
@@ -82,14 +89,14 @@ public class Player : NetworkBehaviour {
 
         if (Input.GetButtonDown("B"))
         {
-            if (Slots[2] != null)
+            if (Consumable != null)
             {
-                Item item = Slots[2].GetComponent<Item>();
+                Item item = Consumable.GetComponent<Item>();
                 item.CastItem(this);
             }
         }
 
-        if (State == states.Idle || State == states.Armed)
+        if (State == states.Idle || State == states.Armed || State == states.Talking)
 		{
 			Character.Move (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
 			Character.Move (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
@@ -99,8 +106,8 @@ public class Player : NetworkBehaviour {
 		{
 			if (Input.GetButtonDown("Y"))
 			{
-					if (Selected == Slots[0] && Slots[0] != null) ReadyDraw(0);
-				else if (Selected == Slots[1] && Slots[1] != null) ReadyDraw(1);
+					if (Selected == Slots[0] && Slots[0] != null) CmdReadyDraw(0);
+				else if (Selected == Slots[1] && Slots[1] != null) CmdReadyDraw(1);
 			}
 
             if (Input.GetAxis("LBumper") != 0)
@@ -219,17 +226,19 @@ public class Player : NetworkBehaviour {
 			attacking = attackweapon.AttackSpeed;
 			State = states.Attacking;
 	}
-	void ReadyDraw(int selected)
+    [Command]
+	void CmdReadyDraw(int selected)
 	{
 		State = states.Drawing;
 		ClearDraws();
-		Weapon = Instantiate(Slots[selected],transform.position + Slots[selected].transform.position,Slots[selected].transform.rotation) as GameObject;
+        Weapon = GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity) as GameObject;
         Weapon.transform.parent = this.transform;
 		Item drawnweapon = Weapon.GetComponentInChildren<Item>();
 		drawing = drawnweapon.DrawSpeed;
 		WeaponHeld = selected;
         SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
-	}
+        NetworkServer.Spawn(Weapon);
+    }
 	void ClearDraws()
 	{
 		GameObject.Destroy(Weapon);
@@ -241,7 +250,8 @@ public class Player : NetworkBehaviour {
         if (Slots[selected] != null)
         {
             Item item = Slots[selected].GetComponent<Item>();
-            Instantiate(Slots[selected], transform.position, Slots[selected].transform.rotation);
+            GameObject go = GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity) as GameObject;
+            NetworkServer.Spawn(go);
             Slots[selected] = null;
             Selected = null;
         }

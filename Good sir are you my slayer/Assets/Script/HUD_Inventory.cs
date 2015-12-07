@@ -21,7 +21,7 @@ public class HUD_Inventory : MonoBehaviour {
 	{
 		if (player != null)
 		{
-			for (int i = 0;i < Inventory.Length;i++)
+			for (int i = 0;i < 2;i++)
 			{
                 if (player.Slots[i] != null)
                 {
@@ -30,9 +30,17 @@ public class HUD_Inventory : MonoBehaviour {
                 }
                 else
                     Icons[i].GetComponent<SpriteRenderer>().sprite = null;
+
+                if (player.Consumable != null)
+                {
+                    Sprite icon = player.Consumable.GetComponent<SpriteRenderer>().sprite;
+                    Icons[2].GetComponent<SpriteRenderer>().sprite = icon;
+                }
+                else
+                    Icons[2].GetComponent<SpriteRenderer>().sprite = null;
             }
 			
-			for (int i = 0; i < Inventory.Length;i++)
+			for (int i = 0; i < 2;i++)
 			{
 				if(player.Selected == player.Slots[i])
 				{

@@ -45,13 +45,13 @@ namespace Database{
 		static public void Drink(Item item, Player player)
 		{
             player.Needs[3].Meter = Mathf.Min(player.Needs[3].Meter + item.Amount, 100);
-            player.Slots[2] = null;
+            player.Consumable = null;
 		}
 
 		static public void Snack(Item item, Player player)
 		{
             player.Needs[0].Meter = Mathf.Min(player.Needs[0].Meter + item.Amount, 100);
-            player.Slots[2] = null;
+            player.Consumable = null;
         }
 		static public void Bandage(Player player)
 		{

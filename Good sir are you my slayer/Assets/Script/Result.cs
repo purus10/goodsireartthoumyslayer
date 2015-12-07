@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using Database;
 
 public class Result : NetworkBehaviour {
 
@@ -18,10 +19,10 @@ public class Result : NetworkBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+       /* if (Input.GetKeyDown(KeyCode.L))
         {
             End = true;
-        }
+        }*/
 
         if (Network.connections.Length+1 == press_count)
         {
@@ -103,6 +104,11 @@ public class Result : NetworkBehaviour {
                 p.Weapon = null;
                 p.State = Player.states.Idle;
                 p.AxisPress = false;
+                p.Health = 10;
+                foreach(Need n in p.Needs)
+                {
+                    n.Meter = 100;
+                }
             }
 
             USpawner.SpawnPoints.Clear();
@@ -133,26 +139,32 @@ public class Result : NetworkBehaviour {
 	{
 		if (End)
 		{
-            Time.timeScale = 0;
-            GUI.Box(ResultBox, "");
-            for (int i = 0; i < PlayerDisplay.Length; i++)
+            Player[] SearchP = GameObject.FindObjectsOfType(typeof(Player)) as Player[];
+            foreach (Player p in SearchP)
             {
-                GUI.Label(PlayerDisplay[i], PlayerName[i] + "  " + PlayerScore[i]);
-            }
-
-            if (Digit.currentRound != 3)
-            {
-                if (GUI.Button(NextRound, "Next Round"))
+                print(p.Name);
+                Time.timeScale = 0;
+                GUI.Box(ResultBox, "");
+                for (int i = 0; i < PlayerDisplay.Length; i++)
                 {
-                    press_count++;
-                    End = false;
+                    GUI.Label(PlayerDisplay[i], PlayerName[i] + "  " + PlayerScore[i]);
                 }
-            } else
-            {
-                if (GUI.Button(NextRound, "End Game"))
+
+                if (Digit.currentRound != 3)
                 {
-                    press_count++;
-                    End = false;
+                    if (GUI.Button(NextRound, "Next Round"))
+                    {
+                        press_count++;
+                        End = false;
+                    }
+                }
+                else
+                {
+                    if (GUI.Button(NextRound, "End Game"))
+                    {
+                        press_count++;
+                        End = false;
+                    }
                 }
             }
 

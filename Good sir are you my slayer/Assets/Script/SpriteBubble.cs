@@ -9,23 +9,47 @@ public class SpriteBubble : NetworkBehaviour
     public Sprite[] Bubbles;
     public float Anim_speed;
     public Npc Npc;
+    public Player player;
     int frame;
     float time;
 	
 	void Update ()
     {
-        switch (Npc.State)
+        if (Npc != null)
         {
-            case Npc.states.Talking:
-                {
-                    Anim_Bubble(0, 5);
-                    break;
-                }
-            case Npc.states.Idle:
-                {
-                    Bubble.sprite = Bubbles[20];
-                    break;
-                }
+            switch (Npc.State)
+            {
+                case Npc.states.Talking:
+                    {
+                        Anim_Bubble(0, 5);
+                        break;
+                    }
+                case Npc.states.Afraid:
+                    {
+                        Anim_Bubble(12, 15);
+                        break;
+                    }
+                case Npc.states.Idle:
+                    {
+                        Bubble.sprite = Bubbles[20];
+                        break;
+                    }
+            }
+        } else if (player != null)
+        {
+            switch (player.State)
+            {
+                case Player.states.Talking:
+                    {
+                        Anim_Bubble(0, 5);
+                        break;
+                    }
+                case Player.states.Idle:
+                    {
+                        Bubble.sprite = Bubbles[20];
+                        break;
+                    }
+            }
         }
 	
 	}

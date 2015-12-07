@@ -26,80 +26,91 @@ public class Unit_Spawner : NetworkBehaviour {
     public int NumberOfConsumables;
     static public bool StartMatch;
 
-    public void SpawnUnits()
+    [Command]
+    public void CmdSpawnUnits()
     {
-        for (int i = 0; i < NumberOfNPC; i++)
-        {
-            if (i < SpawnPoints.Count)
+            for (int i = 0; i < NumberOfNPC; i++)
             {
-                int position = Random.Range(0, SpawnPoints.Count - 1);
-                SpawnNPC(SpawnPoints[position]);
-                SpawnPoints.RemoveAt(position);
+                if (i < SpawnPoints.Count)
+                {
+                    int position = Random.Range(0, SpawnPoints.Count - 1);
+                    SpawnNPC(SpawnPoints[position]);
+                    SpawnPoints.RemoveAt(position);
+                }
             }
-        }
 
-        for (int i = 0; i < NumberOfGuards; i++)
-        {
-            if (i < SpawnPoints.Count)
+            for (int i = 0; i < NumberOfGuards; i++)
             {
-                int position = Random.Range(0, SpawnPoints.Count - 1);
-                SpawnGuard(SpawnPoints[position]);
-                SpawnPoints.RemoveAt(position);
+                if (i < SpawnPoints.Count)
+                {
+                    int position = Random.Range(0, SpawnPoints.Count - 1);
+                    SpawnGuard(SpawnPoints[position]);
+                    SpawnPoints.RemoveAt(position);
+                }
             }
-        }
 
-        for (int i = 0; i < NumberOfButlers; i++)
-        {
-            if (i < SpawnPoints.Count)
+            for (int i = 0; i < NumberOfButlers; i++)
             {
-                int position = Random.Range(0, SpawnPoints.Count - 1);
-                SpawnGuard(SpawnPoints[position]);
-                SpawnPoints.RemoveAt(position);
+                if (i < SpawnPoints.Count)
+                {
+                    int position = Random.Range(0, SpawnPoints.Count - 1);
+                    SpawnGuard(SpawnPoints[position]);
+                    SpawnPoints.RemoveAt(position);
+                }
             }
-        }
 
-        for (int i = 0; i < NumberOfClues; i++)
-        {
-            if (i < ItemSpawnPoints.Count)
+            for (int i = 0; i < NumberOfClues; i++)
             {
-                int position = Random.Range(0, ItemSpawnPoints.Count - 1);
-                SpawnClues(ItemSpawnPoints[position]);
-                ItemSpawnPoints.RemoveAt(position);
+                if (i < ItemSpawnPoints.Count)
+                {
+                    int position = Random.Range(0, ItemSpawnPoints.Count - 1);
+                    SpawnClues(ItemSpawnPoints[position]);
+                    ItemSpawnPoints.RemoveAt(position);
+                }
             }
-        }
 
-        for (int i = 0; i < NumberOfItems; i++)
-        {
-            if (i < ItemSpawnPoints.Count)
+            for (int i = 0; i < NumberOfItems; i++)
             {
-                int position = Random.Range(0, ItemSpawnPoints.Count - 1);
-                SpawnItem(ItemSpawnPoints[position]);
-                ItemSpawnPoints.RemoveAt(position);
+                if (i < ItemSpawnPoints.Count)
+                {
+                    int position = Random.Range(0, ItemSpawnPoints.Count - 1);
+                    SpawnItem(ItemSpawnPoints[position]);
+                    ItemSpawnPoints.RemoveAt(position);
+                }
             }
-        }
 
-        for (int i = 0; i < NumberOfConsumables; i++)
-        {
-            if (i < ItemSpawnPoints.Count)
+            for (int i = 0; i < NumberOfConsumables; i++)
             {
-                int position = Random.Range(0, ItemSpawnPoints.Count - 1);
-                SpawnCpnsumables(ItemSpawnPoints[position]);
-                ItemSpawnPoints.RemoveAt(position);
+                if (i < ItemSpawnPoints.Count)
+                {
+                    int position = Random.Range(0, ItemSpawnPoints.Count - 1);
+                    SpawnCpnsumables(ItemSpawnPoints[position]);
+                    ItemSpawnPoints.RemoveAt(position);
+                }
             }
-        }
-        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
-        int chosen = Random.Range(0, SearchN.Length - 1);
-        Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
-        Get.TargetBody = SearchN[chosen].GetComponentInChildren<SpriteRenderer>().sprite;
-        Get.TargetName = Get.Name;
-        SearchN[chosen].Name = Get.TargetName;
-        for (int i = 0; i < SearchN.Length; i++)
-        {
-            if (SearchN[i] != SearchN[chosen] && SearchN[i].Name == SearchN[chosen].name)
-            {
+            Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+            int chosen = Random.Range(0, SearchN.Length - 1);
+            Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
 
+        SpriteRenderer[] parts = SearchN[chosen].GetComponentsInChildren<SpriteRenderer>();
+
+        for (int i = 0; i < parts.Length;i++)
+        {
+            if (parts[i].gameObject.name == "NPC Body")
+           {
+               Get.TargetBody = parts[i].sprite;
             }
         }
+            Get.TargetName = SearchN[chosen].Name;
+            SearchN[chosen].Name = Get.TargetName;
+            for (int i = 0; i < SearchN.Length; i++)
+            {
+                if (SearchN[i] != SearchN[chosen] && SearchN[i] == SearchN[chosen])
+                {
+                SearchN[i].Name = Get.Name;
+                i = 0;
+                }
+            }
     }
 
     public override void OnStartServer()
@@ -161,7 +172,7 @@ public class Unit_Spawner : NetworkBehaviour {
     {
 	    if (StartMatch == true)
         {
-            SpawnUnits();
+            CmdSpawnUnits();
             StartMatch = false;
         }
 	}

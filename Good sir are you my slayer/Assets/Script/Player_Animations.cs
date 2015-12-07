@@ -68,21 +68,23 @@ public class Player_Animations : NetworkBehaviour {
 
     void Awake()
     {
-        SetHead();
-       SetBody();
+        CmdSetHead();
+       CmdSetBody();
         player = GetComponent<SpriteRenderer>();
         position = transform.position;
         _head = Random.Range(0, Head_Walk_Down1.Length - 1);
         _body = Random.Range(0, 9);
-        AssignParts();
+        CmdAssignParts();
     }
-    public void AssignParts()
+    //[Command]
+    public void CmdAssignParts()
     {
         player.sprite = Head[_head, 0];
         Sprite_body.sprite = Body[_body, 0];
     }
     void Update()
     {
+
         //walk
         if (position.x > transform.position.x)
         {
@@ -140,7 +142,7 @@ public class Player_Animations : NetworkBehaviour {
         }
     }
 
-    void SetHead()
+    void CmdSetHead()
     {
         Head = new Sprite[Head_Walk_Down1.Length, 24];
         for (int i = 0; i < Head_Walk_Down1.Length;i++)
@@ -229,7 +231,7 @@ public class Player_Animations : NetworkBehaviour {
 
         }
     }
-    void SetBody()
+    void CmdSetBody()
     {
         Body = new Sprite[Body_Walk_Down1.Length, 24];
         for (int i = 0; i < Body.GetLength(0); i++)

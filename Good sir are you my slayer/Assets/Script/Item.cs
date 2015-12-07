@@ -43,7 +43,7 @@ public class Item : NetworkBehaviour {
                     if (Input.GetButtonDown("X"))
                         GiveLoot(player);
             }
-            else if (Type == type.Weapon && player.Selected == null && player.State == Player.states.Idle)
+            else if (Type == type.Weapon && player.Selected == null && player.State == Player.states.Idle || Type == type.Consumable)
             {
 
                 if (Input.GetButtonDown("X"))
@@ -152,16 +152,24 @@ public class Item : NetworkBehaviour {
     }
     void GiveSelf(Player player)
     {
-        if (player.Slots[0] == null)
+        if (Type == type.Weapon)
         {
-            player.Slots[0] = Instantiate(Loot, new Vector3(0.3f,-0.1f,-0.1f), transform.rotation) as GameObject;
-            GameObject.Destroy(this.gameObject);
-            player.Selected = player.Slots[0];
-        } else if (player.Slots[1] == null)
+            if (player.Slots[0] == null)
+            {
+                player.Slots[0] = Instantiate(Loot, new Vector3(0.3f, -0.1f, 1f), transform.rotation) as GameObject;
+                GameObject.Destroy(this.gameObject);
+                player.Selected = player.Slots[0];
+            }
+            else if (player.Slots[1] == null)
+            {
+                player.Slots[1] = Instantiate(Loot, new Vector3(0.3f, -0.1f, 1f), transform.rotation) as GameObject;
+                GameObject.Destroy(this.gameObject);
+                player.Selected = player.Slots[1];
+            }
+        } else if (player.Consumable == null)
         {
-            player.Slots[1] = Instantiate(Loot, new Vector3(0.3f, -0.1f, -0.1f), transform.rotation) as GameObject;
+            player.Consumable = Instantiate(Loot, new Vector3(0.3f, -0.1f, 1f), transform.rotation) as GameObject;
             GameObject.Destroy(this.gameObject);
-            player.Selected = player.Slots[1];
         }
     }
     void GiveLoot(Player player)

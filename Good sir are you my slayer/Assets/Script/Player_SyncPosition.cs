@@ -40,7 +40,7 @@ public class Player_SyncPosition : NetworkBehaviour {
     [ClientCallback]
     void TransmitPosition()
     {
-        if (isLocalPlayer && Vector3.Distance(myTransform.position,Lastpos) < threshold)
+        if (isLocalPlayer && Vector3.Distance(myTransform.position,Lastpos) > threshold)
         {
             CmdProvidePositionToServer(myTransform.position);
             Lastpos = myTransform.position;

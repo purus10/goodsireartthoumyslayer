@@ -10,10 +10,21 @@ public class Guard : NetworkBehaviour {
     public Unit Unit;
     public LayerMask layermask;
 
-	void Update () 
-	{
+    void OnTriggerStay(Collider col)
+    {
+        Npc npc = col.gameObject.GetComponentInParent<Npc>();
+
+        if (npc != null && npc.offender != null && npc.State == Npc.states.Afraid)
+        {
+            Target = npc.offender;
+        }
+    }
+
+    void Update()
+    {
         if (Target != null)
         {
+            GetComponentInChildren<SpriteBubble>().Anim_Bubble(8, 11);
             Target.IsWanted = true;
             bool walkable = (Physics.CheckSphere(Target.transform.position, 0.5f, layermask));
             if (walkable)
@@ -25,6 +36,9 @@ public class Guard : NetworkBehaviour {
                 Unit.MoveTo(StartPoint);
                 Target = null;
             }
-        }    
+        }
+
+        if (Target == null)
+            GetComponentInChildren<SpriteBubble>().Bubble.sprite = GetComponentInChildren<SpriteBubble>().Bubbles[20];
     }
 }
