@@ -13,8 +13,10 @@ public class Unit_Spawner : NetworkBehaviour {
     [SerializeField] GameObject[] Item_prefab;
     [SerializeField] GameObject[] CONSUME_Prefab;
     public List<Vector3> SpawnPoints = new List<Vector3>();
+    public List<Vector3> GuardSpawnPoints = new List<Vector3>();
     public List<Vector3> ItemSpawnPoints = new List<Vector3>();
     public GameObject startscreen;
+    public List<Vector3> SaveGuardSpawnPoints = new List<Vector3>();
     public List<Vector3> SaveSpawnPoints = new List<Vector3>();
     public List<Vector3> SaveItemSpawnPoints = new List<Vector3>();
     private int counter;
@@ -41,11 +43,11 @@ public class Unit_Spawner : NetworkBehaviour {
 
             for (int i = 0; i < NumberOfGuards; i++)
             {
-                if (i < SpawnPoints.Count)
+                if (i < GuardSpawnPoints.Count)
                 {
-                    int position = Random.Range(0, SpawnPoints.Count - 1);
-                    SpawnGuard(SpawnPoints[position]);
-                    SpawnPoints.RemoveAt(position);
+                    int position = Random.Range(0, GuardSpawnPoints.Count - 1);
+                    SpawnGuard(GuardSpawnPoints[position]);
+                    GuardSpawnPoints.RemoveAt(position);
                 }
             }
 
@@ -54,7 +56,7 @@ public class Unit_Spawner : NetworkBehaviour {
                 if (i < SpawnPoints.Count)
                 {
                     int position = Random.Range(0, SpawnPoints.Count - 1);
-                    SpawnGuard(SpawnPoints[position]);
+                    SpawnButler(SpawnPoints[position]);
                     SpawnPoints.RemoveAt(position);
                 }
             }

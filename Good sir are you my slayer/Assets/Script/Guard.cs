@@ -10,6 +10,11 @@ public class Guard : NetworkBehaviour {
     public Unit Unit;
     public LayerMask layermask;
 
+    void Start()
+    {
+        StartPoint = transform.position;
+    }
+
     void OnTriggerStay(Collider col)
     {
         Npc npc = col.gameObject.GetComponentInParent<Npc>();
