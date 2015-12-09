@@ -31,6 +31,7 @@ public class Player : NetworkBehaviour {
 	public GameObject Weapon;
     public Container SelectedContain;
 	int ResultSlot;
+    [SyncVar] bool test;
 
 	// Use this for initialization
 	void Awake ()
@@ -59,6 +60,12 @@ public class Player : NetworkBehaviour {
         HUD.SetActive(true);
     }
 
+    [Command]
+    void CmdResultScreen()
+    {
+        Result.End = true;
+    }
+
     public override void OnStartServer()
     {
         PlacePlayer();
@@ -68,20 +75,17 @@ public class Player : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Result.End = true;
+        }
+
         if (Health == 0)
         {
             GetComponent<Player>().enabled = false;
             GetComponent<CharacterController>().enabled = false;
         }
 
-       /* if (Input.GetKeyDown(KeyCode.A))
-        {
-            Application.LoadLevel("Main Scene");
-            Player_Animations p = GetComponent<Player_Animations>();
-            p.AssignParts();
-            
-            StartCoroutine("PlayTimer");
-        }*/
         Result.PlayerScore [ResultSlot] = Points;
 		CheckNeeds();
 		if (Input.GetButtonDown("A"))

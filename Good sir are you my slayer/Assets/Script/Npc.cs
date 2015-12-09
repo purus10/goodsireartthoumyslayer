@@ -36,6 +36,7 @@ public class Npc : NetworkBehaviour {
     public Npc mingler;
     public SpriteBubble Bubble;
 	public Need[] Needs = new Need[4];
+    int test;
 
 	Vector3 RunAway()
 	{
@@ -56,16 +57,16 @@ public class Npc : NetworkBehaviour {
 		InvokeRepeating("Drunk",DrunkTimer,1.0f);
         conversation = Random.Range(300, 700);
         convoLength = Random.Range(20, 40);
-        HungerTimer = Random.Range(20, 40);
-        BathTimer = Random.Range(20, 40);
-        DrunkTimer = Random.Range(20, 40);
-        SmokeTimer = Random.Range(20, 40);
+        HungerTimer = Random.Range(60, 120);
+        BathTimer = Random.Range(60, 120);
+        DrunkTimer = Random.Range(60, 120);
+        SmokeTimer = Random.Range(60, 120);
         Name = Get.Name;
+ 
     }
 
 
-
-	void CountDown()
+    void CountDown()
 	{
 		counter--;
 	}
@@ -110,7 +111,7 @@ public class Npc : NetworkBehaviour {
 
                 if (Health <= 0 && Name == Get.TargetName)
                 {
-                    player.Points += item.Amount;
+                    player.Points += (item.Amount*2)%10;
                 }
 
             }
@@ -136,14 +137,32 @@ public class Npc : NetworkBehaviour {
         Npc guest = col.gameObject.GetComponent<Npc>();
         if (guest != null && mingler == null && SearchingforArea == null)
         {
-            if (guest.State == states.Afraid)
-                State = states.Afraid;
-            else if (guest.State == states.Idle)
+            float distance = Vector3.Distance(guest.transform.position, transform.position);
+            if (distance > 0.5f)
             {
-                mingler = guest;
-                guest.mingler = this;
-                guest.State = states.Talking;
-                State = states.Talking;
+                if (guest.State == states.Afraid)
+                    State = states.Afraid;
+                else if (guest.State == states.Idle)
+                {
+                    mingler = guest;
+                    guest.mingler = this;
+                    guest.State = states.Talking;
+                    State = states.Talking;
+                }
+            } else
+            {
+                direction = Move[Random.Range(0, Move.Length)];
+                Vector3 move = direction + new Vector3(direction.x * Random.Range(1f, 20f), direction.y * Random.Range(1f, 12f), -0.1f);
+                bool walkable = (Physics.CheckSphere(move, 0.5f, layermask));
+                if (walkable)
+                {
+                    State = states.Walk;
+                    Unit.MoveTo(move);
+                }
+                else
+                {
+                    counter = SetCounter;
+                }
             }
         }
     }

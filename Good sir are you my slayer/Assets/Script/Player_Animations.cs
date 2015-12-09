@@ -73,7 +73,7 @@ public class Player_Animations : NetworkBehaviour {
         player = GetComponent<SpriteRenderer>();
         position = transform.position;
         _head = Random.Range(0, Head_Walk_Down1.Length - 1);
-        _body = Random.Range(0, 9);
+        _body = Random.Range(0, Body_Walk_Down1.Length - 1);
         CmdAssignParts();
     }
     //[Command]
@@ -105,18 +105,6 @@ public class Player_Animations : NetworkBehaviour {
             Walk(0, 5);
             position = transform.position;
         }
-        position = transform.position;
-
-
-        //Idle
-        /*  if (Input.GetKeyUp(KeyCode.W))
-              player.sprite = Head[_head, 6];
-          else if(Input.GetKeyUp(KeyCode.A))
-              player.sprite = Head[_head, 18];
-          else if(Input.GetKeyUp(KeyCode.D))
-              player.sprite = Head[_head, 12];
-          else if(Input.GetKeyUp(KeyCode.S))
-              player.sprite = Head[_head, 0];*/
     }
     private void AssignIdle(int i)
     {
@@ -277,40 +265,40 @@ public class Player_Animations : NetworkBehaviour {
                         Body[i, j] = Body_Walk_Up6[i];
                         break;
                     case 12:
-                        Body[i, j] = Body_Walk_Down1[i];
+                        Body[i, j] = Body_Walk_Right1[i];
                         break;
                     case 13:
-                        Body[i, j] = Body_Walk_Down2[i];
+                        Body[i, j] = Body_Walk_Right2[i];
                         break;
                     case 14:
-                        Body[i, j] = Body_Walk_Down3[i];
+                        Body[i, j] = Body_Walk_Right3[i];
                         break;
                     case 15:
-                        Body[i, j] = Body_Walk_Down4[i];
+                        Body[i, j] = Body_Walk_Right4[i];
                         break;
                     case 16:
-                        Body[i, j] = Body_Walk_Down5[i];
+                        Body[i, j] = Body_Walk_Right5[i];
                         break;
                     case 17:
-                        Body[i, j] = Body_Walk_Down6[i];
+                        Body[i, j] = Body_Walk_Right6[i];
                         break;
                     case 18:
-                        Body[i, j] = Body_Walk_Up1[i];
+                        Body[i, j] = Body_Walk_Left1[i];
                         break;
                     case 19:
-                        Body[i, j] = Body_Walk_Up2[i];
+                        Body[i, j] = Body_Walk_Left2[i];
                         break;
                     case 20:
-                        Body[i, j] = Body_Walk_Up3[i];
+                        Body[i, j] = Body_Walk_Left3[i];
                         break;
                     case 21:
-                        Body[i, j] = Body_Walk_Up4[i];
+                        Body[i, j] = Body_Walk_Left4[i];
                         break;
                     case 22:
-                        Body[i, j] = Body_Walk_Up5[i];
+                        Body[i, j] = Body_Walk_Left5[i];
                         break;
                     case 23:
-                        Body[i, j] = Body_Walk_Up6[i];
+                        Body[i, j] = Body_Walk_Left6[i];
                         break;
                     default:
                         print("ERROR " + j + " NOT ASSIGNED");
