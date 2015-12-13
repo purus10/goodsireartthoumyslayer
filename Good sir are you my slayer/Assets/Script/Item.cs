@@ -55,28 +55,29 @@ public class Item : NetworkBehaviour {
             }
         }
 	}
-	// Update is called once per frame
-	void Update () 
+    // Update is called once per frame
+    void Update () 
 	{
+        print("YEAH IT ADDS THE CHANGES");
         if (Type == type.Weapon && Drawn == true)
         {
             if (Attack_Anim == true)
             {
-                Weapon.enabled = false;
+                GetComponent<SpriteRenderer>().enabled = false;
                 Attack.enabled = true;
             }
             else
             {
-                Weapon.enabled = true;
+                GetComponent<SpriteRenderer>().enabled = true;
                 Attack.enabled = false;
             }
             if (position.x > transform.position.x)
             {
                 //left
                 facing = 2;
-                Weapon.sortingOrder = 2;
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
                 Attack.sortingOrder = 2;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[2];
                 Attack.gameObject.transform.localPosition = AttackPlacement[2];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
             }
@@ -84,9 +85,9 @@ public class Item : NetworkBehaviour {
             {
                 //right
                 facing = 6;
-                Weapon.sortingOrder = 0;
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
                 Attack.sortingOrder = -1;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[0];
                 Attack.gameObject.transform.localPosition = AttackPlacement[2];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
             }
@@ -94,9 +95,9 @@ public class Item : NetworkBehaviour {
             {
                 //up
                 facing = 0;
-                Weapon.sortingOrder = 0;
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
                 Attack.sortingOrder = -1;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[1];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[1];
                 Attack.gameObject.transform.localPosition = AttackPlacement[3];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
             }
@@ -104,9 +105,9 @@ public class Item : NetworkBehaviour {
             {
                 //upright
                 facing = 1;
-                Weapon.sortingOrder = 0;
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
                 Attack.sortingOrder = -1;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[1];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[1];
                 Attack.gameObject.transform.localPosition = AttackPlacement[2];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
             }
@@ -114,9 +115,9 @@ public class Item : NetworkBehaviour {
             {
                 //upleft
                 facing = 7;
-                Weapon.sortingOrder = 0;
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
                 Attack.sortingOrder = 2;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[2];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[2];
                 Attack.gameObject.transform.localPosition = AttackPlacement[2];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
             }
@@ -124,9 +125,9 @@ public class Item : NetworkBehaviour {
             {
                 //down
                 facing = 4;
-                Weapon.sortingOrder = 2;
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
                 Attack.sortingOrder = 2;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[0];
                 Attack.gameObject.transform.localPosition = AttackPlacement[0];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 180, 0);
             }
@@ -134,9 +135,9 @@ public class Item : NetworkBehaviour {
             {
                 //downright
                 facing = 3;
-                Weapon.sortingOrder = 2;
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
                 Attack.sortingOrder = -1;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[0];
                 Attack.gameObject.transform.localPosition = AttackPlacement[0];
                 Attack.gameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
             }
@@ -144,9 +145,9 @@ public class Item : NetworkBehaviour {
             {
                 //downleft
                 facing = 5;
-                Weapon.sortingOrder = 2;
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
                 Attack.sortingOrder = 2;
-                Weapon.gameObject.transform.localPosition = WeaponPlacment[0];
+                GetComponent<SpriteRenderer>().gameObject.transform.localPosition = WeaponPlacment[0];
                 Attack.gameObject.transform.localPosition = AttackPlacement[0];
             }
             position = transform.position;

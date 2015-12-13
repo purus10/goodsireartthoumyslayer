@@ -30,6 +30,7 @@ public class Unit_Spawner : NetworkBehaviour {
 
     public void SpawnUnits()
     {
+        print("YEAH");
             for (int i = 0; i < NumberOfNPC; i++)
             {
                 if (i < SpawnPoints.Count)
@@ -89,7 +90,16 @@ public class Unit_Spawner : NetworkBehaviour {
                     ItemSpawnPoints.RemoveAt(position);
                 }
             }
-        RpcDesignateTarget();
+
+            if (isLocalPlayer)
+        {
+            print("YEAH");
+            RpcDesignateTarget();
+        } else
+        {
+            DesignateTarget();
+        }
+      
     }
     void SpawnNPC(Vector3 position)
     {
@@ -153,6 +163,35 @@ public class Unit_Spawner : NetworkBehaviour {
                 i = 0;
             }
         }
+        print("ASSIGNED");
+    }
+
+    void DesignateTarget()
+    {
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+        int chosen = Random.Range(0, SearchN.Length - 1);
+        Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
+
+        SpriteRenderer[] parts = SearchN[chosen].GetComponentsInChildren<SpriteRenderer>();
+
+        for (int i = 0; i < parts.Length; i++)
+        {
+            if (parts[i].gameObject.name == "NPC Body")
+            {
+                Get.TargetBody = parts[i].sprite;
+            }
+        }
+        Get.TargetName = SearchN[chosen].Name;
+        SearchN[chosen].Name = Get.TargetName;
+        for (int i = 0; i < SearchN.Length; i++)
+        {
+            if (SearchN[i] != SearchN[chosen] && SearchN[i] == SearchN[chosen])
+            {
+                SearchN[i].Name = Get.Name;
+                i = 0;
+            }
+        }
+        print("ASSIGNED");
     }
 
     // Use this for initialization

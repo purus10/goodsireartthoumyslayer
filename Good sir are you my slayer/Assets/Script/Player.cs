@@ -175,7 +175,8 @@ public class Player : NetworkBehaviour {
 				if (AxisPress == false)
 				{
 				Attack (WeaponHeld);
-				AxisPress = true;
+                   State = states.Attacking;
+                    AxisPress = true;
 				}
 			}
 
@@ -201,20 +202,26 @@ public class Player : NetworkBehaviour {
 				AxisPress = false;
                 if (Weapon != null)
                 {
-                    Item attackweapon = Weapon.GetComponentInChildren<Item>();
-                    attackweapon.Attack_Anim = false;
-                    if (attackweapon.Lethal)
-                    {
-                        attackweapon.Lethal = false;
-                        WeaponRange[attackweapon.facing].enabled = false;
-                        attacking = attackweapon.AttackSpeed;
-                    }
+                    AttackwithWeapon();
                     State = states.Armed;
                 }
-			}
-		}
+                
+
+            }
+        }
 
 	}
+    void AttackwithWeapon()
+    {
+        Item attackweapon = Weapon.GetComponentInChildren<Item>();
+        if (attackweapon.Lethal)
+        {
+            attackweapon.Attack_Anim = false;
+            attackweapon.Lethal = false;
+            WeaponRange[attackweapon.facing].enabled = false;
+            attacking = attackweapon.AttackSpeed;
+        }
+    }
 
     void CreatePositionList()
     {
@@ -268,6 +275,7 @@ public class Player : NetworkBehaviour {
 	void Attack(int selected)
 	{
 		Item attackweapon = Weapon.GetComponentInChildren<Item>();
+        print(attackweapon);
 			attackweapon.Lethal = true;
         attackweapon.Attack_Anim = true;
         WeaponRange[attackweapon.facing].enabled = true;
@@ -328,6 +336,14 @@ public class Player : NetworkBehaviour {
 		Weapon = null;
 	}
 
+    [ClientRpc]
+    void RpcClearDraws()
+    {
+        print("I AMA DESTROYING");
+        GameObject.Destroy(Weapon);
+        Weapon = null;
+    }
+
     void Drop(int selected)
     {
         if (Slots[selected] != null)
@@ -385,6 +401,9 @@ public class Player : NetworkBehaviour {
 		Item heldweapon = Weapon.GetComponent<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{
+            if (isLocalPlayer)
+                RpcClearDraws();
+            else
                 ClearDraws();
 			State = states.Idle;
 		}
