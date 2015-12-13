@@ -15,6 +15,12 @@ public class Butler : NetworkBehaviour {
 
     void Update()
     {
+        if (GUI_Start.Start)
+            return;
+
+        if (!isServer)
+            return;
+
         if (Unit.path.Length != 0)
         {
             if (transform.position == Unit.path[Unit.path.Length - 1])

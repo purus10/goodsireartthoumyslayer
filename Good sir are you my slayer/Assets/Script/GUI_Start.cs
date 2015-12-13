@@ -10,23 +10,31 @@ public class GUI_Start : NetworkBehaviour {
     public Unit_Spawner Uspawner;
 
 
+    public override void OnStartServer()
+    {
+        if (isServer)
+        {
+            Uspawner.SpawnUnits();
+        }
+    }
+
+
     void Update()
     {
-        if (Start)
+        if (Input.GetButtonDown("Submit"))
         {
-            if (Input.GetButtonDown("Start"))
+            if (isServer)
             {
-                clickCount++;
+                RpcStartMatch();
             }
         }
+    }
 
-        if (clickCount == Network.connections.Length + 1)
-        {
+    [ClientRpc]
+    void RpcStartMatch()
+    {
             Uspawner.startscreen.SetActive(false);
             Uspawner.startscreen.GetComponent<Camera>().enabled = false;
-            Unit_Spawner.StartMatch = true;
             Start = false;
-            clickCount = 0;
-        }
     }
 }

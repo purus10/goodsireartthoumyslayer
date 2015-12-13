@@ -17,51 +17,10 @@ public class Result : NetworkBehaviour {
     public Rect NextRound;
     public Unit_Spawner USpawner;
     public Camera ResultScreen;
-
-    void Results()
-    {
-        if (Digit.currentRound < 3)
-        {
-            Unit_Destroy();
-            Digit.currentRound++;
-            Digit.playTime = 0;
-            Time.timeScale = 1;
-            Unit_Spawner.StartMatch = true;
-            press_count = 0;
-            for (int i = 0; i < Result.PlayerName.Length; i++)
-            {
-                Result.PlayerName[i] = null;
-            }
-        }
-        else
-        {
-            Unit_Destroy();
-            Digit.currentRound = 0;
-            print("GAME DONE");
-            Time.timeScale = 1;
-            Digit.playTime = 0;
-            USpawner.startscreen.SetActive(true);
-            USpawner.startscreen.GetComponent<Camera>().enabled = true;
-            GUI_Start.Start = true;
-        }
-    }
-
-    void Update()
-    {
-       /* if (Input.GetKeyDown(KeyCode.L))
-        {
-            End = true;
-        }*/
-
-        if (Network.connections.Length+1 == press_count)
-        {
-            Results();
-        }
-    }
+    string next = "Next Round";
 
     void Unit_Destroy()
     {
-        
         Guard[] SearchG = GameObject.FindObjectsOfType(typeof(Guard)) as Guard[];
         Butler[] SearchB = GameObject.FindObjectsOfType(typeof(Butler)) as Butler[];
         Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
@@ -141,23 +100,49 @@ public class Result : NetworkBehaviour {
         }
 
     }
-	void OnGUI () 
-	{
+
+    void Results()
+    {
+        if (Digit.currentRound < 3)
+        {
+            Unit_Destroy();
+            Digit.currentRound++;
+            Digit.playTime = 0;
+            Time.timeScale = 1;
+            Unit_Spawner.StartMatch = true;
+        }
+        else
+        {
+            Unit_Destroy();
+            Digit.currentRound = 0;
+            print("GAME DONE");
+            Time.timeScale = 1;
+            Digit.playTime = 0;
+            USpawner.startscreen.SetActive(true);
+            USpawner.startscreen.GetComponent<Camera>().enabled = true;
+            GUI_Start.Start = true;
+        }
+    }
+
+    void OnGUI ()
+    {
         if (End)
         {
-            Player[] SearchP = GameObject.FindObjectsOfType(typeof(Player)) as Player[];
-            ResultScreen.enabled = true;
             GUIStyle style = new GUIStyle();
             style.fontSize = 42;
             style.alignment = TextAnchor.MiddleCenter;
             GUI.color = Color.black;
+
+            Player[] SearchP = GameObject.FindObjectsOfType(typeof(Player)) as Player[];
             foreach (Player p in SearchP)
             {
                 p.GetComponentInChildren<Camera>().enabled = false;
+                ResultScreen.GetComponent<Camera>().enabled = true;
                 Time.timeScale = 0;
+
                 for (int i = 0; i < PlayerDisplay.Length; i++)
                 {
-                    GUI.Label(PlayerDisplay[i], PlayerName[i] + "  " + PlayerScore[i],style);
+                    GUI.Label(PlayerDisplay[i], PlayerName[i] + "  " + PlayerScore[i], style);
                 }
 
                 if (Digit.currentRound != 3)
@@ -166,8 +151,9 @@ public class Result : NetworkBehaviour {
                     {
                         press_count++;
                         End = false;
-                         p.GetComponentInChildren<Camera>().enabled = true;
-                        ResultScreen.enabled = false;
+                        Results();
+                        p.GetComponentInChildren<Camera>().enabled = true;
+                        ResultScreen.GetComponent<Camera>().enabled = false;
                     }
                 }
                 else
@@ -175,13 +161,14 @@ public class Result : NetworkBehaviour {
                     if (GUI.Button(NextRound, "End Game"))
                     {
                         press_count++;
+                        Results();
                         End = false;
-                        p.GetComponentInChildren<Camera>().enabled = true;
-                        ResultScreen.enabled = false;
+                        p.GetComponentInChildren<Camera>().enabled = false;
+                        ResultScreen.GetComponent<Camera>().enabled = false;
                     }
                 }
             }
-
         }
+
     }
 }

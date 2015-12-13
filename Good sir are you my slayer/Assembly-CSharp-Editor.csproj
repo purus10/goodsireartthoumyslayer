@@ -246,12 +246,6 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
      <None Include="Assets\Colorful\Shaders\CC_Negative.shader" />
-<<<<<<< HEAD
-=======
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
->>>>>>> 360c382fc5a21b4548352477e6bf6adeb13ea83f
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -266,18 +260,9 @@
  </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
-<<<<<<< HEAD
  </Reference>
  <Reference Include="JMOAssets">
  <HintPath>C:/Users/Kosta/Documents/goodsirmurder/Good sir are you my slayer/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
-=======
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="JMOAssets">
- <HintPath>C:/Users/Roomila/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/JMO Assets/Editor/JMOAssets.dll</HintPath>
->>>>>>> 360c382fc5a21b4548352477e6bf6adeb13ea83f
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

@@ -107,7 +107,6 @@ public class Npc : NetworkBehaviour {
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
-                Health -= item.Amount;
                 hurtstart = true;
                  player.WeaponRange[item.facing].enabled = false;
                  item.Lethal = false;
@@ -131,6 +130,7 @@ public class Npc : NetworkBehaviour {
         if (!isServer)
             return;
         Health -= damage;
+        print(Health);
     }
 
     [Command]
@@ -258,18 +258,41 @@ public class Npc : NetworkBehaviour {
 		}
 	}
 
-	// Update is called once per frame
-	void FixedUpdate () 
+   [ClientRpc]
+   void RpcEndGame()
+    {
+        CmdEndGame();
+    }
+    [Command]
+    void CmdEndGame()
+    {
+        Result.End = true;
+        GameObject.Destroy(gameObject);
+    }
+
+
+    // Update is called once per frame
+    void FixedUpdate () 
 	{
+        if (GUI_Start.Start)
+            return;
+
+        if (!isServer)
+            return;
+
 		if (Health <= 0)
 		{
 			if (hurtstart == false)
             {
                 if (Name == Get.TargetName)
                 {
-                    Result.End = true;
+                    if (isServer)
+                        RpcEndGame();
+                    else CmdEndGame();
+                } else
+                {
+                    GameObject.Destroy(gameObject);
                 }
-                GameObject.Destroy(gameObject);
             }
 		}
 

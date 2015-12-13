@@ -35,6 +35,7 @@ public class Player : NetworkBehaviour {
 	public GameObject Weapon;
     public Container SelectedContain;
 	int ResultSlot;
+    bool endgame;
 
 	// Use this for initialization
 	void Awake ()
@@ -66,6 +67,7 @@ public class Player : NetworkBehaviour {
 
             if (item != null && item.Lethal == true)
             {
+            print("IM HIT");
             Health--;
                 item.Lethal = false;
             TakeDamage(item.Amount);
@@ -90,10 +92,37 @@ public class Player : NetworkBehaviour {
     {
         PlacePlayer();
     }
+
+    [ClientRpc]
+    void RpcEndGame()
+    {
+        Result.End = true;
+    }
+    [Command]
+    void CmdEndGame()
+    {
+        Result.End = true;
+        endgame = true;
+    }
+
     void Update () 
 	{
+        if (isServer)
+        {
+            if (endgame == true)
+                RpcEndGame();
+        }
+            
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if (isServer)
+                RpcEndGame();
+            else CmdEndGame();
+        }
+
         if (!isLocalPlayer)
             return;
+
         if (GUI_Start.Start == false)
         {
             GetComponentInChildren<Camera>().enabled = true;
@@ -245,30 +274,56 @@ public class Player : NetworkBehaviour {
 			attacking = attackweapon.AttackSpeed;
 			State = states.Attacking;
 	}
+
+
 	void ReadyDraw(int selected)
 	{
-		State = states.Drawing;
-		CmdClearDraws();
-        Weapon = GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity) as GameObject;
-        Weapon.transform.parent = this.transform;
-        Item drawnweapon = Weapon.GetComponentInChildren<Item>();
-		drawing = drawnweapon.DrawSpeed;
-		WeaponHeld = selected;
-        SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
-        drawnweapon.Drawn = true;
-        drawnweapon.Notice.enabled = true;
-        CmdCreateWeapon(selected);
+        State = states.Drawing;
+        if (isServer)
+        {
+            SpawnWeapon(selected);
+        } else CmdSpawnWeapon(selected);
+
 
     }
     [Command]
-    void CmdCreateWeapon(int selected)
+    void CmdSpawnWeapon(int selected)
     {
-       
+        ClearDraws();
+        Weapon = (GameObject) GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity);
+        NetworkServer.Spawn(Weapon);
+        RpcParentWeapon(Weapon, selected);
+    }
+
+    [ClientRpc]
+    void RpcParentWeapon(GameObject wep, int selected)
+    {
+        wep.transform.parent = this.transform;
+        Item drawnweapon = wep.GetComponentInChildren<Item>();
+        drawing = drawnweapon.DrawSpeed;
+        WeaponHeld = selected;
+        SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
+        drawnweapon.Drawn = true;
+        drawnweapon.Notice.enabled = true;
+        Weapon = wep;
+    }
+
+    void SpawnWeapon(int selected)
+    {
+        ClearDraws();
+        Weapon = GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity) as GameObject;
+        Weapon.transform.parent = this.transform;
+        Item drawnweapon = Weapon.GetComponentInChildren<Item>();
+        drawing = drawnweapon.DrawSpeed;
+        WeaponHeld = selected;
+        SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
+        drawnweapon.Drawn = true;
+        drawnweapon.Notice.enabled = true;
         NetworkServer.Spawn(Weapon);
     }
-    [Command]
-    void CmdClearDraws()
+    void ClearDraws()
 	{
+        print("I AMA DESTROYING");
 		GameObject.Destroy(Weapon);
 		Weapon = null;
 	}
@@ -326,10 +381,11 @@ public class Player : NetworkBehaviour {
 	}
 	public void Undraw(int selected)
 	{
+        print("I RUN");
 		Item heldweapon = Weapon.GetComponent<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{
-			CmdClearDraws();
+                ClearDraws();
 			State = states.Idle;
 		}
 	}

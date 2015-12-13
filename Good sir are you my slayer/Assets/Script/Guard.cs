@@ -27,6 +27,12 @@ public class Guard : NetworkBehaviour {
 
     void Update()
     {
+        if (GUI_Start.Start)
+            return;
+
+        if (!isServer)
+            return;
+
         if (Target != null)
         {
             GetComponentInChildren<SpriteBubble>().Anim_Bubble(8, 11);

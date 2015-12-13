@@ -28,8 +28,7 @@ public class Unit_Spawner : NetworkBehaviour {
     public int NumberOfConsumables;
     static public bool StartMatch;
 
-    [Command]
-    public void CmdSpawnUnits()
+    public void SpawnUnits()
     {
             for (int i = 0; i < NumberOfNPC; i++)
             {
@@ -169,17 +168,14 @@ public class Unit_Spawner : NetworkBehaviour {
             SaveItemSpawnPoints.Add(p);
         }*/
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    void FixedUpdate()
     {
-	    if (StartMatch == true)
+        if (StartMatch == true)
         {
-            if (isServer)
-            {
-             CmdSpawnUnits();
-            }
+            SpawnUnits();
             StartMatch = false;
         }
-	}
+           
+    }
 }

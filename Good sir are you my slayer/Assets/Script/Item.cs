@@ -16,6 +16,7 @@ public class Item : NetworkBehaviour {
 	public type Type; 
 	public consumable IsConsumable;
 	public GameObject Loot;
+    [SyncVar]
     public SpriteRenderer Weapon;
     public SpriteRenderer Attack;
     [SyncVar]
