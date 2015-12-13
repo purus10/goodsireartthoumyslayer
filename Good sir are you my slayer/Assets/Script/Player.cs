@@ -318,7 +318,7 @@ public class Player : NetworkBehaviour {
 
     void SpawnWeapon(int selected)
     {
-        ClearDraws();
+        CmdClearDraws();
         Weapon = GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity) as GameObject;
         Weapon.transform.parent = this.transform;
         Item drawnweapon = Weapon.GetComponentInChildren<Item>();
@@ -329,7 +329,8 @@ public class Player : NetworkBehaviour {
         drawnweapon.Notice.enabled = true;
         NetworkServer.Spawn(Weapon);
     }
-    void ClearDraws()
+    [Command]
+    void CmdClearDraws()
 	{
         print("I AMA DESTROYING");
 		GameObject.Destroy(Weapon);
@@ -402,9 +403,9 @@ public class Player : NetworkBehaviour {
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{
             if (isLocalPlayer)
-                RpcClearDraws();
+                CmdClearDraws();
             else
-                ClearDraws();
+                RpcClearDraws();
 			State = states.Idle;
 		}
 	}

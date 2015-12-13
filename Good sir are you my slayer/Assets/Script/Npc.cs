@@ -107,9 +107,11 @@ public class Npc : NetworkBehaviour {
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
+                print("ITEM HIT");
                 hurtstart = true;
                  player.WeaponRange[item.facing].enabled = false;
                  item.Lethal = false;
+                item.Attack_Anim = false;
                 TakeDamage(item.Amount);
 
             }
@@ -120,24 +122,19 @@ public class Npc : NetworkBehaviour {
     {
         if (Health < 10)
         {
-            CmdStartLerp();
+            StartLerp();
             Health = newHealth;
         }
     }
 
     void TakeDamage(int damage)
     {
-        if (!isServer)
-            return;
         Health -= damage;
         print(Health);
     }
 
-    [Command]
-    void CmdStartLerp()
+    void StartLerp()
     {
-        if (!isServer)
-            return;
         StartCoroutine("HurtLerp");
     }
 
@@ -277,9 +274,6 @@ public class Npc : NetworkBehaviour {
         if (GUI_Start.Start)
             return;
 
-        if (!isServer)
-            return;
-
 		if (Health <= 0)
 		{
 			if (hurtstart == false)
@@ -291,7 +285,7 @@ public class Npc : NetworkBehaviour {
                     else CmdEndGame();
                 } else
                 {
-                    GameObject.Destroy(gameObject);
+                    NetworkServer.Destroy(this.gameObject);
                 }
             }
 		}
