@@ -266,8 +266,16 @@ public class Npc : NetworkBehaviour {
         Result.End = true;
         GameObject.Destroy(gameObject);
     }
-
-
+    [Command]
+    void CmdDestoryUnit()
+    {
+        NetworkServer.Destroy(this.gameObject);
+    }
+    [ClientRpc]
+    void RpcDestoryUnit()
+    {
+        NetworkServer.Destroy(this.gameObject);
+    }
     // Update is called once per frame
     void FixedUpdate () 
 	{
@@ -285,7 +293,10 @@ public class Npc : NetworkBehaviour {
                     else CmdEndGame();
                 } else
                 {
-                    NetworkServer.Destroy(this.gameObject);
+                    if (isServer)
+                        RpcDestoryUnit();
+                    else
+                        CmdDestoryUnit();
                 }
             }
 		}

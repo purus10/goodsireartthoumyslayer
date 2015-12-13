@@ -297,7 +297,7 @@ public class Player : NetworkBehaviour {
     [Command]
     void CmdSpawnWeapon(int selected)
     {
-        ClearDraws();
+        CmdClearDraws();
         Weapon = (GameObject) GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity);
         NetworkServer.Spawn(Weapon);
         RpcParentWeapon(Weapon, selected);

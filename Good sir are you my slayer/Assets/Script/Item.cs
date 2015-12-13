@@ -58,7 +58,6 @@ public class Item : NetworkBehaviour {
     // Update is called once per frame
     void Update () 
 	{
-        print("YEAH IT ADDS THE CHANGES");
         if (Type == type.Weapon && Drawn == true)
         {
             if (Attack_Anim == true)
