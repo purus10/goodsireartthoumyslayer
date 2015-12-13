@@ -15,6 +15,7 @@ namespace Database{
 		static public string[] NeedName = new string[] {"Eat","Smoke","Bathroom","Drunkness"};
 		static public string[] Consumable = new string[] {"Poison","Snack","Drink","Bandage","Firecracker","PainKiller"};
 		static public string Name{get{return FirstName [Random.Range (0, FirstName.Length)]+" "+LastName [Random.Range (0, LastName.Length)];}}
+
 	}
 
 	public class Need

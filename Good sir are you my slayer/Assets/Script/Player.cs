@@ -10,7 +10,11 @@ public class Player : NetworkBehaviour {
     static public List<Vector3> SpawnPoints = new List<Vector3>();
     public List<Vector3> Spawn_Point;
     public states State;
-	public int Points, Health, WeaponHeld, Hits;
+    [SyncVar]
+    public int Points;
+    [SyncVar(hook = "OnDamage")]
+    public int Health;
+    public int WeaponHeld, Hits;
     public float Speed;
     float EatTimer, BathTimer, DrunkTimer, SmokeTimer;
     public Rect[] GUIHUD;
@@ -31,7 +35,6 @@ public class Player : NetworkBehaviour {
 	public GameObject Weapon;
     public Container SelectedContain;
 	int ResultSlot;
-    [SyncVar] bool test;
 
 	// Use this for initialization
 	void Awake ()
@@ -42,6 +45,21 @@ public class Player : NetworkBehaviour {
 		SetDress ();
 	}
 
+    void OnDamage(int newHealth)
+    {
+        if (Health < 10)
+        {
+            Health = newHealth;
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        if (!isServer)
+            return;
+        Health -= damage;
+    }
+
 	void OnCollisionEnter(Collision col)
 	{
 		Item item = col.gameObject.GetComponent<Item>();
@@ -50,17 +68,19 @@ public class Player : NetworkBehaviour {
             {
             Health--;
                 item.Lethal = false;
+            TakeDamage(item.Amount);
             }
 	}
         void Start()
 	{
         if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
-        GetComponentInChildren<Camera>().enabled = true;
-        HUD.SetActive(true);
+        if (isLocalPlayer)
+        {
+            HUD.SetActive(true);
+        }
     }
 
-    [Command]
     void CmdResultScreen()
     {
         Result.End = true;
@@ -74,16 +94,14 @@ public class Player : NetworkBehaviour {
 	{
         if (!isLocalPlayer)
             return;
-
-        if (Input.GetKeyDown(KeyCode.A))
+        if (GUI_Start.Start == false)
         {
-            Result.End = true;
+            GetComponentInChildren<Camera>().enabled = true;
         }
 
         if (Health == 0)
         {
-            GetComponent<Player>().enabled = false;
-            GetComponent<CharacterController>().enabled = false;
+            print("I AM DEAD");
         }
 
         Result.PlayerScore [ResultSlot] = Points;
@@ -110,8 +128,8 @@ public class Player : NetworkBehaviour {
 		{
 			if (Input.GetButtonDown("Y"))
 			{
-					if (Selected == Slots[0] && Slots[0] != null) CmdReadyDraw(0);
-				else if (Selected == Slots[1] && Slots[1] != null) CmdReadyDraw(1);
+                if (Selected == Slots[0] && Slots[0] != null) ReadyDraw(0);
+                else if (Selected == Slots[1] && Slots[1] != null) ReadyDraw(1);
 			}
 
             if (Input.GetAxis("LBumper") != 0)
@@ -144,9 +162,6 @@ public class Player : NetworkBehaviour {
 				if (drawing != 0) drawing--;
 				else {
 					State = states.Armed;
-					Item drawnweapon = Weapon.GetComponentInChildren<Item>();
-					drawnweapon.Drawn = true;
-					drawnweapon.Notice.enabled = true;
 				}
 		}
 		if (State == states.Attacking)
@@ -230,20 +245,29 @@ public class Player : NetworkBehaviour {
 			attacking = attackweapon.AttackSpeed;
 			State = states.Attacking;
 	}
-    [Command]
-	void CmdReadyDraw(int selected)
+	void ReadyDraw(int selected)
 	{
 		State = states.Drawing;
-		ClearDraws();
+		CmdClearDraws();
         Weapon = GameObject.Instantiate(Slots[selected], transform.position, Quaternion.identity) as GameObject;
         Weapon.transform.parent = this.transform;
-		Item drawnweapon = Weapon.GetComponentInChildren<Item>();
+        Item drawnweapon = Weapon.GetComponentInChildren<Item>();
 		drawing = drawnweapon.DrawSpeed;
 		WeaponHeld = selected;
         SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
+        drawnweapon.Drawn = true;
+        drawnweapon.Notice.enabled = true;
+        CmdCreateWeapon(selected);
+
+    }
+    [Command]
+    void CmdCreateWeapon(int selected)
+    {
+       
         NetworkServer.Spawn(Weapon);
     }
-	void ClearDraws()
+    [Command]
+    void CmdClearDraws()
 	{
 		GameObject.Destroy(Weapon);
 		Weapon = null;
@@ -305,7 +329,7 @@ public class Player : NetworkBehaviour {
 		Item heldweapon = Weapon.GetComponent<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{
-			ClearDraws();
+			CmdClearDraws();
 			State = states.Idle;
 		}
 	}

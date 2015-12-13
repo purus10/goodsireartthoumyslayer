@@ -18,6 +18,7 @@ public class Item : NetworkBehaviour {
 	public GameObject Loot;
     public SpriteRenderer Weapon;
     public SpriteRenderer Attack;
+    [SyncVar]
 	public int Ammo, Amount, Bleed, Force, Suspicion, ThrowAmount;
 	public float DrawSpeed, AttackSpeed, WeaponRange_X, WeaponRange_Y;
     public Vector3 position;
@@ -157,20 +158,25 @@ public class Item : NetworkBehaviour {
             if (player.Slots[0] == null)
             {
                 player.Slots[0] = Instantiate(Loot, new Vector3(0.3f, -0.1f, 1f), transform.rotation) as GameObject;
-                GameObject.Destroy(this.gameObject);
+                RpcDestroy();
                 player.Selected = player.Slots[0];
             }
             else if (player.Slots[1] == null)
             {
                 player.Slots[1] = Instantiate(Loot, new Vector3(0.3f, -0.1f, 1f), transform.rotation) as GameObject;
-                GameObject.Destroy(this.gameObject);
+                RpcDestroy();
                 player.Selected = player.Slots[1];
             }
         } else if (player.Consumable == null)
         {
             player.Consumable = Instantiate(Loot, new Vector3(0.3f, -0.1f, 1f), transform.rotation) as GameObject;
-            GameObject.Destroy(this.gameObject);
+            RpcDestroy();
         }
+    }
+    [ClientRpc]
+    void RpcDestroy()
+    {
+        GameObject.Destroy(this.gameObject);
     }
     void GiveLoot(Player player)
     {

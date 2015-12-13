@@ -14,7 +14,10 @@ public class Npc : NetworkBehaviour {
 	public Unit Unit;
     public float HurtTimer;
     float HungerTimer, BathTimer, DrunkTimer, SmokeTimer;
-	public int Health, Suspicion, Afraidat, Crave;
+
+    [SyncVar(hook = "OnDamage")]
+    public int Health;
+    public int Suspicion, Afraidat, Crave;
 	float[] needs = new float[4] {100,100,100,100};
 	public float conversation = 500f, convoLength = 50f;
 	float[] NeedTimers = new float[4];
@@ -108,21 +111,46 @@ public class Npc : NetworkBehaviour {
                 hurtstart = true;
                  player.WeaponRange[item.facing].enabled = false;
                  item.Lethal = false;
-
-                if (Health <= 0 && Name == Get.TargetName)
-                {
-                    player.Points += (item.Amount*2)%10;
-                }
+                TakeDamage(item.Amount);
 
             }
         }
     }
-	private void HurtLerp(float spd)
+
+    void OnDamage(int newHealth)
+    {
+        if (Health < 10)
+        {
+            CmdStartLerp();
+            Health = newHealth;
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        if (!isServer)
+            return;
+        Health -= damage;
+    }
+
+    [Command]
+    void CmdStartLerp()
+    {
+        if (!isServer)
+            return;
+        StartCoroutine("HurtLerp");
+    }
+
+    IEnumerator HurtLerp()
 	{
-		for (int i = 0; i < Sprite.Length;i++)
-		{
-		Sprite[i].color = Color.Lerp (Sprite[i].color, Color.red, spd * Time.time);
-		}
+        if (hurtstart == true)
+        {
+            for (int i = 0; i < Sprite.Length; i++)
+            {
+                Sprite[i].color = Color.Lerp(Sprite[i].color, Color.red, 0.1f * Time.time);
+            }
+            yield return null;
+        }
 	}
 	private void RevertColor()
 	{
@@ -233,10 +261,6 @@ public class Npc : NetworkBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-        if (!isServer)
-        {
-            return;
-        }
 		if (Health <= 0)
 		{
 			if (hurtstart == false)
@@ -278,8 +302,7 @@ public class Npc : NetworkBehaviour {
                 RevertColor();
 				hurt = 1f;
 				hurtstart = false;
-			} else 
-				HurtLerp(0.1f);
+			}
 		}
 		#endregion
 		#region Offended
@@ -339,7 +362,7 @@ public class Npc : NetworkBehaviour {
 		{
 			if (Unit.path.Length > 0)
 			{
-			if (transform.position == Unit.path[Unit.path.Length-1])
+			if (Unit.path.Length > 0 && transform.position == Unit.path[Unit.path.Length-1])
 				{
 				counter = SetCounter;
 				State = states.Idle;
@@ -411,7 +434,7 @@ public class Npc : NetworkBehaviour {
                 Unit.MoveTo(SearchingforArea.transform.position);
             }
 
-            if (transform.position == Unit.path[Unit.path.Length - 1])
+            if (Unit.path.Length > 0 && transform.position == Unit.path[Unit.path.Length - 1])
             {
                 needs[2] = 100;
                 SearchingforArea = null;
@@ -456,7 +479,7 @@ public class Npc : NetworkBehaviour {
 				Unit.MoveTo(SearchingforArea.transform.position);
 			}
 
-			if (transform.position == Unit.path[Unit.path.Length-1])
+			if (Unit.path.Length > 0 && transform.position == Unit.path[Unit.path.Length-1])
 			{
 				needs[2] = 100;
 				SearchingforArea = null;
@@ -473,7 +496,7 @@ public class Npc : NetworkBehaviour {
                 Unit.MoveTo(SearchingforArea.transform.position);
             }
 
-            if (transform.position == Unit.path[Unit.path.Length - 1])
+            if (Unit.path.Length > 0 && transform.position == Unit.path[Unit.path.Length - 1])
             {
                 needs[2] = 100;
                 SearchingforArea = null;
@@ -502,7 +525,7 @@ public class Npc : NetworkBehaviour {
 				Unit.MoveTo(SearchingforArea.transform.position);
 			}
 
-			if (SearchingforArea != null && transform.position == Unit.path[Unit.path.Length-1])
+			if (Unit.path.Length > 0 && SearchingforArea != null && transform.position == Unit.path[Unit.path.Length-1])
 			{
 				needs[1] = 100;
 				SearchingforArea = null;

@@ -76,33 +76,33 @@ public class Player_Animations : NetworkBehaviour {
         _body = Random.Range(0, Body_Walk_Down1.Length - 1);
         CmdAssignParts();
     }
-    //[Command]
     public void CmdAssignParts()
     {
         player.sprite = Head[_head, 0];
         Sprite_body.sprite = Body[_body, 0];
     }
+
     void Update()
     {
 
         //walk
         if (position.x > transform.position.x)
         {
-            Walk(18, 23);
+            CmdWalk(18, 23);
             position = transform.position;
         }
         else if (position.x < transform.position.x)
         {
-            Walk(12, 17);
+            CmdWalk(12, 17);
             position = transform.position;
         }
         else if (position.y < transform.position.y)
         {
-            Walk(6, 11);
+            CmdWalk(6, 11);
             position = transform.position;
         }else if (position.y > transform.position.y)
         {
-            Walk(0, 5);
+            CmdWalk(0, 5);
             position = transform.position;
         }
     }
@@ -308,8 +308,7 @@ public class Player_Animations : NetworkBehaviour {
 
         }
     }
-
-	public void Walk(int min, int max)
+	public void CmdWalk(int min, int max)
 	{
         if (frame < max && frame >= min)
         {

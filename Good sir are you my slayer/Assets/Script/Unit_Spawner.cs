@@ -90,36 +90,8 @@ public class Unit_Spawner : NetworkBehaviour {
                     ItemSpawnPoints.RemoveAt(position);
                 }
             }
-            Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
-            int chosen = Random.Range(0, SearchN.Length - 1);
-            Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
-
-        SpriteRenderer[] parts = SearchN[chosen].GetComponentsInChildren<SpriteRenderer>();
-
-        for (int i = 0; i < parts.Length;i++)
-        {
-            if (parts[i].gameObject.name == "NPC Body")
-           {
-               Get.TargetBody = parts[i].sprite;
-            }
-        }
-            Get.TargetName = SearchN[chosen].Name;
-            SearchN[chosen].Name = Get.TargetName;
-            for (int i = 0; i < SearchN.Length; i++)
-            {
-                if (SearchN[i] != SearchN[chosen] && SearchN[i] == SearchN[chosen])
-                {
-                SearchN[i].Name = Get.Name;
-                i = 0;
-                }
-            }
+        RpcDesignateTarget();
     }
-
-    public override void OnStartServer()
-    {
-        
-    }
-
     void SpawnNPC(Vector3 position)
     {
         GameObject go = GameObject.Instantiate(NPC_prefab, position, Quaternion.identity) as GameObject;
@@ -146,13 +118,42 @@ public class Unit_Spawner : NetworkBehaviour {
 
     void SpawnClues(Vector3 position)
     {
-        Instantiate(CLUE_prefab, position, Quaternion.identity);
+        GameObject go = GameObject.Instantiate(CLUE_prefab, position, Quaternion.identity) as GameObject;
+        NetworkServer.Spawn(go);
     }
 
     void SpawnCpnsumables(Vector3 position)
     {
         GameObject go = GameObject.Instantiate(CONSUME_Prefab[Random.Range(0, CONSUME_Prefab.Length - 1)], position, Quaternion.identity) as GameObject;
         NetworkServer.Spawn(go);
+    }
+
+    [ClientRpc]
+    void RpcDesignateTarget()
+    {
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+        int chosen = Random.Range(0, SearchN.Length - 1);
+        Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
+
+        SpriteRenderer[] parts = SearchN[chosen].GetComponentsInChildren<SpriteRenderer>();
+
+        for (int i = 0; i < parts.Length; i++)
+        {
+            if (parts[i].gameObject.name == "NPC Body")
+            {
+                Get.TargetBody = parts[i].sprite;
+            }
+        }
+        Get.TargetName = SearchN[chosen].Name;
+        SearchN[chosen].Name = Get.TargetName;
+        for (int i = 0; i < SearchN.Length; i++)
+        {
+            if (SearchN[i] != SearchN[chosen] && SearchN[i] == SearchN[chosen])
+            {
+                SearchN[i].Name = Get.Name;
+                i = 0;
+            }
+        }
     }
 
     // Use this for initialization
@@ -174,7 +175,10 @@ public class Unit_Spawner : NetworkBehaviour {
     {
 	    if (StartMatch == true)
         {
-            CmdSpawnUnits();
+            if (isServer)
+            {
+             CmdSpawnUnits();
+            }
             StartMatch = false;
         }
 	}
