@@ -252,6 +252,15 @@ public class Npc : NetworkBehaviour {
 		{
 			State = states.Idle;
 		}
+
+        Player player = col.GetComponent<Player>();
+        if (player != null)
+        {
+            if (player.State == Player.states.Talking)
+            {
+                player.State = Player.states.Idle;
+            }
+        }
 	}
 
    [ClientRpc]

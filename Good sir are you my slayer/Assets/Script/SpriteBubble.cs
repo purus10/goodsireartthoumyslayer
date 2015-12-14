@@ -37,18 +37,13 @@ public class SpriteBubble : NetworkBehaviour
             }
         } else if (player != null)
         {
-            switch (player.State)
+            if (player.State == Player.states.Talking)
             {
-                case Player.states.Talking:
-                    {
-                        Anim_Bubble(0, 5);
-                        break;
-                    }
-                case Player.states.Idle:
-                    {
-                        Bubble.sprite = Bubbles[20];
-                        break;
-                    }
+                Anim_Bubble(0, 5);
+            }
+            else
+            {
+                Bubble.sprite = Bubbles[20];
             }
         }
 	

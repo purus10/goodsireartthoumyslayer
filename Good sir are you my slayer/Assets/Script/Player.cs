@@ -155,7 +155,8 @@ public class Player : NetworkBehaviour {
                 player.WeaponRange[item.facing].enabled = false;
                 item.Lethal = false;
                 hit = true;
-                TakeDamage(item.Amount);
+                if (player != this)
+                player.TakeDamage(item.Amount);
             }
         }
 
@@ -305,6 +306,10 @@ public class Player : NetworkBehaviour {
                 CmdSetPos();
             else
             position = transform.position;*/
+        }
+
+        if (State == states.Talking)
+        {
         }
 
 		if (State == states.Idle)
