@@ -62,6 +62,7 @@ public class Result : NetworkBehaviour {
         {
             foreach (Player p in SearchP)
             {
+                p.gameObject.SetActive(true);
                 p.PlacePlayer();
                 p.TargetBody.sprite = Clear;
                 p.TargetHead.sprite = Clear;
@@ -70,7 +71,20 @@ public class Result : NetworkBehaviour {
                 p.State = Player.states.Idle;
                 p.AxisPress = false;
                 p.Health = 10;
-                foreach(Need n in p.Needs)
+                p.PleaseStandby.gameObject.SetActive(false);
+                for (int i = 0; i < p.Sprites.Length; i++)
+                {
+                    p.Sprites[i].enabled = true;
+                }
+                p.GetComponentInChildren<Camera>().enabled = true;
+                p.GetComponent<CharacterController>().enabled = true;
+                Item item = p.GetComponentInChildren<Item>();
+                if (item != null)
+                    GameObject.Destroy(item.gameObject);
+                p.GetComponent<BoxCollider>().enabled = true;
+                p.GetComponent<SphereCollider>().enabled = true;
+                p.IsWanted = false;
+                foreach (Need n in p.Needs)
                 {
                     n.Meter = 100;
                 }
@@ -137,7 +151,6 @@ public class Result : NetworkBehaviour {
             foreach (Player p in SearchP)
             {
                 p.GetComponentInChildren<Camera>().enabled = false;
-                ResultScreen.GetComponent<Camera>().enabled = true;
                 Time.timeScale = 0;
 
                 for (int i = 0; i < PlayerDisplay.Length; i++)

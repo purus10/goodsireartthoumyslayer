@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour {
 
-	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing, Talking}
+	public enum states {Idle, Armed, Attacking, Searching, Hurt, Drawing, Talking, Dead}
 	public enum player {one,two,three,four}
     static public List<Vector3> SpawnPoints = new List<Vector3>();
     public List<Vector3> Spawn_Point;
@@ -25,6 +25,7 @@ public class Player : NetworkBehaviour {
     float[] NeedTimers = new float[4];
 	public float drawing, attacking, consuming, smoking, peeing;
 	public bool IsBleeding, WeaponDrawn, IsSeen, IsWanted, AxisPress;
+    public SpriteRenderer[] Sprites;
 	public string Name, TargetName;
 	public SpriteRenderer TargetBody, TargetHead;
     public Player_Animations Anim;
@@ -36,9 +37,11 @@ public class Player : NetworkBehaviour {
 	public GameObject Selected;
 	public GameObject Weapon;
     public Container SelectedContain;
-    [SyncVar]
-    public Vector3 position;
-
+    public Color self;
+    public Color hurt;
+    public int hitTimer,hitcount;
+    public bool hit;
+    public Camera PleaseStandby;
 	int ResultSlot;
     public bool endgame;
 
@@ -118,6 +121,7 @@ public class Player : NetworkBehaviour {
     // Use this for initialization
     void Awake ()
 	{
+        self = Sprites[0].color;
         play = this;
         CreatePositionList();
 		SetName();
@@ -140,7 +144,7 @@ public class Player : NetworkBehaviour {
         else Health = 0;
     }
 
-	void OnCollisionEnter(Collision col)
+	void OnTriggerStay(Collider col)
 	{
         Player player = col.gameObject.GetComponentInParent<Player>();
         if (player != null && player != this)
@@ -148,12 +152,14 @@ public class Player : NetworkBehaviour {
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
-                print("IM HIT " + name);
                 player.WeaponRange[item.facing].enabled = false;
                 item.Lethal = false;
+                hit = true;
                 TakeDamage(item.Amount);
             }
         }
+
+
         /*transform.rotation = new Quaternion(0, 0, 0, 0);
         if (item != null && item.Lethal == true)
         {
@@ -165,7 +171,6 @@ public class Player : NetworkBehaviour {
     }
         void Start()
 	{
-        position = transform.position;
         if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
         if (isLocalPlayer)
@@ -184,47 +189,70 @@ public class Player : NetworkBehaviour {
         PlacePlayer();
     }
 
-    [Command]
-    void CmdPositionSync()
-    {
-        transform.position = position;
-        RpcPositionSync();
-    }
-    [Command]
-    void CmdSetPos()
-    {
-        position = transform.position;
-        RpcSetPos();
-    }
     [ClientRpc]
-    void RpcSetPos()
-    {
-        position = transform.position;
-    }
-    [ClientRpc]
-    void RpcPositionSync()
-    {
-        transform.position = position;
-    }
-
-    [ClientRpc]
-    void RpcEndGame()
+    public void RpcEndGame()
     {
         Result.End = true;
     }
     [Command]
-    void CmdEndGame()
+    public void CmdEndGame()
     {
         Result.End = true;
         endgame = true;
     }
+
+    [Command]
+    void CmdHitOn()
+    {
+        hit = true;
+    }
     void Update () 
 	{
         transform.rotation = new Quaternion(0, 0, 0, 0);
+        transform.position = new Vector3(transform.position.x,transform.position.y,-0.1f);
 
-        /*if (isLocalPlayer)
-            CmdPositionSync();
-        else transform.position = position;*/
+        if (Health <= 0)
+            State = states.Dead;
+
+
+        if (State == states.Dead)
+        {
+            PleaseStandby.gameObject.SetActive(true);
+            for (int i = 0; i < Sprites.Length; i++)
+            {
+                Sprites[i].enabled = false;
+            }
+            GetComponentInChildren<Camera>().enabled = false;
+            GetComponent<CharacterController>().enabled = false;
+                Item item = GetComponentInChildren<Item>();
+            if (item != null)
+            item.gameObject.SetActive(false);
+            GetComponent<BoxCollider>().enabled = false;
+            GetComponent<SphereCollider>().enabled = false;
+        }
+
+        if (hit == true)
+        {
+            hitcount--;
+            if (hitcount <= 0)
+            {
+                hitcount = hitTimer;
+                hit = false;
+            }
+        }
+        if (hit == true)
+        {
+            for (int i = 0; i < Sprites.Length;i++)
+            {
+                Sprites[i].color = hurt;
+            }
+        } else
+        {
+            for (int i = 0; i < Sprites.Length; i++)
+            {
+                Sprites[i].color = self;
+            }
+        }
         if (isServer)
         {
             if (endgame == true)
@@ -244,7 +272,7 @@ public class Player : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-        if (GUI_Start.Start == false)
+        if (GUI_Start.Start == false && Health > 0)
         {
             GetComponentInChildren<Camera>().enabled = true;
         }
@@ -305,7 +333,6 @@ public class Player : NetworkBehaviour {
 			{
 				if (AxisPress == false)
 				{
-                    GetComponent<Rigidbody>().Sleep();
 				Attack (WeaponHeld);
                    State = states.Attacking;
                     AxisPress = true;

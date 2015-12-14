@@ -37,8 +37,8 @@ public class HUD_Bar : MonoBehaviour {
 	{
 		if (player.Health == 10)
 		{
-			ShowBar = Bar[0];
-			ShowNumber = Number[0];
+			ShowBar = Bar[10];
+			ShowNumber = Number[10];
 		} else {
 			ShowBar = Bar[player.Health];
 			ShowNumber = Number[player.Health];

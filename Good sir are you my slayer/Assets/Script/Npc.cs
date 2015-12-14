@@ -42,8 +42,12 @@ public class Npc : NetworkBehaviour {
     public int id;
     Player setplayer;
     int test;
+    public Color self;
+    public Color hurted;
+    public int hitTimer, hitcount;
+    public bool hit;
 
-	Vector3 RunAway()
+    Vector3 RunAway()
 	{
 		Vector3 path = Vector3.zero;
 		Vector3 moveaway = -Vector3.MoveTowards(transform.position,Afraidof.position,10f);
@@ -111,10 +115,9 @@ public class Npc : NetworkBehaviour {
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
-                hurtstart = true;
                  player.WeaponRange[item.facing].enabled = false;
                  item.Lethal = false;
-                player.CmdStartLerp(id);
+                hit = true;
                 TakeDamage(item.Amount);
             }
         }
@@ -131,7 +134,6 @@ public class Npc : NetworkBehaviour {
     public void TakeDamage(int damage)
     {
         Health -= damage;
-        print(Health);
     }
 
     /*public IEnumerator HurtLerp()
@@ -255,12 +257,14 @@ public class Npc : NetworkBehaviour {
    [ClientRpc]
    void RpcEndGame()
     {
+
         CmdEndGame();
     }
     [Command]
     void CmdEndGame()
     {
         Result.End = true;
+        RpcEndGame();
         GameObject.Destroy(gameObject);
     }
     [Command]
@@ -279,17 +283,42 @@ public class Npc : NetworkBehaviour {
         if (GUI_Start.Start)
             return;
 
-		if (Health <= 0)
+        if (hit == true)
+        {
+            hitcount--;
+            if (hitcount <= 0)
+            {
+                hitcount = hitTimer;
+                hit = false;
+            }
+        }
+        if (hit == true)
+        {
+            for (int i = 0; i < Sprite.Length; i++)
+            {
+                Sprite[i].color = hurted;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Sprite.Length; i++)
+            {
+                Sprite[i].color = self;
+            }
+        }
+
+        if (Health <= 0)
 		{
-			if (hurtstart == false)
+			if (hit == false)
             {
                 for (int i = 0; i < Sprite.Length; i++)
                     Sprite[i].enabled = false;
+
                 if (Name == Get.TargetName)
                 {
                     if (isServer)
-                        RpcEndGame();
-                    else CmdEndGame();
+                        Player.play.RpcEndGame();
+                    else Player.play.CmdEndGame();
                 } else
                 {
                     if (isServer)

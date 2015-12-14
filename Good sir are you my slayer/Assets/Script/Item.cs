@@ -7,7 +7,7 @@ public class Item : NetworkBehaviour {
 
 	public enum type {Consumable,Spawn,Weapon, Clue};
 	public enum consumable{Any, Poison, Snack, Drink, Bandage, Firecracker, PainKiller};
-	public bool IsPoisoned, Drawn, Lethal, Attack_Anim;
+	public bool IsPoisoned, Drawn, Lethal, Attack_Anim, scary;
 	public string Name;
     public int facing;
     public Vector3[] WeaponPlacment;

@@ -201,7 +201,12 @@ public class Unit_Spawner : NetworkBehaviour {
     {
         if (StartMatch == true)
         {
-            if (isServer) SpawnUnits();
+            if (isServer)
+            {
+                SpawnUnits();
+                RpcDesignateTarget();
+            }
+                
                 StartMatch = false;
         }
            

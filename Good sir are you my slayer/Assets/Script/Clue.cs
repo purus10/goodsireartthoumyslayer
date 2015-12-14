@@ -21,7 +21,7 @@ public class Clue : NetworkBehaviour {
                     player.TargetBody.sprite = Get.TargetBody;
                 else
                     player.TargetName = Get.TargetName;
-                GameObject.Destroy(this);
+                NetworkServer.Destroy(this.gameObject);
             }
         }
     }

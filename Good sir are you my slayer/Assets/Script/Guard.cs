@@ -23,14 +23,21 @@ public class Guard : NetworkBehaviour {
         {
             Target = npc.offender;
         }
+
+        Player player = col.gameObject.GetComponentInParent<Player>();
+        if (player != null)
+        {
+            Item item = player.gameObject.GetComponentInChildren<Item>();
+            if (item != null && item.scary == true)
+            {
+                Target = player;
+            }
+        }
     }
 
     void Update()
     {
         if (GUI_Start.Start)
-            return;
-
-        if (!isServer)
             return;
 
         if (Target != null)
@@ -43,6 +50,8 @@ public class Guard : NetworkBehaviour {
             float distance = Vector3.Distance(Target.transform.position, transform.position);
             if (distance < 1.5f)
             {
+                Target.IsWanted = false;
+                Target.hit = true;
                 Target.Health = 0;
                 Unit.MoveTo(StartPoint);
                 Target = null;
