@@ -52,6 +52,9 @@ namespace Database{
 
 		static public void Snack(Item item, Player player)
 		{
+            if (player.Health + 1 <= 10)
+                player.Health = player.Health + 1;
+            else player.Health = 10;
             player.Needs[0].Meter = Mathf.Min(player.Needs[0].Meter + item.Amount, 100);
             player.Consumable = null;
         }
@@ -60,7 +63,8 @@ namespace Database{
             if (player.Health + 3 <= 10)
                 player.Health = player.Health + 3;
             else player.Health = 10;
-		}
+            player.Consumable = null;
+        }
 
 	}
 }
