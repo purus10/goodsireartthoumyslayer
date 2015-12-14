@@ -145,6 +145,7 @@
     <Compile Include="Assets\Script\Player_Animations.cs" />
     <Compile Include="Assets\Script\Player_NetworkSetup.cs" />
     <Compile Include="Assets\Script\Player_SyncPosition.cs" />
+    <Compile Include="Assets\Script\PlayersName.cs" />
     <Compile Include="Assets\Script\Result.cs" />
     <Compile Include="Assets\Script\SetName.cs" />
     <Compile Include="Assets\Script\Smoking_Area.cs" />

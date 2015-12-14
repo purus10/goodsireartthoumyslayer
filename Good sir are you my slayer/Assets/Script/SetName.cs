@@ -8,7 +8,7 @@ public class SetName : MonoBehaviour {
     public Player player;
 	
 	void Start () {
-        GetComponent<MeshRenderer>().sortingOrder = 3;
+        GetComponent<MeshRenderer>().sortingOrder = 10;
 
     }
 	
