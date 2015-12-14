@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using Database;
 using System.Collections.Generic;
 using UnityEngine.Networking;
@@ -9,6 +10,7 @@ public class Player : NetworkBehaviour {
 	public enum player {one,two,three,four}
     static public List<Vector3> SpawnPoints = new List<Vector3>();
     public List<Vector3> Spawn_Point;
+    static public Player play;
     public states State;
     [SyncVar]
     public int Points;
@@ -34,12 +36,88 @@ public class Player : NetworkBehaviour {
 	public GameObject Selected;
 	public GameObject Weapon;
     public Container SelectedContain;
+    public Npc npc;
+    public Npc SETNpc;
 	int ResultSlot;
     bool endgame;
 
-	// Use this for initialization
-	void Awake ()
+    [Command]
+    public void CmdStartLerp(int id)
+    {
+        print("I AM STARTING LOOP");
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+        for (int i = 0; i < SearchN.Length;i++)
+        {
+            if (SearchN[i].id == id)
+            {
+                SearchN[i].StartCoroutine(HurtLerp(id));
+                break;
+            }
+        }
+    }
+
+    [Command]
+    public void CmdDestroyUnit(int id)
+    {
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+
+        for (int i = 0; i < SearchN.Length; i++)
+        {
+            if (SearchN[i].id == id)
+            {
+                NetworkServer.Destroy(SearchN[i].gameObject);
+                break;
+            }
+        }
+    }
+
+    [ClientRpc]
+    public void RpcDestroyUnit(int id)
+    {
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+
+        for (int i = 0; i < SearchN.Length; i++)
+        {
+            if (SearchN[i].id == id)
+            {
+                NetworkServer.Destroy(SearchN[i].gameObject);
+                break;
+            }
+        }
+    }
+
+    IEnumerator HurtLerp(int id)
+    {
+        int i = -1;
+        Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
+
+        for (int l = 0; l < SearchN.Length; l++)
+        {
+            if (SearchN[l].id == id)
+            {
+                l = i;
+                break;
+            }
+            print(i);
+        }
+
+        if (i != -1 && SearchN[i].hurtstart == true)
+        {
+            print(i+" ID = "+id);
+            for (int j = 0; j < npc.Sprite.Length; j++)
+            {
+                SearchN[i].Sprite[j].color = Color.Lerp(SearchN[i].Sprite[j].color, Color.red, 0.1f * Time.time);
+            }
+            yield return null;
+        }
+    }
+
+
+
+    // Use this for initialization
+    void Awake ()
 	{
+        play = this;
         CreatePositionList();
 		SetName();
 		CreateNeeds();
@@ -48,7 +126,7 @@ public class Player : NetworkBehaviour {
 
     void OnDamage(int newHealth)
     {
-        if (Health < 10)
+        if (newHealth < 10)
         {
             Health = newHealth;
         }
@@ -56,23 +134,34 @@ public class Player : NetworkBehaviour {
 
     void TakeDamage(int damage)
     {
-        if (!isServer)
-            return;
-        Health -= damage;
+        if (Health - damage >= 0)
+            Health -= damage;
+        else Health = 0;
     }
 
 	void OnCollisionEnter(Collision col)
 	{
-		Item item = col.gameObject.GetComponent<Item>();
-
-            if (item != null && item.Lethal == true)
+        Player player = col.gameObject.GetComponentInParent<Player>();
+        if (player != null && player != this)
+        {
+            Item item = player.gameObject.GetComponentInChildren<Item>();
+            if (item != null && item.Lethal)
             {
-            print("IM HIT");
-            Health--;
+                print("IM HIT " + name);
+                player.WeaponRange[item.facing].enabled = false;
                 item.Lethal = false;
-            TakeDamage(item.Amount);
+                TakeDamage(item.Amount);
             }
-	}
+        }
+        /*transform.rotation = new Quaternion(0, 0, 0, 0);
+        if (item != null && item.Lethal == true)
+        {
+            print("IM HIT "+name);
+            Health--;
+            item.Lethal = false;
+            TakeDamage(item.Amount);
+        }*/
+    }
         void Start()
 	{
         if (Slots[0] != null && Selected == null) 
@@ -104,9 +193,14 @@ public class Player : NetworkBehaviour {
         Result.End = true;
         endgame = true;
     }
+    void FixedUpdate()
+    {
 
+    }
     void Update () 
 	{
+        transform.rotation = new Quaternion(0, 0, 0, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
         if (isServer)
         {
             if (endgame == true)
@@ -170,10 +264,16 @@ public class Player : NetworkBehaviour {
 
 		if (State == states.Armed) 
 		{
+            if (Weapon != null)
+            {
+                Item wep = Weapon.GetComponent<Item>();
+                wep.Attack_Anim = false;
+            }
 			if (Input.GetAxis ("RBumper") != 0)
 			{
 				if (AxisPress == false)
 				{
+                    GetComponent<Rigidbody>().Sleep();
 				Attack (WeaponHeld);
                    State = states.Attacking;
                     AxisPress = true;
@@ -202,7 +302,14 @@ public class Player : NetworkBehaviour {
 				AxisPress = false;
                 if (Weapon != null)
                 {
-                    AttackwithWeapon();
+                    Item attackweapon = Weapon.GetComponentInChildren<Item>();
+                    if (attackweapon.Lethal)
+                    {
+                        attackweapon.Attack_Anim = false;
+                        attackweapon.Lethal = false;
+                        WeaponRange[attackweapon.facing].enabled = false;
+                        attacking = attackweapon.AttackSpeed;
+                    }
                     State = states.Armed;
                 }
                 
@@ -211,17 +318,6 @@ public class Player : NetworkBehaviour {
         }
 
 	}
-    void AttackwithWeapon()
-    {
-        Item attackweapon = Weapon.GetComponentInChildren<Item>();
-        if (attackweapon.Lethal)
-        {
-            attackweapon.Attack_Anim = false;
-            attackweapon.Lethal = false;
-            WeaponRange[attackweapon.facing].enabled = false;
-            attacking = attackweapon.AttackSpeed;
-        }
-    }
 
     void CreatePositionList()
     {

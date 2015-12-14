@@ -39,6 +39,8 @@ public class Npc : NetworkBehaviour {
     public Npc mingler;
     public SpriteBubble Bubble;
 	public Need[] Needs = new Need[4];
+    public int id;
+    Player setplayer;
     int test;
 
 	Vector3 RunAway()
@@ -65,6 +67,8 @@ public class Npc : NetworkBehaviour {
         DrunkTimer = Random.Range(60, 120);
         SmokeTimer = Random.Range(60, 120);
         Name = Get.Name;
+        id = Get.ID;
+        Get.ID++;
  
     }
 
@@ -107,38 +111,30 @@ public class Npc : NetworkBehaviour {
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
-                print("ITEM HIT");
                 hurtstart = true;
                  player.WeaponRange[item.facing].enabled = false;
                  item.Lethal = false;
-                item.Attack_Anim = false;
+                player.CmdStartLerp(id);
                 TakeDamage(item.Amount);
-
             }
         }
     }
 
     void OnDamage(int newHealth)
     {
-        if (Health < 10)
+        if (newHealth < 10)
         {
-            StartLerp();
             Health = newHealth;
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         Health -= damage;
         print(Health);
     }
 
-    void StartLerp()
-    {
-        StartCoroutine("HurtLerp");
-    }
-
-    IEnumerator HurtLerp()
+    /*public IEnumerator HurtLerp()
 	{
         if (hurtstart == true)
         {
@@ -146,9 +142,10 @@ public class Npc : NetworkBehaviour {
             {
                 Sprite[i].color = Color.Lerp(Sprite[i].color, Color.red, 0.1f * Time.time);
             }
+
             yield return null;
         }
-	}
+	}*/
 	private void RevertColor()
 	{
 		for (int i = 0; i < Sprite.Length;i++)
@@ -294,9 +291,9 @@ public class Npc : NetworkBehaviour {
                 } else
                 {
                     if (isServer)
-                        RpcDestoryUnit();
+                        Player.play.RpcDestroyUnit(id);
                     else
-                        CmdDestoryUnit();
+                        Player.play.CmdDestroyUnit(id);
                 }
             }
 		}

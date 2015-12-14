@@ -33,6 +33,11 @@ public class Item : NetworkBehaviour {
 		}
 	}
 
+    void OnCollisionEnter(Collision col)
+    {
+
+    }
+
 	//Check if Player is picking up or poisoning the loot
 	void OnTriggerStay(Collider col)
 	{
