@@ -25,7 +25,12 @@ public class GUI_Start : NetworkBehaviour {
         {
             if (isServer)
             {
-                RpcStartMatch();
+                if (Start == true)
+                {
+                    Uspawner.RpcDesignateTarget();
+                    RpcStartMatch();
+                }
+               
             }
         }
     }

@@ -283,6 +283,8 @@ public class Npc : NetworkBehaviour {
 		{
 			if (hurtstart == false)
             {
+                for (int i = 0; i < Sprite.Length; i++)
+                    Sprite[i].enabled = false;
                 if (Name == Get.TargetName)
                 {
                     if (isServer)

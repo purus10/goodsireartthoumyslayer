@@ -101,27 +101,27 @@ public class Result : NetworkBehaviour {
 
     }
 
-    void Results()
+    [ClientRpc]
+    void RpcResultsNextRound()
     {
-        if (Digit.currentRound < 3)
-        {
-            Unit_Destroy();
-            Digit.currentRound++;
-            Digit.playTime = 0;
-            Time.timeScale = 1;
-            Unit_Spawner.StartMatch = true;
-        }
-        else
-        {
-            Unit_Destroy();
-            Digit.currentRound = 0;
-            print("GAME DONE");
-            Time.timeScale = 1;
-            Digit.playTime = 0;
-            USpawner.startscreen.SetActive(true);
-            USpawner.startscreen.GetComponent<Camera>().enabled = true;
-            GUI_Start.Start = true;
-        }
+        Unit_Destroy();
+        Digit.currentRound++;
+        Digit.playTime = 0;
+        Time.timeScale = 1;
+        Unit_Spawner.StartMatch = true;
+        End = false;
+    }
+    [ClientRpc]
+    void RpcResultsEndGame()
+    {
+        Unit_Destroy();
+        Digit.currentRound = 0;
+        Time.timeScale = 1;
+        Digit.playTime = 0;
+        USpawner.startscreen.SetActive(true);
+        USpawner.startscreen.GetComponent<Camera>().enabled = true;
+        GUI_Start.Start = true;
+        End = false;
     }
 
     void OnGUI ()
@@ -147,24 +147,26 @@ public class Result : NetworkBehaviour {
 
                 if (Digit.currentRound != 3)
                 {
-                    if (GUI.Button(NextRound, "Next Round"))
+                    if (isServer)
                     {
-                        press_count++;
-                        End = false;
-                        Results();
-                        p.GetComponentInChildren<Camera>().enabled = true;
-                        ResultScreen.GetComponent<Camera>().enabled = false;
+                        if (GUI.Button(NextRound, "Next Round"))
+                        {
+                            RpcResultsNextRound();
+                            End = false;
+
+                        }
                     }
                 }
                 else
                 {
-                    if (GUI.Button(NextRound, "End Game"))
+                    if (isServer)
                     {
-                        press_count++;
-                        Results();
-                        End = false;
-                        p.GetComponentInChildren<Camera>().enabled = false;
-                        ResultScreen.GetComponent<Camera>().enabled = false;
+                        if (GUI.Button(NextRound, "End Game"))
+                        {
+
+                            RpcResultsEndGame();
+                            End = false;
+                        }
                     }
                 }
             }

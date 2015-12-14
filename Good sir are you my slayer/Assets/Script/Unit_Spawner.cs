@@ -30,7 +30,6 @@ public class Unit_Spawner : NetworkBehaviour {
 
     public void SpawnUnits()
     {
-        print("YEAH");
             for (int i = 0; i < NumberOfNPC; i++)
             {
                 if (i < SpawnPoints.Count)
@@ -90,16 +89,6 @@ public class Unit_Spawner : NetworkBehaviour {
                     ItemSpawnPoints.RemoveAt(position);
                 }
             }
-
-            if (isLocalPlayer)
-        {
-            print("YEAH");
-            RpcDesignateTarget();
-        } else
-        {
-            DesignateTarget();
-        }
-      
     }
     void SpawnNPC(Vector3 position)
     {
@@ -138,7 +127,7 @@ public class Unit_Spawner : NetworkBehaviour {
     }
 
     [ClientRpc]
-    void RpcDesignateTarget()
+    public void RpcDesignateTarget()
     {
         Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
         int chosen = Random.Range(0, SearchN.Length - 1);
@@ -212,8 +201,8 @@ public class Unit_Spawner : NetworkBehaviour {
     {
         if (StartMatch == true)
         {
-            SpawnUnits();
-            StartMatch = false;
+            if (isServer) SpawnUnits();
+                StartMatch = false;
         }
            
     }

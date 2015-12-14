@@ -31,6 +31,7 @@ public class Player_SyncPosition : NetworkBehaviour {
         }
     }
 
+    [Command]
     void CmdProvidePositionToServer(Vector3 pos)
     {
         syncPos = pos;

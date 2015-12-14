@@ -36,10 +36,11 @@ public class Player : NetworkBehaviour {
 	public GameObject Selected;
 	public GameObject Weapon;
     public Container SelectedContain;
-    public Npc npc;
-    public Npc SETNpc;
+    [SyncVar]
+    public Vector3 position;
+
 	int ResultSlot;
-    bool endgame;
+    public bool endgame;
 
     [Command]
     public void CmdStartLerp(int id)
@@ -104,7 +105,7 @@ public class Player : NetworkBehaviour {
         if (i != -1 && SearchN[i].hurtstart == true)
         {
             print(i+" ID = "+id);
-            for (int j = 0; j < npc.Sprite.Length; j++)
+            for (int j = 0; j < SearchN[i].Sprite.Length; j++)
             {
                 SearchN[i].Sprite[j].color = Color.Lerp(SearchN[i].Sprite[j].color, Color.red, 0.1f * Time.time);
             }
@@ -164,6 +165,7 @@ public class Player : NetworkBehaviour {
     }
         void Start()
 	{
+        position = transform.position;
         if (Slots[0] != null && Selected == null) 
 			Selected = Slots[0];
         if (isLocalPlayer)
@@ -182,6 +184,29 @@ public class Player : NetworkBehaviour {
         PlacePlayer();
     }
 
+    [Command]
+    void CmdPositionSync()
+    {
+        transform.position = position;
+        RpcPositionSync();
+    }
+    [Command]
+    void CmdSetPos()
+    {
+        position = transform.position;
+        RpcSetPos();
+    }
+    [ClientRpc]
+    void RpcSetPos()
+    {
+        position = transform.position;
+    }
+    [ClientRpc]
+    void RpcPositionSync()
+    {
+        transform.position = position;
+    }
+
     [ClientRpc]
     void RpcEndGame()
     {
@@ -193,18 +218,20 @@ public class Player : NetworkBehaviour {
         Result.End = true;
         endgame = true;
     }
-    void FixedUpdate()
-    {
-
-    }
     void Update () 
 	{
         transform.rotation = new Quaternion(0, 0, 0, 0);
-        transform.position = new Vector3(transform.position.x, transform.position.y, -0.1f);
+
+        /*if (isLocalPlayer)
+            CmdPositionSync();
+        else transform.position = position;*/
         if (isServer)
         {
             if (endgame == true)
+            {
                 RpcEndGame();
+                endgame = false;
+            }
         }
             
         if (Input.GetKeyDown(KeyCode.L))
@@ -245,7 +272,12 @@ public class Player : NetworkBehaviour {
 		{
 			Character.Move (Vector3.right * Input.GetAxis ("Horizontal") * Speed * Time.deltaTime);
 			Character.Move (Vector3.up * Input.GetAxis ("Vertical") * Speed * Time.deltaTime);
-		}
+
+            /*if (isLocalPlayer)
+                CmdSetPos();
+            else
+            position = transform.position;*/
+        }
 
 		if (State == states.Idle)
 		{
@@ -279,8 +311,12 @@ public class Player : NetworkBehaviour {
                     AxisPress = true;
 				}
 			}
+            if (Input.GetAxis("RBumper") == 0)
+            {
+                AxisPress = false;
+            }
 
-			if (Input.GetButtonDown("Y"))
+                if (Input.GetButtonDown("Y"))
 			{
 				if (Selected == Slots[0]) Undraw(0);
 				else if (Selected == Slots[1]) Undraw(1);
@@ -299,7 +335,6 @@ public class Player : NetworkBehaviour {
 			if (attacking != 0) 
 				attacking--;
 			else {
-				AxisPress = false;
                 if (Weapon != null)
                 {
                     Item attackweapon = Weapon.GetComponentInChildren<Item>();
