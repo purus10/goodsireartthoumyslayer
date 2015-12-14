@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 using Database;
 
-public class Digit : MonoBehaviour {
+public class Digit : NetworkBehaviour {
 	
 	static public int playTime;
+    static public bool StartTimer;
 	public Sprite[] Digits;
 	public SpriteRenderer Minute;
 	public SpriteRenderer Colon;
@@ -22,17 +24,24 @@ public class Digit : MonoBehaviour {
 
 	void Start()
 	{
-		StartCoroutine("ChangeDigits");
-		digit = FinalRound;
-		CreateDigit(finalRound, false);
-	}
+        StartCoroutine("ChangeDigits");
+        digit = FinalRound;
+        CreateDigit(finalRound, false);
+        StartTimer = false;
+    }
 
 
 	// Use this for initialization
 	void Update () 
 	{
-       if (minutes == 3)
-            Result.End = true;
+        if (minutes == 3)
+        {
+            if (isServer)
+                Player.play.RpcEndGame();
+            else Player.play.CmdEndGame();
+            minutes = 0;
+        }
+            
 
 		digit = CurrentRound;
 		CreateDigit(currentRound, false);

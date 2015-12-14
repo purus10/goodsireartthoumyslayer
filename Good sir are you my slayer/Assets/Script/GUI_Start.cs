@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 public class GUI_Start : NetworkBehaviour {
 
     public Rect StartButton;
+    bool starttimer = true;
     static public int clickCount;
     static public bool Start = true;
     public Unit_Spawner Uspawner;
@@ -27,6 +28,7 @@ public class GUI_Start : NetworkBehaviour {
             {
                 if (Start == true)
                 {
+                        Digit.StartTimer = true;
                     Uspawner.RpcDesignateTarget();
                     RpcStartMatch();
                 }

@@ -31,7 +31,7 @@ namespace Database{
 		{
 			if (item.Name == "Drink") Drink(item,player);
 			else if (item.Name == "Snack") Snack(item,player);
-			else if (item.Name == "Bandage") Bandage(player);
+			else if (item.Name == "PainKiller") Bandage(player);
 		}
 
 		public class Spawn
@@ -57,7 +57,9 @@ namespace Database{
         }
 		static public void Bandage(Player player)
 		{
-			if (player.IsBleeding) player.IsBleeding = false;
+            if (player.Health + 3 <= 10)
+                player.Health = player.Health + 3;
+            else player.Health = 10;
 		}
 
 	}

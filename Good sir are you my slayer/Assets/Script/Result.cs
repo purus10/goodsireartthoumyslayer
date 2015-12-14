@@ -129,11 +129,12 @@ public class Result : NetworkBehaviour {
     void RpcResultsEndGame()
     {
         Unit_Destroy();
-        Digit.currentRound = 0;
+        Digit.currentRound = 1;
         Time.timeScale = 1;
         Digit.playTime = 0;
         USpawner.startscreen.SetActive(true);
         USpawner.startscreen.GetComponent<Camera>().enabled = true;
+        Unit_Spawner.StartMatch = true;
         GUI_Start.Start = true;
         End = false;
     }

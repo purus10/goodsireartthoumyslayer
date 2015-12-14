@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class Item : NetworkBehaviour {
 
 	public enum type {Consumable,Spawn,Weapon, Clue};
-	public enum consumable{Any, Poison, Snack, Drink, Bandage, Firecracker, PainKiller};
+	public enum consumable{None, Any, Snack, Drink, PainKiller};
 	public bool IsPoisoned, Drawn, Lethal, Attack_Anim, scary;
 	public string Name;
     public int facing;
@@ -15,9 +15,11 @@ public class Item : NetworkBehaviour {
 	public Collider Notice;
 	public type Type; 
 	public consumable IsConsumable;
+    public GameObject[] Consumables;
 	public GameObject Loot;
     [SyncVar]
     public SpriteRenderer Weapon;
+    public SpriteRenderer ItemSprite;
     public SpriteRenderer Attack;
     [SyncVar]
 	public int Ammo, Amount, Bleed, Force, Suspicion, ThrowAmount;
@@ -28,14 +30,39 @@ public class Item : NetworkBehaviour {
 	{
 		if (Type == type.Consumable)
 		{
-			if (IsConsumable != consumable.Any) Name = IsConsumable.ToString();
+			if (IsConsumable != consumable.None) Name = IsConsumable.ToString();
 			else Name = Get.Consumable[Random.Range(0,Get.Consumable.Length)];
 		}
 	}
 
-    void OnCollisionEnter(Collision col)
-    {
 
+    void Start()
+    {
+        if (Type == type.Spawn && IsConsumable == consumable.Any)
+        {
+            int choice = Random.Range(0, Consumables.Length);
+
+            switch (choice)
+            {
+                case 0:
+                    IsConsumable = consumable.Drink;
+                    Name = "Drink";
+                    Loot = Consumables[choice];
+                    break;
+                case 1:
+                    IsConsumable = consumable.Snack;
+                    Name = "Snack";
+                    Loot = Consumables[choice];
+                    break;
+                case 2:
+                    IsConsumable = consumable.PainKiller;
+                    Name = "PainKiller";
+                    Loot = Consumables[choice];
+                    break;
+
+            }
+            ItemSprite.sprite = Loot.GetComponent<SpriteRenderer>().sprite;
+        }
     }
 
 	//Check if Player is picking up or poisoning the loot
@@ -45,6 +72,7 @@ public class Item : NetworkBehaviour {
 
         if (player != null)
         {
+            print("YEAH IM REGERSTING");
             if (Type == type.Spawn)
             {
                     if (Input.GetButtonDown("X"))
@@ -52,11 +80,15 @@ public class Item : NetworkBehaviour {
             }
             else if (Type == type.Weapon && player.Selected == null && player.State == Player.states.Idle || Type == type.Consumable)
             {
-
                 if (Input.GetButtonDown("X"))
                 {
                     GiveSelf(player);
                 }
+            }
+            if (Type == type.Consumable)
+            {
+                if (Input.GetButtonDown("X"))
+                    GiveLoot(player);
             }
         }
 	}
@@ -192,10 +224,9 @@ public class Item : NetworkBehaviour {
         {
             if (loot.Type == type.Consumable)
             {
-                if (player.Slots[2] == null)
+                if (player.Consumable == null)
                 {
-                    if (IsPoisoned == true && loot.Name == "Drink") GivePoison();
-                    player.Slots[2] = Loot;
+                    player.Consumable = Loot;
                 }
             }
             else if (loot.Type == type.Weapon) GiveWeapon(player);

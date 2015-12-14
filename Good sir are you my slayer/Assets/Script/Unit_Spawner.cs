@@ -130,29 +130,32 @@ public class Unit_Spawner : NetworkBehaviour {
     public void RpcDesignateTarget()
     {
         Npc[] SearchN = GameObject.FindObjectsOfType(typeof(Npc)) as Npc[];
-        int chosen = Random.Range(0, SearchN.Length - 1);
-        Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
-
-        SpriteRenderer[] parts = SearchN[chosen].GetComponentsInChildren<SpriteRenderer>();
-
-        for (int i = 0; i < parts.Length; i++)
+        if (SearchN.Length > 0)
         {
-            if (parts[i].gameObject.name == "NPC Body")
+            int chosen = Random.Range(0, SearchN.Length - 1);
+            Get.TargetHead = SearchN[chosen].GetComponent<SpriteRenderer>().sprite;
+
+            SpriteRenderer[] parts = SearchN[chosen].GetComponentsInChildren<SpriteRenderer>();
+
+            for (int i = 0; i < parts.Length; i++)
             {
-                Get.TargetBody = parts[i].sprite;
+                if (parts[i].gameObject.name == "NPC Body")
+                {
+                    Get.TargetBody = parts[i].sprite;
+                }
             }
-        }
-        Get.TargetName = SearchN[chosen].Name;
-        SearchN[chosen].Name = Get.TargetName;
-        for (int i = 0; i < SearchN.Length; i++)
-        {
-            if (SearchN[i] != SearchN[chosen] && SearchN[i] == SearchN[chosen])
+            Get.TargetName = SearchN[chosen].Name;
+            SearchN[chosen].Name = Get.TargetName;
+            for (int i = 0; i < SearchN.Length; i++)
             {
-                SearchN[i].Name = Get.Name;
-                i = 0;
+                if (SearchN[i] != SearchN[chosen] && SearchN[i] == SearchN[chosen])
+                {
+                    SearchN[i].Name = Get.Name;
+                    i = 0;
+                }
             }
+            print("ASSIGNED");
         }
-        print("ASSIGNED");
     }
 
     void DesignateTarget()

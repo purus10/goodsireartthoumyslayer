@@ -1,0 +1,53 @@
+Mono path[0] = 'C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data/Managed'
+Mono path[1] = 'C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data/Mono'
+Mono config path = 'C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55480
+Multi-casting "[IP] 10.172.17.74 [Port] 55480 [Flags] 2 [Guid] 786227420 [EditorId] 2614470992 [Version] 1048832 [Id] WindowsPlayer(5B1-06) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.172.17.74:55480]
+Initialize engine version: 5.2.2f1 (3757309da7e7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA Quadro K2000 (ID=0xffe)
+    Vendor:   NVIDIA
+    VRAM:     1990 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.163 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 21c8 -> priority: 1 
+  Thread -> id: 2240 -> priority: 1 
+ASSIGNED
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineMonoBehaviourBindings.gen.cs:108)
+Unit_Spawner:RpcDesignateTarget() (at C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Unit_Spawner.cs:155)
+Unit_Spawner:InvokeRpcRpcDesignateTarget(NetworkBehaviour, NetworkReader)
+UnityEngine.Networking.NetworkBehaviour:InvokeRpcDelegate(Int32, NetworkReader) (at C:\buildslave\unity\build\Extensions\Networking\Runtime\NetworkBehaviour.cs:332)
+UnityEngine.Networking.NetworkBehaviour:InvokeRPC(Int32, NetworkReader) (at C:\buildslave\unity\build\Extensions\Networking\Runtime\NetworkBehaviour.cs:113)
+UnityEngine.Networking.NetworkIdentity:HandleRPC(Int32, NetworkReader) (at C:\buildslave\unity\build\Extensions\Networking\Runtime\NetworkIdentity.cs:533)
+UnityEngine.Networking.ClientScene:OnRPCMessage(NetworkMessage) (at C:\buildslave\unity\build\Extensions\Networking\Runtime\ClientScene.cs:632)
+UnityEngine.Networking.NetworkConnection:InvokeHandler(NetworkMessage) (at C:\buildslave\unity\build\Extensions\Networking\Runtime\NetworkConnection.cs:194)
+UnityEngine.Networking.LocalClient:ProcessInternalMessages() (at C:\buildslave\unity\build\Extensions\Networking\Runtime\LocalClient.cs:137)
+UnityEngine.Networking.LocalClient:Update() (at C:\buildslave\unity\build\Extensions\Networking\Runtime\LocalClient.cs:65)
+UnityEngine.Networking.NetworkClient:UpdateClients() (at C:\buildslave\unity\build\Extensions\Networking\Runtime\NetworkClient.cs:774)
+UnityEngine.Networking.NetworkIdentity:UNetStaticUpdate() (at C:\buildslave\unity\build\Extensions\Networking\Runtime\NetworkIdentity.cs:910)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineMonoBehaviourBindings.gen.cs Line: 108)
+
