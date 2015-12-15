@@ -1,5 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-5660
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-102888
 Cmd: getPlatforms
 Cmd: preprocess
   insize=8687 outsize=2135 ok=1
@@ -260,16 +260,6 @@ Cmd: preprocess
 Cmd: preprocess
   insize=2474 outsize=823 ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=123970 outsize=695 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF TCP2_SPEC pd= ok=1
+  api=4 type=0 insize=76298 outsize=2753 kw=SPOT TCP2_SPEC pd= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=123970 outsize=5645 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON TCP2_SPEC pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=123970 outsize=1000 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF TCP2_SPEC pd= ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=76298 outsize=403 kw=POINT TCP2_SPEC pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=76298 outsize=2753 kw=DIRECTIONAL_COOKIE TCP2_SPEC pd= ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=76298 outsize=1156 kw=POINT TCP2_SPEC pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=76298 outsize=3874 kw=DIRECTIONAL_COOKIE TCP2_SPEC pd= ok=1
+  api=4 type=1 insize=76298 outsize=4638 kw=SPOT TCP2_SPEC pd= ok=1
