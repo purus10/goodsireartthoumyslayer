@@ -42,6 +42,7 @@ public class Player : NetworkBehaviour {
     public int hitTimer,hitcount;
     public bool hit;
     public Camera PleaseStandby;
+    public Camera MainCamera;
 	int ResultSlot;
     public bool endgame;
 
@@ -127,7 +128,12 @@ public class Player : NetworkBehaviour {
 		SetName();
 		CreateNeeds();
 		SetDress ();
-	}
+        GameObject go = GameObject.Instantiate(MainCamera, transform.position, Quaternion.identity) as GameObject;
+        MainCamera.transform.parent = this.transform;
+        MainCamera.transform.localPosition = new Vector3(0, -3, -8);
+
+
+    }
 
     void OnDamage(int newHealth)
     {
@@ -177,17 +183,6 @@ public class Player : NetworkBehaviour {
         if (isLocalPlayer)
         {
             HUD.SetActive(true);
-        }
-        Camera[] SearchG = GameObject.FindObjectsOfType(typeof(Camera)) as Camera[];
-        for (int i = 0; i < SearchG.Length;i++)
-        {
-            if (SearchG[i].name == "MainCamera")
-            {
-                
-                SearchG[i].transform.parent = this.transform;
-                SearchG[i].transform.localPosition = new Vector3(0, -3, -8);
-
-            }
         }
     }
 
@@ -285,10 +280,10 @@ public class Player : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-        if (GUI_Start.Start == false && Health > 0)
+        /*if (Health > 0)
         {
             GetComponentInChildren<Camera>().enabled = true;
-        }
+        }*/
 
         if (Health == 0)
         {
