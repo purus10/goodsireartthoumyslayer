@@ -149,14 +149,14 @@ public class Player : NetworkBehaviour {
         Player player = col.gameObject.GetComponentInParent<Player>();
         if (player != null && player != this)
         {
+            print(player.name);
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
                 player.WeaponRange[item.facing].enabled = false;
                 item.Lethal = false;
                 hit = true;
-                if (player != this)
-                player.TakeDamage(item.Amount);
+                TakeDamage(item.Amount);
             }
         }
 
