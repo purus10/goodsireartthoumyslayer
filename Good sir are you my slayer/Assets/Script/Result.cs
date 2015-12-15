@@ -76,7 +76,6 @@ public class Result : NetworkBehaviour {
                 {
                     p.Sprites[i].enabled = true;
                 }
-                p.GetComponentInChildren<Camera>().enabled = true;
                 p.GetComponent<CharacterController>().enabled = true;
                 Item item = p.GetComponentInChildren<Item>();
                 if (item != null)

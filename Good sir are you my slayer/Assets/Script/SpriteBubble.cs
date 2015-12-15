@@ -35,7 +35,11 @@ public class SpriteBubble : NetworkBehaviour
                         break;
                     }
             }
-        } else if (player != null)
+        } else
+        {
+            Bubble.sprite = Bubbles[20];
+        }
+        if (player != null)
         {
             if (player.State == Player.states.Talking)
             {

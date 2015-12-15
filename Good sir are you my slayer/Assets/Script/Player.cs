@@ -66,7 +66,6 @@ public class Player : NetworkBehaviour {
         Player player = col.GetComponent<Player>();
         if (player != null && player != play)
         {
-            print(player.name);
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
@@ -224,18 +223,30 @@ public class Player : NetworkBehaviour {
 
         if (State == states.Dead)
         {
-            PleaseStandby.gameObject.SetActive(true);
+            
             for (int i = 0; i < Sprites.Length; i++)
             {
                 Sprites[i].enabled = false;
             }
-            GetComponentInChildren<Camera>().enabled = false;
+            if (isLocalPlayer)
+            {
+                PleaseStandby.gameObject.SetActive(true);
+                GetComponentInChildren<Camera>().enabled = false;
+            }
             GetComponent<CharacterController>().enabled = false;
                 Item item = GetComponentInChildren<Item>();
             if (item != null)
             item.gameObject.SetActive(false);
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
+        }
+        else
+        {
+            if (isLocalPlayer)
+            {
+                if (Result.End == true)
+                GetComponentInChildren<Camera>().enabled = false;
+            }
         }
 
         if (hit == true)
@@ -497,7 +508,6 @@ public class Player : NetworkBehaviour {
     [Command]
     void CmdClearDraws()
 	{
-        print("I AMA DESTROYING");
 		GameObject.Destroy(Weapon);
 		Weapon = null;
 	}
@@ -505,7 +515,6 @@ public class Player : NetworkBehaviour {
     [ClientRpc]
     void RpcClearDraws()
     {
-        print("I AMA DESTROYING");
         GameObject.Destroy(Weapon);
         Weapon = null;
     }
@@ -563,7 +572,6 @@ public class Player : NetworkBehaviour {
 	}
 	public void Undraw(int selected)
 	{
-        print("I RUN");
 		Item heldweapon = Weapon.GetComponent<Item>();
 		if (heldweapon.Drawn == true && heldweapon.Lethal == false)
 		{

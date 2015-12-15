@@ -154,7 +154,6 @@ public class Unit_Spawner : NetworkBehaviour {
                     i = 0;
                 }
             }
-            print("ASSIGNED");
         }
     }
 
