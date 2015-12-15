@@ -2,9 +2,9 @@ Mono path[0] = 'C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are 
 Mono path[1] = 'C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data/Mono'
 Mono config path = 'C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data/Mono/etc'
 PlayerConnection initialized from C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Test_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55326
-Multi-casting "[IP] 10.172.17.74 [Port] 55326 [Flags] 2 [Guid] 1088380524 [EditorId] 752742910 [Version] 1048832 [Id] WindowsPlayer(5B1-06) [Debug] 0" to [225.0.0.222:54997]...
-PlayerConnection already initialized - listening to [10.172.17.74:55326]
+PlayerConnection initialized network socket : 0.0.0.0 55047
+Multi-casting "[IP] 10.172.17.74 [Port] 55047 [Flags] 2 [Guid] 1508492484 [EditorId] 4177366815 [Version] 1048832 [Id] WindowsPlayer(5B1-06) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [10.172.17.74:55047]
 Initialize engine version: 5.2.2f1 (3757309da7e7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -24,12 +24,69 @@ Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my s
 Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.130 seconds
+- Completed reload, in  0.128 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Test_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 24dc -> priority: 1 
-  Thread -> id: 20d8 -> priority: 1 
+  Thread -> id: 15e0 -> priority: 1 
+  Thread -> id: 1a94 -> priority: 1 
+RPC Function RpcDestroy called on client.
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:LogError(Object)
+Item:CallRpcDestroy()
+Item:GiveSelf(Player) (at C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Item.cs:204)
+Item:OnTriggerStay(Collider) (at C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Item.cs:84)
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Item.cs Line: 204)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x00513] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:383 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x00513] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:383 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x004ef] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:382 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x004ef] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:382 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x004ef] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:382 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x004ef] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:382 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x004ef] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:382 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at Player.Undraw (Int32 selected) [0x00000] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:592 
+  at Player.Update () [0x004ef] in C:\Users\1231286\Documents\goodsireartthoumyslayer\Good sir are you my slayer\Assets\Script\Player.cs:382 
+ 
+(Filename: C:/Users/1231286/Documents/goodsireartthoumyslayer/Good sir are you my slayer/Assets/Script/Player.cs Line: 592)
+

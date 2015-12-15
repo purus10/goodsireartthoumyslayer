@@ -349,11 +349,11 @@ public class Player : NetworkBehaviour {
                 else if (Selected == Slots[1] && Slots[1] != null) ReadyDraw(1);
 			}
 
-            if (Input.GetAxis("LBumper") != 0)
+            /*if (Input.GetAxis("LBumper") != 0)
             {
                 if (Selected == Slots[0] && Slots[0] != null) Drop(0);
                 else if (Selected == Slots[1] && Slots[1] != null) Drop(1);
-            }
+            }*/
         }
 
 		if (State == states.Armed) 
