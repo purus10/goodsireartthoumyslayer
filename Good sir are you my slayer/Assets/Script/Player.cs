@@ -61,19 +61,35 @@ public class Player : NetworkBehaviour {
         }
     }
 
+    [Command]
+    void CmdTakeDamage(int damage)
+    {
+        if (Health - damage >= 0)
+            Health -= damage;
+        else Health = 0;
+    }
+
+    [ClientRpc]
+    void RpcTakeDamage(int damage)
+    {
+        if (Health - damage >= 0)
+            Health -= damage;
+        else Health = 0;
+    }
+
     void OnTriggerStay(Collider col)
     {
         Player player = col.GetComponent<Player>();
-        if (player != null && player != play)
+        if (player != null)
         {
             Item item = player.gameObject.GetComponentInChildren<Item>();
             if (item != null && item.Lethal)
             {
                 player.WeaponRange[item.facing].enabled = false;
                 item.Lethal = false;
-                player.hit = true;
-                Points += item.Amount;
-                //player.TakeDamage(item.Amount);
+                hit = true;
+                TakeDamage(item.Amount);
+               player.Points += item.Amount;
             }
         }
     }
@@ -228,15 +244,16 @@ public class Player : NetworkBehaviour {
             {
                 Sprites[i].enabled = false;
             }
+            Item item = GetComponentInChildren<Item>();
+            if (item != null)
+                item.gameObject.SetActive(false);
             if (isLocalPlayer)
             {
                 PleaseStandby.gameObject.SetActive(true);
                 GetComponentInChildren<Camera>().enabled = false;
             }
             GetComponent<CharacterController>().enabled = false;
-                Item item = GetComponentInChildren<Item>();
-            if (item != null)
-            item.gameObject.SetActive(false);
+
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
         }
