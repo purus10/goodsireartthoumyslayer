@@ -10,7 +10,46 @@ namespace Database{
 		static public string TargetName;
 		static public Sprite TargetHead;
 		static public Sprite TargetBody;
-		static public string[] FirstName = new string[] {"Lol","JK","Hi","moo"};
+		static public string[] FirstName = new string[] {"Collin","Conway","Ruby","Ripley","Janine","Otis","Crystal","Lewis","Ramsey","Juliana","Erin","Deborah","Jordon","Natalie","Bertina","Faron","Kerena","Cal","Fallon","Felicia","Madonna","Laurene","Rozanne","Kelia",
+"Joselyn","Lindon","Layne","Ainslee","Abbi","Autumn","Elenora","Chris","Rudolph","Katelynn","Eveline","Wiley","Chase","Kristin","Noelene","Jepson","Ridley","Keegan","Blair","Harris","Michael",
+"Joann","Grayson","Callahan","Leigh","Candice",
+"JoBeth",
+"Martie",
+"Vlad",
+"Farida",
+"Lilia",
+"Zoya",
+"Bibiana",
+"Fouad",
+"Rossella",
+"Karima",
+"Sabah",
+"Konstantin",
+"Alisa",
+"Raisa",
+"Isotta",
+"Hasim",
+"Kesha",
+"Rossana",
+"Amir",
+"Marcello",
+"Adel",
+"Qadir",
+"Ilia",
+"Lamya",
+"Galya",
+"Nasim",
+"Kamal",
+"Albina",
+"Kistna",
+"Vina",
+"Shanti",
+"Yami",
+"Prem",
+"Meena",
+"Vikram",
+"Priya",
+"Om","Rajni"};
 		static public string[] LastName = new string[] {"L.","K.","J.,","H."};
 		static public string[] NeedName = new string[] {"Eat","Smoke","Bathroom","Drunkness"};
 		static public string[] Consumable = new string[] {"Poison","Snack","Drink","Bandage","Firecracker","PainKiller"};
