@@ -22,7 +22,7 @@ public class Item : NetworkBehaviour {
     public SpriteRenderer ItemSprite;
     public SpriteRenderer Attack;
     [SyncVar]
-	public int Ammo, Amount, Bleed, Force, Suspicion, ThrowAmount;
+	public int Ammo, Amount, Points, Bleed, Force, Suspicion, ThrowAmount;
 	public float DrawSpeed, AttackSpeed, WeaponRange_X, WeaponRange_Y;
     public Vector3 position;
     public Player play;

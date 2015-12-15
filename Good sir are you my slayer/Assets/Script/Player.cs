@@ -89,7 +89,7 @@ public class Player : NetworkBehaviour {
                 item.Lethal = false;
                 hit = true;
                 TakeDamage(item.Amount);
-               player.Points += item.Amount;
+               player.Points += item.Points;
             }
         }
     }
