@@ -41,7 +41,7 @@ public class GUI_Start : NetworkBehaviour {
     void RpcStartMatch()
     {
             Uspawner.startscreen.SetActive(false);
-            Uspawner.startscreen.GetComponent<Camera>().enabled = false;
+            //Uspawner.startscreen.GetComponent<Camera>().enabled = false;
             Start = false;
     }
 }

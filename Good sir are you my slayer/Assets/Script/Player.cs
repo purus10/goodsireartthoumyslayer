@@ -61,6 +61,24 @@ public class Player : NetworkBehaviour {
         }
     }
 
+    void OnTriggerStay(Collider col)
+    {
+        Player player = col.GetComponent<Player>();
+        if (player != null && player != play)
+        {
+            print(player.name);
+            Item item = player.gameObject.GetComponentInChildren<Item>();
+            if (item != null && item.Lethal)
+            {
+                player.WeaponRange[item.facing].enabled = false;
+                item.Lethal = false;
+                player.hit = true;
+                Points += item.Amount;
+                //player.TakeDamage(item.Amount);
+            }
+        }
+    }
+
     [Command]
     public void CmdDestroyUnit(int id)
     {
@@ -128,11 +146,6 @@ public class Player : NetworkBehaviour {
 		SetName();
 		CreateNeeds();
 		SetDress ();
-        GameObject go = GameObject.Instantiate(MainCamera, transform.position, Quaternion.identity) as GameObject;
-        MainCamera.transform.parent = this.transform;
-        MainCamera.transform.localPosition = new Vector3(0, -3, -8);
-
-
     }
 
     void OnDamage(int newHealth)
@@ -143,28 +156,14 @@ public class Player : NetworkBehaviour {
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (Health - damage >= 0)
             Health -= damage;
         else Health = 0;
     }
 
-	void OnTriggerStay(Collider col)
-	{
-        Player player = col.gameObject.GetComponentInParent<Player>();
-        if (player != null && player != this)
-        {
-            print(player.name);
-            Item item = player.gameObject.GetComponentInChildren<Item>();
-            if (item != null && item.Lethal)
-            {
-                player.WeaponRange[item.facing].enabled = false;
-                item.Lethal = false;
-                hit = true;
-                TakeDamage(item.Amount);
-            }
-        }
+	
 
 
         /*transform.rotation = new Quaternion(0, 0, 0, 0);
@@ -175,7 +174,7 @@ public class Player : NetworkBehaviour {
             item.Lethal = false;
             TakeDamage(item.Amount);
         }*/
-    }
+    //}
         void Start()
 	{
         if (Slots[0] != null && Selected == null) 
@@ -280,14 +279,9 @@ public class Player : NetworkBehaviour {
         if (!isLocalPlayer)
             return;
 
-        /*if (Health > 0)
+        if (Health > 0)
         {
             GetComponentInChildren<Camera>().enabled = true;
-        }*/
-
-        if (Health == 0)
-        {
-            print("I AM DEAD");
         }
 
         Result.PlayerScore [ResultSlot] = Points;
@@ -483,6 +477,7 @@ public class Player : NetworkBehaviour {
         SetWeaponRange(drawnweapon.WeaponRange_Y, drawnweapon.WeaponRange_X);
         drawnweapon.Drawn = true;
         drawnweapon.Notice.enabled = true;
+        drawnweapon.play = this;
         Weapon = wep;
     }
 
@@ -536,10 +531,10 @@ public class Player : NetworkBehaviour {
 			Needs[i].Name = Get.NeedName [i];
 			Needs [i].Name = Get.NeedName [i]; 
 		}
-        EatTimer = Random.Range(20, 40);
-        BathTimer = Random.Range(20, 40);
-        DrunkTimer = Random.Range(20, 40);
-        SmokeTimer = Random.Range(20, 40);
+        EatTimer = Random.Range(120, 240);
+        BathTimer = Random.Range(120, 240);
+        DrunkTimer = Random.Range(210, 240);
+        SmokeTimer = Random.Range(120, 240);
     }
 	void SetNeedTimers()
 	{

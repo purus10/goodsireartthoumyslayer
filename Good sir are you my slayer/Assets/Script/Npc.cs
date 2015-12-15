@@ -119,6 +119,7 @@ public class Npc : NetworkBehaviour {
                  item.Lethal = false;
                 hit = true;
                 TakeDamage(item.Amount);
+                player.Points += item.Amount;
             }
         }
     }

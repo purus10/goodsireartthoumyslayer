@@ -25,6 +25,7 @@ public class Item : NetworkBehaviour {
 	public int Ammo, Amount, Bleed, Force, Suspicion, ThrowAmount;
 	public float DrawSpeed, AttackSpeed, WeaponRange_X, WeaponRange_Y;
     public Vector3 position;
+    public Player play;
 
     void Awake()
 	{
@@ -35,8 +36,7 @@ public class Item : NetworkBehaviour {
 		}
 	}
 
-
-    void Start()
+        void Start()
     {
         if (Type == type.Spawn && IsConsumable == consumable.Any)
         {
@@ -72,7 +72,6 @@ public class Item : NetworkBehaviour {
 
         if (player != null)
         {
-            print("YEAH IM REGERSTING");
             if (Type == type.Spawn)
             {
                     if (Input.GetButtonDown("X"))
