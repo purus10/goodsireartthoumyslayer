@@ -178,6 +178,17 @@ public class Player : NetworkBehaviour {
         {
             HUD.SetActive(true);
         }
+        Camera[] SearchG = GameObject.FindObjectsOfType(typeof(Camera)) as Camera[];
+        for (int i = 0; i < SearchG.Length;i++)
+        {
+            if (SearchG[i].name == "MainCamera")
+            {
+                
+                SearchG[i].transform.parent = this.transform;
+                SearchG[i].transform.localPosition = new Vector3(0, -3, -8);
+
+            }
+        }
     }
 
     void CmdResultScreen()
@@ -209,6 +220,7 @@ public class Player : NetworkBehaviour {
     }
     void Update () 
 	{
+
         transform.rotation = new Quaternion(0, 0, 0, 0);
         transform.position = new Vector3(transform.position.x,transform.position.y,-0.1f);
 
